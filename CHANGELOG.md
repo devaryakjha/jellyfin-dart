@@ -1,3 +1,13 @@
+## 0.1.1
+
+Minor dependency and configuration updates.
+
+### Changes
+
+- 🔧 Updated `copy_with_extension` dependency to ^7.1.0
+- 📝 Bumped version to 0.1.1 in openapi-config and pubspec files
+- 🔄 Regenerated all model `.g.dart` files with updated copy_with_extension
+
 ## 0.1.0
 
 Initial release of jellyfin_dart - a comprehensive Dart client for Jellyfin Media Server API.
@@ -7,11 +17,7 @@ Initial release of jellyfin_dart - a comprehensive Dart client for Jellyfin Medi
 - ✨ Complete coverage of Jellyfin API v10.11.0
 - 🔒 Full type safety with generated models and enums
 - 📱 Cross-platform support (Dart CLI, Flutter mobile, web, desktop)
-- 🔐 Multiple authentication methods:
-  - API Key authentication
-  - Bearer token authentication
-  - OAuth authentication
-  - Basic authentication
+- 🔐 Native MediaBrowser authentication with DeviceId, Version, and Token support
 - 🚀 Dio-based HTTP client with interceptor support
 - 📦 60+ API endpoint classes covering all Jellyfin functionality
 - 🎯 600+ type-safe model classes
