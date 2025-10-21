@@ -1,0 +1,11 @@
+# OpenAPI Generator Configuration for Jellyfin Dart Client
+pubName: jellyfin_dart
+pubVersion: 1.0.0
+pubDescription: Jellyfin API client for Dart
+pubLibrary: jellyfin_dart
+
+equalityCheckMethod: equatable
+
+serializationLibrary: json_serializable
+
+disallowAdditionalPropertiesIfNotPresent: false
