@@ -39,3 +39,7 @@ pubspec.lock
 
 # Mac
 .DS_Store
+
+
+# env
+.env
