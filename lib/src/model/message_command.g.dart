@@ -13,37 +13,40 @@ abstract class _$MessageCommandCWProxy {
 
   MessageCommand timeoutMs(int? timeoutMs);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MessageCommand(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MessageCommand(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MessageCommand(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MessageCommand call({String? header, String text, int? timeoutMs});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMessageCommand.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMessageCommand.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMessageCommand.copyWith(...)` or call `instanceOfMessageCommand.copyWith.fieldName(value)` for a single field.
 class _$MessageCommandCWProxyImpl implements _$MessageCommandCWProxy {
   const _$MessageCommandCWProxyImpl(this._value);
 
   final MessageCommand _value;
 
   @override
-  MessageCommand header(String? header) => this(header: header);
+  MessageCommand header(String? header) => call(header: header);
 
   @override
-  MessageCommand text(String text) => this(text: text);
+  MessageCommand text(String text) => call(text: text);
 
   @override
-  MessageCommand timeoutMs(int? timeoutMs) => this(timeoutMs: timeoutMs);
+  MessageCommand timeoutMs(int? timeoutMs) => call(timeoutMs: timeoutMs);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MessageCommand(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MessageCommand(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MessageCommand(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MessageCommand call({
     Object? header = const $CopyWithPlaceholder(),
     Object? text = const $CopyWithPlaceholder(),
@@ -54,7 +57,7 @@ class _$MessageCommandCWProxyImpl implements _$MessageCommandCWProxy {
           ? _value.header
           // ignore: cast_nullable_to_non_nullable
           : header as String?,
-      text: text == const $CopyWithPlaceholder()
+      text: text == const $CopyWithPlaceholder() || text == null
           ? _value.text
           // ignore: cast_nullable_to_non_nullable
           : text as String,
@@ -67,7 +70,8 @@ class _$MessageCommandCWProxyImpl implements _$MessageCommandCWProxy {
 }
 
 extension $MessageCommandCopyWith on MessageCommand {
-  /// Returns a callable class that can be used as follows: `instanceOfMessageCommand.copyWith(...)` or like so:`instanceOfMessageCommand.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMessageCommand.copyWith(...)` or `instanceOfMessageCommand.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MessageCommandCWProxy get copyWith => _$MessageCommandCWProxyImpl(this);
 }

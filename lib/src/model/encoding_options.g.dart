@@ -125,12 +125,13 @@ abstract class _$EncodingOptionsCWProxy {
     List<String>? allowOnDemandMetadataBasedKeyframeExtractionForExtensions,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `EncodingOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `EncodingOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// EncodingOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   EncodingOptions call({
     int? encodingThreadCount,
     String? transcodingTempPath,
@@ -182,7 +183,8 @@ abstract class _$EncodingOptionsCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfEncodingOptions.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfEncodingOptions.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfEncodingOptions.copyWith(...)` or call `instanceOfEncodingOptions.copyWith.fieldName(value)` for a single field.
 class _$EncodingOptionsCWProxyImpl implements _$EncodingOptionsCWProxy {
   const _$EncodingOptionsCWProxyImpl(this._value);
 
@@ -190,217 +192,218 @@ class _$EncodingOptionsCWProxyImpl implements _$EncodingOptionsCWProxy {
 
   @override
   EncodingOptions encodingThreadCount(int? encodingThreadCount) =>
-      this(encodingThreadCount: encodingThreadCount);
+      call(encodingThreadCount: encodingThreadCount);
 
   @override
   EncodingOptions transcodingTempPath(String? transcodingTempPath) =>
-      this(transcodingTempPath: transcodingTempPath);
+      call(transcodingTempPath: transcodingTempPath);
 
   @override
   EncodingOptions fallbackFontPath(String? fallbackFontPath) =>
-      this(fallbackFontPath: fallbackFontPath);
+      call(fallbackFontPath: fallbackFontPath);
 
   @override
   EncodingOptions enableFallbackFont(bool? enableFallbackFont) =>
-      this(enableFallbackFont: enableFallbackFont);
+      call(enableFallbackFont: enableFallbackFont);
 
   @override
   EncodingOptions enableAudioVbr(bool? enableAudioVbr) =>
-      this(enableAudioVbr: enableAudioVbr);
+      call(enableAudioVbr: enableAudioVbr);
 
   @override
   EncodingOptions downMixAudioBoost(double? downMixAudioBoost) =>
-      this(downMixAudioBoost: downMixAudioBoost);
+      call(downMixAudioBoost: downMixAudioBoost);
 
   @override
   EncodingOptions downMixStereoAlgorithm(
     DownMixStereoAlgorithms? downMixStereoAlgorithm,
-  ) => this(downMixStereoAlgorithm: downMixStereoAlgorithm);
+  ) => call(downMixStereoAlgorithm: downMixStereoAlgorithm);
 
   @override
   EncodingOptions maxMuxingQueueSize(int? maxMuxingQueueSize) =>
-      this(maxMuxingQueueSize: maxMuxingQueueSize);
+      call(maxMuxingQueueSize: maxMuxingQueueSize);
 
   @override
   EncodingOptions enableThrottling(bool? enableThrottling) =>
-      this(enableThrottling: enableThrottling);
+      call(enableThrottling: enableThrottling);
 
   @override
   EncodingOptions throttleDelaySeconds(int? throttleDelaySeconds) =>
-      this(throttleDelaySeconds: throttleDelaySeconds);
+      call(throttleDelaySeconds: throttleDelaySeconds);
 
   @override
   EncodingOptions enableSegmentDeletion(bool? enableSegmentDeletion) =>
-      this(enableSegmentDeletion: enableSegmentDeletion);
+      call(enableSegmentDeletion: enableSegmentDeletion);
 
   @override
   EncodingOptions segmentKeepSeconds(int? segmentKeepSeconds) =>
-      this(segmentKeepSeconds: segmentKeepSeconds);
+      call(segmentKeepSeconds: segmentKeepSeconds);
 
   @override
   EncodingOptions hardwareAccelerationType(
     HardwareAccelerationType? hardwareAccelerationType,
-  ) => this(hardwareAccelerationType: hardwareAccelerationType);
+  ) => call(hardwareAccelerationType: hardwareAccelerationType);
 
   @override
   EncodingOptions encoderAppPath(String? encoderAppPath) =>
-      this(encoderAppPath: encoderAppPath);
+      call(encoderAppPath: encoderAppPath);
 
   @override
   EncodingOptions encoderAppPathDisplay(String? encoderAppPathDisplay) =>
-      this(encoderAppPathDisplay: encoderAppPathDisplay);
+      call(encoderAppPathDisplay: encoderAppPathDisplay);
 
   @override
   EncodingOptions vaapiDevice(String? vaapiDevice) =>
-      this(vaapiDevice: vaapiDevice);
+      call(vaapiDevice: vaapiDevice);
 
   @override
-  EncodingOptions qsvDevice(String? qsvDevice) => this(qsvDevice: qsvDevice);
+  EncodingOptions qsvDevice(String? qsvDevice) => call(qsvDevice: qsvDevice);
 
   @override
   EncodingOptions enableTonemapping(bool? enableTonemapping) =>
-      this(enableTonemapping: enableTonemapping);
+      call(enableTonemapping: enableTonemapping);
 
   @override
   EncodingOptions enableVppTonemapping(bool? enableVppTonemapping) =>
-      this(enableVppTonemapping: enableVppTonemapping);
+      call(enableVppTonemapping: enableVppTonemapping);
 
   @override
   EncodingOptions enableVideoToolboxTonemapping(
     bool? enableVideoToolboxTonemapping,
-  ) => this(enableVideoToolboxTonemapping: enableVideoToolboxTonemapping);
+  ) => call(enableVideoToolboxTonemapping: enableVideoToolboxTonemapping);
 
   @override
   EncodingOptions tonemappingAlgorithm(
     TonemappingAlgorithm? tonemappingAlgorithm,
-  ) => this(tonemappingAlgorithm: tonemappingAlgorithm);
+  ) => call(tonemappingAlgorithm: tonemappingAlgorithm);
 
   @override
   EncodingOptions tonemappingMode(TonemappingMode? tonemappingMode) =>
-      this(tonemappingMode: tonemappingMode);
+      call(tonemappingMode: tonemappingMode);
 
   @override
   EncodingOptions tonemappingRange(TonemappingRange? tonemappingRange) =>
-      this(tonemappingRange: tonemappingRange);
+      call(tonemappingRange: tonemappingRange);
 
   @override
   EncodingOptions tonemappingDesat(double? tonemappingDesat) =>
-      this(tonemappingDesat: tonemappingDesat);
+      call(tonemappingDesat: tonemappingDesat);
 
   @override
   EncodingOptions tonemappingPeak(double? tonemappingPeak) =>
-      this(tonemappingPeak: tonemappingPeak);
+      call(tonemappingPeak: tonemappingPeak);
 
   @override
   EncodingOptions tonemappingParam(double? tonemappingParam) =>
-      this(tonemappingParam: tonemappingParam);
+      call(tonemappingParam: tonemappingParam);
 
   @override
   EncodingOptions vppTonemappingBrightness(double? vppTonemappingBrightness) =>
-      this(vppTonemappingBrightness: vppTonemappingBrightness);
+      call(vppTonemappingBrightness: vppTonemappingBrightness);
 
   @override
   EncodingOptions vppTonemappingContrast(double? vppTonemappingContrast) =>
-      this(vppTonemappingContrast: vppTonemappingContrast);
+      call(vppTonemappingContrast: vppTonemappingContrast);
 
   @override
-  EncodingOptions h264Crf(int? h264Crf) => this(h264Crf: h264Crf);
+  EncodingOptions h264Crf(int? h264Crf) => call(h264Crf: h264Crf);
 
   @override
-  EncodingOptions h265Crf(int? h265Crf) => this(h265Crf: h265Crf);
+  EncodingOptions h265Crf(int? h265Crf) => call(h265Crf: h265Crf);
 
   @override
   EncodingOptions encoderPreset(EncoderPreset? encoderPreset) =>
-      this(encoderPreset: encoderPreset);
+      call(encoderPreset: encoderPreset);
 
   @override
   EncodingOptions deinterlaceDoubleRate(bool? deinterlaceDoubleRate) =>
-      this(deinterlaceDoubleRate: deinterlaceDoubleRate);
+      call(deinterlaceDoubleRate: deinterlaceDoubleRate);
 
   @override
   EncodingOptions deinterlaceMethod(DeinterlaceMethod? deinterlaceMethod) =>
-      this(deinterlaceMethod: deinterlaceMethod);
+      call(deinterlaceMethod: deinterlaceMethod);
 
   @override
   EncodingOptions enableDecodingColorDepth10Hevc(
     bool? enableDecodingColorDepth10Hevc,
-  ) => this(enableDecodingColorDepth10Hevc: enableDecodingColorDepth10Hevc);
+  ) => call(enableDecodingColorDepth10Hevc: enableDecodingColorDepth10Hevc);
 
   @override
   EncodingOptions enableDecodingColorDepth10Vp9(
     bool? enableDecodingColorDepth10Vp9,
-  ) => this(enableDecodingColorDepth10Vp9: enableDecodingColorDepth10Vp9);
+  ) => call(enableDecodingColorDepth10Vp9: enableDecodingColorDepth10Vp9);
 
   @override
   EncodingOptions enableDecodingColorDepth10HevcRext(
     bool? enableDecodingColorDepth10HevcRext,
-  ) => this(
+  ) => call(
     enableDecodingColorDepth10HevcRext: enableDecodingColorDepth10HevcRext,
   );
 
   @override
   EncodingOptions enableDecodingColorDepth12HevcRext(
     bool? enableDecodingColorDepth12HevcRext,
-  ) => this(
+  ) => call(
     enableDecodingColorDepth12HevcRext: enableDecodingColorDepth12HevcRext,
   );
 
   @override
   EncodingOptions enableEnhancedNvdecDecoder(
     bool? enableEnhancedNvdecDecoder,
-  ) => this(enableEnhancedNvdecDecoder: enableEnhancedNvdecDecoder);
+  ) => call(enableEnhancedNvdecDecoder: enableEnhancedNvdecDecoder);
 
   @override
   EncodingOptions preferSystemNativeHwDecoder(
     bool? preferSystemNativeHwDecoder,
-  ) => this(preferSystemNativeHwDecoder: preferSystemNativeHwDecoder);
+  ) => call(preferSystemNativeHwDecoder: preferSystemNativeHwDecoder);
 
   @override
   EncodingOptions enableIntelLowPowerH264HwEncoder(
     bool? enableIntelLowPowerH264HwEncoder,
-  ) => this(enableIntelLowPowerH264HwEncoder: enableIntelLowPowerH264HwEncoder);
+  ) => call(enableIntelLowPowerH264HwEncoder: enableIntelLowPowerH264HwEncoder);
 
   @override
   EncodingOptions enableIntelLowPowerHevcHwEncoder(
     bool? enableIntelLowPowerHevcHwEncoder,
-  ) => this(enableIntelLowPowerHevcHwEncoder: enableIntelLowPowerHevcHwEncoder);
+  ) => call(enableIntelLowPowerHevcHwEncoder: enableIntelLowPowerHevcHwEncoder);
 
   @override
   EncodingOptions enableHardwareEncoding(bool? enableHardwareEncoding) =>
-      this(enableHardwareEncoding: enableHardwareEncoding);
+      call(enableHardwareEncoding: enableHardwareEncoding);
 
   @override
   EncodingOptions allowHevcEncoding(bool? allowHevcEncoding) =>
-      this(allowHevcEncoding: allowHevcEncoding);
+      call(allowHevcEncoding: allowHevcEncoding);
 
   @override
   EncodingOptions allowAv1Encoding(bool? allowAv1Encoding) =>
-      this(allowAv1Encoding: allowAv1Encoding);
+      call(allowAv1Encoding: allowAv1Encoding);
 
   @override
   EncodingOptions enableSubtitleExtraction(bool? enableSubtitleExtraction) =>
-      this(enableSubtitleExtraction: enableSubtitleExtraction);
+      call(enableSubtitleExtraction: enableSubtitleExtraction);
 
   @override
   EncodingOptions hardwareDecodingCodecs(
     List<String>? hardwareDecodingCodecs,
-  ) => this(hardwareDecodingCodecs: hardwareDecodingCodecs);
+  ) => call(hardwareDecodingCodecs: hardwareDecodingCodecs);
 
   @override
   EncodingOptions allowOnDemandMetadataBasedKeyframeExtractionForExtensions(
     List<String>? allowOnDemandMetadataBasedKeyframeExtractionForExtensions,
-  ) => this(
+  ) => call(
     allowOnDemandMetadataBasedKeyframeExtractionForExtensions:
         allowOnDemandMetadataBasedKeyframeExtractionForExtensions,
   );
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `EncodingOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `EncodingOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// EncodingOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   EncodingOptions call({
     Object? encodingThreadCount = const $CopyWithPlaceholder(),
     Object? transcodingTempPath = const $CopyWithPlaceholder(),
@@ -667,7 +670,8 @@ class _$EncodingOptionsCWProxyImpl implements _$EncodingOptionsCWProxy {
 }
 
 extension $EncodingOptionsCopyWith on EncodingOptions {
-  /// Returns a callable class that can be used as follows: `instanceOfEncodingOptions.copyWith(...)` or like so:`instanceOfEncodingOptions.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfEncodingOptions.copyWith(...)` or `instanceOfEncodingOptions.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$EncodingOptionsCWProxy get copyWith => _$EncodingOptionsCWProxyImpl(this);
 }

@@ -315,12 +315,13 @@ abstract class _$BaseItemDtoCWProxy {
 
   BaseItemDto currentProgram(BaseItemDto? currentProgram);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BaseItemDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BaseItemDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BaseItemDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BaseItemDto call({
     String? name,
     String? originalTitle,
@@ -478,564 +479,566 @@ abstract class _$BaseItemDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfBaseItemDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfBaseItemDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfBaseItemDto.copyWith(...)` or call `instanceOfBaseItemDto.copyWith.fieldName(value)` for a single field.
 class _$BaseItemDtoCWProxyImpl implements _$BaseItemDtoCWProxy {
   const _$BaseItemDtoCWProxyImpl(this._value);
 
   final BaseItemDto _value;
 
   @override
-  BaseItemDto name(String? name) => this(name: name);
+  BaseItemDto name(String? name) => call(name: name);
 
   @override
   BaseItemDto originalTitle(String? originalTitle) =>
-      this(originalTitle: originalTitle);
+      call(originalTitle: originalTitle);
 
   @override
-  BaseItemDto serverId(String? serverId) => this(serverId: serverId);
+  BaseItemDto serverId(String? serverId) => call(serverId: serverId);
 
   @override
-  BaseItemDto id(String? id) => this(id: id);
+  BaseItemDto id(String? id) => call(id: id);
 
   @override
-  BaseItemDto etag(String? etag) => this(etag: etag);
+  BaseItemDto etag(String? etag) => call(etag: etag);
 
   @override
-  BaseItemDto sourceType(String? sourceType) => this(sourceType: sourceType);
+  BaseItemDto sourceType(String? sourceType) => call(sourceType: sourceType);
 
   @override
   BaseItemDto playlistItemId(String? playlistItemId) =>
-      this(playlistItemId: playlistItemId);
+      call(playlistItemId: playlistItemId);
 
   @override
   BaseItemDto dateCreated(DateTime? dateCreated) =>
-      this(dateCreated: dateCreated);
+      call(dateCreated: dateCreated);
 
   @override
   BaseItemDto dateLastMediaAdded(DateTime? dateLastMediaAdded) =>
-      this(dateLastMediaAdded: dateLastMediaAdded);
+      call(dateLastMediaAdded: dateLastMediaAdded);
 
   @override
-  BaseItemDto extraType(ExtraType? extraType) => this(extraType: extraType);
+  BaseItemDto extraType(ExtraType? extraType) => call(extraType: extraType);
 
   @override
   BaseItemDto airsBeforeSeasonNumber(int? airsBeforeSeasonNumber) =>
-      this(airsBeforeSeasonNumber: airsBeforeSeasonNumber);
+      call(airsBeforeSeasonNumber: airsBeforeSeasonNumber);
 
   @override
   BaseItemDto airsAfterSeasonNumber(int? airsAfterSeasonNumber) =>
-      this(airsAfterSeasonNumber: airsAfterSeasonNumber);
+      call(airsAfterSeasonNumber: airsAfterSeasonNumber);
 
   @override
   BaseItemDto airsBeforeEpisodeNumber(int? airsBeforeEpisodeNumber) =>
-      this(airsBeforeEpisodeNumber: airsBeforeEpisodeNumber);
+      call(airsBeforeEpisodeNumber: airsBeforeEpisodeNumber);
 
   @override
-  BaseItemDto canDelete(bool? canDelete) => this(canDelete: canDelete);
+  BaseItemDto canDelete(bool? canDelete) => call(canDelete: canDelete);
 
   @override
-  BaseItemDto canDownload(bool? canDownload) => this(canDownload: canDownload);
+  BaseItemDto canDownload(bool? canDownload) => call(canDownload: canDownload);
 
   @override
-  BaseItemDto hasLyrics(bool? hasLyrics) => this(hasLyrics: hasLyrics);
+  BaseItemDto hasLyrics(bool? hasLyrics) => call(hasLyrics: hasLyrics);
 
   @override
   BaseItemDto hasSubtitles(bool? hasSubtitles) =>
-      this(hasSubtitles: hasSubtitles);
+      call(hasSubtitles: hasSubtitles);
 
   @override
   BaseItemDto preferredMetadataLanguage(String? preferredMetadataLanguage) =>
-      this(preferredMetadataLanguage: preferredMetadataLanguage);
+      call(preferredMetadataLanguage: preferredMetadataLanguage);
 
   @override
   BaseItemDto preferredMetadataCountryCode(
     String? preferredMetadataCountryCode,
-  ) => this(preferredMetadataCountryCode: preferredMetadataCountryCode);
+  ) => call(preferredMetadataCountryCode: preferredMetadataCountryCode);
 
   @override
-  BaseItemDto container(String? container) => this(container: container);
+  BaseItemDto container(String? container) => call(container: container);
 
   @override
-  BaseItemDto sortName(String? sortName) => this(sortName: sortName);
+  BaseItemDto sortName(String? sortName) => call(sortName: sortName);
 
   @override
   BaseItemDto forcedSortName(String? forcedSortName) =>
-      this(forcedSortName: forcedSortName);
+      call(forcedSortName: forcedSortName);
 
   @override
   BaseItemDto video3DFormat(Video3DFormat? video3DFormat) =>
-      this(video3DFormat: video3DFormat);
+      call(video3DFormat: video3DFormat);
 
   @override
   BaseItemDto premiereDate(DateTime? premiereDate) =>
-      this(premiereDate: premiereDate);
+      call(premiereDate: premiereDate);
 
   @override
   BaseItemDto externalUrls(List<ExternalUrl>? externalUrls) =>
-      this(externalUrls: externalUrls);
+      call(externalUrls: externalUrls);
 
   @override
   BaseItemDto mediaSources(List<MediaSourceInfo>? mediaSources) =>
-      this(mediaSources: mediaSources);
+      call(mediaSources: mediaSources);
 
   @override
   BaseItemDto criticRating(double? criticRating) =>
-      this(criticRating: criticRating);
+      call(criticRating: criticRating);
 
   @override
   BaseItemDto productionLocations(List<String>? productionLocations) =>
-      this(productionLocations: productionLocations);
+      call(productionLocations: productionLocations);
 
   @override
-  BaseItemDto path(String? path) => this(path: path);
+  BaseItemDto path(String? path) => call(path: path);
 
   @override
   BaseItemDto enableMediaSourceDisplay(bool? enableMediaSourceDisplay) =>
-      this(enableMediaSourceDisplay: enableMediaSourceDisplay);
+      call(enableMediaSourceDisplay: enableMediaSourceDisplay);
 
   @override
   BaseItemDto officialRating(String? officialRating) =>
-      this(officialRating: officialRating);
+      call(officialRating: officialRating);
 
   @override
   BaseItemDto customRating(String? customRating) =>
-      this(customRating: customRating);
+      call(customRating: customRating);
 
   @override
-  BaseItemDto channelId(String? channelId) => this(channelId: channelId);
+  BaseItemDto channelId(String? channelId) => call(channelId: channelId);
 
   @override
   BaseItemDto channelName(String? channelName) =>
-      this(channelName: channelName);
+      call(channelName: channelName);
 
   @override
-  BaseItemDto overview(String? overview) => this(overview: overview);
+  BaseItemDto overview(String? overview) => call(overview: overview);
 
   @override
-  BaseItemDto taglines(List<String>? taglines) => this(taglines: taglines);
+  BaseItemDto taglines(List<String>? taglines) => call(taglines: taglines);
 
   @override
-  BaseItemDto genres(List<String>? genres) => this(genres: genres);
+  BaseItemDto genres(List<String>? genres) => call(genres: genres);
 
   @override
   BaseItemDto communityRating(double? communityRating) =>
-      this(communityRating: communityRating);
+      call(communityRating: communityRating);
 
   @override
   BaseItemDto cumulativeRunTimeTicks(int? cumulativeRunTimeTicks) =>
-      this(cumulativeRunTimeTicks: cumulativeRunTimeTicks);
+      call(cumulativeRunTimeTicks: cumulativeRunTimeTicks);
 
   @override
   BaseItemDto runTimeTicks(int? runTimeTicks) =>
-      this(runTimeTicks: runTimeTicks);
+      call(runTimeTicks: runTimeTicks);
 
   @override
   BaseItemDto playAccess(PlayAccess? playAccess) =>
-      this(playAccess: playAccess);
+      call(playAccess: playAccess);
 
   @override
   BaseItemDto aspectRatio(String? aspectRatio) =>
-      this(aspectRatio: aspectRatio);
+      call(aspectRatio: aspectRatio);
 
   @override
   BaseItemDto productionYear(int? productionYear) =>
-      this(productionYear: productionYear);
+      call(productionYear: productionYear);
 
   @override
   BaseItemDto isPlaceHolder(bool? isPlaceHolder) =>
-      this(isPlaceHolder: isPlaceHolder);
+      call(isPlaceHolder: isPlaceHolder);
 
   @override
-  BaseItemDto number(String? number) => this(number: number);
+  BaseItemDto number(String? number) => call(number: number);
 
   @override
   BaseItemDto channelNumber(String? channelNumber) =>
-      this(channelNumber: channelNumber);
+      call(channelNumber: channelNumber);
 
   @override
-  BaseItemDto indexNumber(int? indexNumber) => this(indexNumber: indexNumber);
+  BaseItemDto indexNumber(int? indexNumber) => call(indexNumber: indexNumber);
 
   @override
   BaseItemDto indexNumberEnd(int? indexNumberEnd) =>
-      this(indexNumberEnd: indexNumberEnd);
+      call(indexNumberEnd: indexNumberEnd);
 
   @override
   BaseItemDto parentIndexNumber(int? parentIndexNumber) =>
-      this(parentIndexNumber: parentIndexNumber);
+      call(parentIndexNumber: parentIndexNumber);
 
   @override
   BaseItemDto remoteTrailers(List<MediaUrl>? remoteTrailers) =>
-      this(remoteTrailers: remoteTrailers);
+      call(remoteTrailers: remoteTrailers);
 
   @override
   BaseItemDto providerIds(Map<String, String>? providerIds) =>
-      this(providerIds: providerIds);
+      call(providerIds: providerIds);
 
   @override
-  BaseItemDto isHD(bool? isHD) => this(isHD: isHD);
+  BaseItemDto isHD(bool? isHD) => call(isHD: isHD);
 
   @override
-  BaseItemDto isFolder(bool? isFolder) => this(isFolder: isFolder);
+  BaseItemDto isFolder(bool? isFolder) => call(isFolder: isFolder);
 
   @override
-  BaseItemDto parentId(String? parentId) => this(parentId: parentId);
+  BaseItemDto parentId(String? parentId) => call(parentId: parentId);
 
   @override
-  BaseItemDto type(BaseItemKind? type) => this(type: type);
+  BaseItemDto type(BaseItemKind? type) => call(type: type);
 
   @override
-  BaseItemDto people(List<BaseItemPerson>? people) => this(people: people);
+  BaseItemDto people(List<BaseItemPerson>? people) => call(people: people);
 
   @override
-  BaseItemDto studios(List<NameGuidPair>? studios) => this(studios: studios);
+  BaseItemDto studios(List<NameGuidPair>? studios) => call(studios: studios);
 
   @override
   BaseItemDto genreItems(List<NameGuidPair>? genreItems) =>
-      this(genreItems: genreItems);
+      call(genreItems: genreItems);
 
   @override
   BaseItemDto parentLogoItemId(String? parentLogoItemId) =>
-      this(parentLogoItemId: parentLogoItemId);
+      call(parentLogoItemId: parentLogoItemId);
 
   @override
   BaseItemDto parentBackdropItemId(String? parentBackdropItemId) =>
-      this(parentBackdropItemId: parentBackdropItemId);
+      call(parentBackdropItemId: parentBackdropItemId);
 
   @override
   BaseItemDto parentBackdropImageTags(List<String>? parentBackdropImageTags) =>
-      this(parentBackdropImageTags: parentBackdropImageTags);
+      call(parentBackdropImageTags: parentBackdropImageTags);
 
   @override
   BaseItemDto localTrailerCount(int? localTrailerCount) =>
-      this(localTrailerCount: localTrailerCount);
+      call(localTrailerCount: localTrailerCount);
 
   @override
-  BaseItemDto userData(UserItemDataDto? userData) => this(userData: userData);
+  BaseItemDto userData(UserItemDataDto? userData) => call(userData: userData);
 
   @override
   BaseItemDto recursiveItemCount(int? recursiveItemCount) =>
-      this(recursiveItemCount: recursiveItemCount);
+      call(recursiveItemCount: recursiveItemCount);
 
   @override
-  BaseItemDto childCount(int? childCount) => this(childCount: childCount);
+  BaseItemDto childCount(int? childCount) => call(childCount: childCount);
 
   @override
-  BaseItemDto seriesName(String? seriesName) => this(seriesName: seriesName);
+  BaseItemDto seriesName(String? seriesName) => call(seriesName: seriesName);
 
   @override
-  BaseItemDto seriesId(String? seriesId) => this(seriesId: seriesId);
+  BaseItemDto seriesId(String? seriesId) => call(seriesId: seriesId);
 
   @override
-  BaseItemDto seasonId(String? seasonId) => this(seasonId: seasonId);
+  BaseItemDto seasonId(String? seasonId) => call(seasonId: seasonId);
 
   @override
   BaseItemDto specialFeatureCount(int? specialFeatureCount) =>
-      this(specialFeatureCount: specialFeatureCount);
+      call(specialFeatureCount: specialFeatureCount);
 
   @override
   BaseItemDto displayPreferencesId(String? displayPreferencesId) =>
-      this(displayPreferencesId: displayPreferencesId);
+      call(displayPreferencesId: displayPreferencesId);
 
   @override
-  BaseItemDto status(String? status) => this(status: status);
+  BaseItemDto status(String? status) => call(status: status);
 
   @override
-  BaseItemDto airTime(String? airTime) => this(airTime: airTime);
+  BaseItemDto airTime(String? airTime) => call(airTime: airTime);
 
   @override
-  BaseItemDto airDays(List<DayOfWeek>? airDays) => this(airDays: airDays);
+  BaseItemDto airDays(List<DayOfWeek>? airDays) => call(airDays: airDays);
 
   @override
-  BaseItemDto tags(List<String>? tags) => this(tags: tags);
+  BaseItemDto tags(List<String>? tags) => call(tags: tags);
 
   @override
   BaseItemDto primaryImageAspectRatio(double? primaryImageAspectRatio) =>
-      this(primaryImageAspectRatio: primaryImageAspectRatio);
+      call(primaryImageAspectRatio: primaryImageAspectRatio);
 
   @override
-  BaseItemDto artists(List<String>? artists) => this(artists: artists);
+  BaseItemDto artists(List<String>? artists) => call(artists: artists);
 
   @override
   BaseItemDto artistItems(List<NameGuidPair>? artistItems) =>
-      this(artistItems: artistItems);
+      call(artistItems: artistItems);
 
   @override
-  BaseItemDto album(String? album) => this(album: album);
+  BaseItemDto album(String? album) => call(album: album);
 
   @override
   BaseItemDto collectionType(CollectionType? collectionType) =>
-      this(collectionType: collectionType);
+      call(collectionType: collectionType);
 
   @override
   BaseItemDto displayOrder(String? displayOrder) =>
-      this(displayOrder: displayOrder);
+      call(displayOrder: displayOrder);
 
   @override
-  BaseItemDto albumId(String? albumId) => this(albumId: albumId);
+  BaseItemDto albumId(String? albumId) => call(albumId: albumId);
 
   @override
   BaseItemDto albumPrimaryImageTag(String? albumPrimaryImageTag) =>
-      this(albumPrimaryImageTag: albumPrimaryImageTag);
+      call(albumPrimaryImageTag: albumPrimaryImageTag);
 
   @override
   BaseItemDto seriesPrimaryImageTag(String? seriesPrimaryImageTag) =>
-      this(seriesPrimaryImageTag: seriesPrimaryImageTag);
+      call(seriesPrimaryImageTag: seriesPrimaryImageTag);
 
   @override
   BaseItemDto albumArtist(String? albumArtist) =>
-      this(albumArtist: albumArtist);
+      call(albumArtist: albumArtist);
 
   @override
   BaseItemDto albumArtists(List<NameGuidPair>? albumArtists) =>
-      this(albumArtists: albumArtists);
+      call(albumArtists: albumArtists);
 
   @override
-  BaseItemDto seasonName(String? seasonName) => this(seasonName: seasonName);
+  BaseItemDto seasonName(String? seasonName) => call(seasonName: seasonName);
 
   @override
   BaseItemDto mediaStreams(List<MediaStream>? mediaStreams) =>
-      this(mediaStreams: mediaStreams);
+      call(mediaStreams: mediaStreams);
 
   @override
-  BaseItemDto videoType(VideoType? videoType) => this(videoType: videoType);
+  BaseItemDto videoType(VideoType? videoType) => call(videoType: videoType);
 
   @override
-  BaseItemDto partCount(int? partCount) => this(partCount: partCount);
+  BaseItemDto partCount(int? partCount) => call(partCount: partCount);
 
   @override
   BaseItemDto mediaSourceCount(int? mediaSourceCount) =>
-      this(mediaSourceCount: mediaSourceCount);
+      call(mediaSourceCount: mediaSourceCount);
 
   @override
   BaseItemDto imageTags(Map<String, String>? imageTags) =>
-      this(imageTags: imageTags);
+      call(imageTags: imageTags);
 
   @override
   BaseItemDto backdropImageTags(List<String>? backdropImageTags) =>
-      this(backdropImageTags: backdropImageTags);
+      call(backdropImageTags: backdropImageTags);
 
   @override
   BaseItemDto screenshotImageTags(List<String>? screenshotImageTags) =>
-      this(screenshotImageTags: screenshotImageTags);
+      call(screenshotImageTags: screenshotImageTags);
 
   @override
   BaseItemDto parentLogoImageTag(String? parentLogoImageTag) =>
-      this(parentLogoImageTag: parentLogoImageTag);
+      call(parentLogoImageTag: parentLogoImageTag);
 
   @override
   BaseItemDto parentArtItemId(String? parentArtItemId) =>
-      this(parentArtItemId: parentArtItemId);
+      call(parentArtItemId: parentArtItemId);
 
   @override
   BaseItemDto parentArtImageTag(String? parentArtImageTag) =>
-      this(parentArtImageTag: parentArtImageTag);
+      call(parentArtImageTag: parentArtImageTag);
 
   @override
   BaseItemDto seriesThumbImageTag(String? seriesThumbImageTag) =>
-      this(seriesThumbImageTag: seriesThumbImageTag);
+      call(seriesThumbImageTag: seriesThumbImageTag);
 
   @override
   BaseItemDto imageBlurHashes(BaseItemDtoImageBlurHashes? imageBlurHashes) =>
-      this(imageBlurHashes: imageBlurHashes);
+      call(imageBlurHashes: imageBlurHashes);
 
   @override
   BaseItemDto seriesStudio(String? seriesStudio) =>
-      this(seriesStudio: seriesStudio);
+      call(seriesStudio: seriesStudio);
 
   @override
   BaseItemDto parentThumbItemId(String? parentThumbItemId) =>
-      this(parentThumbItemId: parentThumbItemId);
+      call(parentThumbItemId: parentThumbItemId);
 
   @override
   BaseItemDto parentThumbImageTag(String? parentThumbImageTag) =>
-      this(parentThumbImageTag: parentThumbImageTag);
+      call(parentThumbImageTag: parentThumbImageTag);
 
   @override
   BaseItemDto parentPrimaryImageItemId(String? parentPrimaryImageItemId) =>
-      this(parentPrimaryImageItemId: parentPrimaryImageItemId);
+      call(parentPrimaryImageItemId: parentPrimaryImageItemId);
 
   @override
   BaseItemDto parentPrimaryImageTag(String? parentPrimaryImageTag) =>
-      this(parentPrimaryImageTag: parentPrimaryImageTag);
+      call(parentPrimaryImageTag: parentPrimaryImageTag);
 
   @override
-  BaseItemDto chapters(List<ChapterInfo>? chapters) => this(chapters: chapters);
+  BaseItemDto chapters(List<ChapterInfo>? chapters) => call(chapters: chapters);
 
   @override
   BaseItemDto trickplay(
     Map<String, Map<String, TrickplayInfoDto>>? trickplay,
-  ) => this(trickplay: trickplay);
+  ) => call(trickplay: trickplay);
 
   @override
   BaseItemDto locationType(LocationType? locationType) =>
-      this(locationType: locationType);
+      call(locationType: locationType);
 
   @override
-  BaseItemDto isoType(IsoType? isoType) => this(isoType: isoType);
+  BaseItemDto isoType(IsoType? isoType) => call(isoType: isoType);
 
   @override
-  BaseItemDto mediaType(MediaType? mediaType) => this(mediaType: mediaType);
+  BaseItemDto mediaType(MediaType? mediaType) => call(mediaType: mediaType);
 
   @override
-  BaseItemDto endDate(DateTime? endDate) => this(endDate: endDate);
+  BaseItemDto endDate(DateTime? endDate) => call(endDate: endDate);
 
   @override
   BaseItemDto lockedFields(List<MetadataField>? lockedFields) =>
-      this(lockedFields: lockedFields);
+      call(lockedFields: lockedFields);
 
   @override
   BaseItemDto trailerCount(int? trailerCount) =>
-      this(trailerCount: trailerCount);
+      call(trailerCount: trailerCount);
 
   @override
-  BaseItemDto movieCount(int? movieCount) => this(movieCount: movieCount);
+  BaseItemDto movieCount(int? movieCount) => call(movieCount: movieCount);
 
   @override
-  BaseItemDto seriesCount(int? seriesCount) => this(seriesCount: seriesCount);
+  BaseItemDto seriesCount(int? seriesCount) => call(seriesCount: seriesCount);
 
   @override
   BaseItemDto programCount(int? programCount) =>
-      this(programCount: programCount);
+      call(programCount: programCount);
 
   @override
   BaseItemDto episodeCount(int? episodeCount) =>
-      this(episodeCount: episodeCount);
+      call(episodeCount: episodeCount);
 
   @override
-  BaseItemDto songCount(int? songCount) => this(songCount: songCount);
+  BaseItemDto songCount(int? songCount) => call(songCount: songCount);
 
   @override
-  BaseItemDto albumCount(int? albumCount) => this(albumCount: albumCount);
+  BaseItemDto albumCount(int? albumCount) => call(albumCount: albumCount);
 
   @override
-  BaseItemDto artistCount(int? artistCount) => this(artistCount: artistCount);
+  BaseItemDto artistCount(int? artistCount) => call(artistCount: artistCount);
 
   @override
   BaseItemDto musicVideoCount(int? musicVideoCount) =>
-      this(musicVideoCount: musicVideoCount);
+      call(musicVideoCount: musicVideoCount);
 
   @override
-  BaseItemDto lockData(bool? lockData) => this(lockData: lockData);
+  BaseItemDto lockData(bool? lockData) => call(lockData: lockData);
 
   @override
-  BaseItemDto width(int? width) => this(width: width);
+  BaseItemDto width(int? width) => call(width: width);
 
   @override
-  BaseItemDto height(int? height) => this(height: height);
+  BaseItemDto height(int? height) => call(height: height);
 
   @override
-  BaseItemDto cameraMake(String? cameraMake) => this(cameraMake: cameraMake);
+  BaseItemDto cameraMake(String? cameraMake) => call(cameraMake: cameraMake);
 
   @override
   BaseItemDto cameraModel(String? cameraModel) =>
-      this(cameraModel: cameraModel);
+      call(cameraModel: cameraModel);
 
   @override
-  BaseItemDto software(String? software) => this(software: software);
+  BaseItemDto software(String? software) => call(software: software);
 
   @override
   BaseItemDto exposureTime(double? exposureTime) =>
-      this(exposureTime: exposureTime);
+      call(exposureTime: exposureTime);
 
   @override
   BaseItemDto focalLength(double? focalLength) =>
-      this(focalLength: focalLength);
+      call(focalLength: focalLength);
 
   @override
   BaseItemDto imageOrientation(ImageOrientation? imageOrientation) =>
-      this(imageOrientation: imageOrientation);
+      call(imageOrientation: imageOrientation);
 
   @override
-  BaseItemDto aperture(double? aperture) => this(aperture: aperture);
+  BaseItemDto aperture(double? aperture) => call(aperture: aperture);
 
   @override
   BaseItemDto shutterSpeed(double? shutterSpeed) =>
-      this(shutterSpeed: shutterSpeed);
+      call(shutterSpeed: shutterSpeed);
 
   @override
-  BaseItemDto latitude(double? latitude) => this(latitude: latitude);
+  BaseItemDto latitude(double? latitude) => call(latitude: latitude);
 
   @override
-  BaseItemDto longitude(double? longitude) => this(longitude: longitude);
+  BaseItemDto longitude(double? longitude) => call(longitude: longitude);
 
   @override
-  BaseItemDto altitude(double? altitude) => this(altitude: altitude);
+  BaseItemDto altitude(double? altitude) => call(altitude: altitude);
 
   @override
   BaseItemDto isoSpeedRating(int? isoSpeedRating) =>
-      this(isoSpeedRating: isoSpeedRating);
+      call(isoSpeedRating: isoSpeedRating);
 
   @override
   BaseItemDto seriesTimerId(String? seriesTimerId) =>
-      this(seriesTimerId: seriesTimerId);
+      call(seriesTimerId: seriesTimerId);
 
   @override
-  BaseItemDto programId(String? programId) => this(programId: programId);
+  BaseItemDto programId(String? programId) => call(programId: programId);
 
   @override
   BaseItemDto channelPrimaryImageTag(String? channelPrimaryImageTag) =>
-      this(channelPrimaryImageTag: channelPrimaryImageTag);
+      call(channelPrimaryImageTag: channelPrimaryImageTag);
 
   @override
-  BaseItemDto startDate(DateTime? startDate) => this(startDate: startDate);
+  BaseItemDto startDate(DateTime? startDate) => call(startDate: startDate);
 
   @override
   BaseItemDto completionPercentage(double? completionPercentage) =>
-      this(completionPercentage: completionPercentage);
+      call(completionPercentage: completionPercentage);
 
   @override
-  BaseItemDto isRepeat(bool? isRepeat) => this(isRepeat: isRepeat);
+  BaseItemDto isRepeat(bool? isRepeat) => call(isRepeat: isRepeat);
 
   @override
   BaseItemDto episodeTitle(String? episodeTitle) =>
-      this(episodeTitle: episodeTitle);
+      call(episodeTitle: episodeTitle);
 
   @override
   BaseItemDto channelType(ChannelType? channelType) =>
-      this(channelType: channelType);
+      call(channelType: channelType);
 
   @override
-  BaseItemDto audio(ProgramAudio? audio) => this(audio: audio);
+  BaseItemDto audio(ProgramAudio? audio) => call(audio: audio);
 
   @override
-  BaseItemDto isMovie(bool? isMovie) => this(isMovie: isMovie);
+  BaseItemDto isMovie(bool? isMovie) => call(isMovie: isMovie);
 
   @override
-  BaseItemDto isSports(bool? isSports) => this(isSports: isSports);
+  BaseItemDto isSports(bool? isSports) => call(isSports: isSports);
 
   @override
-  BaseItemDto isSeries(bool? isSeries) => this(isSeries: isSeries);
+  BaseItemDto isSeries(bool? isSeries) => call(isSeries: isSeries);
 
   @override
-  BaseItemDto isLive(bool? isLive) => this(isLive: isLive);
+  BaseItemDto isLive(bool? isLive) => call(isLive: isLive);
 
   @override
-  BaseItemDto isNews(bool? isNews) => this(isNews: isNews);
+  BaseItemDto isNews(bool? isNews) => call(isNews: isNews);
 
   @override
-  BaseItemDto isKids(bool? isKids) => this(isKids: isKids);
+  BaseItemDto isKids(bool? isKids) => call(isKids: isKids);
 
   @override
-  BaseItemDto isPremiere(bool? isPremiere) => this(isPremiere: isPremiere);
+  BaseItemDto isPremiere(bool? isPremiere) => call(isPremiere: isPremiere);
 
   @override
-  BaseItemDto timerId(String? timerId) => this(timerId: timerId);
+  BaseItemDto timerId(String? timerId) => call(timerId: timerId);
 
   @override
   BaseItemDto normalizationGain(double? normalizationGain) =>
-      this(normalizationGain: normalizationGain);
+      call(normalizationGain: normalizationGain);
 
   @override
   BaseItemDto currentProgram(BaseItemDto? currentProgram) =>
-      this(currentProgram: currentProgram);
+      call(currentProgram: currentProgram);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BaseItemDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BaseItemDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BaseItemDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BaseItemDto call({
     Object? name = const $CopyWithPlaceholder(),
     Object? originalTitle = const $CopyWithPlaceholder(),
@@ -1822,7 +1825,8 @@ class _$BaseItemDtoCWProxyImpl implements _$BaseItemDtoCWProxy {
 }
 
 extension $BaseItemDtoCopyWith on BaseItemDto {
-  /// Returns a callable class that can be used as follows: `instanceOfBaseItemDto.copyWith(...)` or like so:`instanceOfBaseItemDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfBaseItemDto.copyWith(...)` or `instanceOfBaseItemDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$BaseItemDtoCWProxy get copyWith => _$BaseItemDtoCWProxyImpl(this);
 }

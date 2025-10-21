@@ -13,37 +13,40 @@ abstract class _$GroupUpdateCWProxy {
 
   GroupUpdate type(GroupUpdateType? type);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GroupUpdate(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GroupUpdate(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GroupUpdate(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GroupUpdate call({String? groupId, String? data, GroupUpdateType? type});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfGroupUpdate.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfGroupUpdate.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfGroupUpdate.copyWith(...)` or call `instanceOfGroupUpdate.copyWith.fieldName(value)` for a single field.
 class _$GroupUpdateCWProxyImpl implements _$GroupUpdateCWProxy {
   const _$GroupUpdateCWProxyImpl(this._value);
 
   final GroupUpdate _value;
 
   @override
-  GroupUpdate groupId(String? groupId) => this(groupId: groupId);
+  GroupUpdate groupId(String? groupId) => call(groupId: groupId);
 
   @override
-  GroupUpdate data(String? data) => this(data: data);
+  GroupUpdate data(String? data) => call(data: data);
 
   @override
-  GroupUpdate type(GroupUpdateType? type) => this(type: type);
+  GroupUpdate type(GroupUpdateType? type) => call(type: type);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GroupUpdate(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GroupUpdate(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GroupUpdate(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GroupUpdate call({
     Object? groupId = const $CopyWithPlaceholder(),
     Object? data = const $CopyWithPlaceholder(),
@@ -67,7 +70,8 @@ class _$GroupUpdateCWProxyImpl implements _$GroupUpdateCWProxy {
 }
 
 extension $GroupUpdateCopyWith on GroupUpdate {
-  /// Returns a callable class that can be used as follows: `instanceOfGroupUpdate.copyWith(...)` or like so:`instanceOfGroupUpdate.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfGroupUpdate.copyWith(...)` or `instanceOfGroupUpdate.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$GroupUpdateCWProxy get copyWith => _$GroupUpdateCWProxyImpl(this);
 }

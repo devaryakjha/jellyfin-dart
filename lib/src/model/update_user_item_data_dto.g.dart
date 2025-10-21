@@ -29,12 +29,13 @@ abstract class _$UpdateUserItemDataDtoCWProxy {
 
   UpdateUserItemDataDto itemId(String? itemId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UpdateUserItemDataDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UpdateUserItemDataDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UpdateUserItemDataDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UpdateUserItemDataDto call({
     double? rating,
     double? playedPercentage,
@@ -50,7 +51,8 @@ abstract class _$UpdateUserItemDataDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUpdateUserItemDataDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUpdateUserItemDataDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUpdateUserItemDataDto.copyWith(...)` or call `instanceOfUpdateUserItemDataDto.copyWith.fieldName(value)` for a single field.
 class _$UpdateUserItemDataDtoCWProxyImpl
     implements _$UpdateUserItemDataDtoCWProxy {
   const _$UpdateUserItemDataDtoCWProxyImpl(this._value);
@@ -58,50 +60,51 @@ class _$UpdateUserItemDataDtoCWProxyImpl
   final UpdateUserItemDataDto _value;
 
   @override
-  UpdateUserItemDataDto rating(double? rating) => this(rating: rating);
+  UpdateUserItemDataDto rating(double? rating) => call(rating: rating);
 
   @override
   UpdateUserItemDataDto playedPercentage(double? playedPercentage) =>
-      this(playedPercentage: playedPercentage);
+      call(playedPercentage: playedPercentage);
 
   @override
   UpdateUserItemDataDto unplayedItemCount(int? unplayedItemCount) =>
-      this(unplayedItemCount: unplayedItemCount);
+      call(unplayedItemCount: unplayedItemCount);
 
   @override
   UpdateUserItemDataDto playbackPositionTicks(int? playbackPositionTicks) =>
-      this(playbackPositionTicks: playbackPositionTicks);
+      call(playbackPositionTicks: playbackPositionTicks);
 
   @override
-  UpdateUserItemDataDto playCount(int? playCount) => this(playCount: playCount);
+  UpdateUserItemDataDto playCount(int? playCount) => call(playCount: playCount);
 
   @override
   UpdateUserItemDataDto isFavorite(bool? isFavorite) =>
-      this(isFavorite: isFavorite);
+      call(isFavorite: isFavorite);
 
   @override
-  UpdateUserItemDataDto likes(bool? likes) => this(likes: likes);
+  UpdateUserItemDataDto likes(bool? likes) => call(likes: likes);
 
   @override
   UpdateUserItemDataDto lastPlayedDate(DateTime? lastPlayedDate) =>
-      this(lastPlayedDate: lastPlayedDate);
+      call(lastPlayedDate: lastPlayedDate);
 
   @override
-  UpdateUserItemDataDto played(bool? played) => this(played: played);
+  UpdateUserItemDataDto played(bool? played) => call(played: played);
 
   @override
-  UpdateUserItemDataDto key(String? key) => this(key: key);
+  UpdateUserItemDataDto key(String? key) => call(key: key);
 
   @override
-  UpdateUserItemDataDto itemId(String? itemId) => this(itemId: itemId);
+  UpdateUserItemDataDto itemId(String? itemId) => call(itemId: itemId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UpdateUserItemDataDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UpdateUserItemDataDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UpdateUserItemDataDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UpdateUserItemDataDto call({
     Object? rating = const $CopyWithPlaceholder(),
     Object? playedPercentage = const $CopyWithPlaceholder(),
@@ -166,7 +169,8 @@ class _$UpdateUserItemDataDtoCWProxyImpl
 }
 
 extension $UpdateUserItemDataDtoCopyWith on UpdateUserItemDataDto {
-  /// Returns a callable class that can be used as follows: `instanceOfUpdateUserItemDataDto.copyWith(...)` or like so:`instanceOfUpdateUserItemDataDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUpdateUserItemDataDto.copyWith(...)` or `instanceOfUpdateUserItemDataDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UpdateUserItemDataDtoCWProxy get copyWith =>
       _$UpdateUserItemDataDtoCWProxyImpl(this);

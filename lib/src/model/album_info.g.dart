@@ -35,12 +35,13 @@ abstract class _$AlbumInfoCWProxy {
 
   AlbumInfo songInfos(List<SongInfo>? songInfos);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AlbumInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AlbumInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AlbumInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AlbumInfo call({
     String? name,
     String? originalTitle,
@@ -59,69 +60,71 @@ abstract class _$AlbumInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfAlbumInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfAlbumInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfAlbumInfo.copyWith(...)` or call `instanceOfAlbumInfo.copyWith.fieldName(value)` for a single field.
 class _$AlbumInfoCWProxyImpl implements _$AlbumInfoCWProxy {
   const _$AlbumInfoCWProxyImpl(this._value);
 
   final AlbumInfo _value;
 
   @override
-  AlbumInfo name(String? name) => this(name: name);
+  AlbumInfo name(String? name) => call(name: name);
 
   @override
   AlbumInfo originalTitle(String? originalTitle) =>
-      this(originalTitle: originalTitle);
+      call(originalTitle: originalTitle);
 
   @override
-  AlbumInfo path(String? path) => this(path: path);
+  AlbumInfo path(String? path) => call(path: path);
 
   @override
   AlbumInfo metadataLanguage(String? metadataLanguage) =>
-      this(metadataLanguage: metadataLanguage);
+      call(metadataLanguage: metadataLanguage);
 
   @override
   AlbumInfo metadataCountryCode(String? metadataCountryCode) =>
-      this(metadataCountryCode: metadataCountryCode);
+      call(metadataCountryCode: metadataCountryCode);
 
   @override
   AlbumInfo providerIds(Map<String, String>? providerIds) =>
-      this(providerIds: providerIds);
+      call(providerIds: providerIds);
 
   @override
-  AlbumInfo year(int? year) => this(year: year);
+  AlbumInfo year(int? year) => call(year: year);
 
   @override
-  AlbumInfo indexNumber(int? indexNumber) => this(indexNumber: indexNumber);
+  AlbumInfo indexNumber(int? indexNumber) => call(indexNumber: indexNumber);
 
   @override
   AlbumInfo parentIndexNumber(int? parentIndexNumber) =>
-      this(parentIndexNumber: parentIndexNumber);
+      call(parentIndexNumber: parentIndexNumber);
 
   @override
   AlbumInfo premiereDate(DateTime? premiereDate) =>
-      this(premiereDate: premiereDate);
+      call(premiereDate: premiereDate);
 
   @override
-  AlbumInfo isAutomated(bool? isAutomated) => this(isAutomated: isAutomated);
+  AlbumInfo isAutomated(bool? isAutomated) => call(isAutomated: isAutomated);
 
   @override
   AlbumInfo albumArtists(List<String>? albumArtists) =>
-      this(albumArtists: albumArtists);
+      call(albumArtists: albumArtists);
 
   @override
   AlbumInfo artistProviderIds(Map<String, String>? artistProviderIds) =>
-      this(artistProviderIds: artistProviderIds);
+      call(artistProviderIds: artistProviderIds);
 
   @override
-  AlbumInfo songInfos(List<SongInfo>? songInfos) => this(songInfos: songInfos);
+  AlbumInfo songInfos(List<SongInfo>? songInfos) => call(songInfos: songInfos);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AlbumInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AlbumInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AlbumInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AlbumInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? originalTitle = const $CopyWithPlaceholder(),
@@ -200,7 +203,8 @@ class _$AlbumInfoCWProxyImpl implements _$AlbumInfoCWProxy {
 }
 
 extension $AlbumInfoCopyWith on AlbumInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfAlbumInfo.copyWith(...)` or like so:`instanceOfAlbumInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfAlbumInfo.copyWith(...)` or `instanceOfAlbumInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$AlbumInfoCWProxy get copyWith => _$AlbumInfoCWProxyImpl(this);
 }

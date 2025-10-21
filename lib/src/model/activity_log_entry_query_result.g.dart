@@ -13,12 +13,13 @@ abstract class _$ActivityLogEntryQueryResultCWProxy {
 
   ActivityLogEntryQueryResult startIndex(int? startIndex);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ActivityLogEntryQueryResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ActivityLogEntryQueryResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ActivityLogEntryQueryResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ActivityLogEntryQueryResult call({
     List<ActivityLogEntry>? items,
     int? totalRecordCount,
@@ -26,7 +27,8 @@ abstract class _$ActivityLogEntryQueryResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfActivityLogEntryQueryResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfActivityLogEntryQueryResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfActivityLogEntryQueryResult.copyWith(...)` or call `instanceOfActivityLogEntryQueryResult.copyWith.fieldName(value)` for a single field.
 class _$ActivityLogEntryQueryResultCWProxyImpl
     implements _$ActivityLogEntryQueryResultCWProxy {
   const _$ActivityLogEntryQueryResultCWProxyImpl(this._value);
@@ -35,23 +37,24 @@ class _$ActivityLogEntryQueryResultCWProxyImpl
 
   @override
   ActivityLogEntryQueryResult items(List<ActivityLogEntry>? items) =>
-      this(items: items);
+      call(items: items);
 
   @override
   ActivityLogEntryQueryResult totalRecordCount(int? totalRecordCount) =>
-      this(totalRecordCount: totalRecordCount);
+      call(totalRecordCount: totalRecordCount);
 
   @override
   ActivityLogEntryQueryResult startIndex(int? startIndex) =>
-      this(startIndex: startIndex);
+      call(startIndex: startIndex);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ActivityLogEntryQueryResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ActivityLogEntryQueryResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ActivityLogEntryQueryResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ActivityLogEntryQueryResult call({
     Object? items = const $CopyWithPlaceholder(),
     Object? totalRecordCount = const $CopyWithPlaceholder(),
@@ -75,7 +78,8 @@ class _$ActivityLogEntryQueryResultCWProxyImpl
 }
 
 extension $ActivityLogEntryQueryResultCopyWith on ActivityLogEntryQueryResult {
-  /// Returns a callable class that can be used as follows: `instanceOfActivityLogEntryQueryResult.copyWith(...)` or like so:`instanceOfActivityLogEntryQueryResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfActivityLogEntryQueryResult.copyWith(...)` or `instanceOfActivityLogEntryQueryResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ActivityLogEntryQueryResultCWProxy get copyWith =>
       _$ActivityLogEntryQueryResultCWProxyImpl(this);

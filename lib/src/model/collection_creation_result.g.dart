@@ -9,16 +9,18 @@ part of 'collection_creation_result.dart';
 abstract class _$CollectionCreationResultCWProxy {
   CollectionCreationResult id(String? id);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CollectionCreationResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CollectionCreationResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CollectionCreationResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CollectionCreationResult call({String? id});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfCollectionCreationResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfCollectionCreationResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfCollectionCreationResult.copyWith(...)` or call `instanceOfCollectionCreationResult.copyWith.fieldName(value)` for a single field.
 class _$CollectionCreationResultCWProxyImpl
     implements _$CollectionCreationResultCWProxy {
   const _$CollectionCreationResultCWProxyImpl(this._value);
@@ -26,15 +28,16 @@ class _$CollectionCreationResultCWProxyImpl
   final CollectionCreationResult _value;
 
   @override
-  CollectionCreationResult id(String? id) => this(id: id);
+  CollectionCreationResult id(String? id) => call(id: id);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CollectionCreationResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CollectionCreationResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CollectionCreationResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CollectionCreationResult call({Object? id = const $CopyWithPlaceholder()}) {
     return CollectionCreationResult(
       id: id == const $CopyWithPlaceholder()
@@ -46,7 +49,8 @@ class _$CollectionCreationResultCWProxyImpl
 }
 
 extension $CollectionCreationResultCopyWith on CollectionCreationResult {
-  /// Returns a callable class that can be used as follows: `instanceOfCollectionCreationResult.copyWith(...)` or like so:`instanceOfCollectionCreationResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfCollectionCreationResult.copyWith(...)` or `instanceOfCollectionCreationResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$CollectionCreationResultCWProxy get copyWith =>
       _$CollectionCreationResultCWProxyImpl(this);

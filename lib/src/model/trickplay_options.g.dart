@@ -33,12 +33,13 @@ abstract class _$TrickplayOptionsCWProxy {
 
   TrickplayOptions processThreads(int? processThreads);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TrickplayOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TrickplayOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TrickplayOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TrickplayOptions call({
     bool? enableHwAcceleration,
     bool? enableHwEncoding,
@@ -55,7 +56,8 @@ abstract class _$TrickplayOptionsCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTrickplayOptions.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTrickplayOptions.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTrickplayOptions.copyWith(...)` or call `instanceOfTrickplayOptions.copyWith.fieldName(value)` for a single field.
 class _$TrickplayOptionsCWProxyImpl implements _$TrickplayOptionsCWProxy {
   const _$TrickplayOptionsCWProxyImpl(this._value);
 
@@ -63,56 +65,57 @@ class _$TrickplayOptionsCWProxyImpl implements _$TrickplayOptionsCWProxy {
 
   @override
   TrickplayOptions enableHwAcceleration(bool? enableHwAcceleration) =>
-      this(enableHwAcceleration: enableHwAcceleration);
+      call(enableHwAcceleration: enableHwAcceleration);
 
   @override
   TrickplayOptions enableHwEncoding(bool? enableHwEncoding) =>
-      this(enableHwEncoding: enableHwEncoding);
+      call(enableHwEncoding: enableHwEncoding);
 
   @override
   TrickplayOptions enableKeyFrameOnlyExtraction(
     bool? enableKeyFrameOnlyExtraction,
-  ) => this(enableKeyFrameOnlyExtraction: enableKeyFrameOnlyExtraction);
+  ) => call(enableKeyFrameOnlyExtraction: enableKeyFrameOnlyExtraction);
 
   @override
   TrickplayOptions scanBehavior(TrickplayScanBehavior? scanBehavior) =>
-      this(scanBehavior: scanBehavior);
+      call(scanBehavior: scanBehavior);
 
   @override
   TrickplayOptions processPriority(ProcessPriorityClass? processPriority) =>
-      this(processPriority: processPriority);
+      call(processPriority: processPriority);
 
   @override
-  TrickplayOptions interval(int? interval) => this(interval: interval);
+  TrickplayOptions interval(int? interval) => call(interval: interval);
 
   @override
   TrickplayOptions widthResolutions(List<int>? widthResolutions) =>
-      this(widthResolutions: widthResolutions);
+      call(widthResolutions: widthResolutions);
 
   @override
-  TrickplayOptions tileWidth(int? tileWidth) => this(tileWidth: tileWidth);
+  TrickplayOptions tileWidth(int? tileWidth) => call(tileWidth: tileWidth);
 
   @override
-  TrickplayOptions tileHeight(int? tileHeight) => this(tileHeight: tileHeight);
+  TrickplayOptions tileHeight(int? tileHeight) => call(tileHeight: tileHeight);
 
   @override
-  TrickplayOptions qscale(int? qscale) => this(qscale: qscale);
+  TrickplayOptions qscale(int? qscale) => call(qscale: qscale);
 
   @override
   TrickplayOptions jpegQuality(int? jpegQuality) =>
-      this(jpegQuality: jpegQuality);
+      call(jpegQuality: jpegQuality);
 
   @override
   TrickplayOptions processThreads(int? processThreads) =>
-      this(processThreads: processThreads);
+      call(processThreads: processThreads);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TrickplayOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TrickplayOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TrickplayOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TrickplayOptions call({
     Object? enableHwAcceleration = const $CopyWithPlaceholder(),
     Object? enableHwEncoding = const $CopyWithPlaceholder(),
@@ -182,7 +185,8 @@ class _$TrickplayOptionsCWProxyImpl implements _$TrickplayOptionsCWProxy {
 }
 
 extension $TrickplayOptionsCopyWith on TrickplayOptions {
-  /// Returns a callable class that can be used as follows: `instanceOfTrickplayOptions.copyWith(...)` or like so:`instanceOfTrickplayOptions.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTrickplayOptions.copyWith(...)` or `instanceOfTrickplayOptions.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TrickplayOptionsCWProxy get copyWith => _$TrickplayOptionsCWProxyImpl(this);
 }

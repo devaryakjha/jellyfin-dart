@@ -35,7 +35,10 @@ abstract class _$LibraryOptionsCWProxy {
 
   LibraryOptions saveLocalMetadata(bool? saveLocalMetadata);
 
-  LibraryOptions enableInternetProviders(bool? enableInternetProviders);
+  LibraryOptions enableInternetProviders(
+    @Deprecated('enableInternetProviders has been deprecated')
+    bool? enableInternetProviders,
+  );
 
   LibraryOptions enableAutomaticSeriesGrouping(
     bool? enableAutomaticSeriesGrouping,
@@ -123,12 +126,13 @@ abstract class _$LibraryOptionsCWProxy {
 
   LibraryOptions typeOptions(List<TypeOptions>? typeOptions);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryOptions call({
     bool? enabled,
     bool? enablePhotos,
@@ -140,6 +144,7 @@ abstract class _$LibraryOptionsCWProxy {
     bool? extractTrickplayImagesDuringLibraryScan,
     List<MediaPathInfo>? pathInfos,
     bool? saveLocalMetadata,
+    @Deprecated('enableInternetProviders has been deprecated')
     bool? enableInternetProviders,
     bool? enableAutomaticSeriesGrouping,
     bool? enableEmbeddedTitles,
@@ -175,36 +180,37 @@ abstract class _$LibraryOptionsCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLibraryOptions.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLibraryOptions.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLibraryOptions.copyWith(...)` or call `instanceOfLibraryOptions.copyWith.fieldName(value)` for a single field.
 class _$LibraryOptionsCWProxyImpl implements _$LibraryOptionsCWProxy {
   const _$LibraryOptionsCWProxyImpl(this._value);
 
   final LibraryOptions _value;
 
   @override
-  LibraryOptions enabled(bool? enabled) => this(enabled: enabled);
+  LibraryOptions enabled(bool? enabled) => call(enabled: enabled);
 
   @override
   LibraryOptions enablePhotos(bool? enablePhotos) =>
-      this(enablePhotos: enablePhotos);
+      call(enablePhotos: enablePhotos);
 
   @override
   LibraryOptions enableRealtimeMonitor(bool? enableRealtimeMonitor) =>
-      this(enableRealtimeMonitor: enableRealtimeMonitor);
+      call(enableRealtimeMonitor: enableRealtimeMonitor);
 
   @override
   LibraryOptions enableLUFSScan(bool? enableLUFSScan) =>
-      this(enableLUFSScan: enableLUFSScan);
+      call(enableLUFSScan: enableLUFSScan);
 
   @override
   LibraryOptions enableChapterImageExtraction(
     bool? enableChapterImageExtraction,
-  ) => this(enableChapterImageExtraction: enableChapterImageExtraction);
+  ) => call(enableChapterImageExtraction: enableChapterImageExtraction);
 
   @override
   LibraryOptions extractChapterImagesDuringLibraryScan(
     bool? extractChapterImagesDuringLibraryScan,
-  ) => this(
+  ) => call(
     extractChapterImagesDuringLibraryScan:
         extractChapterImagesDuringLibraryScan,
   );
@@ -212,99 +218,101 @@ class _$LibraryOptionsCWProxyImpl implements _$LibraryOptionsCWProxy {
   @override
   LibraryOptions enableTrickplayImageExtraction(
     bool? enableTrickplayImageExtraction,
-  ) => this(enableTrickplayImageExtraction: enableTrickplayImageExtraction);
+  ) => call(enableTrickplayImageExtraction: enableTrickplayImageExtraction);
 
   @override
   LibraryOptions extractTrickplayImagesDuringLibraryScan(
     bool? extractTrickplayImagesDuringLibraryScan,
-  ) => this(
+  ) => call(
     extractTrickplayImagesDuringLibraryScan:
         extractTrickplayImagesDuringLibraryScan,
   );
 
   @override
   LibraryOptions pathInfos(List<MediaPathInfo>? pathInfos) =>
-      this(pathInfos: pathInfos);
+      call(pathInfos: pathInfos);
 
   @override
   LibraryOptions saveLocalMetadata(bool? saveLocalMetadata) =>
-      this(saveLocalMetadata: saveLocalMetadata);
+      call(saveLocalMetadata: saveLocalMetadata);
 
   @override
-  LibraryOptions enableInternetProviders(bool? enableInternetProviders) =>
-      this(enableInternetProviders: enableInternetProviders);
+  LibraryOptions enableInternetProviders(
+    @Deprecated('enableInternetProviders has been deprecated')
+    bool? enableInternetProviders,
+  ) => call(enableInternetProviders: enableInternetProviders);
 
   @override
   LibraryOptions enableAutomaticSeriesGrouping(
     bool? enableAutomaticSeriesGrouping,
-  ) => this(enableAutomaticSeriesGrouping: enableAutomaticSeriesGrouping);
+  ) => call(enableAutomaticSeriesGrouping: enableAutomaticSeriesGrouping);
 
   @override
   LibraryOptions enableEmbeddedTitles(bool? enableEmbeddedTitles) =>
-      this(enableEmbeddedTitles: enableEmbeddedTitles);
+      call(enableEmbeddedTitles: enableEmbeddedTitles);
 
   @override
   LibraryOptions enableEmbeddedExtrasTitles(bool? enableEmbeddedExtrasTitles) =>
-      this(enableEmbeddedExtrasTitles: enableEmbeddedExtrasTitles);
+      call(enableEmbeddedExtrasTitles: enableEmbeddedExtrasTitles);
 
   @override
   LibraryOptions enableEmbeddedEpisodeInfos(bool? enableEmbeddedEpisodeInfos) =>
-      this(enableEmbeddedEpisodeInfos: enableEmbeddedEpisodeInfos);
+      call(enableEmbeddedEpisodeInfos: enableEmbeddedEpisodeInfos);
 
   @override
   LibraryOptions automaticRefreshIntervalDays(
     int? automaticRefreshIntervalDays,
-  ) => this(automaticRefreshIntervalDays: automaticRefreshIntervalDays);
+  ) => call(automaticRefreshIntervalDays: automaticRefreshIntervalDays);
 
   @override
   LibraryOptions preferredMetadataLanguage(String? preferredMetadataLanguage) =>
-      this(preferredMetadataLanguage: preferredMetadataLanguage);
+      call(preferredMetadataLanguage: preferredMetadataLanguage);
 
   @override
   LibraryOptions metadataCountryCode(String? metadataCountryCode) =>
-      this(metadataCountryCode: metadataCountryCode);
+      call(metadataCountryCode: metadataCountryCode);
 
   @override
   LibraryOptions seasonZeroDisplayName(String? seasonZeroDisplayName) =>
-      this(seasonZeroDisplayName: seasonZeroDisplayName);
+      call(seasonZeroDisplayName: seasonZeroDisplayName);
 
   @override
   LibraryOptions metadataSavers(List<String>? metadataSavers) =>
-      this(metadataSavers: metadataSavers);
+      call(metadataSavers: metadataSavers);
 
   @override
   LibraryOptions disabledLocalMetadataReaders(
     List<String>? disabledLocalMetadataReaders,
-  ) => this(disabledLocalMetadataReaders: disabledLocalMetadataReaders);
+  ) => call(disabledLocalMetadataReaders: disabledLocalMetadataReaders);
 
   @override
   LibraryOptions localMetadataReaderOrder(
     List<String>? localMetadataReaderOrder,
-  ) => this(localMetadataReaderOrder: localMetadataReaderOrder);
+  ) => call(localMetadataReaderOrder: localMetadataReaderOrder);
 
   @override
   LibraryOptions disabledSubtitleFetchers(
     List<String>? disabledSubtitleFetchers,
-  ) => this(disabledSubtitleFetchers: disabledSubtitleFetchers);
+  ) => call(disabledSubtitleFetchers: disabledSubtitleFetchers);
 
   @override
   LibraryOptions subtitleFetcherOrder(List<String>? subtitleFetcherOrder) =>
-      this(subtitleFetcherOrder: subtitleFetcherOrder);
+      call(subtitleFetcherOrder: subtitleFetcherOrder);
 
   @override
   LibraryOptions disabledMediaSegmentProviders(
     List<String>? disabledMediaSegmentProviders,
-  ) => this(disabledMediaSegmentProviders: disabledMediaSegmentProviders);
+  ) => call(disabledMediaSegmentProviders: disabledMediaSegmentProviders);
 
   @override
   LibraryOptions mediaSegmentProviderOrder(
     List<String>? mediaSegmentProviderOrder,
-  ) => this(mediaSegmentProviderOrder: mediaSegmentProviderOrder);
+  ) => call(mediaSegmentProviderOrder: mediaSegmentProviderOrder);
 
   @override
   LibraryOptions skipSubtitlesIfEmbeddedSubtitlesPresent(
     bool? skipSubtitlesIfEmbeddedSubtitlesPresent,
-  ) => this(
+  ) => call(
     skipSubtitlesIfEmbeddedSubtitlesPresent:
         skipSubtitlesIfEmbeddedSubtitlesPresent,
   );
@@ -312,76 +320,77 @@ class _$LibraryOptionsCWProxyImpl implements _$LibraryOptionsCWProxy {
   @override
   LibraryOptions skipSubtitlesIfAudioTrackMatches(
     bool? skipSubtitlesIfAudioTrackMatches,
-  ) => this(skipSubtitlesIfAudioTrackMatches: skipSubtitlesIfAudioTrackMatches);
+  ) => call(skipSubtitlesIfAudioTrackMatches: skipSubtitlesIfAudioTrackMatches);
 
   @override
   LibraryOptions subtitleDownloadLanguages(
     List<String>? subtitleDownloadLanguages,
-  ) => this(subtitleDownloadLanguages: subtitleDownloadLanguages);
+  ) => call(subtitleDownloadLanguages: subtitleDownloadLanguages);
 
   @override
   LibraryOptions requirePerfectSubtitleMatch(
     bool? requirePerfectSubtitleMatch,
-  ) => this(requirePerfectSubtitleMatch: requirePerfectSubtitleMatch);
+  ) => call(requirePerfectSubtitleMatch: requirePerfectSubtitleMatch);
 
   @override
   LibraryOptions saveSubtitlesWithMedia(bool? saveSubtitlesWithMedia) =>
-      this(saveSubtitlesWithMedia: saveSubtitlesWithMedia);
+      call(saveSubtitlesWithMedia: saveSubtitlesWithMedia);
 
   @override
   LibraryOptions saveLyricsWithMedia(bool? saveLyricsWithMedia) =>
-      this(saveLyricsWithMedia: saveLyricsWithMedia);
+      call(saveLyricsWithMedia: saveLyricsWithMedia);
 
   @override
   LibraryOptions saveTrickplayWithMedia(bool? saveTrickplayWithMedia) =>
-      this(saveTrickplayWithMedia: saveTrickplayWithMedia);
+      call(saveTrickplayWithMedia: saveTrickplayWithMedia);
 
   @override
   LibraryOptions disabledLyricFetchers(List<String>? disabledLyricFetchers) =>
-      this(disabledLyricFetchers: disabledLyricFetchers);
+      call(disabledLyricFetchers: disabledLyricFetchers);
 
   @override
   LibraryOptions lyricFetcherOrder(List<String>? lyricFetcherOrder) =>
-      this(lyricFetcherOrder: lyricFetcherOrder);
+      call(lyricFetcherOrder: lyricFetcherOrder);
 
   @override
   LibraryOptions preferNonstandardArtistsTag(
     bool? preferNonstandardArtistsTag,
-  ) => this(preferNonstandardArtistsTag: preferNonstandardArtistsTag);
+  ) => call(preferNonstandardArtistsTag: preferNonstandardArtistsTag);
 
   @override
   LibraryOptions useCustomTagDelimiters(bool? useCustomTagDelimiters) =>
-      this(useCustomTagDelimiters: useCustomTagDelimiters);
+      call(useCustomTagDelimiters: useCustomTagDelimiters);
 
   @override
   LibraryOptions customTagDelimiters(List<String>? customTagDelimiters) =>
-      this(customTagDelimiters: customTagDelimiters);
+      call(customTagDelimiters: customTagDelimiters);
 
   @override
   LibraryOptions delimiterWhitelist(List<String>? delimiterWhitelist) =>
-      this(delimiterWhitelist: delimiterWhitelist);
+      call(delimiterWhitelist: delimiterWhitelist);
 
   @override
   LibraryOptions automaticallyAddToCollection(
     bool? automaticallyAddToCollection,
-  ) => this(automaticallyAddToCollection: automaticallyAddToCollection);
+  ) => call(automaticallyAddToCollection: automaticallyAddToCollection);
 
   @override
   LibraryOptions allowEmbeddedSubtitles(
     EmbeddedSubtitleOptions? allowEmbeddedSubtitles,
-  ) => this(allowEmbeddedSubtitles: allowEmbeddedSubtitles);
+  ) => call(allowEmbeddedSubtitles: allowEmbeddedSubtitles);
 
   @override
   LibraryOptions typeOptions(List<TypeOptions>? typeOptions) =>
-      this(typeOptions: typeOptions);
+      call(typeOptions: typeOptions);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryOptions call({
     Object? enabled = const $CopyWithPlaceholder(),
     Object? enablePhotos = const $CopyWithPlaceholder(),
@@ -395,6 +404,7 @@ class _$LibraryOptionsCWProxyImpl implements _$LibraryOptionsCWProxy {
         const $CopyWithPlaceholder(),
     Object? pathInfos = const $CopyWithPlaceholder(),
     Object? saveLocalMetadata = const $CopyWithPlaceholder(),
+    @Deprecated('enableInternetProviders has been deprecated')
     Object? enableInternetProviders = const $CopyWithPlaceholder(),
     Object? enableAutomaticSeriesGrouping = const $CopyWithPlaceholder(),
     Object? enableEmbeddedTitles = const $CopyWithPlaceholder(),
@@ -633,7 +643,8 @@ class _$LibraryOptionsCWProxyImpl implements _$LibraryOptionsCWProxy {
 }
 
 extension $LibraryOptionsCopyWith on LibraryOptions {
-  /// Returns a callable class that can be used as follows: `instanceOfLibraryOptions.copyWith(...)` or like so:`instanceOfLibraryOptions.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLibraryOptions.copyWith(...)` or `instanceOfLibraryOptions.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LibraryOptionsCWProxy get copyWith => _$LibraryOptionsCWProxyImpl(this);
 }

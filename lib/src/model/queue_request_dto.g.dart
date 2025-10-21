@@ -11,34 +11,37 @@ abstract class _$QueueRequestDtoCWProxy {
 
   QueueRequestDto mode(GroupQueueMode? mode);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `QueueRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `QueueRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// QueueRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   QueueRequestDto call({List<String>? itemIds, GroupQueueMode? mode});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfQueueRequestDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfQueueRequestDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfQueueRequestDto.copyWith(...)` or call `instanceOfQueueRequestDto.copyWith.fieldName(value)` for a single field.
 class _$QueueRequestDtoCWProxyImpl implements _$QueueRequestDtoCWProxy {
   const _$QueueRequestDtoCWProxyImpl(this._value);
 
   final QueueRequestDto _value;
 
   @override
-  QueueRequestDto itemIds(List<String>? itemIds) => this(itemIds: itemIds);
+  QueueRequestDto itemIds(List<String>? itemIds) => call(itemIds: itemIds);
 
   @override
-  QueueRequestDto mode(GroupQueueMode? mode) => this(mode: mode);
+  QueueRequestDto mode(GroupQueueMode? mode) => call(mode: mode);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `QueueRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `QueueRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// QueueRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   QueueRequestDto call({
     Object? itemIds = const $CopyWithPlaceholder(),
     Object? mode = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$QueueRequestDtoCWProxyImpl implements _$QueueRequestDtoCWProxy {
 }
 
 extension $QueueRequestDtoCopyWith on QueueRequestDto {
-  /// Returns a callable class that can be used as follows: `instanceOfQueueRequestDto.copyWith(...)` or like so:`instanceOfQueueRequestDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfQueueRequestDto.copyWith(...)` or `instanceOfQueueRequestDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$QueueRequestDtoCWProxy get copyWith => _$QueueRequestDtoCWProxyImpl(this);
 }

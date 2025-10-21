@@ -15,12 +15,13 @@ abstract class _$BackupOptionsDtoCWProxy {
 
   BackupOptionsDto database(bool? database);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BackupOptionsDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BackupOptionsDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BackupOptionsDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BackupOptionsDto call({
     bool? metadata,
     bool? trickplay,
@@ -29,31 +30,33 @@ abstract class _$BackupOptionsDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfBackupOptionsDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfBackupOptionsDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfBackupOptionsDto.copyWith(...)` or call `instanceOfBackupOptionsDto.copyWith.fieldName(value)` for a single field.
 class _$BackupOptionsDtoCWProxyImpl implements _$BackupOptionsDtoCWProxy {
   const _$BackupOptionsDtoCWProxyImpl(this._value);
 
   final BackupOptionsDto _value;
 
   @override
-  BackupOptionsDto metadata(bool? metadata) => this(metadata: metadata);
+  BackupOptionsDto metadata(bool? metadata) => call(metadata: metadata);
 
   @override
-  BackupOptionsDto trickplay(bool? trickplay) => this(trickplay: trickplay);
+  BackupOptionsDto trickplay(bool? trickplay) => call(trickplay: trickplay);
 
   @override
-  BackupOptionsDto subtitles(bool? subtitles) => this(subtitles: subtitles);
+  BackupOptionsDto subtitles(bool? subtitles) => call(subtitles: subtitles);
 
   @override
-  BackupOptionsDto database(bool? database) => this(database: database);
+  BackupOptionsDto database(bool? database) => call(database: database);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BackupOptionsDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BackupOptionsDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BackupOptionsDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BackupOptionsDto call({
     Object? metadata = const $CopyWithPlaceholder(),
     Object? trickplay = const $CopyWithPlaceholder(),
@@ -82,7 +85,8 @@ class _$BackupOptionsDtoCWProxyImpl implements _$BackupOptionsDtoCWProxy {
 }
 
 extension $BackupOptionsDtoCopyWith on BackupOptionsDto {
-  /// Returns a callable class that can be used as follows: `instanceOfBackupOptionsDto.copyWith(...)` or like so:`instanceOfBackupOptionsDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfBackupOptionsDto.copyWith(...)` or `instanceOfBackupOptionsDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$BackupOptionsDtoCWProxy get copyWith => _$BackupOptionsDtoCWProxyImpl(this);
 }

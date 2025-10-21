@@ -11,34 +11,37 @@ abstract class _$LyricDtoCWProxy {
 
   LyricDto lyrics(List<LyricLine>? lyrics);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LyricDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LyricDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LyricDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LyricDto call({LyricMetadata? metadata, List<LyricLine>? lyrics});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLyricDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLyricDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLyricDto.copyWith(...)` or call `instanceOfLyricDto.copyWith.fieldName(value)` for a single field.
 class _$LyricDtoCWProxyImpl implements _$LyricDtoCWProxy {
   const _$LyricDtoCWProxyImpl(this._value);
 
   final LyricDto _value;
 
   @override
-  LyricDto metadata(LyricMetadata? metadata) => this(metadata: metadata);
+  LyricDto metadata(LyricMetadata? metadata) => call(metadata: metadata);
 
   @override
-  LyricDto lyrics(List<LyricLine>? lyrics) => this(lyrics: lyrics);
+  LyricDto lyrics(List<LyricLine>? lyrics) => call(lyrics: lyrics);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LyricDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LyricDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LyricDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LyricDto call({
     Object? metadata = const $CopyWithPlaceholder(),
     Object? lyrics = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$LyricDtoCWProxyImpl implements _$LyricDtoCWProxy {
 }
 
 extension $LyricDtoCopyWith on LyricDto {
-  /// Returns a callable class that can be used as follows: `instanceOfLyricDto.copyWith(...)` or like so:`instanceOfLyricDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLyricDto.copyWith(...)` or `instanceOfLyricDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LyricDtoCWProxy get copyWith => _$LyricDtoCWProxyImpl(this);
 }

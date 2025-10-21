@@ -11,19 +11,21 @@ abstract class _$UtcTimeResponseCWProxy {
 
   UtcTimeResponse responseTransmissionTime(DateTime? responseTransmissionTime);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UtcTimeResponse(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UtcTimeResponse(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UtcTimeResponse(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UtcTimeResponse call({
     DateTime? requestReceptionTime,
     DateTime? responseTransmissionTime,
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUtcTimeResponse.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUtcTimeResponse.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUtcTimeResponse.copyWith(...)` or call `instanceOfUtcTimeResponse.copyWith.fieldName(value)` for a single field.
 class _$UtcTimeResponseCWProxyImpl implements _$UtcTimeResponseCWProxy {
   const _$UtcTimeResponseCWProxyImpl(this._value);
 
@@ -31,20 +33,21 @@ class _$UtcTimeResponseCWProxyImpl implements _$UtcTimeResponseCWProxy {
 
   @override
   UtcTimeResponse requestReceptionTime(DateTime? requestReceptionTime) =>
-      this(requestReceptionTime: requestReceptionTime);
+      call(requestReceptionTime: requestReceptionTime);
 
   @override
   UtcTimeResponse responseTransmissionTime(
     DateTime? responseTransmissionTime,
-  ) => this(responseTransmissionTime: responseTransmissionTime);
+  ) => call(responseTransmissionTime: responseTransmissionTime);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UtcTimeResponse(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UtcTimeResponse(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UtcTimeResponse(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UtcTimeResponse call({
     Object? requestReceptionTime = const $CopyWithPlaceholder(),
     Object? responseTransmissionTime = const $CopyWithPlaceholder(),
@@ -64,7 +67,8 @@ class _$UtcTimeResponseCWProxyImpl implements _$UtcTimeResponseCWProxy {
 }
 
 extension $UtcTimeResponseCopyWith on UtcTimeResponse {
-  /// Returns a callable class that can be used as follows: `instanceOfUtcTimeResponse.copyWith(...)` or like so:`instanceOfUtcTimeResponse.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUtcTimeResponse.copyWith(...)` or `instanceOfUtcTimeResponse.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UtcTimeResponseCWProxy get copyWith => _$UtcTimeResponseCWProxyImpl(this);
 }

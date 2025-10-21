@@ -9,16 +9,18 @@ part of 'activity_log_entry_stop_message.dart';
 abstract class _$ActivityLogEntryStopMessageCWProxy {
   ActivityLogEntryStopMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ActivityLogEntryStopMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ActivityLogEntryStopMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ActivityLogEntryStopMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ActivityLogEntryStopMessage call({SessionMessageType? messageType});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfActivityLogEntryStopMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfActivityLogEntryStopMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfActivityLogEntryStopMessage.copyWith(...)` or call `instanceOfActivityLogEntryStopMessage.copyWith.fieldName(value)` for a single field.
 class _$ActivityLogEntryStopMessageCWProxyImpl
     implements _$ActivityLogEntryStopMessageCWProxy {
   const _$ActivityLogEntryStopMessageCWProxyImpl(this._value);
@@ -27,15 +29,16 @@ class _$ActivityLogEntryStopMessageCWProxyImpl
 
   @override
   ActivityLogEntryStopMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ActivityLogEntryStopMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ActivityLogEntryStopMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ActivityLogEntryStopMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ActivityLogEntryStopMessage call({
     Object? messageType = const $CopyWithPlaceholder(),
   }) {
@@ -49,7 +52,8 @@ class _$ActivityLogEntryStopMessageCWProxyImpl
 }
 
 extension $ActivityLogEntryStopMessageCopyWith on ActivityLogEntryStopMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfActivityLogEntryStopMessage.copyWith(...)` or like so:`instanceOfActivityLogEntryStopMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfActivityLogEntryStopMessage.copyWith(...)` or `instanceOfActivityLogEntryStopMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ActivityLogEntryStopMessageCWProxy get copyWith =>
       _$ActivityLogEntryStopMessageCWProxyImpl(this);

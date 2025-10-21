@@ -13,12 +13,13 @@ abstract class _$GeneralCommandMessageCWProxy {
 
   GeneralCommandMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GeneralCommandMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GeneralCommandMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GeneralCommandMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GeneralCommandMessage call({
     GeneralCommand? data,
     String? messageId,
@@ -26,7 +27,8 @@ abstract class _$GeneralCommandMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfGeneralCommandMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfGeneralCommandMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfGeneralCommandMessage.copyWith(...)` or call `instanceOfGeneralCommandMessage.copyWith.fieldName(value)` for a single field.
 class _$GeneralCommandMessageCWProxyImpl
     implements _$GeneralCommandMessageCWProxy {
   const _$GeneralCommandMessageCWProxyImpl(this._value);
@@ -34,23 +36,24 @@ class _$GeneralCommandMessageCWProxyImpl
   final GeneralCommandMessage _value;
 
   @override
-  GeneralCommandMessage data(GeneralCommand? data) => this(data: data);
+  GeneralCommandMessage data(GeneralCommand? data) => call(data: data);
 
   @override
   GeneralCommandMessage messageId(String? messageId) =>
-      this(messageId: messageId);
+      call(messageId: messageId);
 
   @override
   GeneralCommandMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GeneralCommandMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GeneralCommandMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GeneralCommandMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GeneralCommandMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$GeneralCommandMessageCWProxyImpl
 }
 
 extension $GeneralCommandMessageCopyWith on GeneralCommandMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfGeneralCommandMessage.copyWith(...)` or like so:`instanceOfGeneralCommandMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfGeneralCommandMessage.copyWith(...)` or `instanceOfGeneralCommandMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$GeneralCommandMessageCWProxy get copyWith =>
       _$GeneralCommandMessageCWProxyImpl(this);

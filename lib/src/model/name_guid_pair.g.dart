@@ -11,34 +11,37 @@ abstract class _$NameGuidPairCWProxy {
 
   NameGuidPair id(String? id);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `NameGuidPair(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `NameGuidPair(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// NameGuidPair(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   NameGuidPair call({String? name, String? id});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfNameGuidPair.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfNameGuidPair.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfNameGuidPair.copyWith(...)` or call `instanceOfNameGuidPair.copyWith.fieldName(value)` for a single field.
 class _$NameGuidPairCWProxyImpl implements _$NameGuidPairCWProxy {
   const _$NameGuidPairCWProxyImpl(this._value);
 
   final NameGuidPair _value;
 
   @override
-  NameGuidPair name(String? name) => this(name: name);
+  NameGuidPair name(String? name) => call(name: name);
 
   @override
-  NameGuidPair id(String? id) => this(id: id);
+  NameGuidPair id(String? id) => call(id: id);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `NameGuidPair(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `NameGuidPair(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// NameGuidPair(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   NameGuidPair call({
     Object? name = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$NameGuidPairCWProxyImpl implements _$NameGuidPairCWProxy {
 }
 
 extension $NameGuidPairCopyWith on NameGuidPair {
-  /// Returns a callable class that can be used as follows: `instanceOfNameGuidPair.copyWith(...)` or like so:`instanceOfNameGuidPair.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfNameGuidPair.copyWith(...)` or `instanceOfNameGuidPair.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$NameGuidPairCWProxy get copyWith => _$NameGuidPairCWProxyImpl(this);
 }

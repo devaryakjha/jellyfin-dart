@@ -23,12 +23,13 @@ abstract class _$PackageInfoCWProxy {
 
   PackageInfo imageUrl(String? imageUrl);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PackageInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PackageInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PackageInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PackageInfo call({
     String? name,
     String? description,
@@ -41,44 +42,46 @@ abstract class _$PackageInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPackageInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPackageInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPackageInfo.copyWith(...)` or call `instanceOfPackageInfo.copyWith.fieldName(value)` for a single field.
 class _$PackageInfoCWProxyImpl implements _$PackageInfoCWProxy {
   const _$PackageInfoCWProxyImpl(this._value);
 
   final PackageInfo _value;
 
   @override
-  PackageInfo name(String? name) => this(name: name);
+  PackageInfo name(String? name) => call(name: name);
 
   @override
   PackageInfo description(String? description) =>
-      this(description: description);
+      call(description: description);
 
   @override
-  PackageInfo overview(String? overview) => this(overview: overview);
+  PackageInfo overview(String? overview) => call(overview: overview);
 
   @override
-  PackageInfo owner(String? owner) => this(owner: owner);
+  PackageInfo owner(String? owner) => call(owner: owner);
 
   @override
-  PackageInfo category(String? category) => this(category: category);
+  PackageInfo category(String? category) => call(category: category);
 
   @override
-  PackageInfo guid(String? guid) => this(guid: guid);
+  PackageInfo guid(String? guid) => call(guid: guid);
 
   @override
-  PackageInfo versions(List<VersionInfo>? versions) => this(versions: versions);
+  PackageInfo versions(List<VersionInfo>? versions) => call(versions: versions);
 
   @override
-  PackageInfo imageUrl(String? imageUrl) => this(imageUrl: imageUrl);
+  PackageInfo imageUrl(String? imageUrl) => call(imageUrl: imageUrl);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PackageInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PackageInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PackageInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PackageInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? description = const $CopyWithPlaceholder(),
@@ -127,7 +130,8 @@ class _$PackageInfoCWProxyImpl implements _$PackageInfoCWProxy {
 }
 
 extension $PackageInfoCopyWith on PackageInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfPackageInfo.copyWith(...)` or like so:`instanceOfPackageInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPackageInfo.copyWith(...)` or `instanceOfPackageInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PackageInfoCWProxy get copyWith => _$PackageInfoCWProxyImpl(this);
 }

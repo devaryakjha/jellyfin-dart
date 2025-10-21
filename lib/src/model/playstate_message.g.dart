@@ -13,12 +13,13 @@ abstract class _$PlaystateMessageCWProxy {
 
   PlaystateMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaystateMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaystateMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaystateMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaystateMessage call({
     PlaystateRequest? data,
     String? messageId,
@@ -26,29 +27,31 @@ abstract class _$PlaystateMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlaystateMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlaystateMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlaystateMessage.copyWith(...)` or call `instanceOfPlaystateMessage.copyWith.fieldName(value)` for a single field.
 class _$PlaystateMessageCWProxyImpl implements _$PlaystateMessageCWProxy {
   const _$PlaystateMessageCWProxyImpl(this._value);
 
   final PlaystateMessage _value;
 
   @override
-  PlaystateMessage data(PlaystateRequest? data) => this(data: data);
+  PlaystateMessage data(PlaystateRequest? data) => call(data: data);
 
   @override
-  PlaystateMessage messageId(String? messageId) => this(messageId: messageId);
+  PlaystateMessage messageId(String? messageId) => call(messageId: messageId);
 
   @override
   PlaystateMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaystateMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaystateMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaystateMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaystateMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -72,7 +75,8 @@ class _$PlaystateMessageCWProxyImpl implements _$PlaystateMessageCWProxy {
 }
 
 extension $PlaystateMessageCopyWith on PlaystateMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfPlaystateMessage.copyWith(...)` or like so:`instanceOfPlaystateMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlaystateMessage.copyWith(...)` or `instanceOfPlaystateMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlaystateMessageCWProxy get copyWith => _$PlaystateMessageCWProxyImpl(this);
 }

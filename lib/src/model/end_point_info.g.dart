@@ -11,34 +11,37 @@ abstract class _$EndPointInfoCWProxy {
 
   EndPointInfo isInNetwork(bool? isInNetwork);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `EndPointInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `EndPointInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// EndPointInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   EndPointInfo call({bool? isLocal, bool? isInNetwork});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfEndPointInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfEndPointInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfEndPointInfo.copyWith(...)` or call `instanceOfEndPointInfo.copyWith.fieldName(value)` for a single field.
 class _$EndPointInfoCWProxyImpl implements _$EndPointInfoCWProxy {
   const _$EndPointInfoCWProxyImpl(this._value);
 
   final EndPointInfo _value;
 
   @override
-  EndPointInfo isLocal(bool? isLocal) => this(isLocal: isLocal);
+  EndPointInfo isLocal(bool? isLocal) => call(isLocal: isLocal);
 
   @override
-  EndPointInfo isInNetwork(bool? isInNetwork) => this(isInNetwork: isInNetwork);
+  EndPointInfo isInNetwork(bool? isInNetwork) => call(isInNetwork: isInNetwork);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `EndPointInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `EndPointInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// EndPointInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   EndPointInfo call({
     Object? isLocal = const $CopyWithPlaceholder(),
     Object? isInNetwork = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$EndPointInfoCWProxyImpl implements _$EndPointInfoCWProxy {
 }
 
 extension $EndPointInfoCopyWith on EndPointInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfEndPointInfo.copyWith(...)` or like so:`instanceOfEndPointInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfEndPointInfo.copyWith(...)` or `instanceOfEndPointInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$EndPointInfoCWProxy get copyWith => _$EndPointInfoCWProxyImpl(this);
 }

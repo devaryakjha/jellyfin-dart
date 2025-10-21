@@ -13,12 +13,13 @@ abstract class _$AuthenticationInfoQueryResultCWProxy {
 
   AuthenticationInfoQueryResult startIndex(int? startIndex);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AuthenticationInfoQueryResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AuthenticationInfoQueryResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AuthenticationInfoQueryResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AuthenticationInfoQueryResult call({
     List<AuthenticationInfo>? items,
     int? totalRecordCount,
@@ -26,7 +27,8 @@ abstract class _$AuthenticationInfoQueryResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfAuthenticationInfoQueryResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfAuthenticationInfoQueryResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfAuthenticationInfoQueryResult.copyWith(...)` or call `instanceOfAuthenticationInfoQueryResult.copyWith.fieldName(value)` for a single field.
 class _$AuthenticationInfoQueryResultCWProxyImpl
     implements _$AuthenticationInfoQueryResultCWProxy {
   const _$AuthenticationInfoQueryResultCWProxyImpl(this._value);
@@ -35,23 +37,24 @@ class _$AuthenticationInfoQueryResultCWProxyImpl
 
   @override
   AuthenticationInfoQueryResult items(List<AuthenticationInfo>? items) =>
-      this(items: items);
+      call(items: items);
 
   @override
   AuthenticationInfoQueryResult totalRecordCount(int? totalRecordCount) =>
-      this(totalRecordCount: totalRecordCount);
+      call(totalRecordCount: totalRecordCount);
 
   @override
   AuthenticationInfoQueryResult startIndex(int? startIndex) =>
-      this(startIndex: startIndex);
+      call(startIndex: startIndex);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AuthenticationInfoQueryResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AuthenticationInfoQueryResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AuthenticationInfoQueryResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AuthenticationInfoQueryResult call({
     Object? items = const $CopyWithPlaceholder(),
     Object? totalRecordCount = const $CopyWithPlaceholder(),
@@ -76,7 +79,8 @@ class _$AuthenticationInfoQueryResultCWProxyImpl
 
 extension $AuthenticationInfoQueryResultCopyWith
     on AuthenticationInfoQueryResult {
-  /// Returns a callable class that can be used as follows: `instanceOfAuthenticationInfoQueryResult.copyWith(...)` or like so:`instanceOfAuthenticationInfoQueryResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfAuthenticationInfoQueryResult.copyWith(...)` or `instanceOfAuthenticationInfoQueryResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$AuthenticationInfoQueryResultCWProxy get copyWith =>
       _$AuthenticationInfoQueryResultCWProxyImpl(this);

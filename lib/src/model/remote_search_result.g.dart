@@ -31,12 +31,13 @@ abstract class _$RemoteSearchResultCWProxy {
 
   RemoteSearchResult artists(List<RemoteSearchResult>? artists);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoteSearchResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoteSearchResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoteSearchResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoteSearchResult call({
     String? name,
     Map<String, String>? providerIds,
@@ -53,64 +54,66 @@ abstract class _$RemoteSearchResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfRemoteSearchResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfRemoteSearchResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfRemoteSearchResult.copyWith(...)` or call `instanceOfRemoteSearchResult.copyWith.fieldName(value)` for a single field.
 class _$RemoteSearchResultCWProxyImpl implements _$RemoteSearchResultCWProxy {
   const _$RemoteSearchResultCWProxyImpl(this._value);
 
   final RemoteSearchResult _value;
 
   @override
-  RemoteSearchResult name(String? name) => this(name: name);
+  RemoteSearchResult name(String? name) => call(name: name);
 
   @override
   RemoteSearchResult providerIds(Map<String, String>? providerIds) =>
-      this(providerIds: providerIds);
+      call(providerIds: providerIds);
 
   @override
   RemoteSearchResult productionYear(int? productionYear) =>
-      this(productionYear: productionYear);
+      call(productionYear: productionYear);
 
   @override
   RemoteSearchResult indexNumber(int? indexNumber) =>
-      this(indexNumber: indexNumber);
+      call(indexNumber: indexNumber);
 
   @override
   RemoteSearchResult indexNumberEnd(int? indexNumberEnd) =>
-      this(indexNumberEnd: indexNumberEnd);
+      call(indexNumberEnd: indexNumberEnd);
 
   @override
   RemoteSearchResult parentIndexNumber(int? parentIndexNumber) =>
-      this(parentIndexNumber: parentIndexNumber);
+      call(parentIndexNumber: parentIndexNumber);
 
   @override
   RemoteSearchResult premiereDate(DateTime? premiereDate) =>
-      this(premiereDate: premiereDate);
+      call(premiereDate: premiereDate);
 
   @override
-  RemoteSearchResult imageUrl(String? imageUrl) => this(imageUrl: imageUrl);
+  RemoteSearchResult imageUrl(String? imageUrl) => call(imageUrl: imageUrl);
 
   @override
   RemoteSearchResult searchProviderName(String? searchProviderName) =>
-      this(searchProviderName: searchProviderName);
+      call(searchProviderName: searchProviderName);
 
   @override
-  RemoteSearchResult overview(String? overview) => this(overview: overview);
+  RemoteSearchResult overview(String? overview) => call(overview: overview);
 
   @override
   RemoteSearchResult albumArtist(RemoteSearchResult? albumArtist) =>
-      this(albumArtist: albumArtist);
+      call(albumArtist: albumArtist);
 
   @override
   RemoteSearchResult artists(List<RemoteSearchResult>? artists) =>
-      this(artists: artists);
+      call(artists: artists);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoteSearchResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoteSearchResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoteSearchResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoteSearchResult call({
     Object? name = const $CopyWithPlaceholder(),
     Object? providerIds = const $CopyWithPlaceholder(),
@@ -179,7 +182,8 @@ class _$RemoteSearchResultCWProxyImpl implements _$RemoteSearchResultCWProxy {
 }
 
 extension $RemoteSearchResultCopyWith on RemoteSearchResult {
-  /// Returns a callable class that can be used as follows: `instanceOfRemoteSearchResult.copyWith(...)` or like so:`instanceOfRemoteSearchResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfRemoteSearchResult.copyWith(...)` or `instanceOfRemoteSearchResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$RemoteSearchResultCWProxy get copyWith =>
       _$RemoteSearchResultCWProxyImpl(this);

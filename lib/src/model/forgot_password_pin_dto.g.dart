@@ -9,16 +9,18 @@ part of 'forgot_password_pin_dto.dart';
 abstract class _$ForgotPasswordPinDtoCWProxy {
   ForgotPasswordPinDto pin(String pin);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ForgotPasswordPinDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ForgotPasswordPinDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ForgotPasswordPinDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ForgotPasswordPinDto call({String pin});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfForgotPasswordPinDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfForgotPasswordPinDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfForgotPasswordPinDto.copyWith(...)` or call `instanceOfForgotPasswordPinDto.copyWith.fieldName(value)` for a single field.
 class _$ForgotPasswordPinDtoCWProxyImpl
     implements _$ForgotPasswordPinDtoCWProxy {
   const _$ForgotPasswordPinDtoCWProxyImpl(this._value);
@@ -26,18 +28,19 @@ class _$ForgotPasswordPinDtoCWProxyImpl
   final ForgotPasswordPinDto _value;
 
   @override
-  ForgotPasswordPinDto pin(String pin) => this(pin: pin);
+  ForgotPasswordPinDto pin(String pin) => call(pin: pin);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ForgotPasswordPinDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ForgotPasswordPinDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ForgotPasswordPinDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ForgotPasswordPinDto call({Object? pin = const $CopyWithPlaceholder()}) {
     return ForgotPasswordPinDto(
-      pin: pin == const $CopyWithPlaceholder()
+      pin: pin == const $CopyWithPlaceholder() || pin == null
           ? _value.pin
           // ignore: cast_nullable_to_non_nullable
           : pin as String,
@@ -46,7 +49,8 @@ class _$ForgotPasswordPinDtoCWProxyImpl
 }
 
 extension $ForgotPasswordPinDtoCopyWith on ForgotPasswordPinDto {
-  /// Returns a callable class that can be used as follows: `instanceOfForgotPasswordPinDto.copyWith(...)` or like so:`instanceOfForgotPasswordPinDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfForgotPasswordPinDto.copyWith(...)` or `instanceOfForgotPasswordPinDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ForgotPasswordPinDtoCWProxy get copyWith =>
       _$ForgotPasswordPinDtoCWProxyImpl(this);

@@ -13,12 +13,13 @@ abstract class _$ForceKeepAliveMessageCWProxy {
 
   ForceKeepAliveMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ForceKeepAliveMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ForceKeepAliveMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ForceKeepAliveMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ForceKeepAliveMessage call({
     int? data,
     String? messageId,
@@ -26,7 +27,8 @@ abstract class _$ForceKeepAliveMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfForceKeepAliveMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfForceKeepAliveMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfForceKeepAliveMessage.copyWith(...)` or call `instanceOfForceKeepAliveMessage.copyWith.fieldName(value)` for a single field.
 class _$ForceKeepAliveMessageCWProxyImpl
     implements _$ForceKeepAliveMessageCWProxy {
   const _$ForceKeepAliveMessageCWProxyImpl(this._value);
@@ -34,23 +36,24 @@ class _$ForceKeepAliveMessageCWProxyImpl
   final ForceKeepAliveMessage _value;
 
   @override
-  ForceKeepAliveMessage data(int? data) => this(data: data);
+  ForceKeepAliveMessage data(int? data) => call(data: data);
 
   @override
   ForceKeepAliveMessage messageId(String? messageId) =>
-      this(messageId: messageId);
+      call(messageId: messageId);
 
   @override
   ForceKeepAliveMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ForceKeepAliveMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ForceKeepAliveMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ForceKeepAliveMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ForceKeepAliveMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$ForceKeepAliveMessageCWProxyImpl
 }
 
 extension $ForceKeepAliveMessageCopyWith on ForceKeepAliveMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfForceKeepAliveMessage.copyWith(...)` or like so:`instanceOfForceKeepAliveMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfForceKeepAliveMessage.copyWith(...)` or `instanceOfForceKeepAliveMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ForceKeepAliveMessageCWProxy get copyWith =>
       _$ForceKeepAliveMessageCWProxyImpl(this);

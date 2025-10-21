@@ -9,16 +9,18 @@ part of 'playlist_creation_result.dart';
 abstract class _$PlaylistCreationResultCWProxy {
   PlaylistCreationResult id(String? id);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaylistCreationResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaylistCreationResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaylistCreationResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaylistCreationResult call({String? id});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlaylistCreationResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlaylistCreationResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlaylistCreationResult.copyWith(...)` or call `instanceOfPlaylistCreationResult.copyWith.fieldName(value)` for a single field.
 class _$PlaylistCreationResultCWProxyImpl
     implements _$PlaylistCreationResultCWProxy {
   const _$PlaylistCreationResultCWProxyImpl(this._value);
@@ -26,15 +28,16 @@ class _$PlaylistCreationResultCWProxyImpl
   final PlaylistCreationResult _value;
 
   @override
-  PlaylistCreationResult id(String? id) => this(id: id);
+  PlaylistCreationResult id(String? id) => call(id: id);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaylistCreationResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaylistCreationResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaylistCreationResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaylistCreationResult call({Object? id = const $CopyWithPlaceholder()}) {
     return PlaylistCreationResult(
       id: id == const $CopyWithPlaceholder()
@@ -46,7 +49,8 @@ class _$PlaylistCreationResultCWProxyImpl
 }
 
 extension $PlaylistCreationResultCopyWith on PlaylistCreationResult {
-  /// Returns a callable class that can be used as follows: `instanceOfPlaylistCreationResult.copyWith(...)` or like so:`instanceOfPlaylistCreationResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlaylistCreationResult.copyWith(...)` or `instanceOfPlaylistCreationResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlaylistCreationResultCWProxy get copyWith =>
       _$PlaylistCreationResultCWProxyImpl(this);

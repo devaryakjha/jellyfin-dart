@@ -7,7 +7,7 @@ part of 'search_hint.dart';
 // **************************************************************************
 
 abstract class _$SearchHintCWProxy {
-  SearchHint itemId(String? itemId);
+  SearchHint itemId(@Deprecated('itemId has been deprecated') String? itemId);
 
   SearchHint id(String? id);
 
@@ -65,14 +65,15 @@ abstract class _$SearchHintCWProxy {
 
   SearchHint primaryImageAspectRatio(double? primaryImageAspectRatio);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SearchHint(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SearchHint(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SearchHint(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SearchHint call({
-    String? itemId,
+    @Deprecated('itemId has been deprecated') String? itemId,
     String? id,
     String? name,
     String? matchedTerm,
@@ -104,117 +105,121 @@ abstract class _$SearchHintCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSearchHint.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSearchHint.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSearchHint.copyWith(...)` or call `instanceOfSearchHint.copyWith.fieldName(value)` for a single field.
 class _$SearchHintCWProxyImpl implements _$SearchHintCWProxy {
   const _$SearchHintCWProxyImpl(this._value);
 
   final SearchHint _value;
 
   @override
-  SearchHint itemId(String? itemId) => this(itemId: itemId);
+  SearchHint itemId(@Deprecated('itemId has been deprecated') String? itemId) =>
+      call(itemId: itemId);
 
   @override
-  SearchHint id(String? id) => this(id: id);
+  SearchHint id(String? id) => call(id: id);
 
   @override
-  SearchHint name(String? name) => this(name: name);
+  SearchHint name(String? name) => call(name: name);
 
   @override
-  SearchHint matchedTerm(String? matchedTerm) => this(matchedTerm: matchedTerm);
+  SearchHint matchedTerm(String? matchedTerm) => call(matchedTerm: matchedTerm);
 
   @override
-  SearchHint indexNumber(int? indexNumber) => this(indexNumber: indexNumber);
+  SearchHint indexNumber(int? indexNumber) => call(indexNumber: indexNumber);
 
   @override
   SearchHint productionYear(int? productionYear) =>
-      this(productionYear: productionYear);
+      call(productionYear: productionYear);
 
   @override
   SearchHint parentIndexNumber(int? parentIndexNumber) =>
-      this(parentIndexNumber: parentIndexNumber);
+      call(parentIndexNumber: parentIndexNumber);
 
   @override
   SearchHint primaryImageTag(String? primaryImageTag) =>
-      this(primaryImageTag: primaryImageTag);
+      call(primaryImageTag: primaryImageTag);
 
   @override
   SearchHint thumbImageTag(String? thumbImageTag) =>
-      this(thumbImageTag: thumbImageTag);
+      call(thumbImageTag: thumbImageTag);
 
   @override
   SearchHint thumbImageItemId(String? thumbImageItemId) =>
-      this(thumbImageItemId: thumbImageItemId);
+      call(thumbImageItemId: thumbImageItemId);
 
   @override
   SearchHint backdropImageTag(String? backdropImageTag) =>
-      this(backdropImageTag: backdropImageTag);
+      call(backdropImageTag: backdropImageTag);
 
   @override
   SearchHint backdropImageItemId(String? backdropImageItemId) =>
-      this(backdropImageItemId: backdropImageItemId);
+      call(backdropImageItemId: backdropImageItemId);
 
   @override
-  SearchHint type(BaseItemKind? type) => this(type: type);
+  SearchHint type(BaseItemKind? type) => call(type: type);
 
   @override
-  SearchHint isFolder(bool? isFolder) => this(isFolder: isFolder);
+  SearchHint isFolder(bool? isFolder) => call(isFolder: isFolder);
 
   @override
   SearchHint runTimeTicks(int? runTimeTicks) =>
-      this(runTimeTicks: runTimeTicks);
+      call(runTimeTicks: runTimeTicks);
 
   @override
-  SearchHint mediaType(MediaType? mediaType) => this(mediaType: mediaType);
+  SearchHint mediaType(MediaType? mediaType) => call(mediaType: mediaType);
 
   @override
-  SearchHint startDate(DateTime? startDate) => this(startDate: startDate);
+  SearchHint startDate(DateTime? startDate) => call(startDate: startDate);
 
   @override
-  SearchHint endDate(DateTime? endDate) => this(endDate: endDate);
+  SearchHint endDate(DateTime? endDate) => call(endDate: endDate);
 
   @override
-  SearchHint series(String? series) => this(series: series);
+  SearchHint series(String? series) => call(series: series);
 
   @override
-  SearchHint status(String? status) => this(status: status);
+  SearchHint status(String? status) => call(status: status);
 
   @override
-  SearchHint album(String? album) => this(album: album);
+  SearchHint album(String? album) => call(album: album);
 
   @override
-  SearchHint albumId(String? albumId) => this(albumId: albumId);
+  SearchHint albumId(String? albumId) => call(albumId: albumId);
 
   @override
-  SearchHint albumArtist(String? albumArtist) => this(albumArtist: albumArtist);
+  SearchHint albumArtist(String? albumArtist) => call(albumArtist: albumArtist);
 
   @override
-  SearchHint artists(List<String>? artists) => this(artists: artists);
+  SearchHint artists(List<String>? artists) => call(artists: artists);
 
   @override
-  SearchHint songCount(int? songCount) => this(songCount: songCount);
+  SearchHint songCount(int? songCount) => call(songCount: songCount);
 
   @override
   SearchHint episodeCount(int? episodeCount) =>
-      this(episodeCount: episodeCount);
+      call(episodeCount: episodeCount);
 
   @override
-  SearchHint channelId(String? channelId) => this(channelId: channelId);
+  SearchHint channelId(String? channelId) => call(channelId: channelId);
 
   @override
-  SearchHint channelName(String? channelName) => this(channelName: channelName);
+  SearchHint channelName(String? channelName) => call(channelName: channelName);
 
   @override
   SearchHint primaryImageAspectRatio(double? primaryImageAspectRatio) =>
-      this(primaryImageAspectRatio: primaryImageAspectRatio);
+      call(primaryImageAspectRatio: primaryImageAspectRatio);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SearchHint(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SearchHint(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SearchHint(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SearchHint call({
+    @Deprecated('itemId has been deprecated')
     Object? itemId = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
@@ -368,7 +373,8 @@ class _$SearchHintCWProxyImpl implements _$SearchHintCWProxy {
 }
 
 extension $SearchHintCopyWith on SearchHint {
-  /// Returns a callable class that can be used as follows: `instanceOfSearchHint.copyWith(...)` or like so:`instanceOfSearchHint.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSearchHint.copyWith(...)` or `instanceOfSearchHint.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SearchHintCWProxy get copyWith => _$SearchHintCWProxyImpl(this);
 }

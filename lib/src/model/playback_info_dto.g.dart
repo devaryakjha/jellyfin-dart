@@ -41,12 +41,13 @@ abstract class _$PlaybackInfoDtoCWProxy {
     bool? alwaysBurnInSubtitleWhenTranscoding,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaybackInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaybackInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaybackInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaybackInfoDto call({
     String? userId,
     int? maxStreamingBitrate,
@@ -67,85 +68,87 @@ abstract class _$PlaybackInfoDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlaybackInfoDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlaybackInfoDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlaybackInfoDto.copyWith(...)` or call `instanceOfPlaybackInfoDto.copyWith.fieldName(value)` for a single field.
 class _$PlaybackInfoDtoCWProxyImpl implements _$PlaybackInfoDtoCWProxy {
   const _$PlaybackInfoDtoCWProxyImpl(this._value);
 
   final PlaybackInfoDto _value;
 
   @override
-  PlaybackInfoDto userId(String? userId) => this(userId: userId);
+  PlaybackInfoDto userId(String? userId) => call(userId: userId);
 
   @override
   PlaybackInfoDto maxStreamingBitrate(int? maxStreamingBitrate) =>
-      this(maxStreamingBitrate: maxStreamingBitrate);
+      call(maxStreamingBitrate: maxStreamingBitrate);
 
   @override
   PlaybackInfoDto startTimeTicks(int? startTimeTicks) =>
-      this(startTimeTicks: startTimeTicks);
+      call(startTimeTicks: startTimeTicks);
 
   @override
   PlaybackInfoDto audioStreamIndex(int? audioStreamIndex) =>
-      this(audioStreamIndex: audioStreamIndex);
+      call(audioStreamIndex: audioStreamIndex);
 
   @override
   PlaybackInfoDto subtitleStreamIndex(int? subtitleStreamIndex) =>
-      this(subtitleStreamIndex: subtitleStreamIndex);
+      call(subtitleStreamIndex: subtitleStreamIndex);
 
   @override
   PlaybackInfoDto maxAudioChannels(int? maxAudioChannels) =>
-      this(maxAudioChannels: maxAudioChannels);
+      call(maxAudioChannels: maxAudioChannels);
 
   @override
   PlaybackInfoDto mediaSourceId(String? mediaSourceId) =>
-      this(mediaSourceId: mediaSourceId);
+      call(mediaSourceId: mediaSourceId);
 
   @override
   PlaybackInfoDto liveStreamId(String? liveStreamId) =>
-      this(liveStreamId: liveStreamId);
+      call(liveStreamId: liveStreamId);
 
   @override
   PlaybackInfoDto deviceProfile(DeviceProfile? deviceProfile) =>
-      this(deviceProfile: deviceProfile);
+      call(deviceProfile: deviceProfile);
 
   @override
   PlaybackInfoDto enableDirectPlay(bool? enableDirectPlay) =>
-      this(enableDirectPlay: enableDirectPlay);
+      call(enableDirectPlay: enableDirectPlay);
 
   @override
   PlaybackInfoDto enableDirectStream(bool? enableDirectStream) =>
-      this(enableDirectStream: enableDirectStream);
+      call(enableDirectStream: enableDirectStream);
 
   @override
   PlaybackInfoDto enableTranscoding(bool? enableTranscoding) =>
-      this(enableTranscoding: enableTranscoding);
+      call(enableTranscoding: enableTranscoding);
 
   @override
   PlaybackInfoDto allowVideoStreamCopy(bool? allowVideoStreamCopy) =>
-      this(allowVideoStreamCopy: allowVideoStreamCopy);
+      call(allowVideoStreamCopy: allowVideoStreamCopy);
 
   @override
   PlaybackInfoDto allowAudioStreamCopy(bool? allowAudioStreamCopy) =>
-      this(allowAudioStreamCopy: allowAudioStreamCopy);
+      call(allowAudioStreamCopy: allowAudioStreamCopy);
 
   @override
   PlaybackInfoDto autoOpenLiveStream(bool? autoOpenLiveStream) =>
-      this(autoOpenLiveStream: autoOpenLiveStream);
+      call(autoOpenLiveStream: autoOpenLiveStream);
 
   @override
   PlaybackInfoDto alwaysBurnInSubtitleWhenTranscoding(
     bool? alwaysBurnInSubtitleWhenTranscoding,
-  ) => this(
+  ) => call(
     alwaysBurnInSubtitleWhenTranscoding: alwaysBurnInSubtitleWhenTranscoding,
   );
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaybackInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaybackInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaybackInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaybackInfoDto call({
     Object? userId = const $CopyWithPlaceholder(),
     Object? maxStreamingBitrate = const $CopyWithPlaceholder(),
@@ -235,7 +238,8 @@ class _$PlaybackInfoDtoCWProxyImpl implements _$PlaybackInfoDtoCWProxy {
 }
 
 extension $PlaybackInfoDtoCopyWith on PlaybackInfoDto {
-  /// Returns a callable class that can be used as follows: `instanceOfPlaybackInfoDto.copyWith(...)` or like so:`instanceOfPlaybackInfoDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlaybackInfoDto.copyWith(...)` or `instanceOfPlaybackInfoDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlaybackInfoDtoCWProxy get copyWith => _$PlaybackInfoDtoCWProxyImpl(this);
 }

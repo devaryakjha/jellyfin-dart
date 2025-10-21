@@ -67,12 +67,13 @@ abstract class _$SessionInfoDtoCWProxy {
 
   SessionInfoDto supportedCommands(List<GeneralCommandType>? supportedCommands);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SessionInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SessionInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SessionInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SessionInfoDto call({
     PlayerStateInfo? playState,
     List<SessionUserInfo>? additionalUsers,
@@ -106,7 +107,8 @@ abstract class _$SessionInfoDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSessionInfoDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSessionInfoDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSessionInfoDto.copyWith(...)` or call `instanceOfSessionInfoDto.copyWith.fieldName(value)` for a single field.
 class _$SessionInfoDtoCWProxyImpl implements _$SessionInfoDtoCWProxy {
   const _$SessionInfoDtoCWProxyImpl(this._value);
 
@@ -114,120 +116,121 @@ class _$SessionInfoDtoCWProxyImpl implements _$SessionInfoDtoCWProxy {
 
   @override
   SessionInfoDto playState(PlayerStateInfo? playState) =>
-      this(playState: playState);
+      call(playState: playState);
 
   @override
   SessionInfoDto additionalUsers(List<SessionUserInfo>? additionalUsers) =>
-      this(additionalUsers: additionalUsers);
+      call(additionalUsers: additionalUsers);
 
   @override
   SessionInfoDto capabilities(ClientCapabilitiesDto? capabilities) =>
-      this(capabilities: capabilities);
+      call(capabilities: capabilities);
 
   @override
   SessionInfoDto remoteEndPoint(String? remoteEndPoint) =>
-      this(remoteEndPoint: remoteEndPoint);
+      call(remoteEndPoint: remoteEndPoint);
 
   @override
   SessionInfoDto playableMediaTypes(List<MediaType>? playableMediaTypes) =>
-      this(playableMediaTypes: playableMediaTypes);
+      call(playableMediaTypes: playableMediaTypes);
 
   @override
-  SessionInfoDto id(String? id) => this(id: id);
+  SessionInfoDto id(String? id) => call(id: id);
 
   @override
-  SessionInfoDto userId(String? userId) => this(userId: userId);
+  SessionInfoDto userId(String? userId) => call(userId: userId);
 
   @override
-  SessionInfoDto userName(String? userName) => this(userName: userName);
+  SessionInfoDto userName(String? userName) => call(userName: userName);
 
   @override
-  SessionInfoDto client(String? client) => this(client: client);
+  SessionInfoDto client(String? client) => call(client: client);
 
   @override
   SessionInfoDto lastActivityDate(DateTime? lastActivityDate) =>
-      this(lastActivityDate: lastActivityDate);
+      call(lastActivityDate: lastActivityDate);
 
   @override
   SessionInfoDto lastPlaybackCheckIn(DateTime? lastPlaybackCheckIn) =>
-      this(lastPlaybackCheckIn: lastPlaybackCheckIn);
+      call(lastPlaybackCheckIn: lastPlaybackCheckIn);
 
   @override
   SessionInfoDto lastPausedDate(DateTime? lastPausedDate) =>
-      this(lastPausedDate: lastPausedDate);
+      call(lastPausedDate: lastPausedDate);
 
   @override
-  SessionInfoDto deviceName(String? deviceName) => this(deviceName: deviceName);
+  SessionInfoDto deviceName(String? deviceName) => call(deviceName: deviceName);
 
   @override
-  SessionInfoDto deviceType(String? deviceType) => this(deviceType: deviceType);
+  SessionInfoDto deviceType(String? deviceType) => call(deviceType: deviceType);
 
   @override
   SessionInfoDto nowPlayingItem(BaseItemDto? nowPlayingItem) =>
-      this(nowPlayingItem: nowPlayingItem);
+      call(nowPlayingItem: nowPlayingItem);
 
   @override
   SessionInfoDto nowViewingItem(BaseItemDto? nowViewingItem) =>
-      this(nowViewingItem: nowViewingItem);
+      call(nowViewingItem: nowViewingItem);
 
   @override
-  SessionInfoDto deviceId(String? deviceId) => this(deviceId: deviceId);
+  SessionInfoDto deviceId(String? deviceId) => call(deviceId: deviceId);
 
   @override
   SessionInfoDto applicationVersion(String? applicationVersion) =>
-      this(applicationVersion: applicationVersion);
+      call(applicationVersion: applicationVersion);
 
   @override
   SessionInfoDto transcodingInfo(TranscodingInfo? transcodingInfo) =>
-      this(transcodingInfo: transcodingInfo);
+      call(transcodingInfo: transcodingInfo);
 
   @override
-  SessionInfoDto isActive(bool? isActive) => this(isActive: isActive);
+  SessionInfoDto isActive(bool? isActive) => call(isActive: isActive);
 
   @override
   SessionInfoDto supportsMediaControl(bool? supportsMediaControl) =>
-      this(supportsMediaControl: supportsMediaControl);
+      call(supportsMediaControl: supportsMediaControl);
 
   @override
   SessionInfoDto supportsRemoteControl(bool? supportsRemoteControl) =>
-      this(supportsRemoteControl: supportsRemoteControl);
+      call(supportsRemoteControl: supportsRemoteControl);
 
   @override
   SessionInfoDto nowPlayingQueue(List<QueueItem>? nowPlayingQueue) =>
-      this(nowPlayingQueue: nowPlayingQueue);
+      call(nowPlayingQueue: nowPlayingQueue);
 
   @override
   SessionInfoDto nowPlayingQueueFullItems(
     List<BaseItemDto>? nowPlayingQueueFullItems,
-  ) => this(nowPlayingQueueFullItems: nowPlayingQueueFullItems);
+  ) => call(nowPlayingQueueFullItems: nowPlayingQueueFullItems);
 
   @override
   SessionInfoDto hasCustomDeviceName(bool? hasCustomDeviceName) =>
-      this(hasCustomDeviceName: hasCustomDeviceName);
+      call(hasCustomDeviceName: hasCustomDeviceName);
 
   @override
   SessionInfoDto playlistItemId(String? playlistItemId) =>
-      this(playlistItemId: playlistItemId);
+      call(playlistItemId: playlistItemId);
 
   @override
-  SessionInfoDto serverId(String? serverId) => this(serverId: serverId);
+  SessionInfoDto serverId(String? serverId) => call(serverId: serverId);
 
   @override
   SessionInfoDto userPrimaryImageTag(String? userPrimaryImageTag) =>
-      this(userPrimaryImageTag: userPrimaryImageTag);
+      call(userPrimaryImageTag: userPrimaryImageTag);
 
   @override
   SessionInfoDto supportedCommands(
     List<GeneralCommandType>? supportedCommands,
-  ) => this(supportedCommands: supportedCommands);
+  ) => call(supportedCommands: supportedCommands);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SessionInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SessionInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SessionInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SessionInfoDto call({
     Object? playState = const $CopyWithPlaceholder(),
     Object? additionalUsers = const $CopyWithPlaceholder(),
@@ -383,7 +386,8 @@ class _$SessionInfoDtoCWProxyImpl implements _$SessionInfoDtoCWProxy {
 }
 
 extension $SessionInfoDtoCopyWith on SessionInfoDto {
-  /// Returns a callable class that can be used as follows: `instanceOfSessionInfoDto.copyWith(...)` or like so:`instanceOfSessionInfoDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSessionInfoDto.copyWith(...)` or `instanceOfSessionInfoDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SessionInfoDtoCWProxy get copyWith => _$SessionInfoDtoCWProxyImpl(this);
 }

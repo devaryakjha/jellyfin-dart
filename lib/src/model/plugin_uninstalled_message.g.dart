@@ -13,12 +13,13 @@ abstract class _$PluginUninstalledMessageCWProxy {
 
   PluginUninstalledMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PluginUninstalledMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PluginUninstalledMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PluginUninstalledMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PluginUninstalledMessage call({
     PluginInfo? data,
     String? messageId,
@@ -26,7 +27,8 @@ abstract class _$PluginUninstalledMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPluginUninstalledMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPluginUninstalledMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPluginUninstalledMessage.copyWith(...)` or call `instanceOfPluginUninstalledMessage.copyWith.fieldName(value)` for a single field.
 class _$PluginUninstalledMessageCWProxyImpl
     implements _$PluginUninstalledMessageCWProxy {
   const _$PluginUninstalledMessageCWProxyImpl(this._value);
@@ -34,23 +36,24 @@ class _$PluginUninstalledMessageCWProxyImpl
   final PluginUninstalledMessage _value;
 
   @override
-  PluginUninstalledMessage data(PluginInfo? data) => this(data: data);
+  PluginUninstalledMessage data(PluginInfo? data) => call(data: data);
 
   @override
   PluginUninstalledMessage messageId(String? messageId) =>
-      this(messageId: messageId);
+      call(messageId: messageId);
 
   @override
   PluginUninstalledMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PluginUninstalledMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PluginUninstalledMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PluginUninstalledMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PluginUninstalledMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$PluginUninstalledMessageCWProxyImpl
 }
 
 extension $PluginUninstalledMessageCopyWith on PluginUninstalledMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfPluginUninstalledMessage.copyWith(...)` or like so:`instanceOfPluginUninstalledMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPluginUninstalledMessage.copyWith(...)` or `instanceOfPluginUninstalledMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PluginUninstalledMessageCWProxy get copyWith =>
       _$PluginUninstalledMessageCWProxyImpl(this);

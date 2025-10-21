@@ -23,12 +23,13 @@ abstract class _$MetadataEditorInfoCWProxy {
     List<NameValuePair>? contentTypeOptions,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MetadataEditorInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MetadataEditorInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MetadataEditorInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MetadataEditorInfo call({
     List<ParentalRating>? parentalRatingOptions,
     List<CountryInfo>? countries,
@@ -39,7 +40,8 @@ abstract class _$MetadataEditorInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMetadataEditorInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMetadataEditorInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMetadataEditorInfo.copyWith(...)` or call `instanceOfMetadataEditorInfo.copyWith.fieldName(value)` for a single field.
 class _$MetadataEditorInfoCWProxyImpl implements _$MetadataEditorInfoCWProxy {
   const _$MetadataEditorInfoCWProxyImpl(this._value);
 
@@ -48,36 +50,37 @@ class _$MetadataEditorInfoCWProxyImpl implements _$MetadataEditorInfoCWProxy {
   @override
   MetadataEditorInfo parentalRatingOptions(
     List<ParentalRating>? parentalRatingOptions,
-  ) => this(parentalRatingOptions: parentalRatingOptions);
+  ) => call(parentalRatingOptions: parentalRatingOptions);
 
   @override
   MetadataEditorInfo countries(List<CountryInfo>? countries) =>
-      this(countries: countries);
+      call(countries: countries);
 
   @override
   MetadataEditorInfo cultures(List<CultureDto>? cultures) =>
-      this(cultures: cultures);
+      call(cultures: cultures);
 
   @override
   MetadataEditorInfo externalIdInfos(List<ExternalIdInfo>? externalIdInfos) =>
-      this(externalIdInfos: externalIdInfos);
+      call(externalIdInfos: externalIdInfos);
 
   @override
   MetadataEditorInfo contentType(CollectionType? contentType) =>
-      this(contentType: contentType);
+      call(contentType: contentType);
 
   @override
   MetadataEditorInfo contentTypeOptions(
     List<NameValuePair>? contentTypeOptions,
-  ) => this(contentTypeOptions: contentTypeOptions);
+  ) => call(contentTypeOptions: contentTypeOptions);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MetadataEditorInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MetadataEditorInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MetadataEditorInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MetadataEditorInfo call({
     Object? parentalRatingOptions = const $CopyWithPlaceholder(),
     Object? countries = const $CopyWithPlaceholder(),
@@ -117,7 +120,8 @@ class _$MetadataEditorInfoCWProxyImpl implements _$MetadataEditorInfoCWProxy {
 }
 
 extension $MetadataEditorInfoCopyWith on MetadataEditorInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfMetadataEditorInfo.copyWith(...)` or like so:`instanceOfMetadataEditorInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMetadataEditorInfo.copyWith(...)` or `instanceOfMetadataEditorInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MetadataEditorInfoCWProxy get copyWith =>
       _$MetadataEditorInfoCWProxyImpl(this);

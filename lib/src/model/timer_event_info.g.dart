@@ -11,34 +11,37 @@ abstract class _$TimerEventInfoCWProxy {
 
   TimerEventInfo programId(String? programId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TimerEventInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TimerEventInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TimerEventInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TimerEventInfo call({String? id, String? programId});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTimerEventInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTimerEventInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTimerEventInfo.copyWith(...)` or call `instanceOfTimerEventInfo.copyWith.fieldName(value)` for a single field.
 class _$TimerEventInfoCWProxyImpl implements _$TimerEventInfoCWProxy {
   const _$TimerEventInfoCWProxyImpl(this._value);
 
   final TimerEventInfo _value;
 
   @override
-  TimerEventInfo id(String? id) => this(id: id);
+  TimerEventInfo id(String? id) => call(id: id);
 
   @override
-  TimerEventInfo programId(String? programId) => this(programId: programId);
+  TimerEventInfo programId(String? programId) => call(programId: programId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TimerEventInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TimerEventInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TimerEventInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TimerEventInfo call({
     Object? id = const $CopyWithPlaceholder(),
     Object? programId = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$TimerEventInfoCWProxyImpl implements _$TimerEventInfoCWProxy {
 }
 
 extension $TimerEventInfoCopyWith on TimerEventInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfTimerEventInfo.copyWith(...)` or like so:`instanceOfTimerEventInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTimerEventInfo.copyWith(...)` or `instanceOfTimerEventInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TimerEventInfoCWProxy get copyWith => _$TimerEventInfoCWProxyImpl(this);
 }

@@ -11,16 +11,18 @@ abstract class _$AuthenticateUserByNameCWProxy {
 
   AuthenticateUserByName pw(String? pw);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AuthenticateUserByName(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AuthenticateUserByName(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AuthenticateUserByName(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AuthenticateUserByName call({String? username, String? pw});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfAuthenticateUserByName.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfAuthenticateUserByName.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfAuthenticateUserByName.copyWith(...)` or call `instanceOfAuthenticateUserByName.copyWith.fieldName(value)` for a single field.
 class _$AuthenticateUserByNameCWProxyImpl
     implements _$AuthenticateUserByNameCWProxy {
   const _$AuthenticateUserByNameCWProxyImpl(this._value);
@@ -28,18 +30,19 @@ class _$AuthenticateUserByNameCWProxyImpl
   final AuthenticateUserByName _value;
 
   @override
-  AuthenticateUserByName username(String? username) => this(username: username);
+  AuthenticateUserByName username(String? username) => call(username: username);
 
   @override
-  AuthenticateUserByName pw(String? pw) => this(pw: pw);
+  AuthenticateUserByName pw(String? pw) => call(pw: pw);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AuthenticateUserByName(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AuthenticateUserByName(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AuthenticateUserByName(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AuthenticateUserByName call({
     Object? username = const $CopyWithPlaceholder(),
     Object? pw = const $CopyWithPlaceholder(),
@@ -58,7 +61,8 @@ class _$AuthenticateUserByNameCWProxyImpl
 }
 
 extension $AuthenticateUserByNameCopyWith on AuthenticateUserByName {
-  /// Returns a callable class that can be used as follows: `instanceOfAuthenticateUserByName.copyWith(...)` or like so:`instanceOfAuthenticateUserByName.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfAuthenticateUserByName.copyWith(...)` or `instanceOfAuthenticateUserByName.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$AuthenticateUserByNameCWProxy get copyWith =>
       _$AuthenticateUserByNameCWProxyImpl(this);

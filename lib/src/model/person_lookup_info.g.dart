@@ -29,12 +29,13 @@ abstract class _$PersonLookupInfoCWProxy {
 
   PersonLookupInfo isAutomated(bool? isAutomated);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PersonLookupInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PersonLookupInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PersonLookupInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PersonLookupInfo call({
     String? name,
     String? originalTitle,
@@ -50,60 +51,62 @@ abstract class _$PersonLookupInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPersonLookupInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPersonLookupInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPersonLookupInfo.copyWith(...)` or call `instanceOfPersonLookupInfo.copyWith.fieldName(value)` for a single field.
 class _$PersonLookupInfoCWProxyImpl implements _$PersonLookupInfoCWProxy {
   const _$PersonLookupInfoCWProxyImpl(this._value);
 
   final PersonLookupInfo _value;
 
   @override
-  PersonLookupInfo name(String? name) => this(name: name);
+  PersonLookupInfo name(String? name) => call(name: name);
 
   @override
   PersonLookupInfo originalTitle(String? originalTitle) =>
-      this(originalTitle: originalTitle);
+      call(originalTitle: originalTitle);
 
   @override
-  PersonLookupInfo path(String? path) => this(path: path);
+  PersonLookupInfo path(String? path) => call(path: path);
 
   @override
   PersonLookupInfo metadataLanguage(String? metadataLanguage) =>
-      this(metadataLanguage: metadataLanguage);
+      call(metadataLanguage: metadataLanguage);
 
   @override
   PersonLookupInfo metadataCountryCode(String? metadataCountryCode) =>
-      this(metadataCountryCode: metadataCountryCode);
+      call(metadataCountryCode: metadataCountryCode);
 
   @override
   PersonLookupInfo providerIds(Map<String, String>? providerIds) =>
-      this(providerIds: providerIds);
+      call(providerIds: providerIds);
 
   @override
-  PersonLookupInfo year(int? year) => this(year: year);
+  PersonLookupInfo year(int? year) => call(year: year);
 
   @override
   PersonLookupInfo indexNumber(int? indexNumber) =>
-      this(indexNumber: indexNumber);
+      call(indexNumber: indexNumber);
 
   @override
   PersonLookupInfo parentIndexNumber(int? parentIndexNumber) =>
-      this(parentIndexNumber: parentIndexNumber);
+      call(parentIndexNumber: parentIndexNumber);
 
   @override
   PersonLookupInfo premiereDate(DateTime? premiereDate) =>
-      this(premiereDate: premiereDate);
+      call(premiereDate: premiereDate);
 
   @override
   PersonLookupInfo isAutomated(bool? isAutomated) =>
-      this(isAutomated: isAutomated);
+      call(isAutomated: isAutomated);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PersonLookupInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PersonLookupInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PersonLookupInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PersonLookupInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? originalTitle = const $CopyWithPlaceholder(),
@@ -167,7 +170,8 @@ class _$PersonLookupInfoCWProxyImpl implements _$PersonLookupInfoCWProxy {
 }
 
 extension $PersonLookupInfoCopyWith on PersonLookupInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfPersonLookupInfo.copyWith(...)` or like so:`instanceOfPersonLookupInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPersonLookupInfo.copyWith(...)` or `instanceOfPersonLookupInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PersonLookupInfoCWProxy get copyWith => _$PersonLookupInfoCWProxyImpl(this);
 }

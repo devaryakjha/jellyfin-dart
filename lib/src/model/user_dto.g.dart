@@ -21,7 +21,10 @@ abstract class _$UserDtoCWProxy {
 
   UserDto hasConfiguredPassword(bool? hasConfiguredPassword);
 
-  UserDto hasConfiguredEasyPassword(bool? hasConfiguredEasyPassword);
+  UserDto hasConfiguredEasyPassword(
+    @Deprecated('hasConfiguredEasyPassword has been deprecated')
+    bool? hasConfiguredEasyPassword,
+  );
 
   UserDto enableAutoLogin(bool? enableAutoLogin);
 
@@ -35,12 +38,13 @@ abstract class _$UserDtoCWProxy {
 
   UserDto primaryImageAspectRatio(double? primaryImageAspectRatio);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserDto call({
     String? name,
     String? serverId,
@@ -49,6 +53,7 @@ abstract class _$UserDtoCWProxy {
     String? primaryImageTag,
     bool? hasPassword,
     bool? hasConfiguredPassword,
+    @Deprecated('hasConfiguredEasyPassword has been deprecated')
     bool? hasConfiguredEasyPassword,
     bool? enableAutoLogin,
     DateTime? lastLoginDate,
@@ -59,69 +64,73 @@ abstract class _$UserDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUserDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUserDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUserDto.copyWith(...)` or call `instanceOfUserDto.copyWith.fieldName(value)` for a single field.
 class _$UserDtoCWProxyImpl implements _$UserDtoCWProxy {
   const _$UserDtoCWProxyImpl(this._value);
 
   final UserDto _value;
 
   @override
-  UserDto name(String? name) => this(name: name);
+  UserDto name(String? name) => call(name: name);
 
   @override
-  UserDto serverId(String? serverId) => this(serverId: serverId);
+  UserDto serverId(String? serverId) => call(serverId: serverId);
 
   @override
-  UserDto serverName(String? serverName) => this(serverName: serverName);
+  UserDto serverName(String? serverName) => call(serverName: serverName);
 
   @override
-  UserDto id(String? id) => this(id: id);
+  UserDto id(String? id) => call(id: id);
 
   @override
   UserDto primaryImageTag(String? primaryImageTag) =>
-      this(primaryImageTag: primaryImageTag);
+      call(primaryImageTag: primaryImageTag);
 
   @override
-  UserDto hasPassword(bool? hasPassword) => this(hasPassword: hasPassword);
+  UserDto hasPassword(bool? hasPassword) => call(hasPassword: hasPassword);
 
   @override
   UserDto hasConfiguredPassword(bool? hasConfiguredPassword) =>
-      this(hasConfiguredPassword: hasConfiguredPassword);
+      call(hasConfiguredPassword: hasConfiguredPassword);
 
   @override
-  UserDto hasConfiguredEasyPassword(bool? hasConfiguredEasyPassword) =>
-      this(hasConfiguredEasyPassword: hasConfiguredEasyPassword);
+  UserDto hasConfiguredEasyPassword(
+    @Deprecated('hasConfiguredEasyPassword has been deprecated')
+    bool? hasConfiguredEasyPassword,
+  ) => call(hasConfiguredEasyPassword: hasConfiguredEasyPassword);
 
   @override
   UserDto enableAutoLogin(bool? enableAutoLogin) =>
-      this(enableAutoLogin: enableAutoLogin);
+      call(enableAutoLogin: enableAutoLogin);
 
   @override
   UserDto lastLoginDate(DateTime? lastLoginDate) =>
-      this(lastLoginDate: lastLoginDate);
+      call(lastLoginDate: lastLoginDate);
 
   @override
   UserDto lastActivityDate(DateTime? lastActivityDate) =>
-      this(lastActivityDate: lastActivityDate);
+      call(lastActivityDate: lastActivityDate);
 
   @override
   UserDto configuration(UserConfiguration? configuration) =>
-      this(configuration: configuration);
+      call(configuration: configuration);
 
   @override
-  UserDto policy(UserPolicy? policy) => this(policy: policy);
+  UserDto policy(UserPolicy? policy) => call(policy: policy);
 
   @override
   UserDto primaryImageAspectRatio(double? primaryImageAspectRatio) =>
-      this(primaryImageAspectRatio: primaryImageAspectRatio);
+      call(primaryImageAspectRatio: primaryImageAspectRatio);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserDto call({
     Object? name = const $CopyWithPlaceholder(),
     Object? serverId = const $CopyWithPlaceholder(),
@@ -130,6 +139,7 @@ class _$UserDtoCWProxyImpl implements _$UserDtoCWProxy {
     Object? primaryImageTag = const $CopyWithPlaceholder(),
     Object? hasPassword = const $CopyWithPlaceholder(),
     Object? hasConfiguredPassword = const $CopyWithPlaceholder(),
+    @Deprecated('hasConfiguredEasyPassword has been deprecated')
     Object? hasConfiguredEasyPassword = const $CopyWithPlaceholder(),
     Object? enableAutoLogin = const $CopyWithPlaceholder(),
     Object? lastLoginDate = const $CopyWithPlaceholder(),
@@ -203,7 +213,8 @@ class _$UserDtoCWProxyImpl implements _$UserDtoCWProxy {
 }
 
 extension $UserDtoCopyWith on UserDto {
-  /// Returns a callable class that can be used as follows: `instanceOfUserDto.copyWith(...)` or like so:`instanceOfUserDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUserDto.copyWith(...)` or `instanceOfUserDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UserDtoCWProxy get copyWith => _$UserDtoCWProxyImpl(this);
 }

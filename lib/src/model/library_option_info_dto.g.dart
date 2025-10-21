@@ -11,16 +11,18 @@ abstract class _$LibraryOptionInfoDtoCWProxy {
 
   LibraryOptionInfoDto defaultEnabled(bool? defaultEnabled);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryOptionInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryOptionInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryOptionInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryOptionInfoDto call({String? name, bool? defaultEnabled});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLibraryOptionInfoDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLibraryOptionInfoDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLibraryOptionInfoDto.copyWith(...)` or call `instanceOfLibraryOptionInfoDto.copyWith.fieldName(value)` for a single field.
 class _$LibraryOptionInfoDtoCWProxyImpl
     implements _$LibraryOptionInfoDtoCWProxy {
   const _$LibraryOptionInfoDtoCWProxyImpl(this._value);
@@ -28,19 +30,20 @@ class _$LibraryOptionInfoDtoCWProxyImpl
   final LibraryOptionInfoDto _value;
 
   @override
-  LibraryOptionInfoDto name(String? name) => this(name: name);
+  LibraryOptionInfoDto name(String? name) => call(name: name);
 
   @override
   LibraryOptionInfoDto defaultEnabled(bool? defaultEnabled) =>
-      this(defaultEnabled: defaultEnabled);
+      call(defaultEnabled: defaultEnabled);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryOptionInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryOptionInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryOptionInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryOptionInfoDto call({
     Object? name = const $CopyWithPlaceholder(),
     Object? defaultEnabled = const $CopyWithPlaceholder(),
@@ -59,7 +62,8 @@ class _$LibraryOptionInfoDtoCWProxyImpl
 }
 
 extension $LibraryOptionInfoDtoCopyWith on LibraryOptionInfoDto {
-  /// Returns a callable class that can be used as follows: `instanceOfLibraryOptionInfoDto.copyWith(...)` or like so:`instanceOfLibraryOptionInfoDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLibraryOptionInfoDto.copyWith(...)` or `instanceOfLibraryOptionInfoDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LibraryOptionInfoDtoCWProxy get copyWith =>
       _$LibraryOptionInfoDtoCWProxyImpl(this);

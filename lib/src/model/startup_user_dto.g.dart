@@ -11,34 +11,37 @@ abstract class _$StartupUserDtoCWProxy {
 
   StartupUserDto password(String? password);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `StartupUserDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `StartupUserDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// StartupUserDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   StartupUserDto call({String? name, String? password});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfStartupUserDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfStartupUserDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfStartupUserDto.copyWith(...)` or call `instanceOfStartupUserDto.copyWith.fieldName(value)` for a single field.
 class _$StartupUserDtoCWProxyImpl implements _$StartupUserDtoCWProxy {
   const _$StartupUserDtoCWProxyImpl(this._value);
 
   final StartupUserDto _value;
 
   @override
-  StartupUserDto name(String? name) => this(name: name);
+  StartupUserDto name(String? name) => call(name: name);
 
   @override
-  StartupUserDto password(String? password) => this(password: password);
+  StartupUserDto password(String? password) => call(password: password);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `StartupUserDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `StartupUserDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// StartupUserDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   StartupUserDto call({
     Object? name = const $CopyWithPlaceholder(),
     Object? password = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$StartupUserDtoCWProxyImpl implements _$StartupUserDtoCWProxy {
 }
 
 extension $StartupUserDtoCopyWith on StartupUserDto {
-  /// Returns a callable class that can be used as follows: `instanceOfStartupUserDto.copyWith(...)` or like so:`instanceOfStartupUserDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfStartupUserDto.copyWith(...)` or `instanceOfStartupUserDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$StartupUserDtoCWProxy get copyWith => _$StartupUserDtoCWProxyImpl(this);
 }

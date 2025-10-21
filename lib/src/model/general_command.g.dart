@@ -13,12 +13,13 @@ abstract class _$GeneralCommandCWProxy {
 
   GeneralCommand arguments(Map<String, String>? arguments);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GeneralCommand(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GeneralCommand(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GeneralCommand(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GeneralCommand call({
     GeneralCommandType? name,
     String? controllingUserId,
@@ -26,30 +27,32 @@ abstract class _$GeneralCommandCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfGeneralCommand.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfGeneralCommand.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfGeneralCommand.copyWith(...)` or call `instanceOfGeneralCommand.copyWith.fieldName(value)` for a single field.
 class _$GeneralCommandCWProxyImpl implements _$GeneralCommandCWProxy {
   const _$GeneralCommandCWProxyImpl(this._value);
 
   final GeneralCommand _value;
 
   @override
-  GeneralCommand name(GeneralCommandType? name) => this(name: name);
+  GeneralCommand name(GeneralCommandType? name) => call(name: name);
 
   @override
   GeneralCommand controllingUserId(String? controllingUserId) =>
-      this(controllingUserId: controllingUserId);
+      call(controllingUserId: controllingUserId);
 
   @override
   GeneralCommand arguments(Map<String, String>? arguments) =>
-      this(arguments: arguments);
+      call(arguments: arguments);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GeneralCommand(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GeneralCommand(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GeneralCommand(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GeneralCommand call({
     Object? name = const $CopyWithPlaceholder(),
     Object? controllingUserId = const $CopyWithPlaceholder(),
@@ -73,7 +76,8 @@ class _$GeneralCommandCWProxyImpl implements _$GeneralCommandCWProxy {
 }
 
 extension $GeneralCommandCopyWith on GeneralCommand {
-  /// Returns a callable class that can be used as follows: `instanceOfGeneralCommand.copyWith(...)` or like so:`instanceOfGeneralCommand.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfGeneralCommand.copyWith(...)` or `instanceOfGeneralCommand.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$GeneralCommandCWProxy get copyWith => _$GeneralCommandCWProxyImpl(this);
 }

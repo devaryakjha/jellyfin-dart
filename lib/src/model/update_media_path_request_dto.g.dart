@@ -11,16 +11,18 @@ abstract class _$UpdateMediaPathRequestDtoCWProxy {
 
   UpdateMediaPathRequestDto pathInfo(MediaPathInfo pathInfo);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UpdateMediaPathRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UpdateMediaPathRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UpdateMediaPathRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UpdateMediaPathRequestDto call({String name, MediaPathInfo pathInfo});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUpdateMediaPathRequestDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUpdateMediaPathRequestDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUpdateMediaPathRequestDto.copyWith(...)` or call `instanceOfUpdateMediaPathRequestDto.copyWith.fieldName(value)` for a single field.
 class _$UpdateMediaPathRequestDtoCWProxyImpl
     implements _$UpdateMediaPathRequestDtoCWProxy {
   const _$UpdateMediaPathRequestDtoCWProxyImpl(this._value);
@@ -28,29 +30,30 @@ class _$UpdateMediaPathRequestDtoCWProxyImpl
   final UpdateMediaPathRequestDto _value;
 
   @override
-  UpdateMediaPathRequestDto name(String name) => this(name: name);
+  UpdateMediaPathRequestDto name(String name) => call(name: name);
 
   @override
   UpdateMediaPathRequestDto pathInfo(MediaPathInfo pathInfo) =>
-      this(pathInfo: pathInfo);
+      call(pathInfo: pathInfo);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UpdateMediaPathRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UpdateMediaPathRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UpdateMediaPathRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UpdateMediaPathRequestDto call({
     Object? name = const $CopyWithPlaceholder(),
     Object? pathInfo = const $CopyWithPlaceholder(),
   }) {
     return UpdateMediaPathRequestDto(
-      name: name == const $CopyWithPlaceholder()
+      name: name == const $CopyWithPlaceholder() || name == null
           ? _value.name
           // ignore: cast_nullable_to_non_nullable
           : name as String,
-      pathInfo: pathInfo == const $CopyWithPlaceholder()
+      pathInfo: pathInfo == const $CopyWithPlaceholder() || pathInfo == null
           ? _value.pathInfo
           // ignore: cast_nullable_to_non_nullable
           : pathInfo as MediaPathInfo,
@@ -59,7 +62,8 @@ class _$UpdateMediaPathRequestDtoCWProxyImpl
 }
 
 extension $UpdateMediaPathRequestDtoCopyWith on UpdateMediaPathRequestDto {
-  /// Returns a callable class that can be used as follows: `instanceOfUpdateMediaPathRequestDto.copyWith(...)` or like so:`instanceOfUpdateMediaPathRequestDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUpdateMediaPathRequestDto.copyWith(...)` or `instanceOfUpdateMediaPathRequestDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UpdateMediaPathRequestDtoCWProxy get copyWith =>
       _$UpdateMediaPathRequestDtoCWProxyImpl(this);

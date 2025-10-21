@@ -11,34 +11,37 @@ abstract class _$PathSubstitutionCWProxy {
 
   PathSubstitution to(String? to);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PathSubstitution(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PathSubstitution(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PathSubstitution(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PathSubstitution call({String? from, String? to});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPathSubstitution.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPathSubstitution.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPathSubstitution.copyWith(...)` or call `instanceOfPathSubstitution.copyWith.fieldName(value)` for a single field.
 class _$PathSubstitutionCWProxyImpl implements _$PathSubstitutionCWProxy {
   const _$PathSubstitutionCWProxyImpl(this._value);
 
   final PathSubstitution _value;
 
   @override
-  PathSubstitution from(String? from) => this(from: from);
+  PathSubstitution from(String? from) => call(from: from);
 
   @override
-  PathSubstitution to(String? to) => this(to: to);
+  PathSubstitution to(String? to) => call(to: to);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PathSubstitution(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PathSubstitution(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PathSubstitution(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PathSubstitution call({
     Object? from = const $CopyWithPlaceholder(),
     Object? to = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$PathSubstitutionCWProxyImpl implements _$PathSubstitutionCWProxy {
 }
 
 extension $PathSubstitutionCopyWith on PathSubstitution {
-  /// Returns a callable class that can be used as follows: `instanceOfPathSubstitution.copyWith(...)` or like so:`instanceOfPathSubstitution.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPathSubstitution.copyWith(...)` or `instanceOfPathSubstitution.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PathSubstitutionCWProxy get copyWith => _$PathSubstitutionCWProxyImpl(this);
 }

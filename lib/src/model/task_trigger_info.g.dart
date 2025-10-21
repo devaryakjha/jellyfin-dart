@@ -17,12 +17,13 @@ abstract class _$TaskTriggerInfoCWProxy {
 
   TaskTriggerInfo maxRuntimeTicks(int? maxRuntimeTicks);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TaskTriggerInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TaskTriggerInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TaskTriggerInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TaskTriggerInfo call({
     TaskTriggerInfoType? type,
     int? timeOfDayTicks,
@@ -32,37 +33,39 @@ abstract class _$TaskTriggerInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTaskTriggerInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTaskTriggerInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTaskTriggerInfo.copyWith(...)` or call `instanceOfTaskTriggerInfo.copyWith.fieldName(value)` for a single field.
 class _$TaskTriggerInfoCWProxyImpl implements _$TaskTriggerInfoCWProxy {
   const _$TaskTriggerInfoCWProxyImpl(this._value);
 
   final TaskTriggerInfo _value;
 
   @override
-  TaskTriggerInfo type(TaskTriggerInfoType? type) => this(type: type);
+  TaskTriggerInfo type(TaskTriggerInfoType? type) => call(type: type);
 
   @override
   TaskTriggerInfo timeOfDayTicks(int? timeOfDayTicks) =>
-      this(timeOfDayTicks: timeOfDayTicks);
+      call(timeOfDayTicks: timeOfDayTicks);
 
   @override
   TaskTriggerInfo intervalTicks(int? intervalTicks) =>
-      this(intervalTicks: intervalTicks);
+      call(intervalTicks: intervalTicks);
 
   @override
-  TaskTriggerInfo dayOfWeek(DayOfWeek? dayOfWeek) => this(dayOfWeek: dayOfWeek);
+  TaskTriggerInfo dayOfWeek(DayOfWeek? dayOfWeek) => call(dayOfWeek: dayOfWeek);
 
   @override
   TaskTriggerInfo maxRuntimeTicks(int? maxRuntimeTicks) =>
-      this(maxRuntimeTicks: maxRuntimeTicks);
+      call(maxRuntimeTicks: maxRuntimeTicks);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TaskTriggerInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TaskTriggerInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TaskTriggerInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TaskTriggerInfo call({
     Object? type = const $CopyWithPlaceholder(),
     Object? timeOfDayTicks = const $CopyWithPlaceholder(),
@@ -96,7 +99,8 @@ class _$TaskTriggerInfoCWProxyImpl implements _$TaskTriggerInfoCWProxy {
 }
 
 extension $TaskTriggerInfoCopyWith on TaskTriggerInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfTaskTriggerInfo.copyWith(...)` or like so:`instanceOfTaskTriggerInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTaskTriggerInfo.copyWith(...)` or `instanceOfTaskTriggerInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TaskTriggerInfoCWProxy get copyWith => _$TaskTriggerInfoCWProxyImpl(this);
 }

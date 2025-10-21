@@ -27,12 +27,13 @@ abstract class _$SystemStorageDtoCWProxy {
 
   SystemStorageDto libraries(List<LibraryStorageDto>? libraries);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SystemStorageDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SystemStorageDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SystemStorageDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SystemStorageDto call({
     FolderStorageDto? programDataFolder,
     FolderStorageDto? webFolder,
@@ -45,7 +46,8 @@ abstract class _$SystemStorageDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSystemStorageDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSystemStorageDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSystemStorageDto.copyWith(...)` or call `instanceOfSystemStorageDto.copyWith.fieldName(value)` for a single field.
 class _$SystemStorageDtoCWProxyImpl implements _$SystemStorageDtoCWProxy {
   const _$SystemStorageDtoCWProxyImpl(this._value);
 
@@ -53,45 +55,46 @@ class _$SystemStorageDtoCWProxyImpl implements _$SystemStorageDtoCWProxy {
 
   @override
   SystemStorageDto programDataFolder(FolderStorageDto? programDataFolder) =>
-      this(programDataFolder: programDataFolder);
+      call(programDataFolder: programDataFolder);
 
   @override
   SystemStorageDto webFolder(FolderStorageDto? webFolder) =>
-      this(webFolder: webFolder);
+      call(webFolder: webFolder);
 
   @override
   SystemStorageDto imageCacheFolder(FolderStorageDto? imageCacheFolder) =>
-      this(imageCacheFolder: imageCacheFolder);
+      call(imageCacheFolder: imageCacheFolder);
 
   @override
   SystemStorageDto cacheFolder(FolderStorageDto? cacheFolder) =>
-      this(cacheFolder: cacheFolder);
+      call(cacheFolder: cacheFolder);
 
   @override
   SystemStorageDto logFolder(FolderStorageDto? logFolder) =>
-      this(logFolder: logFolder);
+      call(logFolder: logFolder);
 
   @override
   SystemStorageDto internalMetadataFolder(
     FolderStorageDto? internalMetadataFolder,
-  ) => this(internalMetadataFolder: internalMetadataFolder);
+  ) => call(internalMetadataFolder: internalMetadataFolder);
 
   @override
   SystemStorageDto transcodingTempFolder(
     FolderStorageDto? transcodingTempFolder,
-  ) => this(transcodingTempFolder: transcodingTempFolder);
+  ) => call(transcodingTempFolder: transcodingTempFolder);
 
   @override
   SystemStorageDto libraries(List<LibraryStorageDto>? libraries) =>
-      this(libraries: libraries);
+      call(libraries: libraries);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SystemStorageDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SystemStorageDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SystemStorageDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SystemStorageDto call({
     Object? programDataFolder = const $CopyWithPlaceholder(),
     Object? webFolder = const $CopyWithPlaceholder(),
@@ -142,7 +145,8 @@ class _$SystemStorageDtoCWProxyImpl implements _$SystemStorageDtoCWProxy {
 }
 
 extension $SystemStorageDtoCopyWith on SystemStorageDto {
-  /// Returns a callable class that can be used as follows: `instanceOfSystemStorageDto.copyWith(...)` or like so:`instanceOfSystemStorageDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSystemStorageDto.copyWith(...)` or `instanceOfSystemStorageDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SystemStorageDtoCWProxy get copyWith => _$SystemStorageDtoCWProxyImpl(this);
 }

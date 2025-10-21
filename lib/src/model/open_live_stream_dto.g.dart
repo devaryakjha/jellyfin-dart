@@ -39,12 +39,13 @@ abstract class _$OpenLiveStreamDtoCWProxy {
     List<MediaProtocol>? directPlayProtocols,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `OpenLiveStreamDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `OpenLiveStreamDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// OpenLiveStreamDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   OpenLiveStreamDto call({
     String? openToken,
     String? userId,
@@ -63,76 +64,78 @@ abstract class _$OpenLiveStreamDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfOpenLiveStreamDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfOpenLiveStreamDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfOpenLiveStreamDto.copyWith(...)` or call `instanceOfOpenLiveStreamDto.copyWith.fieldName(value)` for a single field.
 class _$OpenLiveStreamDtoCWProxyImpl implements _$OpenLiveStreamDtoCWProxy {
   const _$OpenLiveStreamDtoCWProxyImpl(this._value);
 
   final OpenLiveStreamDto _value;
 
   @override
-  OpenLiveStreamDto openToken(String? openToken) => this(openToken: openToken);
+  OpenLiveStreamDto openToken(String? openToken) => call(openToken: openToken);
 
   @override
-  OpenLiveStreamDto userId(String? userId) => this(userId: userId);
+  OpenLiveStreamDto userId(String? userId) => call(userId: userId);
 
   @override
   OpenLiveStreamDto playSessionId(String? playSessionId) =>
-      this(playSessionId: playSessionId);
+      call(playSessionId: playSessionId);
 
   @override
   OpenLiveStreamDto maxStreamingBitrate(int? maxStreamingBitrate) =>
-      this(maxStreamingBitrate: maxStreamingBitrate);
+      call(maxStreamingBitrate: maxStreamingBitrate);
 
   @override
   OpenLiveStreamDto startTimeTicks(int? startTimeTicks) =>
-      this(startTimeTicks: startTimeTicks);
+      call(startTimeTicks: startTimeTicks);
 
   @override
   OpenLiveStreamDto audioStreamIndex(int? audioStreamIndex) =>
-      this(audioStreamIndex: audioStreamIndex);
+      call(audioStreamIndex: audioStreamIndex);
 
   @override
   OpenLiveStreamDto subtitleStreamIndex(int? subtitleStreamIndex) =>
-      this(subtitleStreamIndex: subtitleStreamIndex);
+      call(subtitleStreamIndex: subtitleStreamIndex);
 
   @override
   OpenLiveStreamDto maxAudioChannels(int? maxAudioChannels) =>
-      this(maxAudioChannels: maxAudioChannels);
+      call(maxAudioChannels: maxAudioChannels);
 
   @override
-  OpenLiveStreamDto itemId(String? itemId) => this(itemId: itemId);
+  OpenLiveStreamDto itemId(String? itemId) => call(itemId: itemId);
 
   @override
   OpenLiveStreamDto enableDirectPlay(bool? enableDirectPlay) =>
-      this(enableDirectPlay: enableDirectPlay);
+      call(enableDirectPlay: enableDirectPlay);
 
   @override
   OpenLiveStreamDto enableDirectStream(bool? enableDirectStream) =>
-      this(enableDirectStream: enableDirectStream);
+      call(enableDirectStream: enableDirectStream);
 
   @override
   OpenLiveStreamDto alwaysBurnInSubtitleWhenTranscoding(
     bool? alwaysBurnInSubtitleWhenTranscoding,
-  ) => this(
+  ) => call(
     alwaysBurnInSubtitleWhenTranscoding: alwaysBurnInSubtitleWhenTranscoding,
   );
 
   @override
   OpenLiveStreamDto deviceProfile(DeviceProfile? deviceProfile) =>
-      this(deviceProfile: deviceProfile);
+      call(deviceProfile: deviceProfile);
 
   @override
   OpenLiveStreamDto directPlayProtocols(
     List<MediaProtocol>? directPlayProtocols,
-  ) => this(directPlayProtocols: directPlayProtocols);
+  ) => call(directPlayProtocols: directPlayProtocols);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `OpenLiveStreamDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `OpenLiveStreamDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// OpenLiveStreamDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   OpenLiveStreamDto call({
     Object? openToken = const $CopyWithPlaceholder(),
     Object? userId = const $CopyWithPlaceholder(),
@@ -212,7 +215,8 @@ class _$OpenLiveStreamDtoCWProxyImpl implements _$OpenLiveStreamDtoCWProxy {
 }
 
 extension $OpenLiveStreamDtoCopyWith on OpenLiveStreamDto {
-  /// Returns a callable class that can be used as follows: `instanceOfOpenLiveStreamDto.copyWith(...)` or like so:`instanceOfOpenLiveStreamDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfOpenLiveStreamDto.copyWith(...)` or `instanceOfOpenLiveStreamDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$OpenLiveStreamDtoCWProxy get copyWith =>
       _$OpenLiveStreamDtoCWProxyImpl(this);

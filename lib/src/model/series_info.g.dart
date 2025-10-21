@@ -29,12 +29,13 @@ abstract class _$SeriesInfoCWProxy {
 
   SeriesInfo isAutomated(bool? isAutomated);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SeriesInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SeriesInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SeriesInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SeriesInfo call({
     String? name,
     String? originalTitle,
@@ -50,58 +51,60 @@ abstract class _$SeriesInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSeriesInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSeriesInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSeriesInfo.copyWith(...)` or call `instanceOfSeriesInfo.copyWith.fieldName(value)` for a single field.
 class _$SeriesInfoCWProxyImpl implements _$SeriesInfoCWProxy {
   const _$SeriesInfoCWProxyImpl(this._value);
 
   final SeriesInfo _value;
 
   @override
-  SeriesInfo name(String? name) => this(name: name);
+  SeriesInfo name(String? name) => call(name: name);
 
   @override
   SeriesInfo originalTitle(String? originalTitle) =>
-      this(originalTitle: originalTitle);
+      call(originalTitle: originalTitle);
 
   @override
-  SeriesInfo path(String? path) => this(path: path);
+  SeriesInfo path(String? path) => call(path: path);
 
   @override
   SeriesInfo metadataLanguage(String? metadataLanguage) =>
-      this(metadataLanguage: metadataLanguage);
+      call(metadataLanguage: metadataLanguage);
 
   @override
   SeriesInfo metadataCountryCode(String? metadataCountryCode) =>
-      this(metadataCountryCode: metadataCountryCode);
+      call(metadataCountryCode: metadataCountryCode);
 
   @override
   SeriesInfo providerIds(Map<String, String>? providerIds) =>
-      this(providerIds: providerIds);
+      call(providerIds: providerIds);
 
   @override
-  SeriesInfo year(int? year) => this(year: year);
+  SeriesInfo year(int? year) => call(year: year);
 
   @override
-  SeriesInfo indexNumber(int? indexNumber) => this(indexNumber: indexNumber);
+  SeriesInfo indexNumber(int? indexNumber) => call(indexNumber: indexNumber);
 
   @override
   SeriesInfo parentIndexNumber(int? parentIndexNumber) =>
-      this(parentIndexNumber: parentIndexNumber);
+      call(parentIndexNumber: parentIndexNumber);
 
   @override
   SeriesInfo premiereDate(DateTime? premiereDate) =>
-      this(premiereDate: premiereDate);
+      call(premiereDate: premiereDate);
 
   @override
-  SeriesInfo isAutomated(bool? isAutomated) => this(isAutomated: isAutomated);
+  SeriesInfo isAutomated(bool? isAutomated) => call(isAutomated: isAutomated);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SeriesInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SeriesInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SeriesInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SeriesInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? originalTitle = const $CopyWithPlaceholder(),
@@ -165,7 +168,8 @@ class _$SeriesInfoCWProxyImpl implements _$SeriesInfoCWProxy {
 }
 
 extension $SeriesInfoCopyWith on SeriesInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfSeriesInfo.copyWith(...)` or like so:`instanceOfSeriesInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSeriesInfo.copyWith(...)` or `instanceOfSeriesInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SeriesInfoCWProxy get copyWith => _$SeriesInfoCWProxyImpl(this);
 }

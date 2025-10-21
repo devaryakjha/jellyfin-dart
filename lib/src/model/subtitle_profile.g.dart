@@ -17,12 +17,13 @@ abstract class _$SubtitleProfileCWProxy {
 
   SubtitleProfile container(String? container);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SubtitleProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SubtitleProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SubtitleProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SubtitleProfile call({
     String? format,
     SubtitleDeliveryMethod? method,
@@ -32,35 +33,37 @@ abstract class _$SubtitleProfileCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSubtitleProfile.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSubtitleProfile.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSubtitleProfile.copyWith(...)` or call `instanceOfSubtitleProfile.copyWith.fieldName(value)` for a single field.
 class _$SubtitleProfileCWProxyImpl implements _$SubtitleProfileCWProxy {
   const _$SubtitleProfileCWProxyImpl(this._value);
 
   final SubtitleProfile _value;
 
   @override
-  SubtitleProfile format(String? format) => this(format: format);
+  SubtitleProfile format(String? format) => call(format: format);
 
   @override
   SubtitleProfile method(SubtitleDeliveryMethod? method) =>
-      this(method: method);
+      call(method: method);
 
   @override
-  SubtitleProfile didlMode(String? didlMode) => this(didlMode: didlMode);
+  SubtitleProfile didlMode(String? didlMode) => call(didlMode: didlMode);
 
   @override
-  SubtitleProfile language(String? language) => this(language: language);
+  SubtitleProfile language(String? language) => call(language: language);
 
   @override
-  SubtitleProfile container(String? container) => this(container: container);
+  SubtitleProfile container(String? container) => call(container: container);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SubtitleProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SubtitleProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SubtitleProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SubtitleProfile call({
     Object? format = const $CopyWithPlaceholder(),
     Object? method = const $CopyWithPlaceholder(),
@@ -94,7 +97,8 @@ class _$SubtitleProfileCWProxyImpl implements _$SubtitleProfileCWProxy {
 }
 
 extension $SubtitleProfileCopyWith on SubtitleProfile {
-  /// Returns a callable class that can be used as follows: `instanceOfSubtitleProfile.copyWith(...)` or like so:`instanceOfSubtitleProfile.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSubtitleProfile.copyWith(...)` or `instanceOfSubtitleProfile.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SubtitleProfileCWProxy get copyWith => _$SubtitleProfileCWProxyImpl(this);
 }

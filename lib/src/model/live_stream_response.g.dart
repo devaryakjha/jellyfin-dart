@@ -9,16 +9,18 @@ part of 'live_stream_response.dart';
 abstract class _$LiveStreamResponseCWProxy {
   LiveStreamResponse mediaSource(MediaSourceInfo? mediaSource);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LiveStreamResponse(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LiveStreamResponse(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LiveStreamResponse(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LiveStreamResponse call({MediaSourceInfo? mediaSource});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLiveStreamResponse.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLiveStreamResponse.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLiveStreamResponse.copyWith(...)` or call `instanceOfLiveStreamResponse.copyWith.fieldName(value)` for a single field.
 class _$LiveStreamResponseCWProxyImpl implements _$LiveStreamResponseCWProxy {
   const _$LiveStreamResponseCWProxyImpl(this._value);
 
@@ -26,15 +28,16 @@ class _$LiveStreamResponseCWProxyImpl implements _$LiveStreamResponseCWProxy {
 
   @override
   LiveStreamResponse mediaSource(MediaSourceInfo? mediaSource) =>
-      this(mediaSource: mediaSource);
+      call(mediaSource: mediaSource);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LiveStreamResponse(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LiveStreamResponse(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LiveStreamResponse(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LiveStreamResponse call({
     Object? mediaSource = const $CopyWithPlaceholder(),
   }) {
@@ -48,7 +51,8 @@ class _$LiveStreamResponseCWProxyImpl implements _$LiveStreamResponseCWProxy {
 }
 
 extension $LiveStreamResponseCopyWith on LiveStreamResponse {
-  /// Returns a callable class that can be used as follows: `instanceOfLiveStreamResponse.copyWith(...)` or like so:`instanceOfLiveStreamResponse.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLiveStreamResponse.copyWith(...)` or `instanceOfLiveStreamResponse.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LiveStreamResponseCWProxy get copyWith =>
       _$LiveStreamResponseCWProxyImpl(this);

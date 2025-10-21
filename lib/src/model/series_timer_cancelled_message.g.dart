@@ -13,12 +13,13 @@ abstract class _$SeriesTimerCancelledMessageCWProxy {
 
   SeriesTimerCancelledMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SeriesTimerCancelledMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SeriesTimerCancelledMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SeriesTimerCancelledMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SeriesTimerCancelledMessage call({
     TimerEventInfo? data,
     String? messageId,
@@ -26,7 +27,8 @@ abstract class _$SeriesTimerCancelledMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSeriesTimerCancelledMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSeriesTimerCancelledMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSeriesTimerCancelledMessage.copyWith(...)` or call `instanceOfSeriesTimerCancelledMessage.copyWith.fieldName(value)` for a single field.
 class _$SeriesTimerCancelledMessageCWProxyImpl
     implements _$SeriesTimerCancelledMessageCWProxy {
   const _$SeriesTimerCancelledMessageCWProxyImpl(this._value);
@@ -34,23 +36,24 @@ class _$SeriesTimerCancelledMessageCWProxyImpl
   final SeriesTimerCancelledMessage _value;
 
   @override
-  SeriesTimerCancelledMessage data(TimerEventInfo? data) => this(data: data);
+  SeriesTimerCancelledMessage data(TimerEventInfo? data) => call(data: data);
 
   @override
   SeriesTimerCancelledMessage messageId(String? messageId) =>
-      this(messageId: messageId);
+      call(messageId: messageId);
 
   @override
   SeriesTimerCancelledMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SeriesTimerCancelledMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SeriesTimerCancelledMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SeriesTimerCancelledMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SeriesTimerCancelledMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$SeriesTimerCancelledMessageCWProxyImpl
 }
 
 extension $SeriesTimerCancelledMessageCopyWith on SeriesTimerCancelledMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfSeriesTimerCancelledMessage.copyWith(...)` or like so:`instanceOfSeriesTimerCancelledMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSeriesTimerCancelledMessage.copyWith(...)` or `instanceOfSeriesTimerCancelledMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SeriesTimerCancelledMessageCWProxy get copyWith =>
       _$SeriesTimerCancelledMessageCWProxyImpl(this);

@@ -21,12 +21,13 @@ abstract class _$BaseItemPersonCWProxy {
     BaseItemPersonImageBlurHashes? imageBlurHashes,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BaseItemPerson(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BaseItemPerson(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BaseItemPerson(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BaseItemPerson call({
     String? name,
     String? id,
@@ -37,40 +38,42 @@ abstract class _$BaseItemPersonCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfBaseItemPerson.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfBaseItemPerson.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfBaseItemPerson.copyWith(...)` or call `instanceOfBaseItemPerson.copyWith.fieldName(value)` for a single field.
 class _$BaseItemPersonCWProxyImpl implements _$BaseItemPersonCWProxy {
   const _$BaseItemPersonCWProxyImpl(this._value);
 
   final BaseItemPerson _value;
 
   @override
-  BaseItemPerson name(String? name) => this(name: name);
+  BaseItemPerson name(String? name) => call(name: name);
 
   @override
-  BaseItemPerson id(String? id) => this(id: id);
+  BaseItemPerson id(String? id) => call(id: id);
 
   @override
-  BaseItemPerson role(String? role) => this(role: role);
+  BaseItemPerson role(String? role) => call(role: role);
 
   @override
-  BaseItemPerson type(PersonKind? type) => this(type: type);
+  BaseItemPerson type(PersonKind? type) => call(type: type);
 
   @override
   BaseItemPerson primaryImageTag(String? primaryImageTag) =>
-      this(primaryImageTag: primaryImageTag);
+      call(primaryImageTag: primaryImageTag);
 
   @override
   BaseItemPerson imageBlurHashes(
     BaseItemPersonImageBlurHashes? imageBlurHashes,
-  ) => this(imageBlurHashes: imageBlurHashes);
+  ) => call(imageBlurHashes: imageBlurHashes);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BaseItemPerson(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BaseItemPerson(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BaseItemPerson(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BaseItemPerson call({
     Object? name = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
@@ -109,7 +112,8 @@ class _$BaseItemPersonCWProxyImpl implements _$BaseItemPersonCWProxy {
 }
 
 extension $BaseItemPersonCopyWith on BaseItemPerson {
-  /// Returns a callable class that can be used as follows: `instanceOfBaseItemPerson.copyWith(...)` or like so:`instanceOfBaseItemPerson.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfBaseItemPerson.copyWith(...)` or `instanceOfBaseItemPerson.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$BaseItemPersonCWProxy get copyWith => _$BaseItemPersonCWProxyImpl(this);
 }

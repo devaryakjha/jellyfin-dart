@@ -23,12 +23,13 @@ abstract class _$PluginInfoCWProxy {
 
   PluginInfo status(PluginStatus? status);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PluginInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PluginInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PluginInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PluginInfo call({
     String? name,
     String? version,
@@ -41,45 +42,47 @@ abstract class _$PluginInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPluginInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPluginInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPluginInfo.copyWith(...)` or call `instanceOfPluginInfo.copyWith.fieldName(value)` for a single field.
 class _$PluginInfoCWProxyImpl implements _$PluginInfoCWProxy {
   const _$PluginInfoCWProxyImpl(this._value);
 
   final PluginInfo _value;
 
   @override
-  PluginInfo name(String? name) => this(name: name);
+  PluginInfo name(String? name) => call(name: name);
 
   @override
-  PluginInfo version(String? version) => this(version: version);
+  PluginInfo version(String? version) => call(version: version);
 
   @override
   PluginInfo configurationFileName(String? configurationFileName) =>
-      this(configurationFileName: configurationFileName);
+      call(configurationFileName: configurationFileName);
 
   @override
-  PluginInfo description(String? description) => this(description: description);
+  PluginInfo description(String? description) => call(description: description);
 
   @override
-  PluginInfo id(String? id) => this(id: id);
+  PluginInfo id(String? id) => call(id: id);
 
   @override
   PluginInfo canUninstall(bool? canUninstall) =>
-      this(canUninstall: canUninstall);
+      call(canUninstall: canUninstall);
 
   @override
-  PluginInfo hasImage(bool? hasImage) => this(hasImage: hasImage);
+  PluginInfo hasImage(bool? hasImage) => call(hasImage: hasImage);
 
   @override
-  PluginInfo status(PluginStatus? status) => this(status: status);
+  PluginInfo status(PluginStatus? status) => call(status: status);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PluginInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PluginInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PluginInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PluginInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? version = const $CopyWithPlaceholder(),
@@ -129,7 +132,8 @@ class _$PluginInfoCWProxyImpl implements _$PluginInfoCWProxy {
 }
 
 extension $PluginInfoCopyWith on PluginInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfPluginInfo.copyWith(...)` or like so:`instanceOfPluginInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPluginInfo.copyWith(...)` or `instanceOfPluginInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PluginInfoCWProxy get copyWith => _$PluginInfoCWProxyImpl(this);
 }

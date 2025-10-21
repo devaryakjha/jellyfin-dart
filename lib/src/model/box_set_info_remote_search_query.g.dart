@@ -17,12 +17,13 @@ abstract class _$BoxSetInfoRemoteSearchQueryCWProxy {
     bool? includeDisabledProviders,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BoxSetInfoRemoteSearchQuery(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BoxSetInfoRemoteSearchQuery(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BoxSetInfoRemoteSearchQuery(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BoxSetInfoRemoteSearchQuery call({
     BoxSetInfo? searchInfo,
     String? itemId,
@@ -31,7 +32,8 @@ abstract class _$BoxSetInfoRemoteSearchQueryCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfBoxSetInfoRemoteSearchQuery.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfBoxSetInfoRemoteSearchQuery.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfBoxSetInfoRemoteSearchQuery.copyWith(...)` or call `instanceOfBoxSetInfoRemoteSearchQuery.copyWith.fieldName(value)` for a single field.
 class _$BoxSetInfoRemoteSearchQueryCWProxyImpl
     implements _$BoxSetInfoRemoteSearchQueryCWProxy {
   const _$BoxSetInfoRemoteSearchQueryCWProxyImpl(this._value);
@@ -40,27 +42,28 @@ class _$BoxSetInfoRemoteSearchQueryCWProxyImpl
 
   @override
   BoxSetInfoRemoteSearchQuery searchInfo(BoxSetInfo? searchInfo) =>
-      this(searchInfo: searchInfo);
+      call(searchInfo: searchInfo);
 
   @override
-  BoxSetInfoRemoteSearchQuery itemId(String? itemId) => this(itemId: itemId);
+  BoxSetInfoRemoteSearchQuery itemId(String? itemId) => call(itemId: itemId);
 
   @override
   BoxSetInfoRemoteSearchQuery searchProviderName(String? searchProviderName) =>
-      this(searchProviderName: searchProviderName);
+      call(searchProviderName: searchProviderName);
 
   @override
   BoxSetInfoRemoteSearchQuery includeDisabledProviders(
     bool? includeDisabledProviders,
-  ) => this(includeDisabledProviders: includeDisabledProviders);
+  ) => call(includeDisabledProviders: includeDisabledProviders);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BoxSetInfoRemoteSearchQuery(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BoxSetInfoRemoteSearchQuery(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BoxSetInfoRemoteSearchQuery(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BoxSetInfoRemoteSearchQuery call({
     Object? searchInfo = const $CopyWithPlaceholder(),
     Object? itemId = const $CopyWithPlaceholder(),
@@ -90,7 +93,8 @@ class _$BoxSetInfoRemoteSearchQueryCWProxyImpl
 }
 
 extension $BoxSetInfoRemoteSearchQueryCopyWith on BoxSetInfoRemoteSearchQuery {
-  /// Returns a callable class that can be used as follows: `instanceOfBoxSetInfoRemoteSearchQuery.copyWith(...)` or like so:`instanceOfBoxSetInfoRemoteSearchQuery.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfBoxSetInfoRemoteSearchQuery.copyWith(...)` or `instanceOfBoxSetInfoRemoteSearchQuery.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$BoxSetInfoRemoteSearchQueryCWProxy get copyWith =>
       _$BoxSetInfoRemoteSearchQueryCWProxyImpl(this);

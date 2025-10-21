@@ -11,16 +11,18 @@ abstract class _$CastReceiverApplicationCWProxy {
 
   CastReceiverApplication name(String? name);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CastReceiverApplication(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CastReceiverApplication(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CastReceiverApplication(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CastReceiverApplication call({String? id, String? name});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfCastReceiverApplication.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfCastReceiverApplication.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfCastReceiverApplication.copyWith(...)` or call `instanceOfCastReceiverApplication.copyWith.fieldName(value)` for a single field.
 class _$CastReceiverApplicationCWProxyImpl
     implements _$CastReceiverApplicationCWProxy {
   const _$CastReceiverApplicationCWProxyImpl(this._value);
@@ -28,18 +30,19 @@ class _$CastReceiverApplicationCWProxyImpl
   final CastReceiverApplication _value;
 
   @override
-  CastReceiverApplication id(String? id) => this(id: id);
+  CastReceiverApplication id(String? id) => call(id: id);
 
   @override
-  CastReceiverApplication name(String? name) => this(name: name);
+  CastReceiverApplication name(String? name) => call(name: name);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CastReceiverApplication(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CastReceiverApplication(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CastReceiverApplication(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CastReceiverApplication call({
     Object? id = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
@@ -58,7 +61,8 @@ class _$CastReceiverApplicationCWProxyImpl
 }
 
 extension $CastReceiverApplicationCopyWith on CastReceiverApplication {
-  /// Returns a callable class that can be used as follows: `instanceOfCastReceiverApplication.copyWith(...)` or like so:`instanceOfCastReceiverApplication.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfCastReceiverApplication.copyWith(...)` or `instanceOfCastReceiverApplication.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$CastReceiverApplicationCWProxy get copyWith =>
       _$CastReceiverApplicationCWProxyImpl(this);

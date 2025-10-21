@@ -11,38 +11,41 @@ abstract class _$UserDataChangeInfoCWProxy {
 
   UserDataChangeInfo userDataList(List<UserItemDataDto>? userDataList);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserDataChangeInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserDataChangeInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserDataChangeInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserDataChangeInfo call({
     String? userId,
     List<UserItemDataDto>? userDataList,
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUserDataChangeInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUserDataChangeInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUserDataChangeInfo.copyWith(...)` or call `instanceOfUserDataChangeInfo.copyWith.fieldName(value)` for a single field.
 class _$UserDataChangeInfoCWProxyImpl implements _$UserDataChangeInfoCWProxy {
   const _$UserDataChangeInfoCWProxyImpl(this._value);
 
   final UserDataChangeInfo _value;
 
   @override
-  UserDataChangeInfo userId(String? userId) => this(userId: userId);
+  UserDataChangeInfo userId(String? userId) => call(userId: userId);
 
   @override
   UserDataChangeInfo userDataList(List<UserItemDataDto>? userDataList) =>
-      this(userDataList: userDataList);
+      call(userDataList: userDataList);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserDataChangeInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserDataChangeInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserDataChangeInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserDataChangeInfo call({
     Object? userId = const $CopyWithPlaceholder(),
     Object? userDataList = const $CopyWithPlaceholder(),
@@ -61,7 +64,8 @@ class _$UserDataChangeInfoCWProxyImpl implements _$UserDataChangeInfoCWProxy {
 }
 
 extension $UserDataChangeInfoCopyWith on UserDataChangeInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfUserDataChangeInfo.copyWith(...)` or like so:`instanceOfUserDataChangeInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUserDataChangeInfo.copyWith(...)` or `instanceOfUserDataChangeInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UserDataChangeInfoCWProxy get copyWith =>
       _$UserDataChangeInfoCWProxyImpl(this);

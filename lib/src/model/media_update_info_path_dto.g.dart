@@ -11,16 +11,18 @@ abstract class _$MediaUpdateInfoPathDtoCWProxy {
 
   MediaUpdateInfoPathDto updateType(String? updateType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaUpdateInfoPathDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaUpdateInfoPathDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaUpdateInfoPathDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaUpdateInfoPathDto call({String? path, String? updateType});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMediaUpdateInfoPathDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMediaUpdateInfoPathDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMediaUpdateInfoPathDto.copyWith(...)` or call `instanceOfMediaUpdateInfoPathDto.copyWith.fieldName(value)` for a single field.
 class _$MediaUpdateInfoPathDtoCWProxyImpl
     implements _$MediaUpdateInfoPathDtoCWProxy {
   const _$MediaUpdateInfoPathDtoCWProxyImpl(this._value);
@@ -28,19 +30,20 @@ class _$MediaUpdateInfoPathDtoCWProxyImpl
   final MediaUpdateInfoPathDto _value;
 
   @override
-  MediaUpdateInfoPathDto path(String? path) => this(path: path);
+  MediaUpdateInfoPathDto path(String? path) => call(path: path);
 
   @override
   MediaUpdateInfoPathDto updateType(String? updateType) =>
-      this(updateType: updateType);
+      call(updateType: updateType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaUpdateInfoPathDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaUpdateInfoPathDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaUpdateInfoPathDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaUpdateInfoPathDto call({
     Object? path = const $CopyWithPlaceholder(),
     Object? updateType = const $CopyWithPlaceholder(),
@@ -59,7 +62,8 @@ class _$MediaUpdateInfoPathDtoCWProxyImpl
 }
 
 extension $MediaUpdateInfoPathDtoCopyWith on MediaUpdateInfoPathDto {
-  /// Returns a callable class that can be used as follows: `instanceOfMediaUpdateInfoPathDto.copyWith(...)` or like so:`instanceOfMediaUpdateInfoPathDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMediaUpdateInfoPathDto.copyWith(...)` or `instanceOfMediaUpdateInfoPathDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MediaUpdateInfoPathDtoCWProxy get copyWith =>
       _$MediaUpdateInfoPathDtoCWProxyImpl(this);

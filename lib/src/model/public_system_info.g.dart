@@ -15,30 +15,34 @@ abstract class _$PublicSystemInfoCWProxy {
 
   PublicSystemInfo productName(String? productName);
 
-  PublicSystemInfo operatingSystem(String? operatingSystem);
+  PublicSystemInfo operatingSystem(
+    @Deprecated('operatingSystem has been deprecated') String? operatingSystem,
+  );
 
   PublicSystemInfo id(String? id);
 
   PublicSystemInfo startupWizardCompleted(bool? startupWizardCompleted);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PublicSystemInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PublicSystemInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PublicSystemInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PublicSystemInfo call({
     String? localAddress,
     String? serverName,
     String? version,
     String? productName,
-    String? operatingSystem,
+    @Deprecated('operatingSystem has been deprecated') String? operatingSystem,
     String? id,
     bool? startupWizardCompleted,
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPublicSystemInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPublicSystemInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPublicSystemInfo.copyWith(...)` or call `instanceOfPublicSystemInfo.copyWith.fieldName(value)` for a single field.
 class _$PublicSystemInfoCWProxyImpl implements _$PublicSystemInfoCWProxy {
   const _$PublicSystemInfoCWProxyImpl(this._value);
 
@@ -46,42 +50,45 @@ class _$PublicSystemInfoCWProxyImpl implements _$PublicSystemInfoCWProxy {
 
   @override
   PublicSystemInfo localAddress(String? localAddress) =>
-      this(localAddress: localAddress);
+      call(localAddress: localAddress);
 
   @override
   PublicSystemInfo serverName(String? serverName) =>
-      this(serverName: serverName);
+      call(serverName: serverName);
 
   @override
-  PublicSystemInfo version(String? version) => this(version: version);
+  PublicSystemInfo version(String? version) => call(version: version);
 
   @override
   PublicSystemInfo productName(String? productName) =>
-      this(productName: productName);
+      call(productName: productName);
 
   @override
-  PublicSystemInfo operatingSystem(String? operatingSystem) =>
-      this(operatingSystem: operatingSystem);
+  PublicSystemInfo operatingSystem(
+    @Deprecated('operatingSystem has been deprecated') String? operatingSystem,
+  ) => call(operatingSystem: operatingSystem);
 
   @override
-  PublicSystemInfo id(String? id) => this(id: id);
+  PublicSystemInfo id(String? id) => call(id: id);
 
   @override
   PublicSystemInfo startupWizardCompleted(bool? startupWizardCompleted) =>
-      this(startupWizardCompleted: startupWizardCompleted);
+      call(startupWizardCompleted: startupWizardCompleted);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PublicSystemInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PublicSystemInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PublicSystemInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PublicSystemInfo call({
     Object? localAddress = const $CopyWithPlaceholder(),
     Object? serverName = const $CopyWithPlaceholder(),
     Object? version = const $CopyWithPlaceholder(),
     Object? productName = const $CopyWithPlaceholder(),
+    @Deprecated('operatingSystem has been deprecated')
     Object? operatingSystem = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
     Object? startupWizardCompleted = const $CopyWithPlaceholder(),
@@ -121,7 +128,8 @@ class _$PublicSystemInfoCWProxyImpl implements _$PublicSystemInfoCWProxy {
 }
 
 extension $PublicSystemInfoCopyWith on PublicSystemInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfPublicSystemInfo.copyWith(...)` or like so:`instanceOfPublicSystemInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPublicSystemInfo.copyWith(...)` or `instanceOfPublicSystemInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PublicSystemInfoCWProxy get copyWith => _$PublicSystemInfoCWProxyImpl(this);
 }

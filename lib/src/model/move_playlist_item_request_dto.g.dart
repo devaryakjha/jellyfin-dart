@@ -11,16 +11,18 @@ abstract class _$MovePlaylistItemRequestDtoCWProxy {
 
   MovePlaylistItemRequestDto newIndex(int? newIndex);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MovePlaylistItemRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MovePlaylistItemRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MovePlaylistItemRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MovePlaylistItemRequestDto call({String? playlistItemId, int? newIndex});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMovePlaylistItemRequestDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMovePlaylistItemRequestDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMovePlaylistItemRequestDto.copyWith(...)` or call `instanceOfMovePlaylistItemRequestDto.copyWith.fieldName(value)` for a single field.
 class _$MovePlaylistItemRequestDtoCWProxyImpl
     implements _$MovePlaylistItemRequestDtoCWProxy {
   const _$MovePlaylistItemRequestDtoCWProxyImpl(this._value);
@@ -29,19 +31,20 @@ class _$MovePlaylistItemRequestDtoCWProxyImpl
 
   @override
   MovePlaylistItemRequestDto playlistItemId(String? playlistItemId) =>
-      this(playlistItemId: playlistItemId);
+      call(playlistItemId: playlistItemId);
 
   @override
   MovePlaylistItemRequestDto newIndex(int? newIndex) =>
-      this(newIndex: newIndex);
+      call(newIndex: newIndex);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MovePlaylistItemRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MovePlaylistItemRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MovePlaylistItemRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MovePlaylistItemRequestDto call({
     Object? playlistItemId = const $CopyWithPlaceholder(),
     Object? newIndex = const $CopyWithPlaceholder(),
@@ -60,7 +63,8 @@ class _$MovePlaylistItemRequestDtoCWProxyImpl
 }
 
 extension $MovePlaylistItemRequestDtoCopyWith on MovePlaylistItemRequestDto {
-  /// Returns a callable class that can be used as follows: `instanceOfMovePlaylistItemRequestDto.copyWith(...)` or like so:`instanceOfMovePlaylistItemRequestDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMovePlaylistItemRequestDto.copyWith(...)` or `instanceOfMovePlaylistItemRequestDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MovePlaylistItemRequestDtoCWProxy get copyWith =>
       _$MovePlaylistItemRequestDtoCWProxyImpl(this);

@@ -159,12 +159,13 @@ abstract class _$ServerConfigurationCWProxy {
     bool? enableLegacyAuthorization,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ServerConfiguration(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ServerConfiguration(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ServerConfiguration(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ServerConfiguration call({
     int? logFileRetentionDays,
     bool? isStartupWizardCompleted,
@@ -225,7 +226,8 @@ abstract class _$ServerConfigurationCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfServerConfiguration.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfServerConfiguration.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfServerConfiguration.copyWith(...)` or call `instanceOfServerConfiguration.copyWith.fieldName(value)` for a single field.
 class _$ServerConfigurationCWProxyImpl implements _$ServerConfigurationCWProxy {
   const _$ServerConfigurationCWProxyImpl(this._value);
 
@@ -233,264 +235,265 @@ class _$ServerConfigurationCWProxyImpl implements _$ServerConfigurationCWProxy {
 
   @override
   ServerConfiguration logFileRetentionDays(int? logFileRetentionDays) =>
-      this(logFileRetentionDays: logFileRetentionDays);
+      call(logFileRetentionDays: logFileRetentionDays);
 
   @override
   ServerConfiguration isStartupWizardCompleted(
     bool? isStartupWizardCompleted,
-  ) => this(isStartupWizardCompleted: isStartupWizardCompleted);
+  ) => call(isStartupWizardCompleted: isStartupWizardCompleted);
 
   @override
   ServerConfiguration cachePath(String? cachePath) =>
-      this(cachePath: cachePath);
+      call(cachePath: cachePath);
 
   @override
   ServerConfiguration previousVersion(String? previousVersion) =>
-      this(previousVersion: previousVersion);
+      call(previousVersion: previousVersion);
 
   @override
   ServerConfiguration previousVersionStr(String? previousVersionStr) =>
-      this(previousVersionStr: previousVersionStr);
+      call(previousVersionStr: previousVersionStr);
 
   @override
   ServerConfiguration enableMetrics(bool? enableMetrics) =>
-      this(enableMetrics: enableMetrics);
+      call(enableMetrics: enableMetrics);
 
   @override
   ServerConfiguration enableNormalizedItemByNameIds(
     bool? enableNormalizedItemByNameIds,
-  ) => this(enableNormalizedItemByNameIds: enableNormalizedItemByNameIds);
+  ) => call(enableNormalizedItemByNameIds: enableNormalizedItemByNameIds);
 
   @override
   ServerConfiguration isPortAuthorized(bool? isPortAuthorized) =>
-      this(isPortAuthorized: isPortAuthorized);
+      call(isPortAuthorized: isPortAuthorized);
 
   @override
   ServerConfiguration quickConnectAvailable(bool? quickConnectAvailable) =>
-      this(quickConnectAvailable: quickConnectAvailable);
+      call(quickConnectAvailable: quickConnectAvailable);
 
   @override
   ServerConfiguration enableCaseSensitiveItemIds(
     bool? enableCaseSensitiveItemIds,
-  ) => this(enableCaseSensitiveItemIds: enableCaseSensitiveItemIds);
+  ) => call(enableCaseSensitiveItemIds: enableCaseSensitiveItemIds);
 
   @override
   ServerConfiguration disableLiveTvChannelUserDataName(
     bool? disableLiveTvChannelUserDataName,
-  ) => this(disableLiveTvChannelUserDataName: disableLiveTvChannelUserDataName);
+  ) => call(disableLiveTvChannelUserDataName: disableLiveTvChannelUserDataName);
 
   @override
   ServerConfiguration metadataPath(String? metadataPath) =>
-      this(metadataPath: metadataPath);
+      call(metadataPath: metadataPath);
 
   @override
   ServerConfiguration preferredMetadataLanguage(
     String? preferredMetadataLanguage,
-  ) => this(preferredMetadataLanguage: preferredMetadataLanguage);
+  ) => call(preferredMetadataLanguage: preferredMetadataLanguage);
 
   @override
   ServerConfiguration metadataCountryCode(String? metadataCountryCode) =>
-      this(metadataCountryCode: metadataCountryCode);
+      call(metadataCountryCode: metadataCountryCode);
 
   @override
   ServerConfiguration sortReplaceCharacters(
     List<String>? sortReplaceCharacters,
-  ) => this(sortReplaceCharacters: sortReplaceCharacters);
+  ) => call(sortReplaceCharacters: sortReplaceCharacters);
 
   @override
   ServerConfiguration sortRemoveCharacters(
     List<String>? sortRemoveCharacters,
-  ) => this(sortRemoveCharacters: sortRemoveCharacters);
+  ) => call(sortRemoveCharacters: sortRemoveCharacters);
 
   @override
   ServerConfiguration sortRemoveWords(List<String>? sortRemoveWords) =>
-      this(sortRemoveWords: sortRemoveWords);
+      call(sortRemoveWords: sortRemoveWords);
 
   @override
   ServerConfiguration minResumePct(int? minResumePct) =>
-      this(minResumePct: minResumePct);
+      call(minResumePct: minResumePct);
 
   @override
   ServerConfiguration maxResumePct(int? maxResumePct) =>
-      this(maxResumePct: maxResumePct);
+      call(maxResumePct: maxResumePct);
 
   @override
   ServerConfiguration minResumeDurationSeconds(int? minResumeDurationSeconds) =>
-      this(minResumeDurationSeconds: minResumeDurationSeconds);
+      call(minResumeDurationSeconds: minResumeDurationSeconds);
 
   @override
   ServerConfiguration minAudiobookResume(int? minAudiobookResume) =>
-      this(minAudiobookResume: minAudiobookResume);
+      call(minAudiobookResume: minAudiobookResume);
 
   @override
   ServerConfiguration maxAudiobookResume(int? maxAudiobookResume) =>
-      this(maxAudiobookResume: maxAudiobookResume);
+      call(maxAudiobookResume: maxAudiobookResume);
 
   @override
   ServerConfiguration inactiveSessionThreshold(int? inactiveSessionThreshold) =>
-      this(inactiveSessionThreshold: inactiveSessionThreshold);
+      call(inactiveSessionThreshold: inactiveSessionThreshold);
 
   @override
   ServerConfiguration libraryMonitorDelay(int? libraryMonitorDelay) =>
-      this(libraryMonitorDelay: libraryMonitorDelay);
+      call(libraryMonitorDelay: libraryMonitorDelay);
 
   @override
   ServerConfiguration libraryUpdateDuration(int? libraryUpdateDuration) =>
-      this(libraryUpdateDuration: libraryUpdateDuration);
+      call(libraryUpdateDuration: libraryUpdateDuration);
 
   @override
-  ServerConfiguration cacheSize(int? cacheSize) => this(cacheSize: cacheSize);
+  ServerConfiguration cacheSize(int? cacheSize) => call(cacheSize: cacheSize);
 
   @override
   ServerConfiguration imageSavingConvention(
     ImageSavingConvention? imageSavingConvention,
-  ) => this(imageSavingConvention: imageSavingConvention);
+  ) => call(imageSavingConvention: imageSavingConvention);
 
   @override
   ServerConfiguration metadataOptions(List<MetadataOptions>? metadataOptions) =>
-      this(metadataOptions: metadataOptions);
+      call(metadataOptions: metadataOptions);
 
   @override
   ServerConfiguration skipDeserializationForBasicTypes(
     bool? skipDeserializationForBasicTypes,
-  ) => this(skipDeserializationForBasicTypes: skipDeserializationForBasicTypes);
+  ) => call(skipDeserializationForBasicTypes: skipDeserializationForBasicTypes);
 
   @override
   ServerConfiguration serverName(String? serverName) =>
-      this(serverName: serverName);
+      call(serverName: serverName);
 
   @override
   ServerConfiguration uICulture(String? uICulture) =>
-      this(uICulture: uICulture);
+      call(uICulture: uICulture);
 
   @override
   ServerConfiguration saveMetadataHidden(bool? saveMetadataHidden) =>
-      this(saveMetadataHidden: saveMetadataHidden);
+      call(saveMetadataHidden: saveMetadataHidden);
 
   @override
   ServerConfiguration contentTypes(List<NameValuePair>? contentTypes) =>
-      this(contentTypes: contentTypes);
+      call(contentTypes: contentTypes);
 
   @override
   ServerConfiguration remoteClientBitrateLimit(int? remoteClientBitrateLimit) =>
-      this(remoteClientBitrateLimit: remoteClientBitrateLimit);
+      call(remoteClientBitrateLimit: remoteClientBitrateLimit);
 
   @override
   ServerConfiguration enableFolderView(bool? enableFolderView) =>
-      this(enableFolderView: enableFolderView);
+      call(enableFolderView: enableFolderView);
 
   @override
   ServerConfiguration enableGroupingMoviesIntoCollections(
     bool? enableGroupingMoviesIntoCollections,
-  ) => this(
+  ) => call(
     enableGroupingMoviesIntoCollections: enableGroupingMoviesIntoCollections,
   );
 
   @override
   ServerConfiguration enableGroupingShowsIntoCollections(
     bool? enableGroupingShowsIntoCollections,
-  ) => this(
+  ) => call(
     enableGroupingShowsIntoCollections: enableGroupingShowsIntoCollections,
   );
 
   @override
   ServerConfiguration displaySpecialsWithinSeasons(
     bool? displaySpecialsWithinSeasons,
-  ) => this(displaySpecialsWithinSeasons: displaySpecialsWithinSeasons);
+  ) => call(displaySpecialsWithinSeasons: displaySpecialsWithinSeasons);
 
   @override
   ServerConfiguration codecsUsed(List<String>? codecsUsed) =>
-      this(codecsUsed: codecsUsed);
+      call(codecsUsed: codecsUsed);
 
   @override
   ServerConfiguration pluginRepositories(
     List<RepositoryInfo>? pluginRepositories,
-  ) => this(pluginRepositories: pluginRepositories);
+  ) => call(pluginRepositories: pluginRepositories);
 
   @override
   ServerConfiguration enableExternalContentInSuggestions(
     bool? enableExternalContentInSuggestions,
-  ) => this(
+  ) => call(
     enableExternalContentInSuggestions: enableExternalContentInSuggestions,
   );
 
   @override
   ServerConfiguration imageExtractionTimeoutMs(int? imageExtractionTimeoutMs) =>
-      this(imageExtractionTimeoutMs: imageExtractionTimeoutMs);
+      call(imageExtractionTimeoutMs: imageExtractionTimeoutMs);
 
   @override
   ServerConfiguration pathSubstitutions(
     List<PathSubstitution>? pathSubstitutions,
-  ) => this(pathSubstitutions: pathSubstitutions);
+  ) => call(pathSubstitutions: pathSubstitutions);
 
   @override
   ServerConfiguration enableSlowResponseWarning(
     bool? enableSlowResponseWarning,
-  ) => this(enableSlowResponseWarning: enableSlowResponseWarning);
+  ) => call(enableSlowResponseWarning: enableSlowResponseWarning);
 
   @override
   ServerConfiguration slowResponseThresholdMs(int? slowResponseThresholdMs) =>
-      this(slowResponseThresholdMs: slowResponseThresholdMs);
+      call(slowResponseThresholdMs: slowResponseThresholdMs);
 
   @override
   ServerConfiguration corsHosts(List<String>? corsHosts) =>
-      this(corsHosts: corsHosts);
+      call(corsHosts: corsHosts);
 
   @override
   ServerConfiguration activityLogRetentionDays(int? activityLogRetentionDays) =>
-      this(activityLogRetentionDays: activityLogRetentionDays);
+      call(activityLogRetentionDays: activityLogRetentionDays);
 
   @override
   ServerConfiguration libraryScanFanoutConcurrency(
     int? libraryScanFanoutConcurrency,
-  ) => this(libraryScanFanoutConcurrency: libraryScanFanoutConcurrency);
+  ) => call(libraryScanFanoutConcurrency: libraryScanFanoutConcurrency);
 
   @override
   ServerConfiguration libraryMetadataRefreshConcurrency(
     int? libraryMetadataRefreshConcurrency,
-  ) => this(
+  ) => call(
     libraryMetadataRefreshConcurrency: libraryMetadataRefreshConcurrency,
   );
 
   @override
   ServerConfiguration allowClientLogUpload(bool? allowClientLogUpload) =>
-      this(allowClientLogUpload: allowClientLogUpload);
+      call(allowClientLogUpload: allowClientLogUpload);
 
   @override
   ServerConfiguration dummyChapterDuration(int? dummyChapterDuration) =>
-      this(dummyChapterDuration: dummyChapterDuration);
+      call(dummyChapterDuration: dummyChapterDuration);
 
   @override
   ServerConfiguration chapterImageResolution(
     ImageResolution? chapterImageResolution,
-  ) => this(chapterImageResolution: chapterImageResolution);
+  ) => call(chapterImageResolution: chapterImageResolution);
 
   @override
   ServerConfiguration parallelImageEncodingLimit(
     int? parallelImageEncodingLimit,
-  ) => this(parallelImageEncodingLimit: parallelImageEncodingLimit);
+  ) => call(parallelImageEncodingLimit: parallelImageEncodingLimit);
 
   @override
   ServerConfiguration castReceiverApplications(
     List<CastReceiverApplication>? castReceiverApplications,
-  ) => this(castReceiverApplications: castReceiverApplications);
+  ) => call(castReceiverApplications: castReceiverApplications);
 
   @override
   ServerConfiguration trickplayOptions(TrickplayOptions? trickplayOptions) =>
-      this(trickplayOptions: trickplayOptions);
+      call(trickplayOptions: trickplayOptions);
 
   @override
   ServerConfiguration enableLegacyAuthorization(
     bool? enableLegacyAuthorization,
-  ) => this(enableLegacyAuthorization: enableLegacyAuthorization);
+  ) => call(enableLegacyAuthorization: enableLegacyAuthorization);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ServerConfiguration(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ServerConfiguration(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ServerConfiguration(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ServerConfiguration call({
     Object? logFileRetentionDays = const $CopyWithPlaceholder(),
     Object? isStartupWizardCompleted = const $CopyWithPlaceholder(),
@@ -806,7 +809,8 @@ class _$ServerConfigurationCWProxyImpl implements _$ServerConfigurationCWProxy {
 }
 
 extension $ServerConfigurationCopyWith on ServerConfiguration {
-  /// Returns a callable class that can be used as follows: `instanceOfServerConfiguration.copyWith(...)` or like so:`instanceOfServerConfiguration.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfServerConfiguration.copyWith(...)` or `instanceOfServerConfiguration.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ServerConfigurationCWProxy get copyWith =>
       _$ServerConfigurationCWProxyImpl(this);

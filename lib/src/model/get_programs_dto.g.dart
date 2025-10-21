@@ -61,12 +61,13 @@ abstract class _$GetProgramsDtoCWProxy {
 
   GetProgramsDto fields(List<ItemFields>? fields);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GetProgramsDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GetProgramsDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GetProgramsDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GetProgramsDto call({
     List<String>? channelIds,
     String? userId,
@@ -98,7 +99,8 @@ abstract class _$GetProgramsDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfGetProgramsDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfGetProgramsDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfGetProgramsDto.copyWith(...)` or call `instanceOfGetProgramsDto.copyWith.fieldName(value)` for a single field.
 class _$GetProgramsDtoCWProxyImpl implements _$GetProgramsDtoCWProxy {
   const _$GetProgramsDtoCWProxyImpl(this._value);
 
@@ -106,105 +108,106 @@ class _$GetProgramsDtoCWProxyImpl implements _$GetProgramsDtoCWProxy {
 
   @override
   GetProgramsDto channelIds(List<String>? channelIds) =>
-      this(channelIds: channelIds);
+      call(channelIds: channelIds);
 
   @override
-  GetProgramsDto userId(String? userId) => this(userId: userId);
+  GetProgramsDto userId(String? userId) => call(userId: userId);
 
   @override
   GetProgramsDto minStartDate(DateTime? minStartDate) =>
-      this(minStartDate: minStartDate);
+      call(minStartDate: minStartDate);
 
   @override
-  GetProgramsDto hasAired(bool? hasAired) => this(hasAired: hasAired);
+  GetProgramsDto hasAired(bool? hasAired) => call(hasAired: hasAired);
 
   @override
-  GetProgramsDto isAiring(bool? isAiring) => this(isAiring: isAiring);
+  GetProgramsDto isAiring(bool? isAiring) => call(isAiring: isAiring);
 
   @override
   GetProgramsDto maxStartDate(DateTime? maxStartDate) =>
-      this(maxStartDate: maxStartDate);
+      call(maxStartDate: maxStartDate);
 
   @override
   GetProgramsDto minEndDate(DateTime? minEndDate) =>
-      this(minEndDate: minEndDate);
+      call(minEndDate: minEndDate);
 
   @override
   GetProgramsDto maxEndDate(DateTime? maxEndDate) =>
-      this(maxEndDate: maxEndDate);
+      call(maxEndDate: maxEndDate);
 
   @override
-  GetProgramsDto isMovie(bool? isMovie) => this(isMovie: isMovie);
+  GetProgramsDto isMovie(bool? isMovie) => call(isMovie: isMovie);
 
   @override
-  GetProgramsDto isSeries(bool? isSeries) => this(isSeries: isSeries);
+  GetProgramsDto isSeries(bool? isSeries) => call(isSeries: isSeries);
 
   @override
-  GetProgramsDto isNews(bool? isNews) => this(isNews: isNews);
+  GetProgramsDto isNews(bool? isNews) => call(isNews: isNews);
 
   @override
-  GetProgramsDto isKids(bool? isKids) => this(isKids: isKids);
+  GetProgramsDto isKids(bool? isKids) => call(isKids: isKids);
 
   @override
-  GetProgramsDto isSports(bool? isSports) => this(isSports: isSports);
+  GetProgramsDto isSports(bool? isSports) => call(isSports: isSports);
 
   @override
-  GetProgramsDto startIndex(int? startIndex) => this(startIndex: startIndex);
+  GetProgramsDto startIndex(int? startIndex) => call(startIndex: startIndex);
 
   @override
-  GetProgramsDto limit(int? limit) => this(limit: limit);
+  GetProgramsDto limit(int? limit) => call(limit: limit);
 
   @override
-  GetProgramsDto sortBy(List<ItemSortBy>? sortBy) => this(sortBy: sortBy);
+  GetProgramsDto sortBy(List<ItemSortBy>? sortBy) => call(sortBy: sortBy);
 
   @override
   GetProgramsDto sortOrder(List<SortOrder>? sortOrder) =>
-      this(sortOrder: sortOrder);
+      call(sortOrder: sortOrder);
 
   @override
-  GetProgramsDto genres(List<String>? genres) => this(genres: genres);
+  GetProgramsDto genres(List<String>? genres) => call(genres: genres);
 
   @override
-  GetProgramsDto genreIds(List<String>? genreIds) => this(genreIds: genreIds);
+  GetProgramsDto genreIds(List<String>? genreIds) => call(genreIds: genreIds);
 
   @override
   GetProgramsDto enableImages(bool? enableImages) =>
-      this(enableImages: enableImages);
+      call(enableImages: enableImages);
 
   @override
   GetProgramsDto enableTotalRecordCount(bool? enableTotalRecordCount) =>
-      this(enableTotalRecordCount: enableTotalRecordCount);
+      call(enableTotalRecordCount: enableTotalRecordCount);
 
   @override
   GetProgramsDto imageTypeLimit(int? imageTypeLimit) =>
-      this(imageTypeLimit: imageTypeLimit);
+      call(imageTypeLimit: imageTypeLimit);
 
   @override
   GetProgramsDto enableImageTypes(List<ImageType>? enableImageTypes) =>
-      this(enableImageTypes: enableImageTypes);
+      call(enableImageTypes: enableImageTypes);
 
   @override
   GetProgramsDto enableUserData(bool? enableUserData) =>
-      this(enableUserData: enableUserData);
+      call(enableUserData: enableUserData);
 
   @override
   GetProgramsDto seriesTimerId(String? seriesTimerId) =>
-      this(seriesTimerId: seriesTimerId);
+      call(seriesTimerId: seriesTimerId);
 
   @override
   GetProgramsDto librarySeriesId(String? librarySeriesId) =>
-      this(librarySeriesId: librarySeriesId);
+      call(librarySeriesId: librarySeriesId);
 
   @override
-  GetProgramsDto fields(List<ItemFields>? fields) => this(fields: fields);
+  GetProgramsDto fields(List<ItemFields>? fields) => call(fields: fields);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GetProgramsDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GetProgramsDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GetProgramsDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GetProgramsDto call({
     Object? channelIds = const $CopyWithPlaceholder(),
     Object? userId = const $CopyWithPlaceholder(),
@@ -349,7 +352,8 @@ class _$GetProgramsDtoCWProxyImpl implements _$GetProgramsDtoCWProxy {
 }
 
 extension $GetProgramsDtoCopyWith on GetProgramsDto {
-  /// Returns a callable class that can be used as follows: `instanceOfGetProgramsDto.copyWith(...)` or like so:`instanceOfGetProgramsDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfGetProgramsDto.copyWith(...)` or `instanceOfGetProgramsDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$GetProgramsDtoCWProxy get copyWith => _$GetProgramsDtoCWProxyImpl(this);
 }

@@ -15,12 +15,13 @@ abstract class _$ProfileConditionCWProxy {
 
   ProfileCondition isRequired(bool? isRequired);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ProfileCondition(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ProfileCondition(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ProfileCondition(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ProfileCondition call({
     ProfileConditionType? condition,
     ProfileConditionValue? property,
@@ -29,7 +30,8 @@ abstract class _$ProfileConditionCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfProfileCondition.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfProfileCondition.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfProfileCondition.copyWith(...)` or call `instanceOfProfileCondition.copyWith.fieldName(value)` for a single field.
 class _$ProfileConditionCWProxyImpl implements _$ProfileConditionCWProxy {
   const _$ProfileConditionCWProxyImpl(this._value);
 
@@ -37,25 +39,26 @@ class _$ProfileConditionCWProxyImpl implements _$ProfileConditionCWProxy {
 
   @override
   ProfileCondition condition(ProfileConditionType? condition) =>
-      this(condition: condition);
+      call(condition: condition);
 
   @override
   ProfileCondition property(ProfileConditionValue? property) =>
-      this(property: property);
+      call(property: property);
 
   @override
-  ProfileCondition value(String? value) => this(value: value);
+  ProfileCondition value(String? value) => call(value: value);
 
   @override
-  ProfileCondition isRequired(bool? isRequired) => this(isRequired: isRequired);
+  ProfileCondition isRequired(bool? isRequired) => call(isRequired: isRequired);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ProfileCondition(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ProfileCondition(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ProfileCondition(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ProfileCondition call({
     Object? condition = const $CopyWithPlaceholder(),
     Object? property = const $CopyWithPlaceholder(),
@@ -84,7 +87,8 @@ class _$ProfileConditionCWProxyImpl implements _$ProfileConditionCWProxy {
 }
 
 extension $ProfileConditionCopyWith on ProfileCondition {
-  /// Returns a callable class that can be used as follows: `instanceOfProfileCondition.copyWith(...)` or like so:`instanceOfProfileCondition.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfProfileCondition.copyWith(...)` or `instanceOfProfileCondition.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ProfileConditionCWProxy get copyWith => _$ProfileConditionCWProxyImpl(this);
 }

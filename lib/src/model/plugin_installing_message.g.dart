@@ -13,12 +13,13 @@ abstract class _$PluginInstallingMessageCWProxy {
 
   PluginInstallingMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PluginInstallingMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PluginInstallingMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PluginInstallingMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PluginInstallingMessage call({
     InstallationInfo? data,
     String? messageId,
@@ -26,7 +27,8 @@ abstract class _$PluginInstallingMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPluginInstallingMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPluginInstallingMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPluginInstallingMessage.copyWith(...)` or call `instanceOfPluginInstallingMessage.copyWith.fieldName(value)` for a single field.
 class _$PluginInstallingMessageCWProxyImpl
     implements _$PluginInstallingMessageCWProxy {
   const _$PluginInstallingMessageCWProxyImpl(this._value);
@@ -34,23 +36,24 @@ class _$PluginInstallingMessageCWProxyImpl
   final PluginInstallingMessage _value;
 
   @override
-  PluginInstallingMessage data(InstallationInfo? data) => this(data: data);
+  PluginInstallingMessage data(InstallationInfo? data) => call(data: data);
 
   @override
   PluginInstallingMessage messageId(String? messageId) =>
-      this(messageId: messageId);
+      call(messageId: messageId);
 
   @override
   PluginInstallingMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PluginInstallingMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PluginInstallingMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PluginInstallingMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PluginInstallingMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$PluginInstallingMessageCWProxyImpl
 }
 
 extension $PluginInstallingMessageCopyWith on PluginInstallingMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfPluginInstallingMessage.copyWith(...)` or like so:`instanceOfPluginInstallingMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPluginInstallingMessage.copyWith(...)` or `instanceOfPluginInstallingMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PluginInstallingMessageCWProxy get copyWith =>
       _$PluginInstallingMessageCWProxyImpl(this);

@@ -13,12 +13,13 @@ abstract class _$SyncPlayGroupUpdateMessageCWProxy {
 
   SyncPlayGroupUpdateMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SyncPlayGroupUpdateMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SyncPlayGroupUpdateMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SyncPlayGroupUpdateMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SyncPlayGroupUpdateMessage call({
     GroupUpdate? data,
     String? messageId,
@@ -26,7 +27,8 @@ abstract class _$SyncPlayGroupUpdateMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSyncPlayGroupUpdateMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSyncPlayGroupUpdateMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSyncPlayGroupUpdateMessage.copyWith(...)` or call `instanceOfSyncPlayGroupUpdateMessage.copyWith.fieldName(value)` for a single field.
 class _$SyncPlayGroupUpdateMessageCWProxyImpl
     implements _$SyncPlayGroupUpdateMessageCWProxy {
   const _$SyncPlayGroupUpdateMessageCWProxyImpl(this._value);
@@ -34,23 +36,24 @@ class _$SyncPlayGroupUpdateMessageCWProxyImpl
   final SyncPlayGroupUpdateMessage _value;
 
   @override
-  SyncPlayGroupUpdateMessage data(GroupUpdate? data) => this(data: data);
+  SyncPlayGroupUpdateMessage data(GroupUpdate? data) => call(data: data);
 
   @override
   SyncPlayGroupUpdateMessage messageId(String? messageId) =>
-      this(messageId: messageId);
+      call(messageId: messageId);
 
   @override
   SyncPlayGroupUpdateMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SyncPlayGroupUpdateMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SyncPlayGroupUpdateMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SyncPlayGroupUpdateMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SyncPlayGroupUpdateMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$SyncPlayGroupUpdateMessageCWProxyImpl
 }
 
 extension $SyncPlayGroupUpdateMessageCopyWith on SyncPlayGroupUpdateMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfSyncPlayGroupUpdateMessage.copyWith(...)` or like so:`instanceOfSyncPlayGroupUpdateMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSyncPlayGroupUpdateMessage.copyWith(...)` or `instanceOfSyncPlayGroupUpdateMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SyncPlayGroupUpdateMessageCWProxy get copyWith =>
       _$SyncPlayGroupUpdateMessageCWProxyImpl(this);

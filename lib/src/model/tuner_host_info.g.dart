@@ -41,12 +41,13 @@ abstract class _$TunerHostInfoCWProxy {
 
   TunerHostInfo readAtNativeFramerate(bool? readAtNativeFramerate);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TunerHostInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TunerHostInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TunerHostInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TunerHostInfo call({
     String? id,
     String? url,
@@ -67,76 +68,78 @@ abstract class _$TunerHostInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTunerHostInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTunerHostInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTunerHostInfo.copyWith(...)` or call `instanceOfTunerHostInfo.copyWith.fieldName(value)` for a single field.
 class _$TunerHostInfoCWProxyImpl implements _$TunerHostInfoCWProxy {
   const _$TunerHostInfoCWProxyImpl(this._value);
 
   final TunerHostInfo _value;
 
   @override
-  TunerHostInfo id(String? id) => this(id: id);
+  TunerHostInfo id(String? id) => call(id: id);
 
   @override
-  TunerHostInfo url(String? url) => this(url: url);
+  TunerHostInfo url(String? url) => call(url: url);
 
   @override
-  TunerHostInfo type(String? type) => this(type: type);
+  TunerHostInfo type(String? type) => call(type: type);
 
   @override
-  TunerHostInfo deviceId(String? deviceId) => this(deviceId: deviceId);
+  TunerHostInfo deviceId(String? deviceId) => call(deviceId: deviceId);
 
   @override
   TunerHostInfo friendlyName(String? friendlyName) =>
-      this(friendlyName: friendlyName);
+      call(friendlyName: friendlyName);
 
   @override
   TunerHostInfo importFavoritesOnly(bool? importFavoritesOnly) =>
-      this(importFavoritesOnly: importFavoritesOnly);
+      call(importFavoritesOnly: importFavoritesOnly);
 
   @override
   TunerHostInfo allowHWTranscoding(bool? allowHWTranscoding) =>
-      this(allowHWTranscoding: allowHWTranscoding);
+      call(allowHWTranscoding: allowHWTranscoding);
 
   @override
   TunerHostInfo allowFmp4TranscodingContainer(
     bool? allowFmp4TranscodingContainer,
-  ) => this(allowFmp4TranscodingContainer: allowFmp4TranscodingContainer);
+  ) => call(allowFmp4TranscodingContainer: allowFmp4TranscodingContainer);
 
   @override
   TunerHostInfo allowStreamSharing(bool? allowStreamSharing) =>
-      this(allowStreamSharing: allowStreamSharing);
+      call(allowStreamSharing: allowStreamSharing);
 
   @override
   TunerHostInfo fallbackMaxStreamingBitrate(int? fallbackMaxStreamingBitrate) =>
-      this(fallbackMaxStreamingBitrate: fallbackMaxStreamingBitrate);
+      call(fallbackMaxStreamingBitrate: fallbackMaxStreamingBitrate);
 
   @override
   TunerHostInfo enableStreamLooping(bool? enableStreamLooping) =>
-      this(enableStreamLooping: enableStreamLooping);
+      call(enableStreamLooping: enableStreamLooping);
 
   @override
-  TunerHostInfo source_(String? source_) => this(source_: source_);
+  TunerHostInfo source_(String? source_) => call(source_: source_);
 
   @override
-  TunerHostInfo tunerCount(int? tunerCount) => this(tunerCount: tunerCount);
+  TunerHostInfo tunerCount(int? tunerCount) => call(tunerCount: tunerCount);
 
   @override
-  TunerHostInfo userAgent(String? userAgent) => this(userAgent: userAgent);
+  TunerHostInfo userAgent(String? userAgent) => call(userAgent: userAgent);
 
   @override
-  TunerHostInfo ignoreDts(bool? ignoreDts) => this(ignoreDts: ignoreDts);
+  TunerHostInfo ignoreDts(bool? ignoreDts) => call(ignoreDts: ignoreDts);
 
   @override
   TunerHostInfo readAtNativeFramerate(bool? readAtNativeFramerate) =>
-      this(readAtNativeFramerate: readAtNativeFramerate);
+      call(readAtNativeFramerate: readAtNativeFramerate);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TunerHostInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TunerHostInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TunerHostInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TunerHostInfo call({
     Object? id = const $CopyWithPlaceholder(),
     Object? url = const $CopyWithPlaceholder(),
@@ -228,7 +231,8 @@ class _$TunerHostInfoCWProxyImpl implements _$TunerHostInfoCWProxy {
 }
 
 extension $TunerHostInfoCopyWith on TunerHostInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfTunerHostInfo.copyWith(...)` or like so:`instanceOfTunerHostInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTunerHostInfo.copyWith(...)` or `instanceOfTunerHostInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TunerHostInfoCWProxy get copyWith => _$TunerHostInfoCWProxyImpl(this);
 }

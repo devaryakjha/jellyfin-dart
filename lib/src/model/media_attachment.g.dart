@@ -21,12 +21,13 @@ abstract class _$MediaAttachmentCWProxy {
 
   MediaAttachment deliveryUrl(String? deliveryUrl);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaAttachment(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaAttachment(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaAttachment(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaAttachment call({
     String? codec,
     String? codecTag,
@@ -38,41 +39,43 @@ abstract class _$MediaAttachmentCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMediaAttachment.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMediaAttachment.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMediaAttachment.copyWith(...)` or call `instanceOfMediaAttachment.copyWith.fieldName(value)` for a single field.
 class _$MediaAttachmentCWProxyImpl implements _$MediaAttachmentCWProxy {
   const _$MediaAttachmentCWProxyImpl(this._value);
 
   final MediaAttachment _value;
 
   @override
-  MediaAttachment codec(String? codec) => this(codec: codec);
+  MediaAttachment codec(String? codec) => call(codec: codec);
 
   @override
-  MediaAttachment codecTag(String? codecTag) => this(codecTag: codecTag);
+  MediaAttachment codecTag(String? codecTag) => call(codecTag: codecTag);
 
   @override
-  MediaAttachment comment(String? comment) => this(comment: comment);
+  MediaAttachment comment(String? comment) => call(comment: comment);
 
   @override
-  MediaAttachment index(int? index) => this(index: index);
+  MediaAttachment index(int? index) => call(index: index);
 
   @override
-  MediaAttachment fileName(String? fileName) => this(fileName: fileName);
+  MediaAttachment fileName(String? fileName) => call(fileName: fileName);
 
   @override
-  MediaAttachment mimeType(String? mimeType) => this(mimeType: mimeType);
+  MediaAttachment mimeType(String? mimeType) => call(mimeType: mimeType);
 
   @override
   MediaAttachment deliveryUrl(String? deliveryUrl) =>
-      this(deliveryUrl: deliveryUrl);
+      call(deliveryUrl: deliveryUrl);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaAttachment(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaAttachment(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaAttachment(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaAttachment call({
     Object? codec = const $CopyWithPlaceholder(),
     Object? codecTag = const $CopyWithPlaceholder(),
@@ -116,7 +119,8 @@ class _$MediaAttachmentCWProxyImpl implements _$MediaAttachmentCWProxy {
 }
 
 extension $MediaAttachmentCopyWith on MediaAttachment {
-  /// Returns a callable class that can be used as follows: `instanceOfMediaAttachment.copyWith(...)` or like so:`instanceOfMediaAttachment.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMediaAttachment.copyWith(...)` or `instanceOfMediaAttachment.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MediaAttachmentCWProxy get copyWith => _$MediaAttachmentCWProxyImpl(this);
 }

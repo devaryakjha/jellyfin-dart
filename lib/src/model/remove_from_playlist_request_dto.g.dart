@@ -13,12 +13,13 @@ abstract class _$RemoveFromPlaylistRequestDtoCWProxy {
 
   RemoveFromPlaylistRequestDto clearPlayingItem(bool? clearPlayingItem);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoveFromPlaylistRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoveFromPlaylistRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoveFromPlaylistRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoveFromPlaylistRequestDto call({
     List<String>? playlistItemIds,
     bool? clearPlaylist,
@@ -26,7 +27,8 @@ abstract class _$RemoveFromPlaylistRequestDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfRemoveFromPlaylistRequestDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfRemoveFromPlaylistRequestDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfRemoveFromPlaylistRequestDto.copyWith(...)` or call `instanceOfRemoveFromPlaylistRequestDto.copyWith.fieldName(value)` for a single field.
 class _$RemoveFromPlaylistRequestDtoCWProxyImpl
     implements _$RemoveFromPlaylistRequestDtoCWProxy {
   const _$RemoveFromPlaylistRequestDtoCWProxyImpl(this._value);
@@ -35,23 +37,24 @@ class _$RemoveFromPlaylistRequestDtoCWProxyImpl
 
   @override
   RemoveFromPlaylistRequestDto playlistItemIds(List<String>? playlistItemIds) =>
-      this(playlistItemIds: playlistItemIds);
+      call(playlistItemIds: playlistItemIds);
 
   @override
   RemoveFromPlaylistRequestDto clearPlaylist(bool? clearPlaylist) =>
-      this(clearPlaylist: clearPlaylist);
+      call(clearPlaylist: clearPlaylist);
 
   @override
   RemoveFromPlaylistRequestDto clearPlayingItem(bool? clearPlayingItem) =>
-      this(clearPlayingItem: clearPlayingItem);
+      call(clearPlayingItem: clearPlayingItem);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoveFromPlaylistRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoveFromPlaylistRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoveFromPlaylistRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoveFromPlaylistRequestDto call({
     Object? playlistItemIds = const $CopyWithPlaceholder(),
     Object? clearPlaylist = const $CopyWithPlaceholder(),
@@ -76,7 +79,8 @@ class _$RemoveFromPlaylistRequestDtoCWProxyImpl
 
 extension $RemoveFromPlaylistRequestDtoCopyWith
     on RemoveFromPlaylistRequestDto {
-  /// Returns a callable class that can be used as follows: `instanceOfRemoveFromPlaylistRequestDto.copyWith(...)` or like so:`instanceOfRemoveFromPlaylistRequestDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfRemoveFromPlaylistRequestDto.copyWith(...)` or `instanceOfRemoveFromPlaylistRequestDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$RemoveFromPlaylistRequestDtoCWProxy get copyWith =>
       _$RemoveFromPlaylistRequestDtoCWProxyImpl(this);

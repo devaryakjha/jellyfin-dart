@@ -9,16 +9,18 @@ part of 'sessions_stop_message.dart';
 abstract class _$SessionsStopMessageCWProxy {
   SessionsStopMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SessionsStopMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SessionsStopMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SessionsStopMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SessionsStopMessage call({SessionMessageType? messageType});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSessionsStopMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSessionsStopMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSessionsStopMessage.copyWith(...)` or call `instanceOfSessionsStopMessage.copyWith.fieldName(value)` for a single field.
 class _$SessionsStopMessageCWProxyImpl implements _$SessionsStopMessageCWProxy {
   const _$SessionsStopMessageCWProxyImpl(this._value);
 
@@ -26,15 +28,16 @@ class _$SessionsStopMessageCWProxyImpl implements _$SessionsStopMessageCWProxy {
 
   @override
   SessionsStopMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SessionsStopMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SessionsStopMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SessionsStopMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SessionsStopMessage call({
     Object? messageType = const $CopyWithPlaceholder(),
   }) {
@@ -48,7 +51,8 @@ class _$SessionsStopMessageCWProxyImpl implements _$SessionsStopMessageCWProxy {
 }
 
 extension $SessionsStopMessageCopyWith on SessionsStopMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfSessionsStopMessage.copyWith(...)` or like so:`instanceOfSessionsStopMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSessionsStopMessage.copyWith(...)` or `instanceOfSessionsStopMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SessionsStopMessageCWProxy get copyWith =>
       _$SessionsStopMessageCWProxyImpl(this);

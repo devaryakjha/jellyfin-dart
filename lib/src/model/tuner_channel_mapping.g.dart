@@ -15,12 +15,13 @@ abstract class _$TunerChannelMappingCWProxy {
 
   TunerChannelMapping id(String? id);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TunerChannelMapping(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TunerChannelMapping(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TunerChannelMapping(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TunerChannelMapping call({
     String? name,
     String? providerChannelName,
@@ -29,33 +30,35 @@ abstract class _$TunerChannelMappingCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTunerChannelMapping.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTunerChannelMapping.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTunerChannelMapping.copyWith(...)` or call `instanceOfTunerChannelMapping.copyWith.fieldName(value)` for a single field.
 class _$TunerChannelMappingCWProxyImpl implements _$TunerChannelMappingCWProxy {
   const _$TunerChannelMappingCWProxyImpl(this._value);
 
   final TunerChannelMapping _value;
 
   @override
-  TunerChannelMapping name(String? name) => this(name: name);
+  TunerChannelMapping name(String? name) => call(name: name);
 
   @override
   TunerChannelMapping providerChannelName(String? providerChannelName) =>
-      this(providerChannelName: providerChannelName);
+      call(providerChannelName: providerChannelName);
 
   @override
   TunerChannelMapping providerChannelId(String? providerChannelId) =>
-      this(providerChannelId: providerChannelId);
+      call(providerChannelId: providerChannelId);
 
   @override
-  TunerChannelMapping id(String? id) => this(id: id);
+  TunerChannelMapping id(String? id) => call(id: id);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TunerChannelMapping(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TunerChannelMapping(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TunerChannelMapping(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TunerChannelMapping call({
     Object? name = const $CopyWithPlaceholder(),
     Object? providerChannelName = const $CopyWithPlaceholder(),
@@ -84,7 +87,8 @@ class _$TunerChannelMappingCWProxyImpl implements _$TunerChannelMappingCWProxy {
 }
 
 extension $TunerChannelMappingCopyWith on TunerChannelMapping {
-  /// Returns a callable class that can be used as follows: `instanceOfTunerChannelMapping.copyWith(...)` or like so:`instanceOfTunerChannelMapping.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTunerChannelMapping.copyWith(...)` or `instanceOfTunerChannelMapping.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TunerChannelMappingCWProxy get copyWith =>
       _$TunerChannelMappingCWProxyImpl(this);

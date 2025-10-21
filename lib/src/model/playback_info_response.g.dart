@@ -13,12 +13,13 @@ abstract class _$PlaybackInfoResponseCWProxy {
 
   PlaybackInfoResponse errorCode(PlaybackErrorCode? errorCode);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaybackInfoResponse(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaybackInfoResponse(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaybackInfoResponse(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaybackInfoResponse call({
     List<MediaSourceInfo>? mediaSources,
     String? playSessionId,
@@ -26,7 +27,8 @@ abstract class _$PlaybackInfoResponseCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlaybackInfoResponse.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlaybackInfoResponse.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlaybackInfoResponse.copyWith(...)` or call `instanceOfPlaybackInfoResponse.copyWith.fieldName(value)` for a single field.
 class _$PlaybackInfoResponseCWProxyImpl
     implements _$PlaybackInfoResponseCWProxy {
   const _$PlaybackInfoResponseCWProxyImpl(this._value);
@@ -35,23 +37,24 @@ class _$PlaybackInfoResponseCWProxyImpl
 
   @override
   PlaybackInfoResponse mediaSources(List<MediaSourceInfo>? mediaSources) =>
-      this(mediaSources: mediaSources);
+      call(mediaSources: mediaSources);
 
   @override
   PlaybackInfoResponse playSessionId(String? playSessionId) =>
-      this(playSessionId: playSessionId);
+      call(playSessionId: playSessionId);
 
   @override
   PlaybackInfoResponse errorCode(PlaybackErrorCode? errorCode) =>
-      this(errorCode: errorCode);
+      call(errorCode: errorCode);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaybackInfoResponse(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaybackInfoResponse(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaybackInfoResponse(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaybackInfoResponse call({
     Object? mediaSources = const $CopyWithPlaceholder(),
     Object? playSessionId = const $CopyWithPlaceholder(),
@@ -75,7 +78,8 @@ class _$PlaybackInfoResponseCWProxyImpl
 }
 
 extension $PlaybackInfoResponseCopyWith on PlaybackInfoResponse {
-  /// Returns a callable class that can be used as follows: `instanceOfPlaybackInfoResponse.copyWith(...)` or like so:`instanceOfPlaybackInfoResponse.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlaybackInfoResponse.copyWith(...)` or `instanceOfPlaybackInfoResponse.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlaybackInfoResponseCWProxy get copyWith =>
       _$PlaybackInfoResponseCWProxyImpl(this);

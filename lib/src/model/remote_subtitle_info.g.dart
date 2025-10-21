@@ -41,12 +41,13 @@ abstract class _$RemoteSubtitleInfoCWProxy {
 
   RemoteSubtitleInfo hearingImpaired(bool? hearingImpaired);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoteSubtitleInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoteSubtitleInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoteSubtitleInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoteSubtitleInfo call({
     String? threeLetterISOLanguageName,
     String? id,
@@ -67,7 +68,8 @@ abstract class _$RemoteSubtitleInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfRemoteSubtitleInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfRemoteSubtitleInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfRemoteSubtitleInfo.copyWith(...)` or call `instanceOfRemoteSubtitleInfo.copyWith.fieldName(value)` for a single field.
 class _$RemoteSubtitleInfoCWProxyImpl implements _$RemoteSubtitleInfoCWProxy {
   const _$RemoteSubtitleInfoCWProxyImpl(this._value);
 
@@ -76,68 +78,69 @@ class _$RemoteSubtitleInfoCWProxyImpl implements _$RemoteSubtitleInfoCWProxy {
   @override
   RemoteSubtitleInfo threeLetterISOLanguageName(
     String? threeLetterISOLanguageName,
-  ) => this(threeLetterISOLanguageName: threeLetterISOLanguageName);
+  ) => call(threeLetterISOLanguageName: threeLetterISOLanguageName);
 
   @override
-  RemoteSubtitleInfo id(String? id) => this(id: id);
+  RemoteSubtitleInfo id(String? id) => call(id: id);
 
   @override
   RemoteSubtitleInfo providerName(String? providerName) =>
-      this(providerName: providerName);
+      call(providerName: providerName);
 
   @override
-  RemoteSubtitleInfo name(String? name) => this(name: name);
+  RemoteSubtitleInfo name(String? name) => call(name: name);
 
   @override
-  RemoteSubtitleInfo format(String? format) => this(format: format);
+  RemoteSubtitleInfo format(String? format) => call(format: format);
 
   @override
-  RemoteSubtitleInfo author(String? author) => this(author: author);
+  RemoteSubtitleInfo author(String? author) => call(author: author);
 
   @override
-  RemoteSubtitleInfo comment(String? comment) => this(comment: comment);
+  RemoteSubtitleInfo comment(String? comment) => call(comment: comment);
 
   @override
   RemoteSubtitleInfo dateCreated(DateTime? dateCreated) =>
-      this(dateCreated: dateCreated);
+      call(dateCreated: dateCreated);
 
   @override
   RemoteSubtitleInfo communityRating(double? communityRating) =>
-      this(communityRating: communityRating);
+      call(communityRating: communityRating);
 
   @override
-  RemoteSubtitleInfo frameRate(double? frameRate) => this(frameRate: frameRate);
+  RemoteSubtitleInfo frameRate(double? frameRate) => call(frameRate: frameRate);
 
   @override
   RemoteSubtitleInfo downloadCount(int? downloadCount) =>
-      this(downloadCount: downloadCount);
+      call(downloadCount: downloadCount);
 
   @override
   RemoteSubtitleInfo isHashMatch(bool? isHashMatch) =>
-      this(isHashMatch: isHashMatch);
+      call(isHashMatch: isHashMatch);
 
   @override
   RemoteSubtitleInfo aiTranslated(bool? aiTranslated) =>
-      this(aiTranslated: aiTranslated);
+      call(aiTranslated: aiTranslated);
 
   @override
   RemoteSubtitleInfo machineTranslated(bool? machineTranslated) =>
-      this(machineTranslated: machineTranslated);
+      call(machineTranslated: machineTranslated);
 
   @override
-  RemoteSubtitleInfo forced(bool? forced) => this(forced: forced);
+  RemoteSubtitleInfo forced(bool? forced) => call(forced: forced);
 
   @override
   RemoteSubtitleInfo hearingImpaired(bool? hearingImpaired) =>
-      this(hearingImpaired: hearingImpaired);
+      call(hearingImpaired: hearingImpaired);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoteSubtitleInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoteSubtitleInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoteSubtitleInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoteSubtitleInfo call({
     Object? threeLetterISOLanguageName = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
@@ -227,7 +230,8 @@ class _$RemoteSubtitleInfoCWProxyImpl implements _$RemoteSubtitleInfoCWProxy {
 }
 
 extension $RemoteSubtitleInfoCopyWith on RemoteSubtitleInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfRemoteSubtitleInfo.copyWith(...)` or like so:`instanceOfRemoteSubtitleInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfRemoteSubtitleInfo.copyWith(...)` or `instanceOfRemoteSubtitleInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$RemoteSubtitleInfoCWProxy get copyWith =>
       _$RemoteSubtitleInfoCWProxyImpl(this);

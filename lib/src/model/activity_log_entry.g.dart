@@ -23,16 +23,20 @@ abstract class _$ActivityLogEntryCWProxy {
 
   ActivityLogEntry userId(String? userId);
 
-  ActivityLogEntry userPrimaryImageTag(String? userPrimaryImageTag);
+  ActivityLogEntry userPrimaryImageTag(
+    @Deprecated('userPrimaryImageTag has been deprecated')
+    String? userPrimaryImageTag,
+  );
 
   ActivityLogEntry severity(LogLevel? severity);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ActivityLogEntry(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ActivityLogEntry(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ActivityLogEntry(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ActivityLogEntry call({
     int? id,
     String? name,
@@ -42,56 +46,61 @@ abstract class _$ActivityLogEntryCWProxy {
     String? itemId,
     DateTime? date,
     String? userId,
+    @Deprecated('userPrimaryImageTag has been deprecated')
     String? userPrimaryImageTag,
     LogLevel? severity,
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfActivityLogEntry.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfActivityLogEntry.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfActivityLogEntry.copyWith(...)` or call `instanceOfActivityLogEntry.copyWith.fieldName(value)` for a single field.
 class _$ActivityLogEntryCWProxyImpl implements _$ActivityLogEntryCWProxy {
   const _$ActivityLogEntryCWProxyImpl(this._value);
 
   final ActivityLogEntry _value;
 
   @override
-  ActivityLogEntry id(int? id) => this(id: id);
+  ActivityLogEntry id(int? id) => call(id: id);
 
   @override
-  ActivityLogEntry name(String? name) => this(name: name);
+  ActivityLogEntry name(String? name) => call(name: name);
 
   @override
-  ActivityLogEntry overview(String? overview) => this(overview: overview);
+  ActivityLogEntry overview(String? overview) => call(overview: overview);
 
   @override
   ActivityLogEntry shortOverview(String? shortOverview) =>
-      this(shortOverview: shortOverview);
+      call(shortOverview: shortOverview);
 
   @override
-  ActivityLogEntry type(String? type) => this(type: type);
+  ActivityLogEntry type(String? type) => call(type: type);
 
   @override
-  ActivityLogEntry itemId(String? itemId) => this(itemId: itemId);
+  ActivityLogEntry itemId(String? itemId) => call(itemId: itemId);
 
   @override
-  ActivityLogEntry date(DateTime? date) => this(date: date);
+  ActivityLogEntry date(DateTime? date) => call(date: date);
 
   @override
-  ActivityLogEntry userId(String? userId) => this(userId: userId);
+  ActivityLogEntry userId(String? userId) => call(userId: userId);
 
   @override
-  ActivityLogEntry userPrimaryImageTag(String? userPrimaryImageTag) =>
-      this(userPrimaryImageTag: userPrimaryImageTag);
+  ActivityLogEntry userPrimaryImageTag(
+    @Deprecated('userPrimaryImageTag has been deprecated')
+    String? userPrimaryImageTag,
+  ) => call(userPrimaryImageTag: userPrimaryImageTag);
 
   @override
-  ActivityLogEntry severity(LogLevel? severity) => this(severity: severity);
+  ActivityLogEntry severity(LogLevel? severity) => call(severity: severity);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ActivityLogEntry(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ActivityLogEntry(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ActivityLogEntry(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ActivityLogEntry call({
     Object? id = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
@@ -101,6 +110,7 @@ class _$ActivityLogEntryCWProxyImpl implements _$ActivityLogEntryCWProxy {
     Object? itemId = const $CopyWithPlaceholder(),
     Object? date = const $CopyWithPlaceholder(),
     Object? userId = const $CopyWithPlaceholder(),
+    @Deprecated('userPrimaryImageTag has been deprecated')
     Object? userPrimaryImageTag = const $CopyWithPlaceholder(),
     Object? severity = const $CopyWithPlaceholder(),
   }) {
@@ -150,7 +160,8 @@ class _$ActivityLogEntryCWProxyImpl implements _$ActivityLogEntryCWProxy {
 }
 
 extension $ActivityLogEntryCopyWith on ActivityLogEntry {
-  /// Returns a callable class that can be used as follows: `instanceOfActivityLogEntry.copyWith(...)` or like so:`instanceOfActivityLogEntry.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfActivityLogEntry.copyWith(...)` or `instanceOfActivityLogEntry.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ActivityLogEntryCWProxy get copyWith => _$ActivityLogEntryCWProxyImpl(this);
 }

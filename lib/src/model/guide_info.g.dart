@@ -11,34 +11,37 @@ abstract class _$GuideInfoCWProxy {
 
   GuideInfo endDate(DateTime? endDate);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GuideInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GuideInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GuideInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GuideInfo call({DateTime? startDate, DateTime? endDate});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfGuideInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfGuideInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfGuideInfo.copyWith(...)` or call `instanceOfGuideInfo.copyWith.fieldName(value)` for a single field.
 class _$GuideInfoCWProxyImpl implements _$GuideInfoCWProxy {
   const _$GuideInfoCWProxyImpl(this._value);
 
   final GuideInfo _value;
 
   @override
-  GuideInfo startDate(DateTime? startDate) => this(startDate: startDate);
+  GuideInfo startDate(DateTime? startDate) => call(startDate: startDate);
 
   @override
-  GuideInfo endDate(DateTime? endDate) => this(endDate: endDate);
+  GuideInfo endDate(DateTime? endDate) => call(endDate: endDate);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GuideInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GuideInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GuideInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GuideInfo call({
     Object? startDate = const $CopyWithPlaceholder(),
     Object? endDate = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$GuideInfoCWProxyImpl implements _$GuideInfoCWProxy {
 }
 
 extension $GuideInfoCopyWith on GuideInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfGuideInfo.copyWith(...)` or like so:`instanceOfGuideInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfGuideInfo.copyWith(...)` or `instanceOfGuideInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$GuideInfoCWProxy get copyWith => _$GuideInfoCWProxyImpl(this);
 }

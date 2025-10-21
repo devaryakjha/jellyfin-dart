@@ -13,12 +13,13 @@ abstract class _$ForgotPasswordResultCWProxy {
 
   ForgotPasswordResult pinExpirationDate(DateTime? pinExpirationDate);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ForgotPasswordResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ForgotPasswordResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ForgotPasswordResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ForgotPasswordResult call({
     ForgotPasswordAction? action,
     String? pinFile,
@@ -26,7 +27,8 @@ abstract class _$ForgotPasswordResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfForgotPasswordResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfForgotPasswordResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfForgotPasswordResult.copyWith(...)` or call `instanceOfForgotPasswordResult.copyWith.fieldName(value)` for a single field.
 class _$ForgotPasswordResultCWProxyImpl
     implements _$ForgotPasswordResultCWProxy {
   const _$ForgotPasswordResultCWProxyImpl(this._value);
@@ -35,22 +37,23 @@ class _$ForgotPasswordResultCWProxyImpl
 
   @override
   ForgotPasswordResult action(ForgotPasswordAction? action) =>
-      this(action: action);
+      call(action: action);
 
   @override
-  ForgotPasswordResult pinFile(String? pinFile) => this(pinFile: pinFile);
+  ForgotPasswordResult pinFile(String? pinFile) => call(pinFile: pinFile);
 
   @override
   ForgotPasswordResult pinExpirationDate(DateTime? pinExpirationDate) =>
-      this(pinExpirationDate: pinExpirationDate);
+      call(pinExpirationDate: pinExpirationDate);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ForgotPasswordResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ForgotPasswordResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ForgotPasswordResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ForgotPasswordResult call({
     Object? action = const $CopyWithPlaceholder(),
     Object? pinFile = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$ForgotPasswordResultCWProxyImpl
 }
 
 extension $ForgotPasswordResultCopyWith on ForgotPasswordResult {
-  /// Returns a callable class that can be used as follows: `instanceOfForgotPasswordResult.copyWith(...)` or like so:`instanceOfForgotPasswordResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfForgotPasswordResult.copyWith(...)` or `instanceOfForgotPasswordResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ForgotPasswordResultCWProxy get copyWith =>
       _$ForgotPasswordResultCWProxyImpl(this);

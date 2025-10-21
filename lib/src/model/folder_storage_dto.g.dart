@@ -17,12 +17,13 @@ abstract class _$FolderStorageDtoCWProxy {
 
   FolderStorageDto deviceId(String? deviceId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `FolderStorageDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `FolderStorageDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// FolderStorageDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   FolderStorageDto call({
     String? path,
     int? freeSpace,
@@ -32,35 +33,37 @@ abstract class _$FolderStorageDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfFolderStorageDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfFolderStorageDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfFolderStorageDto.copyWith(...)` or call `instanceOfFolderStorageDto.copyWith.fieldName(value)` for a single field.
 class _$FolderStorageDtoCWProxyImpl implements _$FolderStorageDtoCWProxy {
   const _$FolderStorageDtoCWProxyImpl(this._value);
 
   final FolderStorageDto _value;
 
   @override
-  FolderStorageDto path(String? path) => this(path: path);
+  FolderStorageDto path(String? path) => call(path: path);
 
   @override
-  FolderStorageDto freeSpace(int? freeSpace) => this(freeSpace: freeSpace);
+  FolderStorageDto freeSpace(int? freeSpace) => call(freeSpace: freeSpace);
 
   @override
-  FolderStorageDto usedSpace(int? usedSpace) => this(usedSpace: usedSpace);
+  FolderStorageDto usedSpace(int? usedSpace) => call(usedSpace: usedSpace);
 
   @override
   FolderStorageDto storageType(String? storageType) =>
-      this(storageType: storageType);
+      call(storageType: storageType);
 
   @override
-  FolderStorageDto deviceId(String? deviceId) => this(deviceId: deviceId);
+  FolderStorageDto deviceId(String? deviceId) => call(deviceId: deviceId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `FolderStorageDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `FolderStorageDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// FolderStorageDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   FolderStorageDto call({
     Object? path = const $CopyWithPlaceholder(),
     Object? freeSpace = const $CopyWithPlaceholder(),
@@ -94,7 +97,8 @@ class _$FolderStorageDtoCWProxyImpl implements _$FolderStorageDtoCWProxy {
 }
 
 extension $FolderStorageDtoCopyWith on FolderStorageDto {
-  /// Returns a callable class that can be used as follows: `instanceOfFolderStorageDto.copyWith(...)` or like so:`instanceOfFolderStorageDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfFolderStorageDto.copyWith(...)` or `instanceOfFolderStorageDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$FolderStorageDtoCWProxy get copyWith => _$FolderStorageDtoCWProxyImpl(this);
 }

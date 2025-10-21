@@ -15,12 +15,13 @@ abstract class _$CustomDatabaseOptionsCWProxy {
 
   CustomDatabaseOptions options(List<CustomDatabaseOption>? options);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CustomDatabaseOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CustomDatabaseOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CustomDatabaseOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CustomDatabaseOptions call({
     String? pluginName,
     String? pluginAssembly,
@@ -29,7 +30,8 @@ abstract class _$CustomDatabaseOptionsCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfCustomDatabaseOptions.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfCustomDatabaseOptions.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfCustomDatabaseOptions.copyWith(...)` or call `instanceOfCustomDatabaseOptions.copyWith.fieldName(value)` for a single field.
 class _$CustomDatabaseOptionsCWProxyImpl
     implements _$CustomDatabaseOptionsCWProxy {
   const _$CustomDatabaseOptionsCWProxyImpl(this._value);
@@ -38,27 +40,28 @@ class _$CustomDatabaseOptionsCWProxyImpl
 
   @override
   CustomDatabaseOptions pluginName(String? pluginName) =>
-      this(pluginName: pluginName);
+      call(pluginName: pluginName);
 
   @override
   CustomDatabaseOptions pluginAssembly(String? pluginAssembly) =>
-      this(pluginAssembly: pluginAssembly);
+      call(pluginAssembly: pluginAssembly);
 
   @override
   CustomDatabaseOptions connectionString(String? connectionString) =>
-      this(connectionString: connectionString);
+      call(connectionString: connectionString);
 
   @override
   CustomDatabaseOptions options(List<CustomDatabaseOption>? options) =>
-      this(options: options);
+      call(options: options);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CustomDatabaseOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CustomDatabaseOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CustomDatabaseOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CustomDatabaseOptions call({
     Object? pluginName = const $CopyWithPlaceholder(),
     Object? pluginAssembly = const $CopyWithPlaceholder(),
@@ -87,7 +90,8 @@ class _$CustomDatabaseOptionsCWProxyImpl
 }
 
 extension $CustomDatabaseOptionsCopyWith on CustomDatabaseOptions {
-  /// Returns a callable class that can be used as follows: `instanceOfCustomDatabaseOptions.copyWith(...)` or like so:`instanceOfCustomDatabaseOptions.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfCustomDatabaseOptions.copyWith(...)` or `instanceOfCustomDatabaseOptions.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$CustomDatabaseOptionsCWProxy get copyWith =>
       _$CustomDatabaseOptionsCWProxyImpl(this);

@@ -9,16 +9,18 @@ part of 'default_directory_browser_info_dto.dart';
 abstract class _$DefaultDirectoryBrowserInfoDtoCWProxy {
   DefaultDirectoryBrowserInfoDto path(String? path);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DefaultDirectoryBrowserInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DefaultDirectoryBrowserInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DefaultDirectoryBrowserInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DefaultDirectoryBrowserInfoDto call({String? path});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfDefaultDirectoryBrowserInfoDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfDefaultDirectoryBrowserInfoDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfDefaultDirectoryBrowserInfoDto.copyWith(...)` or call `instanceOfDefaultDirectoryBrowserInfoDto.copyWith.fieldName(value)` for a single field.
 class _$DefaultDirectoryBrowserInfoDtoCWProxyImpl
     implements _$DefaultDirectoryBrowserInfoDtoCWProxy {
   const _$DefaultDirectoryBrowserInfoDtoCWProxyImpl(this._value);
@@ -26,15 +28,16 @@ class _$DefaultDirectoryBrowserInfoDtoCWProxyImpl
   final DefaultDirectoryBrowserInfoDto _value;
 
   @override
-  DefaultDirectoryBrowserInfoDto path(String? path) => this(path: path);
+  DefaultDirectoryBrowserInfoDto path(String? path) => call(path: path);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DefaultDirectoryBrowserInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DefaultDirectoryBrowserInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DefaultDirectoryBrowserInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DefaultDirectoryBrowserInfoDto call({
     Object? path = const $CopyWithPlaceholder(),
   }) {
@@ -49,7 +52,8 @@ class _$DefaultDirectoryBrowserInfoDtoCWProxyImpl
 
 extension $DefaultDirectoryBrowserInfoDtoCopyWith
     on DefaultDirectoryBrowserInfoDto {
-  /// Returns a callable class that can be used as follows: `instanceOfDefaultDirectoryBrowserInfoDto.copyWith(...)` or like so:`instanceOfDefaultDirectoryBrowserInfoDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfDefaultDirectoryBrowserInfoDto.copyWith(...)` or `instanceOfDefaultDirectoryBrowserInfoDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$DefaultDirectoryBrowserInfoDtoCWProxy get copyWith =>
       _$DefaultDirectoryBrowserInfoDtoCWProxyImpl(this);

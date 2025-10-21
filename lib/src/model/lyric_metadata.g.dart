@@ -27,12 +27,13 @@ abstract class _$LyricMetadataCWProxy {
 
   LyricMetadata isSynced(bool? isSynced);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LyricMetadata(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LyricMetadata(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LyricMetadata(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LyricMetadata call({
     String? artist,
     String? album,
@@ -47,49 +48,51 @@ abstract class _$LyricMetadataCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLyricMetadata.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLyricMetadata.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLyricMetadata.copyWith(...)` or call `instanceOfLyricMetadata.copyWith.fieldName(value)` for a single field.
 class _$LyricMetadataCWProxyImpl implements _$LyricMetadataCWProxy {
   const _$LyricMetadataCWProxyImpl(this._value);
 
   final LyricMetadata _value;
 
   @override
-  LyricMetadata artist(String? artist) => this(artist: artist);
+  LyricMetadata artist(String? artist) => call(artist: artist);
 
   @override
-  LyricMetadata album(String? album) => this(album: album);
+  LyricMetadata album(String? album) => call(album: album);
 
   @override
-  LyricMetadata title(String? title) => this(title: title);
+  LyricMetadata title(String? title) => call(title: title);
 
   @override
-  LyricMetadata author(String? author) => this(author: author);
+  LyricMetadata author(String? author) => call(author: author);
 
   @override
-  LyricMetadata length(int? length) => this(length: length);
+  LyricMetadata length(int? length) => call(length: length);
 
   @override
-  LyricMetadata by(String? by) => this(by: by);
+  LyricMetadata by(String? by) => call(by: by);
 
   @override
-  LyricMetadata offset(int? offset) => this(offset: offset);
+  LyricMetadata offset(int? offset) => call(offset: offset);
 
   @override
-  LyricMetadata creator(String? creator) => this(creator: creator);
+  LyricMetadata creator(String? creator) => call(creator: creator);
 
   @override
-  LyricMetadata version(String? version) => this(version: version);
+  LyricMetadata version(String? version) => call(version: version);
 
   @override
-  LyricMetadata isSynced(bool? isSynced) => this(isSynced: isSynced);
+  LyricMetadata isSynced(bool? isSynced) => call(isSynced: isSynced);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LyricMetadata(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LyricMetadata(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LyricMetadata(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LyricMetadata call({
     Object? artist = const $CopyWithPlaceholder(),
     Object? album = const $CopyWithPlaceholder(),
@@ -148,7 +151,8 @@ class _$LyricMetadataCWProxyImpl implements _$LyricMetadataCWProxy {
 }
 
 extension $LyricMetadataCopyWith on LyricMetadata {
-  /// Returns a callable class that can be used as follows: `instanceOfLyricMetadata.copyWith(...)` or like so:`instanceOfLyricMetadata.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLyricMetadata.copyWith(...)` or `instanceOfLyricMetadata.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LyricMetadataCWProxy get copyWith => _$LyricMetadataCWProxyImpl(this);
 }

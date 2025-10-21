@@ -15,12 +15,13 @@ abstract class _$AuthenticationResultCWProxy {
 
   AuthenticationResult serverId(String? serverId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AuthenticationResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AuthenticationResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AuthenticationResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AuthenticationResult call({
     UserDto? user,
     SessionInfoDto? sessionInfo,
@@ -29,7 +30,8 @@ abstract class _$AuthenticationResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfAuthenticationResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfAuthenticationResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfAuthenticationResult.copyWith(...)` or call `instanceOfAuthenticationResult.copyWith.fieldName(value)` for a single field.
 class _$AuthenticationResultCWProxyImpl
     implements _$AuthenticationResultCWProxy {
   const _$AuthenticationResultCWProxyImpl(this._value);
@@ -37,26 +39,27 @@ class _$AuthenticationResultCWProxyImpl
   final AuthenticationResult _value;
 
   @override
-  AuthenticationResult user(UserDto? user) => this(user: user);
+  AuthenticationResult user(UserDto? user) => call(user: user);
 
   @override
   AuthenticationResult sessionInfo(SessionInfoDto? sessionInfo) =>
-      this(sessionInfo: sessionInfo);
+      call(sessionInfo: sessionInfo);
 
   @override
   AuthenticationResult accessToken(String? accessToken) =>
-      this(accessToken: accessToken);
+      call(accessToken: accessToken);
 
   @override
-  AuthenticationResult serverId(String? serverId) => this(serverId: serverId);
+  AuthenticationResult serverId(String? serverId) => call(serverId: serverId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AuthenticationResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AuthenticationResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AuthenticationResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AuthenticationResult call({
     Object? user = const $CopyWithPlaceholder(),
     Object? sessionInfo = const $CopyWithPlaceholder(),
@@ -85,7 +88,8 @@ class _$AuthenticationResultCWProxyImpl
 }
 
 extension $AuthenticationResultCopyWith on AuthenticationResult {
-  /// Returns a callable class that can be used as follows: `instanceOfAuthenticationResult.copyWith(...)` or like so:`instanceOfAuthenticationResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfAuthenticationResult.copyWith(...)` or `instanceOfAuthenticationResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$AuthenticationResultCWProxy get copyWith =>
       _$AuthenticationResultCWProxyImpl(this);

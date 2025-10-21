@@ -15,12 +15,13 @@ abstract class _$FontFileCWProxy {
 
   FontFile dateModified(DateTime? dateModified);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `FontFile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `FontFile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// FontFile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   FontFile call({
     String? name,
     int? size,
@@ -29,32 +30,34 @@ abstract class _$FontFileCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfFontFile.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfFontFile.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfFontFile.copyWith(...)` or call `instanceOfFontFile.copyWith.fieldName(value)` for a single field.
 class _$FontFileCWProxyImpl implements _$FontFileCWProxy {
   const _$FontFileCWProxyImpl(this._value);
 
   final FontFile _value;
 
   @override
-  FontFile name(String? name) => this(name: name);
+  FontFile name(String? name) => call(name: name);
 
   @override
-  FontFile size(int? size) => this(size: size);
+  FontFile size(int? size) => call(size: size);
 
   @override
-  FontFile dateCreated(DateTime? dateCreated) => this(dateCreated: dateCreated);
+  FontFile dateCreated(DateTime? dateCreated) => call(dateCreated: dateCreated);
 
   @override
   FontFile dateModified(DateTime? dateModified) =>
-      this(dateModified: dateModified);
+      call(dateModified: dateModified);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `FontFile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `FontFile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// FontFile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   FontFile call({
     Object? name = const $CopyWithPlaceholder(),
     Object? size = const $CopyWithPlaceholder(),
@@ -83,7 +86,8 @@ class _$FontFileCWProxyImpl implements _$FontFileCWProxy {
 }
 
 extension $FontFileCopyWith on FontFile {
-  /// Returns a callable class that can be used as follows: `instanceOfFontFile.copyWith(...)` or like so:`instanceOfFontFile.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfFontFile.copyWith(...)` or `instanceOfFontFile.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$FontFileCWProxy get copyWith => _$FontFileCWProxyImpl(this);
 }

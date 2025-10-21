@@ -15,12 +15,13 @@ abstract class _$AllThemeMediaResultCWProxy {
     ThemeMediaResult? soundtrackSongsResult,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AllThemeMediaResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AllThemeMediaResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AllThemeMediaResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AllThemeMediaResult call({
     ThemeMediaResult? themeVideosResult,
     ThemeMediaResult? themeSongsResult,
@@ -28,7 +29,8 @@ abstract class _$AllThemeMediaResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfAllThemeMediaResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfAllThemeMediaResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfAllThemeMediaResult.copyWith(...)` or call `instanceOfAllThemeMediaResult.copyWith.fieldName(value)` for a single field.
 class _$AllThemeMediaResultCWProxyImpl implements _$AllThemeMediaResultCWProxy {
   const _$AllThemeMediaResultCWProxyImpl(this._value);
 
@@ -36,24 +38,25 @@ class _$AllThemeMediaResultCWProxyImpl implements _$AllThemeMediaResultCWProxy {
 
   @override
   AllThemeMediaResult themeVideosResult(ThemeMediaResult? themeVideosResult) =>
-      this(themeVideosResult: themeVideosResult);
+      call(themeVideosResult: themeVideosResult);
 
   @override
   AllThemeMediaResult themeSongsResult(ThemeMediaResult? themeSongsResult) =>
-      this(themeSongsResult: themeSongsResult);
+      call(themeSongsResult: themeSongsResult);
 
   @override
   AllThemeMediaResult soundtrackSongsResult(
     ThemeMediaResult? soundtrackSongsResult,
-  ) => this(soundtrackSongsResult: soundtrackSongsResult);
+  ) => call(soundtrackSongsResult: soundtrackSongsResult);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AllThemeMediaResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AllThemeMediaResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AllThemeMediaResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AllThemeMediaResult call({
     Object? themeVideosResult = const $CopyWithPlaceholder(),
     Object? themeSongsResult = const $CopyWithPlaceholder(),
@@ -78,7 +81,8 @@ class _$AllThemeMediaResultCWProxyImpl implements _$AllThemeMediaResultCWProxy {
 }
 
 extension $AllThemeMediaResultCopyWith on AllThemeMediaResult {
-  /// Returns a callable class that can be used as follows: `instanceOfAllThemeMediaResult.copyWith(...)` or like so:`instanceOfAllThemeMediaResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfAllThemeMediaResult.copyWith(...)` or `instanceOfAllThemeMediaResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$AllThemeMediaResultCWProxy get copyWith =>
       _$AllThemeMediaResultCWProxyImpl(this);

@@ -11,34 +11,37 @@ abstract class _$MediaUrlCWProxy {
 
   MediaUrl name(String? name);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaUrl(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaUrl(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaUrl(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaUrl call({String? url, String? name});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMediaUrl.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMediaUrl.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMediaUrl.copyWith(...)` or call `instanceOfMediaUrl.copyWith.fieldName(value)` for a single field.
 class _$MediaUrlCWProxyImpl implements _$MediaUrlCWProxy {
   const _$MediaUrlCWProxyImpl(this._value);
 
   final MediaUrl _value;
 
   @override
-  MediaUrl url(String? url) => this(url: url);
+  MediaUrl url(String? url) => call(url: url);
 
   @override
-  MediaUrl name(String? name) => this(name: name);
+  MediaUrl name(String? name) => call(name: name);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaUrl(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaUrl(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaUrl(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaUrl call({
     Object? url = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$MediaUrlCWProxyImpl implements _$MediaUrlCWProxy {
 }
 
 extension $MediaUrlCopyWith on MediaUrl {
-  /// Returns a callable class that can be used as follows: `instanceOfMediaUrl.copyWith(...)` or like so:`instanceOfMediaUrl.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMediaUrl.copyWith(...)` or `instanceOfMediaUrl.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MediaUrlCWProxy get copyWith => _$MediaUrlCWProxyImpl(this);
 }

@@ -25,12 +25,13 @@ abstract class _$ClientCapabilitiesDtoCWProxy {
 
   ClientCapabilitiesDto iconUrl(String? iconUrl);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ClientCapabilitiesDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ClientCapabilitiesDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ClientCapabilitiesDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ClientCapabilitiesDto call({
     List<MediaType>? playableMediaTypes,
     List<GeneralCommandType>? supportedCommands,
@@ -42,7 +43,8 @@ abstract class _$ClientCapabilitiesDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfClientCapabilitiesDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfClientCapabilitiesDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfClientCapabilitiesDto.copyWith(...)` or call `instanceOfClientCapabilitiesDto.copyWith.fieldName(value)` for a single field.
 class _$ClientCapabilitiesDtoCWProxyImpl
     implements _$ClientCapabilitiesDtoCWProxy {
   const _$ClientCapabilitiesDtoCWProxyImpl(this._value);
@@ -52,40 +54,41 @@ class _$ClientCapabilitiesDtoCWProxyImpl
   @override
   ClientCapabilitiesDto playableMediaTypes(
     List<MediaType>? playableMediaTypes,
-  ) => this(playableMediaTypes: playableMediaTypes);
+  ) => call(playableMediaTypes: playableMediaTypes);
 
   @override
   ClientCapabilitiesDto supportedCommands(
     List<GeneralCommandType>? supportedCommands,
-  ) => this(supportedCommands: supportedCommands);
+  ) => call(supportedCommands: supportedCommands);
 
   @override
   ClientCapabilitiesDto supportsMediaControl(bool? supportsMediaControl) =>
-      this(supportsMediaControl: supportsMediaControl);
+      call(supportsMediaControl: supportsMediaControl);
 
   @override
   ClientCapabilitiesDto supportsPersistentIdentifier(
     bool? supportsPersistentIdentifier,
-  ) => this(supportsPersistentIdentifier: supportsPersistentIdentifier);
+  ) => call(supportsPersistentIdentifier: supportsPersistentIdentifier);
 
   @override
   ClientCapabilitiesDto deviceProfile(DeviceProfile? deviceProfile) =>
-      this(deviceProfile: deviceProfile);
+      call(deviceProfile: deviceProfile);
 
   @override
   ClientCapabilitiesDto appStoreUrl(String? appStoreUrl) =>
-      this(appStoreUrl: appStoreUrl);
+      call(appStoreUrl: appStoreUrl);
 
   @override
-  ClientCapabilitiesDto iconUrl(String? iconUrl) => this(iconUrl: iconUrl);
+  ClientCapabilitiesDto iconUrl(String? iconUrl) => call(iconUrl: iconUrl);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ClientCapabilitiesDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ClientCapabilitiesDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ClientCapabilitiesDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ClientCapabilitiesDto call({
     Object? playableMediaTypes = const $CopyWithPlaceholder(),
     Object? supportedCommands = const $CopyWithPlaceholder(),
@@ -130,7 +133,8 @@ class _$ClientCapabilitiesDtoCWProxyImpl
 }
 
 extension $ClientCapabilitiesDtoCopyWith on ClientCapabilitiesDto {
-  /// Returns a callable class that can be used as follows: `instanceOfClientCapabilitiesDto.copyWith(...)` or like so:`instanceOfClientCapabilitiesDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfClientCapabilitiesDto.copyWith(...)` or `instanceOfClientCapabilitiesDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ClientCapabilitiesDtoCWProxy get copyWith =>
       _$ClientCapabilitiesDtoCWProxyImpl(this);

@@ -15,12 +15,13 @@ abstract class _$ThemeMediaResultCWProxy {
 
   ThemeMediaResult ownerId(String? ownerId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ThemeMediaResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ThemeMediaResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ThemeMediaResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ThemeMediaResult call({
     List<BaseItemDto>? items,
     int? totalRecordCount,
@@ -29,32 +30,34 @@ abstract class _$ThemeMediaResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfThemeMediaResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfThemeMediaResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfThemeMediaResult.copyWith(...)` or call `instanceOfThemeMediaResult.copyWith.fieldName(value)` for a single field.
 class _$ThemeMediaResultCWProxyImpl implements _$ThemeMediaResultCWProxy {
   const _$ThemeMediaResultCWProxyImpl(this._value);
 
   final ThemeMediaResult _value;
 
   @override
-  ThemeMediaResult items(List<BaseItemDto>? items) => this(items: items);
+  ThemeMediaResult items(List<BaseItemDto>? items) => call(items: items);
 
   @override
   ThemeMediaResult totalRecordCount(int? totalRecordCount) =>
-      this(totalRecordCount: totalRecordCount);
+      call(totalRecordCount: totalRecordCount);
 
   @override
-  ThemeMediaResult startIndex(int? startIndex) => this(startIndex: startIndex);
+  ThemeMediaResult startIndex(int? startIndex) => call(startIndex: startIndex);
 
   @override
-  ThemeMediaResult ownerId(String? ownerId) => this(ownerId: ownerId);
+  ThemeMediaResult ownerId(String? ownerId) => call(ownerId: ownerId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ThemeMediaResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ThemeMediaResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ThemeMediaResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ThemeMediaResult call({
     Object? items = const $CopyWithPlaceholder(),
     Object? totalRecordCount = const $CopyWithPlaceholder(),
@@ -83,7 +86,8 @@ class _$ThemeMediaResultCWProxyImpl implements _$ThemeMediaResultCWProxy {
 }
 
 extension $ThemeMediaResultCopyWith on ThemeMediaResult {
-  /// Returns a callable class that can be used as follows: `instanceOfThemeMediaResult.copyWith(...)` or like so:`instanceOfThemeMediaResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfThemeMediaResult.copyWith(...)` or `instanceOfThemeMediaResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ThemeMediaResultCWProxy get copyWith => _$ThemeMediaResultCWProxyImpl(this);
 }

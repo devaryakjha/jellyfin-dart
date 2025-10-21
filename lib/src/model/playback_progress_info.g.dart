@@ -49,12 +49,13 @@ abstract class _$PlaybackProgressInfoCWProxy {
 
   PlaybackProgressInfo playlistItemId(String? playlistItemId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaybackProgressInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaybackProgressInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaybackProgressInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaybackProgressInfo call({
     bool? canSeek,
     BaseItemDto? item,
@@ -80,7 +81,8 @@ abstract class _$PlaybackProgressInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlaybackProgressInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlaybackProgressInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlaybackProgressInfo.copyWith(...)` or call `instanceOfPlaybackProgressInfo.copyWith.fieldName(value)` for a single field.
 class _$PlaybackProgressInfoCWProxyImpl
     implements _$PlaybackProgressInfoCWProxy {
   const _$PlaybackProgressInfoCWProxyImpl(this._value);
@@ -88,91 +90,92 @@ class _$PlaybackProgressInfoCWProxyImpl
   final PlaybackProgressInfo _value;
 
   @override
-  PlaybackProgressInfo canSeek(bool? canSeek) => this(canSeek: canSeek);
+  PlaybackProgressInfo canSeek(bool? canSeek) => call(canSeek: canSeek);
 
   @override
-  PlaybackProgressInfo item(BaseItemDto? item) => this(item: item);
+  PlaybackProgressInfo item(BaseItemDto? item) => call(item: item);
 
   @override
-  PlaybackProgressInfo itemId(String? itemId) => this(itemId: itemId);
+  PlaybackProgressInfo itemId(String? itemId) => call(itemId: itemId);
 
   @override
   PlaybackProgressInfo sessionId(String? sessionId) =>
-      this(sessionId: sessionId);
+      call(sessionId: sessionId);
 
   @override
   PlaybackProgressInfo mediaSourceId(String? mediaSourceId) =>
-      this(mediaSourceId: mediaSourceId);
+      call(mediaSourceId: mediaSourceId);
 
   @override
   PlaybackProgressInfo audioStreamIndex(int? audioStreamIndex) =>
-      this(audioStreamIndex: audioStreamIndex);
+      call(audioStreamIndex: audioStreamIndex);
 
   @override
   PlaybackProgressInfo subtitleStreamIndex(int? subtitleStreamIndex) =>
-      this(subtitleStreamIndex: subtitleStreamIndex);
+      call(subtitleStreamIndex: subtitleStreamIndex);
 
   @override
-  PlaybackProgressInfo isPaused(bool? isPaused) => this(isPaused: isPaused);
+  PlaybackProgressInfo isPaused(bool? isPaused) => call(isPaused: isPaused);
 
   @override
-  PlaybackProgressInfo isMuted(bool? isMuted) => this(isMuted: isMuted);
+  PlaybackProgressInfo isMuted(bool? isMuted) => call(isMuted: isMuted);
 
   @override
   PlaybackProgressInfo positionTicks(int? positionTicks) =>
-      this(positionTicks: positionTicks);
+      call(positionTicks: positionTicks);
 
   @override
   PlaybackProgressInfo playbackStartTimeTicks(int? playbackStartTimeTicks) =>
-      this(playbackStartTimeTicks: playbackStartTimeTicks);
+      call(playbackStartTimeTicks: playbackStartTimeTicks);
 
   @override
   PlaybackProgressInfo volumeLevel(int? volumeLevel) =>
-      this(volumeLevel: volumeLevel);
+      call(volumeLevel: volumeLevel);
 
   @override
   PlaybackProgressInfo brightness(int? brightness) =>
-      this(brightness: brightness);
+      call(brightness: brightness);
 
   @override
   PlaybackProgressInfo aspectRatio(String? aspectRatio) =>
-      this(aspectRatio: aspectRatio);
+      call(aspectRatio: aspectRatio);
 
   @override
   PlaybackProgressInfo playMethod(PlayMethod? playMethod) =>
-      this(playMethod: playMethod);
+      call(playMethod: playMethod);
 
   @override
   PlaybackProgressInfo liveStreamId(String? liveStreamId) =>
-      this(liveStreamId: liveStreamId);
+      call(liveStreamId: liveStreamId);
 
   @override
   PlaybackProgressInfo playSessionId(String? playSessionId) =>
-      this(playSessionId: playSessionId);
+      call(playSessionId: playSessionId);
 
   @override
   PlaybackProgressInfo repeatMode(RepeatMode? repeatMode) =>
-      this(repeatMode: repeatMode);
+      call(repeatMode: repeatMode);
 
   @override
   PlaybackProgressInfo playbackOrder(PlaybackOrder? playbackOrder) =>
-      this(playbackOrder: playbackOrder);
+      call(playbackOrder: playbackOrder);
 
   @override
   PlaybackProgressInfo nowPlayingQueue(List<QueueItem>? nowPlayingQueue) =>
-      this(nowPlayingQueue: nowPlayingQueue);
+      call(nowPlayingQueue: nowPlayingQueue);
 
   @override
   PlaybackProgressInfo playlistItemId(String? playlistItemId) =>
-      this(playlistItemId: playlistItemId);
+      call(playlistItemId: playlistItemId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaybackProgressInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaybackProgressInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaybackProgressInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaybackProgressInfo call({
     Object? canSeek = const $CopyWithPlaceholder(),
     Object? item = const $CopyWithPlaceholder(),
@@ -287,7 +290,8 @@ class _$PlaybackProgressInfoCWProxyImpl
 }
 
 extension $PlaybackProgressInfoCopyWith on PlaybackProgressInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfPlaybackProgressInfo.copyWith(...)` or like so:`instanceOfPlaybackProgressInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlaybackProgressInfo.copyWith(...)` or `instanceOfPlaybackProgressInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlaybackProgressInfoCWProxy get copyWith =>
       _$PlaybackProgressInfoCWProxyImpl(this);

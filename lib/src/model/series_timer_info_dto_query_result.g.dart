@@ -13,12 +13,13 @@ abstract class _$SeriesTimerInfoDtoQueryResultCWProxy {
 
   SeriesTimerInfoDtoQueryResult startIndex(int? startIndex);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SeriesTimerInfoDtoQueryResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SeriesTimerInfoDtoQueryResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SeriesTimerInfoDtoQueryResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SeriesTimerInfoDtoQueryResult call({
     List<SeriesTimerInfoDto>? items,
     int? totalRecordCount,
@@ -26,7 +27,8 @@ abstract class _$SeriesTimerInfoDtoQueryResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSeriesTimerInfoDtoQueryResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSeriesTimerInfoDtoQueryResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSeriesTimerInfoDtoQueryResult.copyWith(...)` or call `instanceOfSeriesTimerInfoDtoQueryResult.copyWith.fieldName(value)` for a single field.
 class _$SeriesTimerInfoDtoQueryResultCWProxyImpl
     implements _$SeriesTimerInfoDtoQueryResultCWProxy {
   const _$SeriesTimerInfoDtoQueryResultCWProxyImpl(this._value);
@@ -35,23 +37,24 @@ class _$SeriesTimerInfoDtoQueryResultCWProxyImpl
 
   @override
   SeriesTimerInfoDtoQueryResult items(List<SeriesTimerInfoDto>? items) =>
-      this(items: items);
+      call(items: items);
 
   @override
   SeriesTimerInfoDtoQueryResult totalRecordCount(int? totalRecordCount) =>
-      this(totalRecordCount: totalRecordCount);
+      call(totalRecordCount: totalRecordCount);
 
   @override
   SeriesTimerInfoDtoQueryResult startIndex(int? startIndex) =>
-      this(startIndex: startIndex);
+      call(startIndex: startIndex);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SeriesTimerInfoDtoQueryResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SeriesTimerInfoDtoQueryResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SeriesTimerInfoDtoQueryResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SeriesTimerInfoDtoQueryResult call({
     Object? items = const $CopyWithPlaceholder(),
     Object? totalRecordCount = const $CopyWithPlaceholder(),
@@ -76,7 +79,8 @@ class _$SeriesTimerInfoDtoQueryResultCWProxyImpl
 
 extension $SeriesTimerInfoDtoQueryResultCopyWith
     on SeriesTimerInfoDtoQueryResult {
-  /// Returns a callable class that can be used as follows: `instanceOfSeriesTimerInfoDtoQueryResult.copyWith(...)` or like so:`instanceOfSeriesTimerInfoDtoQueryResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSeriesTimerInfoDtoQueryResult.copyWith(...)` or `instanceOfSeriesTimerInfoDtoQueryResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SeriesTimerInfoDtoQueryResultCWProxy get copyWith =>
       _$SeriesTimerInfoDtoQueryResultCWProxyImpl(this);

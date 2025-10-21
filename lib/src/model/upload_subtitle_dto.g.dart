@@ -17,12 +17,13 @@ abstract class _$UploadSubtitleDtoCWProxy {
 
   UploadSubtitleDto data(String data);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UploadSubtitleDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UploadSubtitleDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UploadSubtitleDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UploadSubtitleDto call({
     String language,
     String format,
@@ -32,35 +33,37 @@ abstract class _$UploadSubtitleDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUploadSubtitleDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUploadSubtitleDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUploadSubtitleDto.copyWith(...)` or call `instanceOfUploadSubtitleDto.copyWith.fieldName(value)` for a single field.
 class _$UploadSubtitleDtoCWProxyImpl implements _$UploadSubtitleDtoCWProxy {
   const _$UploadSubtitleDtoCWProxyImpl(this._value);
 
   final UploadSubtitleDto _value;
 
   @override
-  UploadSubtitleDto language(String language) => this(language: language);
+  UploadSubtitleDto language(String language) => call(language: language);
 
   @override
-  UploadSubtitleDto format(String format) => this(format: format);
+  UploadSubtitleDto format(String format) => call(format: format);
 
   @override
-  UploadSubtitleDto isForced(bool isForced) => this(isForced: isForced);
+  UploadSubtitleDto isForced(bool isForced) => call(isForced: isForced);
 
   @override
   UploadSubtitleDto isHearingImpaired(bool isHearingImpaired) =>
-      this(isHearingImpaired: isHearingImpaired);
+      call(isHearingImpaired: isHearingImpaired);
 
   @override
-  UploadSubtitleDto data(String data) => this(data: data);
+  UploadSubtitleDto data(String data) => call(data: data);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UploadSubtitleDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UploadSubtitleDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UploadSubtitleDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UploadSubtitleDto call({
     Object? language = const $CopyWithPlaceholder(),
     Object? format = const $CopyWithPlaceholder(),
@@ -69,23 +72,25 @@ class _$UploadSubtitleDtoCWProxyImpl implements _$UploadSubtitleDtoCWProxy {
     Object? data = const $CopyWithPlaceholder(),
   }) {
     return UploadSubtitleDto(
-      language: language == const $CopyWithPlaceholder()
+      language: language == const $CopyWithPlaceholder() || language == null
           ? _value.language
           // ignore: cast_nullable_to_non_nullable
           : language as String,
-      format: format == const $CopyWithPlaceholder()
+      format: format == const $CopyWithPlaceholder() || format == null
           ? _value.format
           // ignore: cast_nullable_to_non_nullable
           : format as String,
-      isForced: isForced == const $CopyWithPlaceholder()
+      isForced: isForced == const $CopyWithPlaceholder() || isForced == null
           ? _value.isForced
           // ignore: cast_nullable_to_non_nullable
           : isForced as bool,
-      isHearingImpaired: isHearingImpaired == const $CopyWithPlaceholder()
+      isHearingImpaired:
+          isHearingImpaired == const $CopyWithPlaceholder() ||
+              isHearingImpaired == null
           ? _value.isHearingImpaired
           // ignore: cast_nullable_to_non_nullable
           : isHearingImpaired as bool,
-      data: data == const $CopyWithPlaceholder()
+      data: data == const $CopyWithPlaceholder() || data == null
           ? _value.data
           // ignore: cast_nullable_to_non_nullable
           : data as String,
@@ -94,7 +99,8 @@ class _$UploadSubtitleDtoCWProxyImpl implements _$UploadSubtitleDtoCWProxy {
 }
 
 extension $UploadSubtitleDtoCopyWith on UploadSubtitleDto {
-  /// Returns a callable class that can be used as follows: `instanceOfUploadSubtitleDto.copyWith(...)` or like so:`instanceOfUploadSubtitleDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUploadSubtitleDto.copyWith(...)` or `instanceOfUploadSubtitleDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UploadSubtitleDtoCWProxy get copyWith =>
       _$UploadSubtitleDtoCWProxyImpl(this);

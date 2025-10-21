@@ -9,16 +9,18 @@ part of 'inbound_keep_alive_message.dart';
 abstract class _$InboundKeepAliveMessageCWProxy {
   InboundKeepAliveMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `InboundKeepAliveMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `InboundKeepAliveMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// InboundKeepAliveMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   InboundKeepAliveMessage call({SessionMessageType? messageType});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfInboundKeepAliveMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfInboundKeepAliveMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfInboundKeepAliveMessage.copyWith(...)` or call `instanceOfInboundKeepAliveMessage.copyWith.fieldName(value)` for a single field.
 class _$InboundKeepAliveMessageCWProxyImpl
     implements _$InboundKeepAliveMessageCWProxy {
   const _$InboundKeepAliveMessageCWProxyImpl(this._value);
@@ -27,15 +29,16 @@ class _$InboundKeepAliveMessageCWProxyImpl
 
   @override
   InboundKeepAliveMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `InboundKeepAliveMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `InboundKeepAliveMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// InboundKeepAliveMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   InboundKeepAliveMessage call({
     Object? messageType = const $CopyWithPlaceholder(),
   }) {
@@ -49,7 +52,8 @@ class _$InboundKeepAliveMessageCWProxyImpl
 }
 
 extension $InboundKeepAliveMessageCopyWith on InboundKeepAliveMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfInboundKeepAliveMessage.copyWith(...)` or like so:`instanceOfInboundKeepAliveMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfInboundKeepAliveMessage.copyWith(...)` or `instanceOfInboundKeepAliveMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$InboundKeepAliveMessageCWProxy get copyWith =>
       _$InboundKeepAliveMessageCWProxyImpl(this);

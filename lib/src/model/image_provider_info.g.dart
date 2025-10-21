@@ -11,35 +11,38 @@ abstract class _$ImageProviderInfoCWProxy {
 
   ImageProviderInfo supportedImages(List<ImageType>? supportedImages);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ImageProviderInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ImageProviderInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ImageProviderInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ImageProviderInfo call({String? name, List<ImageType>? supportedImages});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfImageProviderInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfImageProviderInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfImageProviderInfo.copyWith(...)` or call `instanceOfImageProviderInfo.copyWith.fieldName(value)` for a single field.
 class _$ImageProviderInfoCWProxyImpl implements _$ImageProviderInfoCWProxy {
   const _$ImageProviderInfoCWProxyImpl(this._value);
 
   final ImageProviderInfo _value;
 
   @override
-  ImageProviderInfo name(String? name) => this(name: name);
+  ImageProviderInfo name(String? name) => call(name: name);
 
   @override
   ImageProviderInfo supportedImages(List<ImageType>? supportedImages) =>
-      this(supportedImages: supportedImages);
+      call(supportedImages: supportedImages);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ImageProviderInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ImageProviderInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ImageProviderInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ImageProviderInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? supportedImages = const $CopyWithPlaceholder(),
@@ -58,7 +61,8 @@ class _$ImageProviderInfoCWProxyImpl implements _$ImageProviderInfoCWProxy {
 }
 
 extension $ImageProviderInfoCopyWith on ImageProviderInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfImageProviderInfo.copyWith(...)` or like so:`instanceOfImageProviderInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfImageProviderInfo.copyWith(...)` or `instanceOfImageProviderInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ImageProviderInfoCWProxy get copyWith =>
       _$ImageProviderInfoCWProxyImpl(this);

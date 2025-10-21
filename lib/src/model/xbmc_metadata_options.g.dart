@@ -19,12 +19,13 @@ abstract class _$XbmcMetadataOptionsCWProxy {
     bool? enableExtraThumbsDuplication,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `XbmcMetadataOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `XbmcMetadataOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// XbmcMetadataOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   XbmcMetadataOptions call({
     String? userId,
     String? releaseDateFormat,
@@ -34,39 +35,41 @@ abstract class _$XbmcMetadataOptionsCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfXbmcMetadataOptions.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfXbmcMetadataOptions.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfXbmcMetadataOptions.copyWith(...)` or call `instanceOfXbmcMetadataOptions.copyWith.fieldName(value)` for a single field.
 class _$XbmcMetadataOptionsCWProxyImpl implements _$XbmcMetadataOptionsCWProxy {
   const _$XbmcMetadataOptionsCWProxyImpl(this._value);
 
   final XbmcMetadataOptions _value;
 
   @override
-  XbmcMetadataOptions userId(String? userId) => this(userId: userId);
+  XbmcMetadataOptions userId(String? userId) => call(userId: userId);
 
   @override
   XbmcMetadataOptions releaseDateFormat(String? releaseDateFormat) =>
-      this(releaseDateFormat: releaseDateFormat);
+      call(releaseDateFormat: releaseDateFormat);
 
   @override
   XbmcMetadataOptions saveImagePathsInNfo(bool? saveImagePathsInNfo) =>
-      this(saveImagePathsInNfo: saveImagePathsInNfo);
+      call(saveImagePathsInNfo: saveImagePathsInNfo);
 
   @override
   XbmcMetadataOptions enablePathSubstitution(bool? enablePathSubstitution) =>
-      this(enablePathSubstitution: enablePathSubstitution);
+      call(enablePathSubstitution: enablePathSubstitution);
 
   @override
   XbmcMetadataOptions enableExtraThumbsDuplication(
     bool? enableExtraThumbsDuplication,
-  ) => this(enableExtraThumbsDuplication: enableExtraThumbsDuplication);
+  ) => call(enableExtraThumbsDuplication: enableExtraThumbsDuplication);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `XbmcMetadataOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `XbmcMetadataOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// XbmcMetadataOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   XbmcMetadataOptions call({
     Object? userId = const $CopyWithPlaceholder(),
     Object? releaseDateFormat = const $CopyWithPlaceholder(),
@@ -102,7 +105,8 @@ class _$XbmcMetadataOptionsCWProxyImpl implements _$XbmcMetadataOptionsCWProxy {
 }
 
 extension $XbmcMetadataOptionsCopyWith on XbmcMetadataOptions {
-  /// Returns a callable class that can be used as follows: `instanceOfXbmcMetadataOptions.copyWith(...)` or like so:`instanceOfXbmcMetadataOptions.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfXbmcMetadataOptions.copyWith(...)` or `instanceOfXbmcMetadataOptions.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$XbmcMetadataOptionsCWProxy get copyWith =>
       _$XbmcMetadataOptionsCWProxyImpl(this);

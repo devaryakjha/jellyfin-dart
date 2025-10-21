@@ -25,12 +25,13 @@ abstract class _$VersionInfoCWProxy {
 
   VersionInfo repositoryUrl(String? repositoryUrl);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `VersionInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `VersionInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// VersionInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   VersionInfo call({
     String? version,
     String? versionNumber,
@@ -44,49 +45,51 @@ abstract class _$VersionInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfVersionInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfVersionInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfVersionInfo.copyWith(...)` or call `instanceOfVersionInfo.copyWith.fieldName(value)` for a single field.
 class _$VersionInfoCWProxyImpl implements _$VersionInfoCWProxy {
   const _$VersionInfoCWProxyImpl(this._value);
 
   final VersionInfo _value;
 
   @override
-  VersionInfo version(String? version) => this(version: version);
+  VersionInfo version(String? version) => call(version: version);
 
   @override
   VersionInfo versionNumber(String? versionNumber) =>
-      this(versionNumber: versionNumber);
+      call(versionNumber: versionNumber);
 
   @override
-  VersionInfo changelog(String? changelog) => this(changelog: changelog);
+  VersionInfo changelog(String? changelog) => call(changelog: changelog);
 
   @override
-  VersionInfo targetAbi(String? targetAbi) => this(targetAbi: targetAbi);
+  VersionInfo targetAbi(String? targetAbi) => call(targetAbi: targetAbi);
 
   @override
-  VersionInfo sourceUrl(String? sourceUrl) => this(sourceUrl: sourceUrl);
+  VersionInfo sourceUrl(String? sourceUrl) => call(sourceUrl: sourceUrl);
 
   @override
-  VersionInfo checksum(String? checksum) => this(checksum: checksum);
+  VersionInfo checksum(String? checksum) => call(checksum: checksum);
 
   @override
-  VersionInfo timestamp(String? timestamp) => this(timestamp: timestamp);
+  VersionInfo timestamp(String? timestamp) => call(timestamp: timestamp);
 
   @override
   VersionInfo repositoryName(String? repositoryName) =>
-      this(repositoryName: repositoryName);
+      call(repositoryName: repositoryName);
 
   @override
   VersionInfo repositoryUrl(String? repositoryUrl) =>
-      this(repositoryUrl: repositoryUrl);
+      call(repositoryUrl: repositoryUrl);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `VersionInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `VersionInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// VersionInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   VersionInfo call({
     Object? version = const $CopyWithPlaceholder(),
     Object? versionNumber = const $CopyWithPlaceholder(),
@@ -140,7 +143,8 @@ class _$VersionInfoCWProxyImpl implements _$VersionInfoCWProxy {
 }
 
 extension $VersionInfoCopyWith on VersionInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfVersionInfo.copyWith(...)` or like so:`instanceOfVersionInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfVersionInfo.copyWith(...)` or `instanceOfVersionInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$VersionInfoCWProxy get copyWith => _$VersionInfoCWProxyImpl(this);
 }

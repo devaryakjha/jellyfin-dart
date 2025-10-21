@@ -13,37 +13,40 @@ abstract class _$LyricLineCWProxy {
 
   LyricLine cues(List<LyricLineCue>? cues);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LyricLine(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LyricLine(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LyricLine(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LyricLine call({String? text, int? start, List<LyricLineCue>? cues});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLyricLine.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLyricLine.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLyricLine.copyWith(...)` or call `instanceOfLyricLine.copyWith.fieldName(value)` for a single field.
 class _$LyricLineCWProxyImpl implements _$LyricLineCWProxy {
   const _$LyricLineCWProxyImpl(this._value);
 
   final LyricLine _value;
 
   @override
-  LyricLine text(String? text) => this(text: text);
+  LyricLine text(String? text) => call(text: text);
 
   @override
-  LyricLine start(int? start) => this(start: start);
+  LyricLine start(int? start) => call(start: start);
 
   @override
-  LyricLine cues(List<LyricLineCue>? cues) => this(cues: cues);
+  LyricLine cues(List<LyricLineCue>? cues) => call(cues: cues);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LyricLine(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LyricLine(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LyricLine(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LyricLine call({
     Object? text = const $CopyWithPlaceholder(),
     Object? start = const $CopyWithPlaceholder(),
@@ -67,7 +70,8 @@ class _$LyricLineCWProxyImpl implements _$LyricLineCWProxy {
 }
 
 extension $LyricLineCopyWith on LyricLine {
-  /// Returns a callable class that can be used as follows: `instanceOfLyricLine.copyWith(...)` or like so:`instanceOfLyricLine.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLyricLine.copyWith(...)` or `instanceOfLyricLine.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LyricLineCWProxy get copyWith => _$LyricLineCWProxyImpl(this);
 }

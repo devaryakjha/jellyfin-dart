@@ -23,12 +23,13 @@ abstract class _$QuickConnectResultCWProxy {
 
   QuickConnectResult dateAdded(DateTime? dateAdded);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `QuickConnectResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `QuickConnectResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// QuickConnectResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   QuickConnectResult call({
     bool? authenticated,
     String? secret,
@@ -41,7 +42,8 @@ abstract class _$QuickConnectResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfQuickConnectResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfQuickConnectResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfQuickConnectResult.copyWith(...)` or call `instanceOfQuickConnectResult.copyWith.fieldName(value)` for a single field.
 class _$QuickConnectResultCWProxyImpl implements _$QuickConnectResultCWProxy {
   const _$QuickConnectResultCWProxyImpl(this._value);
 
@@ -49,39 +51,40 @@ class _$QuickConnectResultCWProxyImpl implements _$QuickConnectResultCWProxy {
 
   @override
   QuickConnectResult authenticated(bool? authenticated) =>
-      this(authenticated: authenticated);
+      call(authenticated: authenticated);
 
   @override
-  QuickConnectResult secret(String? secret) => this(secret: secret);
+  QuickConnectResult secret(String? secret) => call(secret: secret);
 
   @override
-  QuickConnectResult code(String? code) => this(code: code);
+  QuickConnectResult code(String? code) => call(code: code);
 
   @override
-  QuickConnectResult deviceId(String? deviceId) => this(deviceId: deviceId);
+  QuickConnectResult deviceId(String? deviceId) => call(deviceId: deviceId);
 
   @override
   QuickConnectResult deviceName(String? deviceName) =>
-      this(deviceName: deviceName);
+      call(deviceName: deviceName);
 
   @override
-  QuickConnectResult appName(String? appName) => this(appName: appName);
+  QuickConnectResult appName(String? appName) => call(appName: appName);
 
   @override
   QuickConnectResult appVersion(String? appVersion) =>
-      this(appVersion: appVersion);
+      call(appVersion: appVersion);
 
   @override
   QuickConnectResult dateAdded(DateTime? dateAdded) =>
-      this(dateAdded: dateAdded);
+      call(dateAdded: dateAdded);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `QuickConnectResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `QuickConnectResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// QuickConnectResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   QuickConnectResult call({
     Object? authenticated = const $CopyWithPlaceholder(),
     Object? secret = const $CopyWithPlaceholder(),
@@ -130,7 +133,8 @@ class _$QuickConnectResultCWProxyImpl implements _$QuickConnectResultCWProxy {
 }
 
 extension $QuickConnectResultCopyWith on QuickConnectResult {
-  /// Returns a callable class that can be used as follows: `instanceOfQuickConnectResult.copyWith(...)` or like so:`instanceOfQuickConnectResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfQuickConnectResult.copyWith(...)` or `instanceOfQuickConnectResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$QuickConnectResultCWProxy get copyWith =>
       _$QuickConnectResultCWProxyImpl(this);

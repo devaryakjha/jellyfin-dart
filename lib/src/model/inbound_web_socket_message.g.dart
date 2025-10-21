@@ -11,16 +11,18 @@ abstract class _$InboundWebSocketMessageCWProxy {
 
   InboundWebSocketMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `InboundWebSocketMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `InboundWebSocketMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// InboundWebSocketMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   InboundWebSocketMessage call({String? data, SessionMessageType? messageType});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfInboundWebSocketMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfInboundWebSocketMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfInboundWebSocketMessage.copyWith(...)` or call `instanceOfInboundWebSocketMessage.copyWith.fieldName(value)` for a single field.
 class _$InboundWebSocketMessageCWProxyImpl
     implements _$InboundWebSocketMessageCWProxy {
   const _$InboundWebSocketMessageCWProxyImpl(this._value);
@@ -28,19 +30,20 @@ class _$InboundWebSocketMessageCWProxyImpl
   final InboundWebSocketMessage _value;
 
   @override
-  InboundWebSocketMessage data(String? data) => this(data: data);
+  InboundWebSocketMessage data(String? data) => call(data: data);
 
   @override
   InboundWebSocketMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `InboundWebSocketMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `InboundWebSocketMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// InboundWebSocketMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   InboundWebSocketMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageType = const $CopyWithPlaceholder(),
@@ -59,7 +62,8 @@ class _$InboundWebSocketMessageCWProxyImpl
 }
 
 extension $InboundWebSocketMessageCopyWith on InboundWebSocketMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfInboundWebSocketMessage.copyWith(...)` or like so:`instanceOfInboundWebSocketMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfInboundWebSocketMessage.copyWith(...)` or `instanceOfInboundWebSocketMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$InboundWebSocketMessageCWProxy get copyWith =>
       _$InboundWebSocketMessageCWProxyImpl(this);

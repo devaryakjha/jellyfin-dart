@@ -9,16 +9,18 @@ part of 'update_playlist_user_dto.dart';
 abstract class _$UpdatePlaylistUserDtoCWProxy {
   UpdatePlaylistUserDto canEdit(bool? canEdit);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UpdatePlaylistUserDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UpdatePlaylistUserDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UpdatePlaylistUserDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UpdatePlaylistUserDto call({bool? canEdit});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUpdatePlaylistUserDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUpdatePlaylistUserDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUpdatePlaylistUserDto.copyWith(...)` or call `instanceOfUpdatePlaylistUserDto.copyWith.fieldName(value)` for a single field.
 class _$UpdatePlaylistUserDtoCWProxyImpl
     implements _$UpdatePlaylistUserDtoCWProxy {
   const _$UpdatePlaylistUserDtoCWProxyImpl(this._value);
@@ -26,15 +28,16 @@ class _$UpdatePlaylistUserDtoCWProxyImpl
   final UpdatePlaylistUserDto _value;
 
   @override
-  UpdatePlaylistUserDto canEdit(bool? canEdit) => this(canEdit: canEdit);
+  UpdatePlaylistUserDto canEdit(bool? canEdit) => call(canEdit: canEdit);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UpdatePlaylistUserDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UpdatePlaylistUserDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UpdatePlaylistUserDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UpdatePlaylistUserDto call({Object? canEdit = const $CopyWithPlaceholder()}) {
     return UpdatePlaylistUserDto(
       canEdit: canEdit == const $CopyWithPlaceholder()
@@ -46,7 +49,8 @@ class _$UpdatePlaylistUserDtoCWProxyImpl
 }
 
 extension $UpdatePlaylistUserDtoCopyWith on UpdatePlaylistUserDto {
-  /// Returns a callable class that can be used as follows: `instanceOfUpdatePlaylistUserDto.copyWith(...)` or like so:`instanceOfUpdatePlaylistUserDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUpdatePlaylistUserDto.copyWith(...)` or `instanceOfUpdatePlaylistUserDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UpdatePlaylistUserDtoCWProxy get copyWith =>
       _$UpdatePlaylistUserDtoCWProxyImpl(this);

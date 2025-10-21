@@ -11,34 +11,37 @@ abstract class _$LocalizationOptionCWProxy {
 
   LocalizationOption value(String? value);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LocalizationOption(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LocalizationOption(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LocalizationOption(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LocalizationOption call({String? name, String? value});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLocalizationOption.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLocalizationOption.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLocalizationOption.copyWith(...)` or call `instanceOfLocalizationOption.copyWith.fieldName(value)` for a single field.
 class _$LocalizationOptionCWProxyImpl implements _$LocalizationOptionCWProxy {
   const _$LocalizationOptionCWProxyImpl(this._value);
 
   final LocalizationOption _value;
 
   @override
-  LocalizationOption name(String? name) => this(name: name);
+  LocalizationOption name(String? name) => call(name: name);
 
   @override
-  LocalizationOption value(String? value) => this(value: value);
+  LocalizationOption value(String? value) => call(value: value);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LocalizationOption(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LocalizationOption(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LocalizationOption(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LocalizationOption call({
     Object? name = const $CopyWithPlaceholder(),
     Object? value = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$LocalizationOptionCWProxyImpl implements _$LocalizationOptionCWProxy {
 }
 
 extension $LocalizationOptionCopyWith on LocalizationOption {
-  /// Returns a callable class that can be used as follows: `instanceOfLocalizationOption.copyWith(...)` or like so:`instanceOfLocalizationOption.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLocalizationOption.copyWith(...)` or `instanceOfLocalizationOption.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LocalizationOptionCWProxy get copyWith =>
       _$LocalizationOptionCWProxyImpl(this);

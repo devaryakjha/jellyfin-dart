@@ -17,12 +17,13 @@ abstract class _$TrailerInfoRemoteSearchQueryCWProxy {
     bool? includeDisabledProviders,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TrailerInfoRemoteSearchQuery(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TrailerInfoRemoteSearchQuery(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TrailerInfoRemoteSearchQuery(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TrailerInfoRemoteSearchQuery call({
     TrailerInfo? searchInfo,
     String? itemId,
@@ -31,7 +32,8 @@ abstract class _$TrailerInfoRemoteSearchQueryCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTrailerInfoRemoteSearchQuery.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTrailerInfoRemoteSearchQuery.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTrailerInfoRemoteSearchQuery.copyWith(...)` or call `instanceOfTrailerInfoRemoteSearchQuery.copyWith.fieldName(value)` for a single field.
 class _$TrailerInfoRemoteSearchQueryCWProxyImpl
     implements _$TrailerInfoRemoteSearchQueryCWProxy {
   const _$TrailerInfoRemoteSearchQueryCWProxyImpl(this._value);
@@ -40,27 +42,28 @@ class _$TrailerInfoRemoteSearchQueryCWProxyImpl
 
   @override
   TrailerInfoRemoteSearchQuery searchInfo(TrailerInfo? searchInfo) =>
-      this(searchInfo: searchInfo);
+      call(searchInfo: searchInfo);
 
   @override
-  TrailerInfoRemoteSearchQuery itemId(String? itemId) => this(itemId: itemId);
+  TrailerInfoRemoteSearchQuery itemId(String? itemId) => call(itemId: itemId);
 
   @override
   TrailerInfoRemoteSearchQuery searchProviderName(String? searchProviderName) =>
-      this(searchProviderName: searchProviderName);
+      call(searchProviderName: searchProviderName);
 
   @override
   TrailerInfoRemoteSearchQuery includeDisabledProviders(
     bool? includeDisabledProviders,
-  ) => this(includeDisabledProviders: includeDisabledProviders);
+  ) => call(includeDisabledProviders: includeDisabledProviders);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TrailerInfoRemoteSearchQuery(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TrailerInfoRemoteSearchQuery(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TrailerInfoRemoteSearchQuery(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TrailerInfoRemoteSearchQuery call({
     Object? searchInfo = const $CopyWithPlaceholder(),
     Object? itemId = const $CopyWithPlaceholder(),
@@ -91,7 +94,8 @@ class _$TrailerInfoRemoteSearchQueryCWProxyImpl
 
 extension $TrailerInfoRemoteSearchQueryCopyWith
     on TrailerInfoRemoteSearchQuery {
-  /// Returns a callable class that can be used as follows: `instanceOfTrailerInfoRemoteSearchQuery.copyWith(...)` or like so:`instanceOfTrailerInfoRemoteSearchQuery.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTrailerInfoRemoteSearchQuery.copyWith(...)` or `instanceOfTrailerInfoRemoteSearchQuery.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TrailerInfoRemoteSearchQueryCWProxy get copyWith =>
       _$TrailerInfoRemoteSearchQueryCWProxyImpl(this);

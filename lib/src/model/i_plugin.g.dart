@@ -21,12 +21,13 @@ abstract class _$IPluginCWProxy {
 
   IPlugin dataFolderPath(String? dataFolderPath);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `IPlugin(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `IPlugin(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// IPlugin(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   IPlugin call({
     String? name,
     String? description,
@@ -38,42 +39,44 @@ abstract class _$IPluginCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfIPlugin.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfIPlugin.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfIPlugin.copyWith(...)` or call `instanceOfIPlugin.copyWith.fieldName(value)` for a single field.
 class _$IPluginCWProxyImpl implements _$IPluginCWProxy {
   const _$IPluginCWProxyImpl(this._value);
 
   final IPlugin _value;
 
   @override
-  IPlugin name(String? name) => this(name: name);
+  IPlugin name(String? name) => call(name: name);
 
   @override
-  IPlugin description(String? description) => this(description: description);
+  IPlugin description(String? description) => call(description: description);
 
   @override
-  IPlugin id(String? id) => this(id: id);
+  IPlugin id(String? id) => call(id: id);
 
   @override
-  IPlugin version(String? version) => this(version: version);
+  IPlugin version(String? version) => call(version: version);
 
   @override
   IPlugin assemblyFilePath(String? assemblyFilePath) =>
-      this(assemblyFilePath: assemblyFilePath);
+      call(assemblyFilePath: assemblyFilePath);
 
   @override
-  IPlugin canUninstall(bool? canUninstall) => this(canUninstall: canUninstall);
+  IPlugin canUninstall(bool? canUninstall) => call(canUninstall: canUninstall);
 
   @override
   IPlugin dataFolderPath(String? dataFolderPath) =>
-      this(dataFolderPath: dataFolderPath);
+      call(dataFolderPath: dataFolderPath);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `IPlugin(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `IPlugin(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// IPlugin(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   IPlugin call({
     Object? name = const $CopyWithPlaceholder(),
     Object? description = const $CopyWithPlaceholder(),
@@ -117,7 +120,8 @@ class _$IPluginCWProxyImpl implements _$IPluginCWProxy {
 }
 
 extension $IPluginCopyWith on IPlugin {
-  /// Returns a callable class that can be used as follows: `instanceOfIPlugin.copyWith(...)` or like so:`instanceOfIPlugin.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfIPlugin.copyWith(...)` or `instanceOfIPlugin.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$IPluginCWProxy get copyWith => _$IPluginCWProxyImpl(this);
 }

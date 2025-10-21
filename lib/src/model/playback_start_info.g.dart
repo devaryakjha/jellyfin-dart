@@ -49,12 +49,13 @@ abstract class _$PlaybackStartInfoCWProxy {
 
   PlaybackStartInfo playlistItemId(String? playlistItemId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaybackStartInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaybackStartInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaybackStartInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaybackStartInfo call({
     bool? canSeek,
     BaseItemDto? item,
@@ -80,96 +81,98 @@ abstract class _$PlaybackStartInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlaybackStartInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlaybackStartInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlaybackStartInfo.copyWith(...)` or call `instanceOfPlaybackStartInfo.copyWith.fieldName(value)` for a single field.
 class _$PlaybackStartInfoCWProxyImpl implements _$PlaybackStartInfoCWProxy {
   const _$PlaybackStartInfoCWProxyImpl(this._value);
 
   final PlaybackStartInfo _value;
 
   @override
-  PlaybackStartInfo canSeek(bool? canSeek) => this(canSeek: canSeek);
+  PlaybackStartInfo canSeek(bool? canSeek) => call(canSeek: canSeek);
 
   @override
-  PlaybackStartInfo item(BaseItemDto? item) => this(item: item);
+  PlaybackStartInfo item(BaseItemDto? item) => call(item: item);
 
   @override
-  PlaybackStartInfo itemId(String? itemId) => this(itemId: itemId);
+  PlaybackStartInfo itemId(String? itemId) => call(itemId: itemId);
 
   @override
-  PlaybackStartInfo sessionId(String? sessionId) => this(sessionId: sessionId);
+  PlaybackStartInfo sessionId(String? sessionId) => call(sessionId: sessionId);
 
   @override
   PlaybackStartInfo mediaSourceId(String? mediaSourceId) =>
-      this(mediaSourceId: mediaSourceId);
+      call(mediaSourceId: mediaSourceId);
 
   @override
   PlaybackStartInfo audioStreamIndex(int? audioStreamIndex) =>
-      this(audioStreamIndex: audioStreamIndex);
+      call(audioStreamIndex: audioStreamIndex);
 
   @override
   PlaybackStartInfo subtitleStreamIndex(int? subtitleStreamIndex) =>
-      this(subtitleStreamIndex: subtitleStreamIndex);
+      call(subtitleStreamIndex: subtitleStreamIndex);
 
   @override
-  PlaybackStartInfo isPaused(bool? isPaused) => this(isPaused: isPaused);
+  PlaybackStartInfo isPaused(bool? isPaused) => call(isPaused: isPaused);
 
   @override
-  PlaybackStartInfo isMuted(bool? isMuted) => this(isMuted: isMuted);
+  PlaybackStartInfo isMuted(bool? isMuted) => call(isMuted: isMuted);
 
   @override
   PlaybackStartInfo positionTicks(int? positionTicks) =>
-      this(positionTicks: positionTicks);
+      call(positionTicks: positionTicks);
 
   @override
   PlaybackStartInfo playbackStartTimeTicks(int? playbackStartTimeTicks) =>
-      this(playbackStartTimeTicks: playbackStartTimeTicks);
+      call(playbackStartTimeTicks: playbackStartTimeTicks);
 
   @override
   PlaybackStartInfo volumeLevel(int? volumeLevel) =>
-      this(volumeLevel: volumeLevel);
+      call(volumeLevel: volumeLevel);
 
   @override
-  PlaybackStartInfo brightness(int? brightness) => this(brightness: brightness);
+  PlaybackStartInfo brightness(int? brightness) => call(brightness: brightness);
 
   @override
   PlaybackStartInfo aspectRatio(String? aspectRatio) =>
-      this(aspectRatio: aspectRatio);
+      call(aspectRatio: aspectRatio);
 
   @override
   PlaybackStartInfo playMethod(PlayMethod? playMethod) =>
-      this(playMethod: playMethod);
+      call(playMethod: playMethod);
 
   @override
   PlaybackStartInfo liveStreamId(String? liveStreamId) =>
-      this(liveStreamId: liveStreamId);
+      call(liveStreamId: liveStreamId);
 
   @override
   PlaybackStartInfo playSessionId(String? playSessionId) =>
-      this(playSessionId: playSessionId);
+      call(playSessionId: playSessionId);
 
   @override
   PlaybackStartInfo repeatMode(RepeatMode? repeatMode) =>
-      this(repeatMode: repeatMode);
+      call(repeatMode: repeatMode);
 
   @override
   PlaybackStartInfo playbackOrder(PlaybackOrder? playbackOrder) =>
-      this(playbackOrder: playbackOrder);
+      call(playbackOrder: playbackOrder);
 
   @override
   PlaybackStartInfo nowPlayingQueue(List<QueueItem>? nowPlayingQueue) =>
-      this(nowPlayingQueue: nowPlayingQueue);
+      call(nowPlayingQueue: nowPlayingQueue);
 
   @override
   PlaybackStartInfo playlistItemId(String? playlistItemId) =>
-      this(playlistItemId: playlistItemId);
+      call(playlistItemId: playlistItemId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaybackStartInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaybackStartInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaybackStartInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaybackStartInfo call({
     Object? canSeek = const $CopyWithPlaceholder(),
     Object? item = const $CopyWithPlaceholder(),
@@ -284,7 +287,8 @@ class _$PlaybackStartInfoCWProxyImpl implements _$PlaybackStartInfoCWProxy {
 }
 
 extension $PlaybackStartInfoCopyWith on PlaybackStartInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfPlaybackStartInfo.copyWith(...)` or like so:`instanceOfPlaybackStartInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlaybackStartInfo.copyWith(...)` or `instanceOfPlaybackStartInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlaybackStartInfoCWProxy get copyWith =>
       _$PlaybackStartInfoCWProxyImpl(this);

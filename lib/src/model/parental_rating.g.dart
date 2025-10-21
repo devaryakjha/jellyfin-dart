@@ -13,12 +13,13 @@ abstract class _$ParentalRatingCWProxy {
 
   ParentalRating ratingScore(ParentalRatingScore? ratingScore);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ParentalRating(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ParentalRating(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ParentalRating(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ParentalRating call({
     String? name,
     int? value,
@@ -26,29 +27,31 @@ abstract class _$ParentalRatingCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfParentalRating.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfParentalRating.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfParentalRating.copyWith(...)` or call `instanceOfParentalRating.copyWith.fieldName(value)` for a single field.
 class _$ParentalRatingCWProxyImpl implements _$ParentalRatingCWProxy {
   const _$ParentalRatingCWProxyImpl(this._value);
 
   final ParentalRating _value;
 
   @override
-  ParentalRating name(String? name) => this(name: name);
+  ParentalRating name(String? name) => call(name: name);
 
   @override
-  ParentalRating value(int? value) => this(value: value);
+  ParentalRating value(int? value) => call(value: value);
 
   @override
   ParentalRating ratingScore(ParentalRatingScore? ratingScore) =>
-      this(ratingScore: ratingScore);
+      call(ratingScore: ratingScore);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ParentalRating(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ParentalRating(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ParentalRating(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ParentalRating call({
     Object? name = const $CopyWithPlaceholder(),
     Object? value = const $CopyWithPlaceholder(),
@@ -72,7 +75,8 @@ class _$ParentalRatingCWProxyImpl implements _$ParentalRatingCWProxy {
 }
 
 extension $ParentalRatingCopyWith on ParentalRating {
-  /// Returns a callable class that can be used as follows: `instanceOfParentalRating.copyWith(...)` or like so:`instanceOfParentalRating.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfParentalRating.copyWith(...)` or `instanceOfParentalRating.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ParentalRatingCWProxy get copyWith => _$ParentalRatingCWProxyImpl(this);
 }

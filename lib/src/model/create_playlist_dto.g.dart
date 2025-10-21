@@ -19,12 +19,13 @@ abstract class _$CreatePlaylistDtoCWProxy {
 
   CreatePlaylistDto isPublic(bool? isPublic);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CreatePlaylistDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CreatePlaylistDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CreatePlaylistDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CreatePlaylistDto call({
     String? name,
     List<String>? ids,
@@ -35,39 +36,41 @@ abstract class _$CreatePlaylistDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfCreatePlaylistDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfCreatePlaylistDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfCreatePlaylistDto.copyWith(...)` or call `instanceOfCreatePlaylistDto.copyWith.fieldName(value)` for a single field.
 class _$CreatePlaylistDtoCWProxyImpl implements _$CreatePlaylistDtoCWProxy {
   const _$CreatePlaylistDtoCWProxyImpl(this._value);
 
   final CreatePlaylistDto _value;
 
   @override
-  CreatePlaylistDto name(String? name) => this(name: name);
+  CreatePlaylistDto name(String? name) => call(name: name);
 
   @override
-  CreatePlaylistDto ids(List<String>? ids) => this(ids: ids);
+  CreatePlaylistDto ids(List<String>? ids) => call(ids: ids);
 
   @override
-  CreatePlaylistDto userId(String? userId) => this(userId: userId);
+  CreatePlaylistDto userId(String? userId) => call(userId: userId);
 
   @override
   CreatePlaylistDto mediaType(MediaType? mediaType) =>
-      this(mediaType: mediaType);
+      call(mediaType: mediaType);
 
   @override
   CreatePlaylistDto users(List<PlaylistUserPermissions>? users) =>
-      this(users: users);
+      call(users: users);
 
   @override
-  CreatePlaylistDto isPublic(bool? isPublic) => this(isPublic: isPublic);
+  CreatePlaylistDto isPublic(bool? isPublic) => call(isPublic: isPublic);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CreatePlaylistDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CreatePlaylistDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CreatePlaylistDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CreatePlaylistDto call({
     Object? name = const $CopyWithPlaceholder(),
     Object? ids = const $CopyWithPlaceholder(),
@@ -106,7 +109,8 @@ class _$CreatePlaylistDtoCWProxyImpl implements _$CreatePlaylistDtoCWProxy {
 }
 
 extension $CreatePlaylistDtoCopyWith on CreatePlaylistDto {
-  /// Returns a callable class that can be used as follows: `instanceOfCreatePlaylistDto.copyWith(...)` or like so:`instanceOfCreatePlaylistDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfCreatePlaylistDto.copyWith(...)` or `instanceOfCreatePlaylistDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$CreatePlaylistDtoCWProxy get copyWith =>
       _$CreatePlaylistDtoCWProxyImpl(this);

@@ -41,12 +41,13 @@ abstract class _$TranscodingProfileCWProxy {
 
   TranscodingProfile enableAudioVbrEncoding(bool? enableAudioVbrEncoding);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TranscodingProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TranscodingProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TranscodingProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TranscodingProfile call({
     String? container,
     DlnaProfileType? type,
@@ -68,86 +69,88 @@ abstract class _$TranscodingProfileCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTranscodingProfile.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTranscodingProfile.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTranscodingProfile.copyWith(...)` or call `instanceOfTranscodingProfile.copyWith.fieldName(value)` for a single field.
 class _$TranscodingProfileCWProxyImpl implements _$TranscodingProfileCWProxy {
   const _$TranscodingProfileCWProxyImpl(this._value);
 
   final TranscodingProfile _value;
 
   @override
-  TranscodingProfile container(String? container) => this(container: container);
+  TranscodingProfile container(String? container) => call(container: container);
 
   @override
-  TranscodingProfile type(DlnaProfileType? type) => this(type: type);
+  TranscodingProfile type(DlnaProfileType? type) => call(type: type);
 
   @override
   TranscodingProfile videoCodec(String? videoCodec) =>
-      this(videoCodec: videoCodec);
+      call(videoCodec: videoCodec);
 
   @override
   TranscodingProfile audioCodec(String? audioCodec) =>
-      this(audioCodec: audioCodec);
+      call(audioCodec: audioCodec);
 
   @override
   TranscodingProfile protocol(MediaStreamProtocol? protocol) =>
-      this(protocol: protocol);
+      call(protocol: protocol);
 
   @override
   TranscodingProfile estimateContentLength(bool? estimateContentLength) =>
-      this(estimateContentLength: estimateContentLength);
+      call(estimateContentLength: estimateContentLength);
 
   @override
   TranscodingProfile enableMpegtsM2TsMode(bool? enableMpegtsM2TsMode) =>
-      this(enableMpegtsM2TsMode: enableMpegtsM2TsMode);
+      call(enableMpegtsM2TsMode: enableMpegtsM2TsMode);
 
   @override
   TranscodingProfile transcodeSeekInfo(TranscodeSeekInfo? transcodeSeekInfo) =>
-      this(transcodeSeekInfo: transcodeSeekInfo);
+      call(transcodeSeekInfo: transcodeSeekInfo);
 
   @override
   TranscodingProfile copyTimestamps(bool? copyTimestamps) =>
-      this(copyTimestamps: copyTimestamps);
+      call(copyTimestamps: copyTimestamps);
 
   @override
   TranscodingProfile context(EncodingContext? context) =>
-      this(context: context);
+      call(context: context);
 
   @override
   TranscodingProfile enableSubtitlesInManifest(
     bool? enableSubtitlesInManifest,
-  ) => this(enableSubtitlesInManifest: enableSubtitlesInManifest);
+  ) => call(enableSubtitlesInManifest: enableSubtitlesInManifest);
 
   @override
   TranscodingProfile maxAudioChannels(String? maxAudioChannels) =>
-      this(maxAudioChannels: maxAudioChannels);
+      call(maxAudioChannels: maxAudioChannels);
 
   @override
   TranscodingProfile minSegments(int? minSegments) =>
-      this(minSegments: minSegments);
+      call(minSegments: minSegments);
 
   @override
   TranscodingProfile segmentLength(int? segmentLength) =>
-      this(segmentLength: segmentLength);
+      call(segmentLength: segmentLength);
 
   @override
   TranscodingProfile breakOnNonKeyFrames(bool? breakOnNonKeyFrames) =>
-      this(breakOnNonKeyFrames: breakOnNonKeyFrames);
+      call(breakOnNonKeyFrames: breakOnNonKeyFrames);
 
   @override
   TranscodingProfile conditions(List<ProfileCondition>? conditions) =>
-      this(conditions: conditions);
+      call(conditions: conditions);
 
   @override
   TranscodingProfile enableAudioVbrEncoding(bool? enableAudioVbrEncoding) =>
-      this(enableAudioVbrEncoding: enableAudioVbrEncoding);
+      call(enableAudioVbrEncoding: enableAudioVbrEncoding);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TranscodingProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TranscodingProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TranscodingProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TranscodingProfile call({
     Object? container = const $CopyWithPlaceholder(),
     Object? type = const $CopyWithPlaceholder(),
@@ -244,7 +247,8 @@ class _$TranscodingProfileCWProxyImpl implements _$TranscodingProfileCWProxy {
 }
 
 extension $TranscodingProfileCopyWith on TranscodingProfile {
-  /// Returns a callable class that can be used as follows: `instanceOfTranscodingProfile.copyWith(...)` or like so:`instanceOfTranscodingProfile.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTranscodingProfile.copyWith(...)` or `instanceOfTranscodingProfile.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TranscodingProfileCWProxy get copyWith =>
       _$TranscodingProfileCWProxyImpl(this);

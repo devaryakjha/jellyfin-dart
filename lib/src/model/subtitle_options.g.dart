@@ -27,12 +27,13 @@ abstract class _$SubtitleOptionsCWProxy {
 
   SubtitleOptions requirePerfectMatch(bool? requirePerfectMatch);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SubtitleOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SubtitleOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SubtitleOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SubtitleOptions call({
     bool? skipIfEmbeddedSubtitlesPresent,
     bool? skipIfAudioTrackMatches,
@@ -46,7 +47,8 @@ abstract class _$SubtitleOptionsCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSubtitleOptions.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSubtitleOptions.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSubtitleOptions.copyWith(...)` or call `instanceOfSubtitleOptions.copyWith.fieldName(value)` for a single field.
 class _$SubtitleOptionsCWProxyImpl implements _$SubtitleOptionsCWProxy {
   const _$SubtitleOptionsCWProxyImpl(this._value);
 
@@ -55,48 +57,49 @@ class _$SubtitleOptionsCWProxyImpl implements _$SubtitleOptionsCWProxy {
   @override
   SubtitleOptions skipIfEmbeddedSubtitlesPresent(
     bool? skipIfEmbeddedSubtitlesPresent,
-  ) => this(skipIfEmbeddedSubtitlesPresent: skipIfEmbeddedSubtitlesPresent);
+  ) => call(skipIfEmbeddedSubtitlesPresent: skipIfEmbeddedSubtitlesPresent);
 
   @override
   SubtitleOptions skipIfAudioTrackMatches(bool? skipIfAudioTrackMatches) =>
-      this(skipIfAudioTrackMatches: skipIfAudioTrackMatches);
+      call(skipIfAudioTrackMatches: skipIfAudioTrackMatches);
 
   @override
   SubtitleOptions downloadLanguages(List<String>? downloadLanguages) =>
-      this(downloadLanguages: downloadLanguages);
+      call(downloadLanguages: downloadLanguages);
 
   @override
   SubtitleOptions downloadMovieSubtitles(bool? downloadMovieSubtitles) =>
-      this(downloadMovieSubtitles: downloadMovieSubtitles);
+      call(downloadMovieSubtitles: downloadMovieSubtitles);
 
   @override
   SubtitleOptions downloadEpisodeSubtitles(bool? downloadEpisodeSubtitles) =>
-      this(downloadEpisodeSubtitles: downloadEpisodeSubtitles);
+      call(downloadEpisodeSubtitles: downloadEpisodeSubtitles);
 
   @override
   SubtitleOptions openSubtitlesUsername(String? openSubtitlesUsername) =>
-      this(openSubtitlesUsername: openSubtitlesUsername);
+      call(openSubtitlesUsername: openSubtitlesUsername);
 
   @override
   SubtitleOptions openSubtitlesPasswordHash(
     String? openSubtitlesPasswordHash,
-  ) => this(openSubtitlesPasswordHash: openSubtitlesPasswordHash);
+  ) => call(openSubtitlesPasswordHash: openSubtitlesPasswordHash);
 
   @override
   SubtitleOptions isOpenSubtitleVipAccount(bool? isOpenSubtitleVipAccount) =>
-      this(isOpenSubtitleVipAccount: isOpenSubtitleVipAccount);
+      call(isOpenSubtitleVipAccount: isOpenSubtitleVipAccount);
 
   @override
   SubtitleOptions requirePerfectMatch(bool? requirePerfectMatch) =>
-      this(requirePerfectMatch: requirePerfectMatch);
+      call(requirePerfectMatch: requirePerfectMatch);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SubtitleOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SubtitleOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SubtitleOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SubtitleOptions call({
     Object? skipIfEmbeddedSubtitlesPresent = const $CopyWithPlaceholder(),
     Object? skipIfAudioTrackMatches = const $CopyWithPlaceholder(),
@@ -157,7 +160,8 @@ class _$SubtitleOptionsCWProxyImpl implements _$SubtitleOptionsCWProxy {
 }
 
 extension $SubtitleOptionsCopyWith on SubtitleOptions {
-  /// Returns a callable class that can be used as follows: `instanceOfSubtitleOptions.copyWith(...)` or like so:`instanceOfSubtitleOptions.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSubtitleOptions.copyWith(...)` or `instanceOfSubtitleOptions.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SubtitleOptionsCWProxy get copyWith => _$SubtitleOptionsCWProxyImpl(this);
 }

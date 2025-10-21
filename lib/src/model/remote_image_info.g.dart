@@ -27,12 +27,13 @@ abstract class _$RemoteImageInfoCWProxy {
 
   RemoteImageInfo ratingType(RatingType? ratingType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoteImageInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoteImageInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoteImageInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoteImageInfo call({
     String? providerName,
     String? url,
@@ -47,7 +48,8 @@ abstract class _$RemoteImageInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfRemoteImageInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfRemoteImageInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfRemoteImageInfo.copyWith(...)` or call `instanceOfRemoteImageInfo.copyWith.fieldName(value)` for a single field.
 class _$RemoteImageInfoCWProxyImpl implements _$RemoteImageInfoCWProxy {
   const _$RemoteImageInfoCWProxyImpl(this._value);
 
@@ -55,45 +57,46 @@ class _$RemoteImageInfoCWProxyImpl implements _$RemoteImageInfoCWProxy {
 
   @override
   RemoteImageInfo providerName(String? providerName) =>
-      this(providerName: providerName);
+      call(providerName: providerName);
 
   @override
-  RemoteImageInfo url(String? url) => this(url: url);
+  RemoteImageInfo url(String? url) => call(url: url);
 
   @override
   RemoteImageInfo thumbnailUrl(String? thumbnailUrl) =>
-      this(thumbnailUrl: thumbnailUrl);
+      call(thumbnailUrl: thumbnailUrl);
 
   @override
-  RemoteImageInfo height(int? height) => this(height: height);
+  RemoteImageInfo height(int? height) => call(height: height);
 
   @override
-  RemoteImageInfo width(int? width) => this(width: width);
+  RemoteImageInfo width(int? width) => call(width: width);
 
   @override
   RemoteImageInfo communityRating(double? communityRating) =>
-      this(communityRating: communityRating);
+      call(communityRating: communityRating);
 
   @override
-  RemoteImageInfo voteCount(int? voteCount) => this(voteCount: voteCount);
+  RemoteImageInfo voteCount(int? voteCount) => call(voteCount: voteCount);
 
   @override
-  RemoteImageInfo language(String? language) => this(language: language);
+  RemoteImageInfo language(String? language) => call(language: language);
 
   @override
-  RemoteImageInfo type(ImageType? type) => this(type: type);
+  RemoteImageInfo type(ImageType? type) => call(type: type);
 
   @override
   RemoteImageInfo ratingType(RatingType? ratingType) =>
-      this(ratingType: ratingType);
+      call(ratingType: ratingType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoteImageInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoteImageInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoteImageInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoteImageInfo call({
     Object? providerName = const $CopyWithPlaceholder(),
     Object? url = const $CopyWithPlaceholder(),
@@ -152,7 +155,8 @@ class _$RemoteImageInfoCWProxyImpl implements _$RemoteImageInfoCWProxy {
 }
 
 extension $RemoteImageInfoCopyWith on RemoteImageInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfRemoteImageInfo.copyWith(...)` or like so:`instanceOfRemoteImageInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfRemoteImageInfo.copyWith(...)` or `instanceOfRemoteImageInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$RemoteImageInfoCWProxy get copyWith => _$RemoteImageInfoCWProxyImpl(this);
 }

@@ -19,12 +19,13 @@ abstract class _$MusicVideoInfoRemoteSearchQueryCWProxy {
     bool? includeDisabledProviders,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MusicVideoInfoRemoteSearchQuery(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MusicVideoInfoRemoteSearchQuery(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MusicVideoInfoRemoteSearchQuery(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MusicVideoInfoRemoteSearchQuery call({
     MusicVideoInfo? searchInfo,
     String? itemId,
@@ -33,7 +34,8 @@ abstract class _$MusicVideoInfoRemoteSearchQueryCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMusicVideoInfoRemoteSearchQuery.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMusicVideoInfoRemoteSearchQuery.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMusicVideoInfoRemoteSearchQuery.copyWith(...)` or call `instanceOfMusicVideoInfoRemoteSearchQuery.copyWith.fieldName(value)` for a single field.
 class _$MusicVideoInfoRemoteSearchQueryCWProxyImpl
     implements _$MusicVideoInfoRemoteSearchQueryCWProxy {
   const _$MusicVideoInfoRemoteSearchQueryCWProxyImpl(this._value);
@@ -42,29 +44,30 @@ class _$MusicVideoInfoRemoteSearchQueryCWProxyImpl
 
   @override
   MusicVideoInfoRemoteSearchQuery searchInfo(MusicVideoInfo? searchInfo) =>
-      this(searchInfo: searchInfo);
+      call(searchInfo: searchInfo);
 
   @override
   MusicVideoInfoRemoteSearchQuery itemId(String? itemId) =>
-      this(itemId: itemId);
+      call(itemId: itemId);
 
   @override
   MusicVideoInfoRemoteSearchQuery searchProviderName(
     String? searchProviderName,
-  ) => this(searchProviderName: searchProviderName);
+  ) => call(searchProviderName: searchProviderName);
 
   @override
   MusicVideoInfoRemoteSearchQuery includeDisabledProviders(
     bool? includeDisabledProviders,
-  ) => this(includeDisabledProviders: includeDisabledProviders);
+  ) => call(includeDisabledProviders: includeDisabledProviders);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MusicVideoInfoRemoteSearchQuery(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MusicVideoInfoRemoteSearchQuery(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MusicVideoInfoRemoteSearchQuery(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MusicVideoInfoRemoteSearchQuery call({
     Object? searchInfo = const $CopyWithPlaceholder(),
     Object? itemId = const $CopyWithPlaceholder(),
@@ -95,7 +98,8 @@ class _$MusicVideoInfoRemoteSearchQueryCWProxyImpl
 
 extension $MusicVideoInfoRemoteSearchQueryCopyWith
     on MusicVideoInfoRemoteSearchQuery {
-  /// Returns a callable class that can be used as follows: `instanceOfMusicVideoInfoRemoteSearchQuery.copyWith(...)` or like so:`instanceOfMusicVideoInfoRemoteSearchQuery.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMusicVideoInfoRemoteSearchQuery.copyWith(...)` or `instanceOfMusicVideoInfoRemoteSearchQuery.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MusicVideoInfoRemoteSearchQueryCWProxy get copyWith =>
       _$MusicVideoInfoRemoteSearchQueryCWProxyImpl(this);

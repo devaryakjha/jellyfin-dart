@@ -23,12 +23,13 @@ abstract class _$ImageInfoCWProxy {
 
   ImageInfo size(int? size);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ImageInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ImageInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ImageInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ImageInfo call({
     ImageType? imageType,
     int? imageIndex,
@@ -41,43 +42,45 @@ abstract class _$ImageInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfImageInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfImageInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfImageInfo.copyWith(...)` or call `instanceOfImageInfo.copyWith.fieldName(value)` for a single field.
 class _$ImageInfoCWProxyImpl implements _$ImageInfoCWProxy {
   const _$ImageInfoCWProxyImpl(this._value);
 
   final ImageInfo _value;
 
   @override
-  ImageInfo imageType(ImageType? imageType) => this(imageType: imageType);
+  ImageInfo imageType(ImageType? imageType) => call(imageType: imageType);
 
   @override
-  ImageInfo imageIndex(int? imageIndex) => this(imageIndex: imageIndex);
+  ImageInfo imageIndex(int? imageIndex) => call(imageIndex: imageIndex);
 
   @override
-  ImageInfo imageTag(String? imageTag) => this(imageTag: imageTag);
+  ImageInfo imageTag(String? imageTag) => call(imageTag: imageTag);
 
   @override
-  ImageInfo path(String? path) => this(path: path);
+  ImageInfo path(String? path) => call(path: path);
 
   @override
-  ImageInfo blurHash(String? blurHash) => this(blurHash: blurHash);
+  ImageInfo blurHash(String? blurHash) => call(blurHash: blurHash);
 
   @override
-  ImageInfo height(int? height) => this(height: height);
+  ImageInfo height(int? height) => call(height: height);
 
   @override
-  ImageInfo width(int? width) => this(width: width);
+  ImageInfo width(int? width) => call(width: width);
 
   @override
-  ImageInfo size(int? size) => this(size: size);
+  ImageInfo size(int? size) => call(size: size);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ImageInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ImageInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ImageInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ImageInfo call({
     Object? imageType = const $CopyWithPlaceholder(),
     Object? imageIndex = const $CopyWithPlaceholder(),
@@ -126,7 +129,8 @@ class _$ImageInfoCWProxyImpl implements _$ImageInfoCWProxy {
 }
 
 extension $ImageInfoCopyWith on ImageInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfImageInfo.copyWith(...)` or like so:`instanceOfImageInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfImageInfo.copyWith(...)` or `instanceOfImageInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ImageInfoCWProxy get copyWith => _$ImageInfoCWProxyImpl(this);
 }

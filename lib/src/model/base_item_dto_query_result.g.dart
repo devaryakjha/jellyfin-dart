@@ -13,12 +13,13 @@ abstract class _$BaseItemDtoQueryResultCWProxy {
 
   BaseItemDtoQueryResult startIndex(int? startIndex);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BaseItemDtoQueryResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BaseItemDtoQueryResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BaseItemDtoQueryResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BaseItemDtoQueryResult call({
     List<BaseItemDto>? items,
     int? totalRecordCount,
@@ -26,7 +27,8 @@ abstract class _$BaseItemDtoQueryResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfBaseItemDtoQueryResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfBaseItemDtoQueryResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfBaseItemDtoQueryResult.copyWith(...)` or call `instanceOfBaseItemDtoQueryResult.copyWith.fieldName(value)` for a single field.
 class _$BaseItemDtoQueryResultCWProxyImpl
     implements _$BaseItemDtoQueryResultCWProxy {
   const _$BaseItemDtoQueryResultCWProxyImpl(this._value);
@@ -34,23 +36,24 @@ class _$BaseItemDtoQueryResultCWProxyImpl
   final BaseItemDtoQueryResult _value;
 
   @override
-  BaseItemDtoQueryResult items(List<BaseItemDto>? items) => this(items: items);
+  BaseItemDtoQueryResult items(List<BaseItemDto>? items) => call(items: items);
 
   @override
   BaseItemDtoQueryResult totalRecordCount(int? totalRecordCount) =>
-      this(totalRecordCount: totalRecordCount);
+      call(totalRecordCount: totalRecordCount);
 
   @override
   BaseItemDtoQueryResult startIndex(int? startIndex) =>
-      this(startIndex: startIndex);
+      call(startIndex: startIndex);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BaseItemDtoQueryResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BaseItemDtoQueryResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BaseItemDtoQueryResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BaseItemDtoQueryResult call({
     Object? items = const $CopyWithPlaceholder(),
     Object? totalRecordCount = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$BaseItemDtoQueryResultCWProxyImpl
 }
 
 extension $BaseItemDtoQueryResultCopyWith on BaseItemDtoQueryResult {
-  /// Returns a callable class that can be used as follows: `instanceOfBaseItemDtoQueryResult.copyWith(...)` or like so:`instanceOfBaseItemDtoQueryResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfBaseItemDtoQueryResult.copyWith(...)` or `instanceOfBaseItemDtoQueryResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$BaseItemDtoQueryResultCWProxy get copyWith =>
       _$BaseItemDtoQueryResultCWProxyImpl(this);

@@ -23,12 +23,13 @@ abstract class _$PlayRequestCWProxy {
 
   PlayRequest startIndex(int? startIndex);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlayRequest(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlayRequest(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlayRequest(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlayRequest call({
     List<String>? itemIds,
     int? startPositionTicks,
@@ -41,49 +42,51 @@ abstract class _$PlayRequestCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlayRequest.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlayRequest.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlayRequest.copyWith(...)` or call `instanceOfPlayRequest.copyWith.fieldName(value)` for a single field.
 class _$PlayRequestCWProxyImpl implements _$PlayRequestCWProxy {
   const _$PlayRequestCWProxyImpl(this._value);
 
   final PlayRequest _value;
 
   @override
-  PlayRequest itemIds(List<String>? itemIds) => this(itemIds: itemIds);
+  PlayRequest itemIds(List<String>? itemIds) => call(itemIds: itemIds);
 
   @override
   PlayRequest startPositionTicks(int? startPositionTicks) =>
-      this(startPositionTicks: startPositionTicks);
+      call(startPositionTicks: startPositionTicks);
 
   @override
   PlayRequest playCommand(PlayCommand? playCommand) =>
-      this(playCommand: playCommand);
+      call(playCommand: playCommand);
 
   @override
   PlayRequest controllingUserId(String? controllingUserId) =>
-      this(controllingUserId: controllingUserId);
+      call(controllingUserId: controllingUserId);
 
   @override
   PlayRequest subtitleStreamIndex(int? subtitleStreamIndex) =>
-      this(subtitleStreamIndex: subtitleStreamIndex);
+      call(subtitleStreamIndex: subtitleStreamIndex);
 
   @override
   PlayRequest audioStreamIndex(int? audioStreamIndex) =>
-      this(audioStreamIndex: audioStreamIndex);
+      call(audioStreamIndex: audioStreamIndex);
 
   @override
   PlayRequest mediaSourceId(String? mediaSourceId) =>
-      this(mediaSourceId: mediaSourceId);
+      call(mediaSourceId: mediaSourceId);
 
   @override
-  PlayRequest startIndex(int? startIndex) => this(startIndex: startIndex);
+  PlayRequest startIndex(int? startIndex) => call(startIndex: startIndex);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlayRequest(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlayRequest(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlayRequest(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlayRequest call({
     Object? itemIds = const $CopyWithPlaceholder(),
     Object? startPositionTicks = const $CopyWithPlaceholder(),
@@ -132,7 +135,8 @@ class _$PlayRequestCWProxyImpl implements _$PlayRequestCWProxy {
 }
 
 extension $PlayRequestCopyWith on PlayRequest {
-  /// Returns a callable class that can be used as follows: `instanceOfPlayRequest.copyWith(...)` or like so:`instanceOfPlayRequest.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlayRequest.copyWith(...)` or `instanceOfPlayRequest.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlayRequestCWProxy get copyWith => _$PlayRequestCWProxyImpl(this);
 }

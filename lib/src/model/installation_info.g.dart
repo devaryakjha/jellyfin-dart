@@ -21,12 +21,13 @@ abstract class _$InstallationInfoCWProxy {
 
   InstallationInfo packageInfo(PackageInfo? packageInfo);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `InstallationInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `InstallationInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// InstallationInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   InstallationInfo call({
     String? guid,
     String? name,
@@ -38,41 +39,43 @@ abstract class _$InstallationInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfInstallationInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfInstallationInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfInstallationInfo.copyWith(...)` or call `instanceOfInstallationInfo.copyWith.fieldName(value)` for a single field.
 class _$InstallationInfoCWProxyImpl implements _$InstallationInfoCWProxy {
   const _$InstallationInfoCWProxyImpl(this._value);
 
   final InstallationInfo _value;
 
   @override
-  InstallationInfo guid(String? guid) => this(guid: guid);
+  InstallationInfo guid(String? guid) => call(guid: guid);
 
   @override
-  InstallationInfo name(String? name) => this(name: name);
+  InstallationInfo name(String? name) => call(name: name);
 
   @override
-  InstallationInfo version(String? version) => this(version: version);
+  InstallationInfo version(String? version) => call(version: version);
 
   @override
-  InstallationInfo changelog(String? changelog) => this(changelog: changelog);
+  InstallationInfo changelog(String? changelog) => call(changelog: changelog);
 
   @override
-  InstallationInfo sourceUrl(String? sourceUrl) => this(sourceUrl: sourceUrl);
+  InstallationInfo sourceUrl(String? sourceUrl) => call(sourceUrl: sourceUrl);
 
   @override
-  InstallationInfo checksum(String? checksum) => this(checksum: checksum);
+  InstallationInfo checksum(String? checksum) => call(checksum: checksum);
 
   @override
   InstallationInfo packageInfo(PackageInfo? packageInfo) =>
-      this(packageInfo: packageInfo);
+      call(packageInfo: packageInfo);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `InstallationInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `InstallationInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// InstallationInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   InstallationInfo call({
     Object? guid = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
@@ -116,7 +119,8 @@ class _$InstallationInfoCWProxyImpl implements _$InstallationInfoCWProxy {
 }
 
 extension $InstallationInfoCopyWith on InstallationInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfInstallationInfo.copyWith(...)` or like so:`instanceOfInstallationInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfInstallationInfo.copyWith(...)` or `instanceOfInstallationInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$InstallationInfoCWProxy get copyWith => _$InstallationInfoCWProxyImpl(this);
 }

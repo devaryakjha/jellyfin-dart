@@ -11,34 +11,37 @@ abstract class _$NameIdPairCWProxy {
 
   NameIdPair id(String? id);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `NameIdPair(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `NameIdPair(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// NameIdPair(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   NameIdPair call({String? name, String? id});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfNameIdPair.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfNameIdPair.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfNameIdPair.copyWith(...)` or call `instanceOfNameIdPair.copyWith.fieldName(value)` for a single field.
 class _$NameIdPairCWProxyImpl implements _$NameIdPairCWProxy {
   const _$NameIdPairCWProxyImpl(this._value);
 
   final NameIdPair _value;
 
   @override
-  NameIdPair name(String? name) => this(name: name);
+  NameIdPair name(String? name) => call(name: name);
 
   @override
-  NameIdPair id(String? id) => this(id: id);
+  NameIdPair id(String? id) => call(id: id);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `NameIdPair(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `NameIdPair(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// NameIdPair(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   NameIdPair call({
     Object? name = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$NameIdPairCWProxyImpl implements _$NameIdPairCWProxy {
 }
 
 extension $NameIdPairCopyWith on NameIdPair {
-  /// Returns a callable class that can be used as follows: `instanceOfNameIdPair.copyWith(...)` or like so:`instanceOfNameIdPair.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfNameIdPair.copyWith(...)` or `instanceOfNameIdPair.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$NameIdPairCWProxy get copyWith => _$NameIdPairCWProxyImpl(this);
 }

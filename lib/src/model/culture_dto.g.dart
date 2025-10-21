@@ -19,12 +19,13 @@ abstract class _$CultureDtoCWProxy {
     List<String>? threeLetterISOLanguageNames,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CultureDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CultureDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CultureDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CultureDto call({
     String? name,
     String? displayName,
@@ -34,38 +35,40 @@ abstract class _$CultureDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfCultureDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfCultureDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfCultureDto.copyWith(...)` or call `instanceOfCultureDto.copyWith.fieldName(value)` for a single field.
 class _$CultureDtoCWProxyImpl implements _$CultureDtoCWProxy {
   const _$CultureDtoCWProxyImpl(this._value);
 
   final CultureDto _value;
 
   @override
-  CultureDto name(String? name) => this(name: name);
+  CultureDto name(String? name) => call(name: name);
 
   @override
-  CultureDto displayName(String? displayName) => this(displayName: displayName);
+  CultureDto displayName(String? displayName) => call(displayName: displayName);
 
   @override
   CultureDto twoLetterISOLanguageName(String? twoLetterISOLanguageName) =>
-      this(twoLetterISOLanguageName: twoLetterISOLanguageName);
+      call(twoLetterISOLanguageName: twoLetterISOLanguageName);
 
   @override
   CultureDto threeLetterISOLanguageName(String? threeLetterISOLanguageName) =>
-      this(threeLetterISOLanguageName: threeLetterISOLanguageName);
+      call(threeLetterISOLanguageName: threeLetterISOLanguageName);
 
   @override
   CultureDto threeLetterISOLanguageNames(
     List<String>? threeLetterISOLanguageNames,
-  ) => this(threeLetterISOLanguageNames: threeLetterISOLanguageNames);
+  ) => call(threeLetterISOLanguageNames: threeLetterISOLanguageNames);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CultureDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CultureDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CultureDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CultureDto call({
     Object? name = const $CopyWithPlaceholder(),
     Object? displayName = const $CopyWithPlaceholder(),
@@ -102,7 +105,8 @@ class _$CultureDtoCWProxyImpl implements _$CultureDtoCWProxy {
 }
 
 extension $CultureDtoCopyWith on CultureDto {
-  /// Returns a callable class that can be used as follows: `instanceOfCultureDto.copyWith(...)` or like so:`instanceOfCultureDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfCultureDto.copyWith(...)` or `instanceOfCultureDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$CultureDtoCWProxy get copyWith => _$CultureDtoCWProxyImpl(this);
 }

@@ -41,12 +41,13 @@ abstract class _$LiveTvOptionsCWProxy {
 
   LiveTvOptions saveRecordingImages(bool? saveRecordingImages);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LiveTvOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LiveTvOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LiveTvOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LiveTvOptions call({
     int? guideDays,
     String? recordingPath,
@@ -66,84 +67,86 @@ abstract class _$LiveTvOptionsCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLiveTvOptions.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLiveTvOptions.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLiveTvOptions.copyWith(...)` or call `instanceOfLiveTvOptions.copyWith.fieldName(value)` for a single field.
 class _$LiveTvOptionsCWProxyImpl implements _$LiveTvOptionsCWProxy {
   const _$LiveTvOptionsCWProxyImpl(this._value);
 
   final LiveTvOptions _value;
 
   @override
-  LiveTvOptions guideDays(int? guideDays) => this(guideDays: guideDays);
+  LiveTvOptions guideDays(int? guideDays) => call(guideDays: guideDays);
 
   @override
   LiveTvOptions recordingPath(String? recordingPath) =>
-      this(recordingPath: recordingPath);
+      call(recordingPath: recordingPath);
 
   @override
   LiveTvOptions movieRecordingPath(String? movieRecordingPath) =>
-      this(movieRecordingPath: movieRecordingPath);
+      call(movieRecordingPath: movieRecordingPath);
 
   @override
   LiveTvOptions seriesRecordingPath(String? seriesRecordingPath) =>
-      this(seriesRecordingPath: seriesRecordingPath);
+      call(seriesRecordingPath: seriesRecordingPath);
 
   @override
   LiveTvOptions enableRecordingSubfolders(bool? enableRecordingSubfolders) =>
-      this(enableRecordingSubfolders: enableRecordingSubfolders);
+      call(enableRecordingSubfolders: enableRecordingSubfolders);
 
   @override
   LiveTvOptions enableOriginalAudioWithEncodedRecordings(
     bool? enableOriginalAudioWithEncodedRecordings,
-  ) => this(
+  ) => call(
     enableOriginalAudioWithEncodedRecordings:
         enableOriginalAudioWithEncodedRecordings,
   );
 
   @override
   LiveTvOptions tunerHosts(List<TunerHostInfo>? tunerHosts) =>
-      this(tunerHosts: tunerHosts);
+      call(tunerHosts: tunerHosts);
 
   @override
   LiveTvOptions listingProviders(
     List<ListingsProviderInfo>? listingProviders,
-  ) => this(listingProviders: listingProviders);
+  ) => call(listingProviders: listingProviders);
 
   @override
   LiveTvOptions prePaddingSeconds(int? prePaddingSeconds) =>
-      this(prePaddingSeconds: prePaddingSeconds);
+      call(prePaddingSeconds: prePaddingSeconds);
 
   @override
   LiveTvOptions postPaddingSeconds(int? postPaddingSeconds) =>
-      this(postPaddingSeconds: postPaddingSeconds);
+      call(postPaddingSeconds: postPaddingSeconds);
 
   @override
   LiveTvOptions mediaLocationsCreated(List<String>? mediaLocationsCreated) =>
-      this(mediaLocationsCreated: mediaLocationsCreated);
+      call(mediaLocationsCreated: mediaLocationsCreated);
 
   @override
   LiveTvOptions recordingPostProcessor(String? recordingPostProcessor) =>
-      this(recordingPostProcessor: recordingPostProcessor);
+      call(recordingPostProcessor: recordingPostProcessor);
 
   @override
   LiveTvOptions recordingPostProcessorArguments(
     String? recordingPostProcessorArguments,
-  ) => this(recordingPostProcessorArguments: recordingPostProcessorArguments);
+  ) => call(recordingPostProcessorArguments: recordingPostProcessorArguments);
 
   @override
   LiveTvOptions saveRecordingNFO(bool? saveRecordingNFO) =>
-      this(saveRecordingNFO: saveRecordingNFO);
+      call(saveRecordingNFO: saveRecordingNFO);
 
   @override
   LiveTvOptions saveRecordingImages(bool? saveRecordingImages) =>
-      this(saveRecordingImages: saveRecordingImages);
+      call(saveRecordingImages: saveRecordingImages);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LiveTvOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LiveTvOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LiveTvOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LiveTvOptions call({
     Object? guideDays = const $CopyWithPlaceholder(),
     Object? recordingPath = const $CopyWithPlaceholder(),
@@ -234,7 +237,8 @@ class _$LiveTvOptionsCWProxyImpl implements _$LiveTvOptionsCWProxy {
 }
 
 extension $LiveTvOptionsCopyWith on LiveTvOptions {
-  /// Returns a callable class that can be used as follows: `instanceOfLiveTvOptions.copyWith(...)` or like so:`instanceOfLiveTvOptions.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLiveTvOptions.copyWith(...)` or `instanceOfLiveTvOptions.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LiveTvOptionsCWProxy get copyWith => _$LiveTvOptionsCWProxyImpl(this);
 }

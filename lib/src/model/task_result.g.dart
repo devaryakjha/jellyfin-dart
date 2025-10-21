@@ -23,12 +23,13 @@ abstract class _$TaskResultCWProxy {
 
   TaskResult longErrorMessage(String? longErrorMessage);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TaskResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TaskResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TaskResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TaskResult call({
     DateTime? startTimeUtc,
     DateTime? endTimeUtc,
@@ -41,7 +42,8 @@ abstract class _$TaskResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTaskResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTaskResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTaskResult.copyWith(...)` or call `instanceOfTaskResult.copyWith.fieldName(value)` for a single field.
 class _$TaskResultCWProxyImpl implements _$TaskResultCWProxy {
   const _$TaskResultCWProxyImpl(this._value);
 
@@ -49,38 +51,39 @@ class _$TaskResultCWProxyImpl implements _$TaskResultCWProxy {
 
   @override
   TaskResult startTimeUtc(DateTime? startTimeUtc) =>
-      this(startTimeUtc: startTimeUtc);
+      call(startTimeUtc: startTimeUtc);
 
   @override
-  TaskResult endTimeUtc(DateTime? endTimeUtc) => this(endTimeUtc: endTimeUtc);
+  TaskResult endTimeUtc(DateTime? endTimeUtc) => call(endTimeUtc: endTimeUtc);
 
   @override
-  TaskResult status(TaskCompletionStatus? status) => this(status: status);
+  TaskResult status(TaskCompletionStatus? status) => call(status: status);
 
   @override
-  TaskResult name(String? name) => this(name: name);
+  TaskResult name(String? name) => call(name: name);
 
   @override
-  TaskResult key(String? key) => this(key: key);
+  TaskResult key(String? key) => call(key: key);
 
   @override
-  TaskResult id(String? id) => this(id: id);
+  TaskResult id(String? id) => call(id: id);
 
   @override
   TaskResult errorMessage(String? errorMessage) =>
-      this(errorMessage: errorMessage);
+      call(errorMessage: errorMessage);
 
   @override
   TaskResult longErrorMessage(String? longErrorMessage) =>
-      this(longErrorMessage: longErrorMessage);
+      call(longErrorMessage: longErrorMessage);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TaskResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TaskResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TaskResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TaskResult call({
     Object? startTimeUtc = const $CopyWithPlaceholder(),
     Object? endTimeUtc = const $CopyWithPlaceholder(),
@@ -129,7 +132,8 @@ class _$TaskResultCWProxyImpl implements _$TaskResultCWProxy {
 }
 
 extension $TaskResultCopyWith on TaskResult {
-  /// Returns a callable class that can be used as follows: `instanceOfTaskResult.copyWith(...)` or like so:`instanceOfTaskResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTaskResult.copyWith(...)` or `instanceOfTaskResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TaskResultCWProxy get copyWith => _$TaskResultCWProxyImpl(this);
 }

@@ -35,12 +35,13 @@ abstract class _$DisplayPreferencesDtoCWProxy {
 
   DisplayPreferencesDto client(String? client);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DisplayPreferencesDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DisplayPreferencesDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DisplayPreferencesDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DisplayPreferencesDto call({
     String? id,
     String? viewType,
@@ -59,7 +60,8 @@ abstract class _$DisplayPreferencesDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfDisplayPreferencesDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfDisplayPreferencesDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfDisplayPreferencesDto.copyWith(...)` or call `instanceOfDisplayPreferencesDto.copyWith.fieldName(value)` for a single field.
 class _$DisplayPreferencesDtoCWProxyImpl
     implements _$DisplayPreferencesDtoCWProxy {
   const _$DisplayPreferencesDtoCWProxyImpl(this._value);
@@ -67,63 +69,64 @@ class _$DisplayPreferencesDtoCWProxyImpl
   final DisplayPreferencesDto _value;
 
   @override
-  DisplayPreferencesDto id(String? id) => this(id: id);
+  DisplayPreferencesDto id(String? id) => call(id: id);
 
   @override
-  DisplayPreferencesDto viewType(String? viewType) => this(viewType: viewType);
+  DisplayPreferencesDto viewType(String? viewType) => call(viewType: viewType);
 
   @override
-  DisplayPreferencesDto sortBy(String? sortBy) => this(sortBy: sortBy);
+  DisplayPreferencesDto sortBy(String? sortBy) => call(sortBy: sortBy);
 
   @override
-  DisplayPreferencesDto indexBy(String? indexBy) => this(indexBy: indexBy);
+  DisplayPreferencesDto indexBy(String? indexBy) => call(indexBy: indexBy);
 
   @override
   DisplayPreferencesDto rememberIndexing(bool? rememberIndexing) =>
-      this(rememberIndexing: rememberIndexing);
+      call(rememberIndexing: rememberIndexing);
 
   @override
   DisplayPreferencesDto primaryImageHeight(int? primaryImageHeight) =>
-      this(primaryImageHeight: primaryImageHeight);
+      call(primaryImageHeight: primaryImageHeight);
 
   @override
   DisplayPreferencesDto primaryImageWidth(int? primaryImageWidth) =>
-      this(primaryImageWidth: primaryImageWidth);
+      call(primaryImageWidth: primaryImageWidth);
 
   @override
   DisplayPreferencesDto customPrefs(Map<String, String>? customPrefs) =>
-      this(customPrefs: customPrefs);
+      call(customPrefs: customPrefs);
 
   @override
   DisplayPreferencesDto scrollDirection(ScrollDirection? scrollDirection) =>
-      this(scrollDirection: scrollDirection);
+      call(scrollDirection: scrollDirection);
 
   @override
   DisplayPreferencesDto showBackdrop(bool? showBackdrop) =>
-      this(showBackdrop: showBackdrop);
+      call(showBackdrop: showBackdrop);
 
   @override
   DisplayPreferencesDto rememberSorting(bool? rememberSorting) =>
-      this(rememberSorting: rememberSorting);
+      call(rememberSorting: rememberSorting);
 
   @override
   DisplayPreferencesDto sortOrder(SortOrder? sortOrder) =>
-      this(sortOrder: sortOrder);
+      call(sortOrder: sortOrder);
 
   @override
   DisplayPreferencesDto showSidebar(bool? showSidebar) =>
-      this(showSidebar: showSidebar);
+      call(showSidebar: showSidebar);
 
   @override
-  DisplayPreferencesDto client(String? client) => this(client: client);
+  DisplayPreferencesDto client(String? client) => call(client: client);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DisplayPreferencesDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DisplayPreferencesDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DisplayPreferencesDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DisplayPreferencesDto call({
     Object? id = const $CopyWithPlaceholder(),
     Object? viewType = const $CopyWithPlaceholder(),
@@ -202,7 +205,8 @@ class _$DisplayPreferencesDtoCWProxyImpl
 }
 
 extension $DisplayPreferencesDtoCopyWith on DisplayPreferencesDto {
-  /// Returns a callable class that can be used as follows: `instanceOfDisplayPreferencesDto.copyWith(...)` or like so:`instanceOfDisplayPreferencesDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfDisplayPreferencesDto.copyWith(...)` or `instanceOfDisplayPreferencesDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$DisplayPreferencesDtoCWProxy get copyWith =>
       _$DisplayPreferencesDtoCWProxyImpl(this);

@@ -15,12 +15,13 @@ abstract class _$RecommendationDtoCWProxy {
 
   RecommendationDto categoryId(String? categoryId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RecommendationDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RecommendationDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RecommendationDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RecommendationDto call({
     List<BaseItemDto>? items,
     RecommendationType? recommendationType,
@@ -29,35 +30,37 @@ abstract class _$RecommendationDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfRecommendationDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfRecommendationDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfRecommendationDto.copyWith(...)` or call `instanceOfRecommendationDto.copyWith.fieldName(value)` for a single field.
 class _$RecommendationDtoCWProxyImpl implements _$RecommendationDtoCWProxy {
   const _$RecommendationDtoCWProxyImpl(this._value);
 
   final RecommendationDto _value;
 
   @override
-  RecommendationDto items(List<BaseItemDto>? items) => this(items: items);
+  RecommendationDto items(List<BaseItemDto>? items) => call(items: items);
 
   @override
   RecommendationDto recommendationType(
     RecommendationType? recommendationType,
-  ) => this(recommendationType: recommendationType);
+  ) => call(recommendationType: recommendationType);
 
   @override
   RecommendationDto baselineItemName(String? baselineItemName) =>
-      this(baselineItemName: baselineItemName);
+      call(baselineItemName: baselineItemName);
 
   @override
   RecommendationDto categoryId(String? categoryId) =>
-      this(categoryId: categoryId);
+      call(categoryId: categoryId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RecommendationDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RecommendationDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RecommendationDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RecommendationDto call({
     Object? items = const $CopyWithPlaceholder(),
     Object? recommendationType = const $CopyWithPlaceholder(),
@@ -86,7 +89,8 @@ class _$RecommendationDtoCWProxyImpl implements _$RecommendationDtoCWProxy {
 }
 
 extension $RecommendationDtoCopyWith on RecommendationDto {
-  /// Returns a callable class that can be used as follows: `instanceOfRecommendationDto.copyWith(...)` or like so:`instanceOfRecommendationDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfRecommendationDto.copyWith(...)` or `instanceOfRecommendationDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$RecommendationDtoCWProxy get copyWith =>
       _$RecommendationDtoCWProxyImpl(this);

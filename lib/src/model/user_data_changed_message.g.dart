@@ -13,12 +13,13 @@ abstract class _$UserDataChangedMessageCWProxy {
 
   UserDataChangedMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserDataChangedMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserDataChangedMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserDataChangedMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserDataChangedMessage call({
     UserDataChangeInfo? data,
     String? messageId,
@@ -26,7 +27,8 @@ abstract class _$UserDataChangedMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUserDataChangedMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUserDataChangedMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUserDataChangedMessage.copyWith(...)` or call `instanceOfUserDataChangedMessage.copyWith.fieldName(value)` for a single field.
 class _$UserDataChangedMessageCWProxyImpl
     implements _$UserDataChangedMessageCWProxy {
   const _$UserDataChangedMessageCWProxyImpl(this._value);
@@ -34,23 +36,24 @@ class _$UserDataChangedMessageCWProxyImpl
   final UserDataChangedMessage _value;
 
   @override
-  UserDataChangedMessage data(UserDataChangeInfo? data) => this(data: data);
+  UserDataChangedMessage data(UserDataChangeInfo? data) => call(data: data);
 
   @override
   UserDataChangedMessage messageId(String? messageId) =>
-      this(messageId: messageId);
+      call(messageId: messageId);
 
   @override
   UserDataChangedMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserDataChangedMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserDataChangedMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserDataChangedMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserDataChangedMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$UserDataChangedMessageCWProxyImpl
 }
 
 extension $UserDataChangedMessageCopyWith on UserDataChangedMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfUserDataChangedMessage.copyWith(...)` or like so:`instanceOfUserDataChangedMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUserDataChangedMessage.copyWith(...)` or `instanceOfUserDataChangedMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UserDataChangedMessageCWProxy get copyWith =>
       _$UserDataChangedMessageCWProxyImpl(this);

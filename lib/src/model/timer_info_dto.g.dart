@@ -63,12 +63,13 @@ abstract class _$TimerInfoDtoCWProxy {
 
   TimerInfoDto programInfo(BaseItemDto? programInfo);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TimerInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TimerInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TimerInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TimerInfoDto call({
     String? id,
     String? type,
@@ -101,118 +102,120 @@ abstract class _$TimerInfoDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTimerInfoDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTimerInfoDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTimerInfoDto.copyWith(...)` or call `instanceOfTimerInfoDto.copyWith.fieldName(value)` for a single field.
 class _$TimerInfoDtoCWProxyImpl implements _$TimerInfoDtoCWProxy {
   const _$TimerInfoDtoCWProxyImpl(this._value);
 
   final TimerInfoDto _value;
 
   @override
-  TimerInfoDto id(String? id) => this(id: id);
+  TimerInfoDto id(String? id) => call(id: id);
 
   @override
-  TimerInfoDto type(String? type) => this(type: type);
+  TimerInfoDto type(String? type) => call(type: type);
 
   @override
-  TimerInfoDto serverId(String? serverId) => this(serverId: serverId);
+  TimerInfoDto serverId(String? serverId) => call(serverId: serverId);
 
   @override
-  TimerInfoDto externalId(String? externalId) => this(externalId: externalId);
+  TimerInfoDto externalId(String? externalId) => call(externalId: externalId);
 
   @override
-  TimerInfoDto channelId(String? channelId) => this(channelId: channelId);
+  TimerInfoDto channelId(String? channelId) => call(channelId: channelId);
 
   @override
   TimerInfoDto externalChannelId(String? externalChannelId) =>
-      this(externalChannelId: externalChannelId);
+      call(externalChannelId: externalChannelId);
 
   @override
   TimerInfoDto channelName(String? channelName) =>
-      this(channelName: channelName);
+      call(channelName: channelName);
 
   @override
   TimerInfoDto channelPrimaryImageTag(String? channelPrimaryImageTag) =>
-      this(channelPrimaryImageTag: channelPrimaryImageTag);
+      call(channelPrimaryImageTag: channelPrimaryImageTag);
 
   @override
-  TimerInfoDto programId(String? programId) => this(programId: programId);
+  TimerInfoDto programId(String? programId) => call(programId: programId);
 
   @override
   TimerInfoDto externalProgramId(String? externalProgramId) =>
-      this(externalProgramId: externalProgramId);
+      call(externalProgramId: externalProgramId);
 
   @override
-  TimerInfoDto name(String? name) => this(name: name);
+  TimerInfoDto name(String? name) => call(name: name);
 
   @override
-  TimerInfoDto overview(String? overview) => this(overview: overview);
+  TimerInfoDto overview(String? overview) => call(overview: overview);
 
   @override
-  TimerInfoDto startDate(DateTime? startDate) => this(startDate: startDate);
+  TimerInfoDto startDate(DateTime? startDate) => call(startDate: startDate);
 
   @override
-  TimerInfoDto endDate(DateTime? endDate) => this(endDate: endDate);
+  TimerInfoDto endDate(DateTime? endDate) => call(endDate: endDate);
 
   @override
   TimerInfoDto serviceName(String? serviceName) =>
-      this(serviceName: serviceName);
+      call(serviceName: serviceName);
 
   @override
-  TimerInfoDto priority(int? priority) => this(priority: priority);
+  TimerInfoDto priority(int? priority) => call(priority: priority);
 
   @override
   TimerInfoDto prePaddingSeconds(int? prePaddingSeconds) =>
-      this(prePaddingSeconds: prePaddingSeconds);
+      call(prePaddingSeconds: prePaddingSeconds);
 
   @override
   TimerInfoDto postPaddingSeconds(int? postPaddingSeconds) =>
-      this(postPaddingSeconds: postPaddingSeconds);
+      call(postPaddingSeconds: postPaddingSeconds);
 
   @override
   TimerInfoDto isPrePaddingRequired(bool? isPrePaddingRequired) =>
-      this(isPrePaddingRequired: isPrePaddingRequired);
+      call(isPrePaddingRequired: isPrePaddingRequired);
 
   @override
   TimerInfoDto parentBackdropItemId(String? parentBackdropItemId) =>
-      this(parentBackdropItemId: parentBackdropItemId);
+      call(parentBackdropItemId: parentBackdropItemId);
 
   @override
   TimerInfoDto parentBackdropImageTags(List<String>? parentBackdropImageTags) =>
-      this(parentBackdropImageTags: parentBackdropImageTags);
+      call(parentBackdropImageTags: parentBackdropImageTags);
 
   @override
   TimerInfoDto isPostPaddingRequired(bool? isPostPaddingRequired) =>
-      this(isPostPaddingRequired: isPostPaddingRequired);
+      call(isPostPaddingRequired: isPostPaddingRequired);
 
   @override
-  TimerInfoDto keepUntil(KeepUntil? keepUntil) => this(keepUntil: keepUntil);
+  TimerInfoDto keepUntil(KeepUntil? keepUntil) => call(keepUntil: keepUntil);
 
   @override
-  TimerInfoDto status(RecordingStatus? status) => this(status: status);
+  TimerInfoDto status(RecordingStatus? status) => call(status: status);
 
   @override
   TimerInfoDto seriesTimerId(String? seriesTimerId) =>
-      this(seriesTimerId: seriesTimerId);
+      call(seriesTimerId: seriesTimerId);
 
   @override
   TimerInfoDto externalSeriesTimerId(String? externalSeriesTimerId) =>
-      this(externalSeriesTimerId: externalSeriesTimerId);
+      call(externalSeriesTimerId: externalSeriesTimerId);
 
   @override
   TimerInfoDto runTimeTicks(int? runTimeTicks) =>
-      this(runTimeTicks: runTimeTicks);
+      call(runTimeTicks: runTimeTicks);
 
   @override
   TimerInfoDto programInfo(BaseItemDto? programInfo) =>
-      this(programInfo: programInfo);
+      call(programInfo: programInfo);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TimerInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TimerInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TimerInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TimerInfoDto call({
     Object? id = const $CopyWithPlaceholder(),
     Object? type = const $CopyWithPlaceholder(),
@@ -365,7 +368,8 @@ class _$TimerInfoDtoCWProxyImpl implements _$TimerInfoDtoCWProxy {
 }
 
 extension $TimerInfoDtoCopyWith on TimerInfoDto {
-  /// Returns a callable class that can be used as follows: `instanceOfTimerInfoDto.copyWith(...)` or like so:`instanceOfTimerInfoDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTimerInfoDto.copyWith(...)` or `instanceOfTimerInfoDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TimerInfoDtoCWProxy get copyWith => _$TimerInfoDtoCWProxyImpl(this);
 }

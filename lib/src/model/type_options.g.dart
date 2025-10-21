@@ -19,12 +19,13 @@ abstract class _$TypeOptionsCWProxy {
 
   TypeOptions imageOptions(List<ImageOption>? imageOptions);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TypeOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TypeOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TypeOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TypeOptions call({
     String? type,
     List<String>? metadataFetchers,
@@ -35,42 +36,44 @@ abstract class _$TypeOptionsCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTypeOptions.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTypeOptions.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTypeOptions.copyWith(...)` or call `instanceOfTypeOptions.copyWith.fieldName(value)` for a single field.
 class _$TypeOptionsCWProxyImpl implements _$TypeOptionsCWProxy {
   const _$TypeOptionsCWProxyImpl(this._value);
 
   final TypeOptions _value;
 
   @override
-  TypeOptions type(String? type) => this(type: type);
+  TypeOptions type(String? type) => call(type: type);
 
   @override
   TypeOptions metadataFetchers(List<String>? metadataFetchers) =>
-      this(metadataFetchers: metadataFetchers);
+      call(metadataFetchers: metadataFetchers);
 
   @override
   TypeOptions metadataFetcherOrder(List<String>? metadataFetcherOrder) =>
-      this(metadataFetcherOrder: metadataFetcherOrder);
+      call(metadataFetcherOrder: metadataFetcherOrder);
 
   @override
   TypeOptions imageFetchers(List<String>? imageFetchers) =>
-      this(imageFetchers: imageFetchers);
+      call(imageFetchers: imageFetchers);
 
   @override
   TypeOptions imageFetcherOrder(List<String>? imageFetcherOrder) =>
-      this(imageFetcherOrder: imageFetcherOrder);
+      call(imageFetcherOrder: imageFetcherOrder);
 
   @override
   TypeOptions imageOptions(List<ImageOption>? imageOptions) =>
-      this(imageOptions: imageOptions);
+      call(imageOptions: imageOptions);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TypeOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TypeOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TypeOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TypeOptions call({
     Object? type = const $CopyWithPlaceholder(),
     Object? metadataFetchers = const $CopyWithPlaceholder(),
@@ -109,7 +112,8 @@ class _$TypeOptionsCWProxyImpl implements _$TypeOptionsCWProxy {
 }
 
 extension $TypeOptionsCopyWith on TypeOptions {
-  /// Returns a callable class that can be used as follows: `instanceOfTypeOptions.copyWith(...)` or like so:`instanceOfTypeOptions.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTypeOptions.copyWith(...)` or `instanceOfTypeOptions.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TypeOptionsCWProxy get copyWith => _$TypeOptionsCWProxyImpl(this);
 }

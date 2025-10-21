@@ -15,12 +15,13 @@ abstract class _$DirectPlayProfileCWProxy {
 
   DirectPlayProfile type(DlnaProfileType? type);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DirectPlayProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DirectPlayProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DirectPlayProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DirectPlayProfile call({
     String? container,
     String? audioCodec,
@@ -29,33 +30,35 @@ abstract class _$DirectPlayProfileCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfDirectPlayProfile.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfDirectPlayProfile.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfDirectPlayProfile.copyWith(...)` or call `instanceOfDirectPlayProfile.copyWith.fieldName(value)` for a single field.
 class _$DirectPlayProfileCWProxyImpl implements _$DirectPlayProfileCWProxy {
   const _$DirectPlayProfileCWProxyImpl(this._value);
 
   final DirectPlayProfile _value;
 
   @override
-  DirectPlayProfile container(String? container) => this(container: container);
+  DirectPlayProfile container(String? container) => call(container: container);
 
   @override
   DirectPlayProfile audioCodec(String? audioCodec) =>
-      this(audioCodec: audioCodec);
+      call(audioCodec: audioCodec);
 
   @override
   DirectPlayProfile videoCodec(String? videoCodec) =>
-      this(videoCodec: videoCodec);
+      call(videoCodec: videoCodec);
 
   @override
-  DirectPlayProfile type(DlnaProfileType? type) => this(type: type);
+  DirectPlayProfile type(DlnaProfileType? type) => call(type: type);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DirectPlayProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DirectPlayProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DirectPlayProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DirectPlayProfile call({
     Object? container = const $CopyWithPlaceholder(),
     Object? audioCodec = const $CopyWithPlaceholder(),
@@ -84,7 +87,8 @@ class _$DirectPlayProfileCWProxyImpl implements _$DirectPlayProfileCWProxy {
 }
 
 extension $DirectPlayProfileCopyWith on DirectPlayProfile {
-  /// Returns a callable class that can be used as follows: `instanceOfDirectPlayProfile.copyWith(...)` or like so:`instanceOfDirectPlayProfile.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfDirectPlayProfile.copyWith(...)` or `instanceOfDirectPlayProfile.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$DirectPlayProfileCWProxy get copyWith =>
       _$DirectPlayProfileCWProxyImpl(this);

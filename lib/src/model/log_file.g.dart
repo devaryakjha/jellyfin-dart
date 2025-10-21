@@ -15,12 +15,13 @@ abstract class _$LogFileCWProxy {
 
   LogFile name(String? name);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LogFile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LogFile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LogFile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LogFile call({
     DateTime? dateCreated,
     DateTime? dateModified,
@@ -29,32 +30,34 @@ abstract class _$LogFileCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLogFile.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLogFile.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLogFile.copyWith(...)` or call `instanceOfLogFile.copyWith.fieldName(value)` for a single field.
 class _$LogFileCWProxyImpl implements _$LogFileCWProxy {
   const _$LogFileCWProxyImpl(this._value);
 
   final LogFile _value;
 
   @override
-  LogFile dateCreated(DateTime? dateCreated) => this(dateCreated: dateCreated);
+  LogFile dateCreated(DateTime? dateCreated) => call(dateCreated: dateCreated);
 
   @override
   LogFile dateModified(DateTime? dateModified) =>
-      this(dateModified: dateModified);
+      call(dateModified: dateModified);
 
   @override
-  LogFile size(int? size) => this(size: size);
+  LogFile size(int? size) => call(size: size);
 
   @override
-  LogFile name(String? name) => this(name: name);
+  LogFile name(String? name) => call(name: name);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LogFile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LogFile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LogFile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LogFile call({
     Object? dateCreated = const $CopyWithPlaceholder(),
     Object? dateModified = const $CopyWithPlaceholder(),
@@ -83,7 +86,8 @@ class _$LogFileCWProxyImpl implements _$LogFileCWProxy {
 }
 
 extension $LogFileCopyWith on LogFile {
-  /// Returns a callable class that can be used as follows: `instanceOfLogFile.copyWith(...)` or like so:`instanceOfLogFile.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLogFile.copyWith(...)` or `instanceOfLogFile.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LogFileCWProxy get copyWith => _$LogFileCWProxyImpl(this);
 }

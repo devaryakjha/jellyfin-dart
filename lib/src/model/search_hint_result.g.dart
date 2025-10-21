@@ -11,16 +11,18 @@ abstract class _$SearchHintResultCWProxy {
 
   SearchHintResult totalRecordCount(int? totalRecordCount);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SearchHintResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SearchHintResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SearchHintResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SearchHintResult call({List<SearchHint>? searchHints, int? totalRecordCount});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSearchHintResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSearchHintResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSearchHintResult.copyWith(...)` or call `instanceOfSearchHintResult.copyWith.fieldName(value)` for a single field.
 class _$SearchHintResultCWProxyImpl implements _$SearchHintResultCWProxy {
   const _$SearchHintResultCWProxyImpl(this._value);
 
@@ -28,19 +30,20 @@ class _$SearchHintResultCWProxyImpl implements _$SearchHintResultCWProxy {
 
   @override
   SearchHintResult searchHints(List<SearchHint>? searchHints) =>
-      this(searchHints: searchHints);
+      call(searchHints: searchHints);
 
   @override
   SearchHintResult totalRecordCount(int? totalRecordCount) =>
-      this(totalRecordCount: totalRecordCount);
+      call(totalRecordCount: totalRecordCount);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SearchHintResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SearchHintResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SearchHintResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SearchHintResult call({
     Object? searchHints = const $CopyWithPlaceholder(),
     Object? totalRecordCount = const $CopyWithPlaceholder(),
@@ -59,7 +62,8 @@ class _$SearchHintResultCWProxyImpl implements _$SearchHintResultCWProxy {
 }
 
 extension $SearchHintResultCopyWith on SearchHintResult {
-  /// Returns a callable class that can be used as follows: `instanceOfSearchHintResult.copyWith(...)` or like so:`instanceOfSearchHintResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSearchHintResult.copyWith(...)` or `instanceOfSearchHintResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SearchHintResultCWProxy get copyWith => _$SearchHintResultCWProxyImpl(this);
 }

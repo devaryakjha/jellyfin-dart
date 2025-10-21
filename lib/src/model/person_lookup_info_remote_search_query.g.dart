@@ -19,12 +19,13 @@ abstract class _$PersonLookupInfoRemoteSearchQueryCWProxy {
     bool? includeDisabledProviders,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PersonLookupInfoRemoteSearchQuery(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PersonLookupInfoRemoteSearchQuery(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PersonLookupInfoRemoteSearchQuery(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PersonLookupInfoRemoteSearchQuery call({
     PersonLookupInfo? searchInfo,
     String? itemId,
@@ -33,7 +34,8 @@ abstract class _$PersonLookupInfoRemoteSearchQueryCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPersonLookupInfoRemoteSearchQuery.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPersonLookupInfoRemoteSearchQuery.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPersonLookupInfoRemoteSearchQuery.copyWith(...)` or call `instanceOfPersonLookupInfoRemoteSearchQuery.copyWith.fieldName(value)` for a single field.
 class _$PersonLookupInfoRemoteSearchQueryCWProxyImpl
     implements _$PersonLookupInfoRemoteSearchQueryCWProxy {
   const _$PersonLookupInfoRemoteSearchQueryCWProxyImpl(this._value);
@@ -42,29 +44,30 @@ class _$PersonLookupInfoRemoteSearchQueryCWProxyImpl
 
   @override
   PersonLookupInfoRemoteSearchQuery searchInfo(PersonLookupInfo? searchInfo) =>
-      this(searchInfo: searchInfo);
+      call(searchInfo: searchInfo);
 
   @override
   PersonLookupInfoRemoteSearchQuery itemId(String? itemId) =>
-      this(itemId: itemId);
+      call(itemId: itemId);
 
   @override
   PersonLookupInfoRemoteSearchQuery searchProviderName(
     String? searchProviderName,
-  ) => this(searchProviderName: searchProviderName);
+  ) => call(searchProviderName: searchProviderName);
 
   @override
   PersonLookupInfoRemoteSearchQuery includeDisabledProviders(
     bool? includeDisabledProviders,
-  ) => this(includeDisabledProviders: includeDisabledProviders);
+  ) => call(includeDisabledProviders: includeDisabledProviders);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PersonLookupInfoRemoteSearchQuery(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PersonLookupInfoRemoteSearchQuery(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PersonLookupInfoRemoteSearchQuery(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PersonLookupInfoRemoteSearchQuery call({
     Object? searchInfo = const $CopyWithPlaceholder(),
     Object? itemId = const $CopyWithPlaceholder(),
@@ -95,7 +98,8 @@ class _$PersonLookupInfoRemoteSearchQueryCWProxyImpl
 
 extension $PersonLookupInfoRemoteSearchQueryCopyWith
     on PersonLookupInfoRemoteSearchQuery {
-  /// Returns a callable class that can be used as follows: `instanceOfPersonLookupInfoRemoteSearchQuery.copyWith(...)` or like so:`instanceOfPersonLookupInfoRemoteSearchQuery.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPersonLookupInfoRemoteSearchQuery.copyWith(...)` or `instanceOfPersonLookupInfoRemoteSearchQuery.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PersonLookupInfoRemoteSearchQueryCWProxy get copyWith =>
       _$PersonLookupInfoRemoteSearchQueryCWProxyImpl(this);

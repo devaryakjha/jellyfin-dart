@@ -13,12 +13,13 @@ abstract class _$PlayRequestDtoCWProxy {
 
   PlayRequestDto startPositionTicks(int? startPositionTicks);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlayRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlayRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlayRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlayRequestDto call({
     List<String>? playingQueue,
     int? playingItemPosition,
@@ -26,7 +27,8 @@ abstract class _$PlayRequestDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlayRequestDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlayRequestDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlayRequestDto.copyWith(...)` or call `instanceOfPlayRequestDto.copyWith.fieldName(value)` for a single field.
 class _$PlayRequestDtoCWProxyImpl implements _$PlayRequestDtoCWProxy {
   const _$PlayRequestDtoCWProxyImpl(this._value);
 
@@ -34,23 +36,24 @@ class _$PlayRequestDtoCWProxyImpl implements _$PlayRequestDtoCWProxy {
 
   @override
   PlayRequestDto playingQueue(List<String>? playingQueue) =>
-      this(playingQueue: playingQueue);
+      call(playingQueue: playingQueue);
 
   @override
   PlayRequestDto playingItemPosition(int? playingItemPosition) =>
-      this(playingItemPosition: playingItemPosition);
+      call(playingItemPosition: playingItemPosition);
 
   @override
   PlayRequestDto startPositionTicks(int? startPositionTicks) =>
-      this(startPositionTicks: startPositionTicks);
+      call(startPositionTicks: startPositionTicks);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlayRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlayRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlayRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlayRequestDto call({
     Object? playingQueue = const $CopyWithPlaceholder(),
     Object? playingItemPosition = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$PlayRequestDtoCWProxyImpl implements _$PlayRequestDtoCWProxy {
 }
 
 extension $PlayRequestDtoCopyWith on PlayRequestDto {
-  /// Returns a callable class that can be used as follows: `instanceOfPlayRequestDto.copyWith(...)` or like so:`instanceOfPlayRequestDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlayRequestDto.copyWith(...)` or `instanceOfPlayRequestDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlayRequestDtoCWProxy get copyWith => _$PlayRequestDtoCWProxyImpl(this);
 }

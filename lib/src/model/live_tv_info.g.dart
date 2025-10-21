@@ -13,12 +13,13 @@ abstract class _$LiveTvInfoCWProxy {
 
   LiveTvInfo enabledUsers(List<String>? enabledUsers);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LiveTvInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LiveTvInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LiveTvInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LiveTvInfo call({
     List<LiveTvServiceInfo>? services,
     bool? isEnabled,
@@ -26,7 +27,8 @@ abstract class _$LiveTvInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLiveTvInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLiveTvInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLiveTvInfo.copyWith(...)` or call `instanceOfLiveTvInfo.copyWith.fieldName(value)` for a single field.
 class _$LiveTvInfoCWProxyImpl implements _$LiveTvInfoCWProxy {
   const _$LiveTvInfoCWProxyImpl(this._value);
 
@@ -34,22 +36,23 @@ class _$LiveTvInfoCWProxyImpl implements _$LiveTvInfoCWProxy {
 
   @override
   LiveTvInfo services(List<LiveTvServiceInfo>? services) =>
-      this(services: services);
+      call(services: services);
 
   @override
-  LiveTvInfo isEnabled(bool? isEnabled) => this(isEnabled: isEnabled);
+  LiveTvInfo isEnabled(bool? isEnabled) => call(isEnabled: isEnabled);
 
   @override
   LiveTvInfo enabledUsers(List<String>? enabledUsers) =>
-      this(enabledUsers: enabledUsers);
+      call(enabledUsers: enabledUsers);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LiveTvInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LiveTvInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LiveTvInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LiveTvInfo call({
     Object? services = const $CopyWithPlaceholder(),
     Object? isEnabled = const $CopyWithPlaceholder(),
@@ -73,7 +76,8 @@ class _$LiveTvInfoCWProxyImpl implements _$LiveTvInfoCWProxy {
 }
 
 extension $LiveTvInfoCopyWith on LiveTvInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfLiveTvInfo.copyWith(...)` or like so:`instanceOfLiveTvInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLiveTvInfo.copyWith(...)` or `instanceOfLiveTvInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LiveTvInfoCWProxy get copyWith => _$LiveTvInfoCWProxyImpl(this);
 }

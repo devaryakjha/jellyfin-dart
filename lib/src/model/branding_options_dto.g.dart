@@ -13,12 +13,13 @@ abstract class _$BrandingOptionsDtoCWProxy {
 
   BrandingOptionsDto splashscreenEnabled(bool? splashscreenEnabled);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BrandingOptionsDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BrandingOptionsDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BrandingOptionsDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BrandingOptionsDto call({
     String? loginDisclaimer,
     String? customCss,
@@ -26,7 +27,8 @@ abstract class _$BrandingOptionsDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfBrandingOptionsDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfBrandingOptionsDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfBrandingOptionsDto.copyWith(...)` or call `instanceOfBrandingOptionsDto.copyWith.fieldName(value)` for a single field.
 class _$BrandingOptionsDtoCWProxyImpl implements _$BrandingOptionsDtoCWProxy {
   const _$BrandingOptionsDtoCWProxyImpl(this._value);
 
@@ -34,22 +36,23 @@ class _$BrandingOptionsDtoCWProxyImpl implements _$BrandingOptionsDtoCWProxy {
 
   @override
   BrandingOptionsDto loginDisclaimer(String? loginDisclaimer) =>
-      this(loginDisclaimer: loginDisclaimer);
+      call(loginDisclaimer: loginDisclaimer);
 
   @override
-  BrandingOptionsDto customCss(String? customCss) => this(customCss: customCss);
+  BrandingOptionsDto customCss(String? customCss) => call(customCss: customCss);
 
   @override
   BrandingOptionsDto splashscreenEnabled(bool? splashscreenEnabled) =>
-      this(splashscreenEnabled: splashscreenEnabled);
+      call(splashscreenEnabled: splashscreenEnabled);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BrandingOptionsDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BrandingOptionsDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BrandingOptionsDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BrandingOptionsDto call({
     Object? loginDisclaimer = const $CopyWithPlaceholder(),
     Object? customCss = const $CopyWithPlaceholder(),
@@ -73,7 +76,8 @@ class _$BrandingOptionsDtoCWProxyImpl implements _$BrandingOptionsDtoCWProxy {
 }
 
 extension $BrandingOptionsDtoCopyWith on BrandingOptionsDto {
-  /// Returns a callable class that can be used as follows: `instanceOfBrandingOptionsDto.copyWith(...)` or like so:`instanceOfBrandingOptionsDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfBrandingOptionsDto.copyWith(...)` or `instanceOfBrandingOptionsDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$BrandingOptionsDtoCWProxy get copyWith =>
       _$BrandingOptionsDtoCWProxyImpl(this);

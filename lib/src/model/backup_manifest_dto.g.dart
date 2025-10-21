@@ -17,12 +17,13 @@ abstract class _$BackupManifestDtoCWProxy {
 
   BackupManifestDto options(BackupOptionsDto? options);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BackupManifestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BackupManifestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BackupManifestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BackupManifestDto call({
     String? serverVersion,
     String? backupEngineVersion,
@@ -32,7 +33,8 @@ abstract class _$BackupManifestDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfBackupManifestDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfBackupManifestDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfBackupManifestDto.copyWith(...)` or call `instanceOfBackupManifestDto.copyWith.fieldName(value)` for a single field.
 class _$BackupManifestDtoCWProxyImpl implements _$BackupManifestDtoCWProxy {
   const _$BackupManifestDtoCWProxyImpl(this._value);
 
@@ -40,30 +42,31 @@ class _$BackupManifestDtoCWProxyImpl implements _$BackupManifestDtoCWProxy {
 
   @override
   BackupManifestDto serverVersion(String? serverVersion) =>
-      this(serverVersion: serverVersion);
+      call(serverVersion: serverVersion);
 
   @override
   BackupManifestDto backupEngineVersion(String? backupEngineVersion) =>
-      this(backupEngineVersion: backupEngineVersion);
+      call(backupEngineVersion: backupEngineVersion);
 
   @override
   BackupManifestDto dateCreated(DateTime? dateCreated) =>
-      this(dateCreated: dateCreated);
+      call(dateCreated: dateCreated);
 
   @override
-  BackupManifestDto path(String? path) => this(path: path);
+  BackupManifestDto path(String? path) => call(path: path);
 
   @override
   BackupManifestDto options(BackupOptionsDto? options) =>
-      this(options: options);
+      call(options: options);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BackupManifestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BackupManifestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BackupManifestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BackupManifestDto call({
     Object? serverVersion = const $CopyWithPlaceholder(),
     Object? backupEngineVersion = const $CopyWithPlaceholder(),
@@ -97,7 +100,8 @@ class _$BackupManifestDtoCWProxyImpl implements _$BackupManifestDtoCWProxy {
 }
 
 extension $BackupManifestDtoCopyWith on BackupManifestDto {
-  /// Returns a callable class that can be used as follows: `instanceOfBackupManifestDto.copyWith(...)` or like so:`instanceOfBackupManifestDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfBackupManifestDto.copyWith(...)` or `instanceOfBackupManifestDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$BackupManifestDtoCWProxy get copyWith =>
       _$BackupManifestDtoCWProxyImpl(this);

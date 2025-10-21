@@ -135,12 +135,13 @@ abstract class _$MediaStreamCWProxy {
 
   MediaStream isAnamorphic(bool? isAnamorphic);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaStream(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaStream(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaStream(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaStream call({
     String? codec,
     String? codecTag,
@@ -209,247 +210,249 @@ abstract class _$MediaStreamCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMediaStream.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMediaStream.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMediaStream.copyWith(...)` or call `instanceOfMediaStream.copyWith.fieldName(value)` for a single field.
 class _$MediaStreamCWProxyImpl implements _$MediaStreamCWProxy {
   const _$MediaStreamCWProxyImpl(this._value);
 
   final MediaStream _value;
 
   @override
-  MediaStream codec(String? codec) => this(codec: codec);
+  MediaStream codec(String? codec) => call(codec: codec);
 
   @override
-  MediaStream codecTag(String? codecTag) => this(codecTag: codecTag);
+  MediaStream codecTag(String? codecTag) => call(codecTag: codecTag);
 
   @override
-  MediaStream language(String? language) => this(language: language);
+  MediaStream language(String? language) => call(language: language);
 
   @override
-  MediaStream colorRange(String? colorRange) => this(colorRange: colorRange);
+  MediaStream colorRange(String? colorRange) => call(colorRange: colorRange);
 
   @override
-  MediaStream colorSpace(String? colorSpace) => this(colorSpace: colorSpace);
+  MediaStream colorSpace(String? colorSpace) => call(colorSpace: colorSpace);
 
   @override
   MediaStream colorTransfer(String? colorTransfer) =>
-      this(colorTransfer: colorTransfer);
+      call(colorTransfer: colorTransfer);
 
   @override
   MediaStream colorPrimaries(String? colorPrimaries) =>
-      this(colorPrimaries: colorPrimaries);
+      call(colorPrimaries: colorPrimaries);
 
   @override
   MediaStream dvVersionMajor(int? dvVersionMajor) =>
-      this(dvVersionMajor: dvVersionMajor);
+      call(dvVersionMajor: dvVersionMajor);
 
   @override
   MediaStream dvVersionMinor(int? dvVersionMinor) =>
-      this(dvVersionMinor: dvVersionMinor);
+      call(dvVersionMinor: dvVersionMinor);
 
   @override
-  MediaStream dvProfile(int? dvProfile) => this(dvProfile: dvProfile);
+  MediaStream dvProfile(int? dvProfile) => call(dvProfile: dvProfile);
 
   @override
-  MediaStream dvLevel(int? dvLevel) => this(dvLevel: dvLevel);
+  MediaStream dvLevel(int? dvLevel) => call(dvLevel: dvLevel);
 
   @override
   MediaStream rpuPresentFlag(int? rpuPresentFlag) =>
-      this(rpuPresentFlag: rpuPresentFlag);
+      call(rpuPresentFlag: rpuPresentFlag);
 
   @override
   MediaStream elPresentFlag(int? elPresentFlag) =>
-      this(elPresentFlag: elPresentFlag);
+      call(elPresentFlag: elPresentFlag);
 
   @override
   MediaStream blPresentFlag(int? blPresentFlag) =>
-      this(blPresentFlag: blPresentFlag);
+      call(blPresentFlag: blPresentFlag);
 
   @override
   MediaStream dvBlSignalCompatibilityId(int? dvBlSignalCompatibilityId) =>
-      this(dvBlSignalCompatibilityId: dvBlSignalCompatibilityId);
+      call(dvBlSignalCompatibilityId: dvBlSignalCompatibilityId);
 
   @override
-  MediaStream rotation(int? rotation) => this(rotation: rotation);
+  MediaStream rotation(int? rotation) => call(rotation: rotation);
 
   @override
-  MediaStream comment(String? comment) => this(comment: comment);
+  MediaStream comment(String? comment) => call(comment: comment);
 
   @override
-  MediaStream timeBase(String? timeBase) => this(timeBase: timeBase);
+  MediaStream timeBase(String? timeBase) => call(timeBase: timeBase);
 
   @override
   MediaStream codecTimeBase(String? codecTimeBase) =>
-      this(codecTimeBase: codecTimeBase);
+      call(codecTimeBase: codecTimeBase);
 
   @override
-  MediaStream title(String? title) => this(title: title);
+  MediaStream title(String? title) => call(title: title);
 
   @override
   MediaStream hdr10PlusPresentFlag(bool? hdr10PlusPresentFlag) =>
-      this(hdr10PlusPresentFlag: hdr10PlusPresentFlag);
+      call(hdr10PlusPresentFlag: hdr10PlusPresentFlag);
 
   @override
   MediaStream videoRange(VideoRange? videoRange) =>
-      this(videoRange: videoRange);
+      call(videoRange: videoRange);
 
   @override
   MediaStream videoRangeType(VideoRangeType? videoRangeType) =>
-      this(videoRangeType: videoRangeType);
+      call(videoRangeType: videoRangeType);
 
   @override
   MediaStream videoDoViTitle(String? videoDoViTitle) =>
-      this(videoDoViTitle: videoDoViTitle);
+      call(videoDoViTitle: videoDoViTitle);
 
   @override
   MediaStream audioSpatialFormat(AudioSpatialFormat? audioSpatialFormat) =>
-      this(audioSpatialFormat: audioSpatialFormat);
+      call(audioSpatialFormat: audioSpatialFormat);
 
   @override
   MediaStream localizedUndefined(String? localizedUndefined) =>
-      this(localizedUndefined: localizedUndefined);
+      call(localizedUndefined: localizedUndefined);
 
   @override
   MediaStream localizedDefault(String? localizedDefault) =>
-      this(localizedDefault: localizedDefault);
+      call(localizedDefault: localizedDefault);
 
   @override
   MediaStream localizedForced(String? localizedForced) =>
-      this(localizedForced: localizedForced);
+      call(localizedForced: localizedForced);
 
   @override
   MediaStream localizedExternal(String? localizedExternal) =>
-      this(localizedExternal: localizedExternal);
+      call(localizedExternal: localizedExternal);
 
   @override
   MediaStream localizedHearingImpaired(String? localizedHearingImpaired) =>
-      this(localizedHearingImpaired: localizedHearingImpaired);
+      call(localizedHearingImpaired: localizedHearingImpaired);
 
   @override
   MediaStream displayTitle(String? displayTitle) =>
-      this(displayTitle: displayTitle);
+      call(displayTitle: displayTitle);
 
   @override
   MediaStream nalLengthSize(String? nalLengthSize) =>
-      this(nalLengthSize: nalLengthSize);
+      call(nalLengthSize: nalLengthSize);
 
   @override
   MediaStream isInterlaced(bool? isInterlaced) =>
-      this(isInterlaced: isInterlaced);
+      call(isInterlaced: isInterlaced);
 
   @override
-  MediaStream isAVC(bool? isAVC) => this(isAVC: isAVC);
+  MediaStream isAVC(bool? isAVC) => call(isAVC: isAVC);
 
   @override
   MediaStream channelLayout(String? channelLayout) =>
-      this(channelLayout: channelLayout);
+      call(channelLayout: channelLayout);
 
   @override
-  MediaStream bitRate(int? bitRate) => this(bitRate: bitRate);
+  MediaStream bitRate(int? bitRate) => call(bitRate: bitRate);
 
   @override
-  MediaStream bitDepth(int? bitDepth) => this(bitDepth: bitDepth);
+  MediaStream bitDepth(int? bitDepth) => call(bitDepth: bitDepth);
 
   @override
-  MediaStream refFrames(int? refFrames) => this(refFrames: refFrames);
+  MediaStream refFrames(int? refFrames) => call(refFrames: refFrames);
 
   @override
   MediaStream packetLength(int? packetLength) =>
-      this(packetLength: packetLength);
+      call(packetLength: packetLength);
 
   @override
-  MediaStream channels(int? channels) => this(channels: channels);
+  MediaStream channels(int? channels) => call(channels: channels);
 
   @override
-  MediaStream sampleRate(int? sampleRate) => this(sampleRate: sampleRate);
+  MediaStream sampleRate(int? sampleRate) => call(sampleRate: sampleRate);
 
   @override
-  MediaStream isDefault(bool? isDefault) => this(isDefault: isDefault);
+  MediaStream isDefault(bool? isDefault) => call(isDefault: isDefault);
 
   @override
-  MediaStream isForced(bool? isForced) => this(isForced: isForced);
+  MediaStream isForced(bool? isForced) => call(isForced: isForced);
 
   @override
   MediaStream isHearingImpaired(bool? isHearingImpaired) =>
-      this(isHearingImpaired: isHearingImpaired);
+      call(isHearingImpaired: isHearingImpaired);
 
   @override
-  MediaStream height(int? height) => this(height: height);
+  MediaStream height(int? height) => call(height: height);
 
   @override
-  MediaStream width(int? width) => this(width: width);
+  MediaStream width(int? width) => call(width: width);
 
   @override
   MediaStream averageFrameRate(double? averageFrameRate) =>
-      this(averageFrameRate: averageFrameRate);
+      call(averageFrameRate: averageFrameRate);
 
   @override
   MediaStream realFrameRate(double? realFrameRate) =>
-      this(realFrameRate: realFrameRate);
+      call(realFrameRate: realFrameRate);
 
   @override
   MediaStream referenceFrameRate(double? referenceFrameRate) =>
-      this(referenceFrameRate: referenceFrameRate);
+      call(referenceFrameRate: referenceFrameRate);
 
   @override
-  MediaStream profile(String? profile) => this(profile: profile);
+  MediaStream profile(String? profile) => call(profile: profile);
 
   @override
-  MediaStream type(MediaStreamType? type) => this(type: type);
+  MediaStream type(MediaStreamType? type) => call(type: type);
 
   @override
   MediaStream aspectRatio(String? aspectRatio) =>
-      this(aspectRatio: aspectRatio);
+      call(aspectRatio: aspectRatio);
 
   @override
-  MediaStream index(int? index) => this(index: index);
+  MediaStream index(int? index) => call(index: index);
 
   @override
-  MediaStream score(int? score) => this(score: score);
+  MediaStream score(int? score) => call(score: score);
 
   @override
-  MediaStream isExternal(bool? isExternal) => this(isExternal: isExternal);
+  MediaStream isExternal(bool? isExternal) => call(isExternal: isExternal);
 
   @override
   MediaStream deliveryMethod(SubtitleDeliveryMethod? deliveryMethod) =>
-      this(deliveryMethod: deliveryMethod);
+      call(deliveryMethod: deliveryMethod);
 
   @override
   MediaStream deliveryUrl(String? deliveryUrl) =>
-      this(deliveryUrl: deliveryUrl);
+      call(deliveryUrl: deliveryUrl);
 
   @override
   MediaStream isExternalUrl(bool? isExternalUrl) =>
-      this(isExternalUrl: isExternalUrl);
+      call(isExternalUrl: isExternalUrl);
 
   @override
   MediaStream isTextSubtitleStream(bool? isTextSubtitleStream) =>
-      this(isTextSubtitleStream: isTextSubtitleStream);
+      call(isTextSubtitleStream: isTextSubtitleStream);
 
   @override
   MediaStream supportsExternalStream(bool? supportsExternalStream) =>
-      this(supportsExternalStream: supportsExternalStream);
+      call(supportsExternalStream: supportsExternalStream);
 
   @override
-  MediaStream path(String? path) => this(path: path);
+  MediaStream path(String? path) => call(path: path);
 
   @override
   MediaStream pixelFormat(String? pixelFormat) =>
-      this(pixelFormat: pixelFormat);
+      call(pixelFormat: pixelFormat);
 
   @override
-  MediaStream level(double? level) => this(level: level);
+  MediaStream level(double? level) => call(level: level);
 
   @override
   MediaStream isAnamorphic(bool? isAnamorphic) =>
-      this(isAnamorphic: isAnamorphic);
+      call(isAnamorphic: isAnamorphic);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaStream(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaStream(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaStream(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaStream call({
     Object? codec = const $CopyWithPlaceholder(),
     Object? codecTag = const $CopyWithPlaceholder(),
@@ -781,7 +784,8 @@ class _$MediaStreamCWProxyImpl implements _$MediaStreamCWProxy {
 }
 
 extension $MediaStreamCopyWith on MediaStream {
-  /// Returns a callable class that can be used as follows: `instanceOfMediaStream.copyWith(...)` or like so:`instanceOfMediaStream.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMediaStream.copyWith(...)` or `instanceOfMediaStream.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MediaStreamCWProxy get copyWith => _$MediaStreamCWProxyImpl(this);
 }

@@ -9,31 +9,34 @@ part of 'media_path_info.dart';
 abstract class _$MediaPathInfoCWProxy {
   MediaPathInfo path(String? path);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaPathInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaPathInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaPathInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaPathInfo call({String? path});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMediaPathInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMediaPathInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMediaPathInfo.copyWith(...)` or call `instanceOfMediaPathInfo.copyWith.fieldName(value)` for a single field.
 class _$MediaPathInfoCWProxyImpl implements _$MediaPathInfoCWProxy {
   const _$MediaPathInfoCWProxyImpl(this._value);
 
   final MediaPathInfo _value;
 
   @override
-  MediaPathInfo path(String? path) => this(path: path);
+  MediaPathInfo path(String? path) => call(path: path);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaPathInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaPathInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaPathInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaPathInfo call({Object? path = const $CopyWithPlaceholder()}) {
     return MediaPathInfo(
       path: path == const $CopyWithPlaceholder()
@@ -45,7 +48,8 @@ class _$MediaPathInfoCWProxyImpl implements _$MediaPathInfoCWProxy {
 }
 
 extension $MediaPathInfoCopyWith on MediaPathInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfMediaPathInfo.copyWith(...)` or like so:`instanceOfMediaPathInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMediaPathInfo.copyWith(...)` or `instanceOfMediaPathInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MediaPathInfoCWProxy get copyWith => _$MediaPathInfoCWProxyImpl(this);
 }

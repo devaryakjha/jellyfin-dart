@@ -13,12 +13,13 @@ abstract class _$SyncPlayGroupDoesNotExistUpdateCWProxy {
 
   SyncPlayGroupDoesNotExistUpdate type(GroupUpdateType? type);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SyncPlayGroupDoesNotExistUpdate(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SyncPlayGroupDoesNotExistUpdate(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SyncPlayGroupDoesNotExistUpdate(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SyncPlayGroupDoesNotExistUpdate call({
     String? groupId,
     String? data,
@@ -26,7 +27,8 @@ abstract class _$SyncPlayGroupDoesNotExistUpdateCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSyncPlayGroupDoesNotExistUpdate.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSyncPlayGroupDoesNotExistUpdate.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSyncPlayGroupDoesNotExistUpdate.copyWith(...)` or call `instanceOfSyncPlayGroupDoesNotExistUpdate.copyWith.fieldName(value)` for a single field.
 class _$SyncPlayGroupDoesNotExistUpdateCWProxyImpl
     implements _$SyncPlayGroupDoesNotExistUpdateCWProxy {
   const _$SyncPlayGroupDoesNotExistUpdateCWProxyImpl(this._value);
@@ -35,22 +37,23 @@ class _$SyncPlayGroupDoesNotExistUpdateCWProxyImpl
 
   @override
   SyncPlayGroupDoesNotExistUpdate groupId(String? groupId) =>
-      this(groupId: groupId);
+      call(groupId: groupId);
 
   @override
-  SyncPlayGroupDoesNotExistUpdate data(String? data) => this(data: data);
+  SyncPlayGroupDoesNotExistUpdate data(String? data) => call(data: data);
 
   @override
   SyncPlayGroupDoesNotExistUpdate type(GroupUpdateType? type) =>
-      this(type: type);
+      call(type: type);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SyncPlayGroupDoesNotExistUpdate(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SyncPlayGroupDoesNotExistUpdate(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SyncPlayGroupDoesNotExistUpdate(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SyncPlayGroupDoesNotExistUpdate call({
     Object? groupId = const $CopyWithPlaceholder(),
     Object? data = const $CopyWithPlaceholder(),
@@ -75,7 +78,8 @@ class _$SyncPlayGroupDoesNotExistUpdateCWProxyImpl
 
 extension $SyncPlayGroupDoesNotExistUpdateCopyWith
     on SyncPlayGroupDoesNotExistUpdate {
-  /// Returns a callable class that can be used as follows: `instanceOfSyncPlayGroupDoesNotExistUpdate.copyWith(...)` or like so:`instanceOfSyncPlayGroupDoesNotExistUpdate.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSyncPlayGroupDoesNotExistUpdate.copyWith(...)` or `instanceOfSyncPlayGroupDoesNotExistUpdate.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SyncPlayGroupDoesNotExistUpdateCWProxy get copyWith =>
       _$SyncPlayGroupDoesNotExistUpdateCWProxyImpl(this);

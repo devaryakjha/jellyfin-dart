@@ -29,12 +29,13 @@ abstract class _$TrailerInfoCWProxy {
 
   TrailerInfo isAutomated(bool? isAutomated);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TrailerInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TrailerInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TrailerInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TrailerInfo call({
     String? name,
     String? originalTitle,
@@ -50,58 +51,60 @@ abstract class _$TrailerInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTrailerInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTrailerInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTrailerInfo.copyWith(...)` or call `instanceOfTrailerInfo.copyWith.fieldName(value)` for a single field.
 class _$TrailerInfoCWProxyImpl implements _$TrailerInfoCWProxy {
   const _$TrailerInfoCWProxyImpl(this._value);
 
   final TrailerInfo _value;
 
   @override
-  TrailerInfo name(String? name) => this(name: name);
+  TrailerInfo name(String? name) => call(name: name);
 
   @override
   TrailerInfo originalTitle(String? originalTitle) =>
-      this(originalTitle: originalTitle);
+      call(originalTitle: originalTitle);
 
   @override
-  TrailerInfo path(String? path) => this(path: path);
+  TrailerInfo path(String? path) => call(path: path);
 
   @override
   TrailerInfo metadataLanguage(String? metadataLanguage) =>
-      this(metadataLanguage: metadataLanguage);
+      call(metadataLanguage: metadataLanguage);
 
   @override
   TrailerInfo metadataCountryCode(String? metadataCountryCode) =>
-      this(metadataCountryCode: metadataCountryCode);
+      call(metadataCountryCode: metadataCountryCode);
 
   @override
   TrailerInfo providerIds(Map<String, String>? providerIds) =>
-      this(providerIds: providerIds);
+      call(providerIds: providerIds);
 
   @override
-  TrailerInfo year(int? year) => this(year: year);
+  TrailerInfo year(int? year) => call(year: year);
 
   @override
-  TrailerInfo indexNumber(int? indexNumber) => this(indexNumber: indexNumber);
+  TrailerInfo indexNumber(int? indexNumber) => call(indexNumber: indexNumber);
 
   @override
   TrailerInfo parentIndexNumber(int? parentIndexNumber) =>
-      this(parentIndexNumber: parentIndexNumber);
+      call(parentIndexNumber: parentIndexNumber);
 
   @override
   TrailerInfo premiereDate(DateTime? premiereDate) =>
-      this(premiereDate: premiereDate);
+      call(premiereDate: premiereDate);
 
   @override
-  TrailerInfo isAutomated(bool? isAutomated) => this(isAutomated: isAutomated);
+  TrailerInfo isAutomated(bool? isAutomated) => call(isAutomated: isAutomated);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TrailerInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TrailerInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TrailerInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TrailerInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? originalTitle = const $CopyWithPlaceholder(),
@@ -165,7 +168,8 @@ class _$TrailerInfoCWProxyImpl implements _$TrailerInfoCWProxy {
 }
 
 extension $TrailerInfoCopyWith on TrailerInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfTrailerInfo.copyWith(...)` or like so:`instanceOfTrailerInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTrailerInfo.copyWith(...)` or `instanceOfTrailerInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TrailerInfoCWProxy get copyWith => _$TrailerInfoCWProxyImpl(this);
 }

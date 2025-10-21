@@ -9,34 +9,37 @@ part of 'quick_connect_dto.dart';
 abstract class _$QuickConnectDtoCWProxy {
   QuickConnectDto secret(String secret);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `QuickConnectDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `QuickConnectDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// QuickConnectDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   QuickConnectDto call({String secret});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfQuickConnectDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfQuickConnectDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfQuickConnectDto.copyWith(...)` or call `instanceOfQuickConnectDto.copyWith.fieldName(value)` for a single field.
 class _$QuickConnectDtoCWProxyImpl implements _$QuickConnectDtoCWProxy {
   const _$QuickConnectDtoCWProxyImpl(this._value);
 
   final QuickConnectDto _value;
 
   @override
-  QuickConnectDto secret(String secret) => this(secret: secret);
+  QuickConnectDto secret(String secret) => call(secret: secret);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `QuickConnectDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `QuickConnectDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// QuickConnectDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   QuickConnectDto call({Object? secret = const $CopyWithPlaceholder()}) {
     return QuickConnectDto(
-      secret: secret == const $CopyWithPlaceholder()
+      secret: secret == const $CopyWithPlaceholder() || secret == null
           ? _value.secret
           // ignore: cast_nullable_to_non_nullable
           : secret as String,
@@ -45,7 +48,8 @@ class _$QuickConnectDtoCWProxyImpl implements _$QuickConnectDtoCWProxy {
 }
 
 extension $QuickConnectDtoCopyWith on QuickConnectDto {
-  /// Returns a callable class that can be used as follows: `instanceOfQuickConnectDto.copyWith(...)` or like so:`instanceOfQuickConnectDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfQuickConnectDto.copyWith(...)` or `instanceOfQuickConnectDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$QuickConnectDtoCWProxy get copyWith => _$QuickConnectDtoCWProxyImpl(this);
 }

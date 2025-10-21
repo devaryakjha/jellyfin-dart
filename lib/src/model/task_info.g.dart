@@ -27,12 +27,13 @@ abstract class _$TaskInfoCWProxy {
 
   TaskInfo key(String? key);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TaskInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TaskInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TaskInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TaskInfo call({
     String? name,
     TaskState? state,
@@ -47,52 +48,54 @@ abstract class _$TaskInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTaskInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTaskInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTaskInfo.copyWith(...)` or call `instanceOfTaskInfo.copyWith.fieldName(value)` for a single field.
 class _$TaskInfoCWProxyImpl implements _$TaskInfoCWProxy {
   const _$TaskInfoCWProxyImpl(this._value);
 
   final TaskInfo _value;
 
   @override
-  TaskInfo name(String? name) => this(name: name);
+  TaskInfo name(String? name) => call(name: name);
 
   @override
-  TaskInfo state(TaskState? state) => this(state: state);
+  TaskInfo state(TaskState? state) => call(state: state);
 
   @override
   TaskInfo currentProgressPercentage(double? currentProgressPercentage) =>
-      this(currentProgressPercentage: currentProgressPercentage);
+      call(currentProgressPercentage: currentProgressPercentage);
 
   @override
-  TaskInfo id(String? id) => this(id: id);
+  TaskInfo id(String? id) => call(id: id);
 
   @override
   TaskInfo lastExecutionResult(TaskResult? lastExecutionResult) =>
-      this(lastExecutionResult: lastExecutionResult);
+      call(lastExecutionResult: lastExecutionResult);
 
   @override
   TaskInfo triggers(List<TaskTriggerInfo>? triggers) =>
-      this(triggers: triggers);
+      call(triggers: triggers);
 
   @override
-  TaskInfo description(String? description) => this(description: description);
+  TaskInfo description(String? description) => call(description: description);
 
   @override
-  TaskInfo category(String? category) => this(category: category);
+  TaskInfo category(String? category) => call(category: category);
 
   @override
-  TaskInfo isHidden(bool? isHidden) => this(isHidden: isHidden);
+  TaskInfo isHidden(bool? isHidden) => call(isHidden: isHidden);
 
   @override
-  TaskInfo key(String? key) => this(key: key);
+  TaskInfo key(String? key) => call(key: key);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TaskInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TaskInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TaskInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TaskInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? state = const $CopyWithPlaceholder(),
@@ -152,7 +155,8 @@ class _$TaskInfoCWProxyImpl implements _$TaskInfoCWProxy {
 }
 
 extension $TaskInfoCopyWith on TaskInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfTaskInfo.copyWith(...)` or like so:`instanceOfTaskInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTaskInfo.copyWith(...)` or `instanceOfTaskInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TaskInfoCWProxy get copyWith => _$TaskInfoCWProxyImpl(this);
 }

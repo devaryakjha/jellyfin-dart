@@ -13,16 +13,18 @@ abstract class _$ValidatePathDtoCWProxy {
 
   ValidatePathDto isFile(bool? isFile);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ValidatePathDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ValidatePathDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ValidatePathDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ValidatePathDto call({bool? validateWritable, String? path, bool? isFile});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfValidatePathDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfValidatePathDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfValidatePathDto.copyWith(...)` or call `instanceOfValidatePathDto.copyWith.fieldName(value)` for a single field.
 class _$ValidatePathDtoCWProxyImpl implements _$ValidatePathDtoCWProxy {
   const _$ValidatePathDtoCWProxyImpl(this._value);
 
@@ -30,21 +32,22 @@ class _$ValidatePathDtoCWProxyImpl implements _$ValidatePathDtoCWProxy {
 
   @override
   ValidatePathDto validateWritable(bool? validateWritable) =>
-      this(validateWritable: validateWritable);
+      call(validateWritable: validateWritable);
 
   @override
-  ValidatePathDto path(String? path) => this(path: path);
+  ValidatePathDto path(String? path) => call(path: path);
 
   @override
-  ValidatePathDto isFile(bool? isFile) => this(isFile: isFile);
+  ValidatePathDto isFile(bool? isFile) => call(isFile: isFile);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ValidatePathDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ValidatePathDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ValidatePathDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ValidatePathDto call({
     Object? validateWritable = const $CopyWithPlaceholder(),
     Object? path = const $CopyWithPlaceholder(),
@@ -68,7 +71,8 @@ class _$ValidatePathDtoCWProxyImpl implements _$ValidatePathDtoCWProxy {
 }
 
 extension $ValidatePathDtoCopyWith on ValidatePathDto {
-  /// Returns a callable class that can be used as follows: `instanceOfValidatePathDto.copyWith(...)` or like so:`instanceOfValidatePathDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfValidatePathDto.copyWith(...)` or `instanceOfValidatePathDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ValidatePathDtoCWProxy get copyWith => _$ValidatePathDtoCWProxyImpl(this);
 }

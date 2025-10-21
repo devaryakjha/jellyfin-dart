@@ -13,12 +13,13 @@ abstract class _$UserDeletedMessageCWProxy {
 
   UserDeletedMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserDeletedMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserDeletedMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserDeletedMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserDeletedMessage call({
     String? data,
     String? messageId,
@@ -26,29 +27,31 @@ abstract class _$UserDeletedMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUserDeletedMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUserDeletedMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUserDeletedMessage.copyWith(...)` or call `instanceOfUserDeletedMessage.copyWith.fieldName(value)` for a single field.
 class _$UserDeletedMessageCWProxyImpl implements _$UserDeletedMessageCWProxy {
   const _$UserDeletedMessageCWProxyImpl(this._value);
 
   final UserDeletedMessage _value;
 
   @override
-  UserDeletedMessage data(String? data) => this(data: data);
+  UserDeletedMessage data(String? data) => call(data: data);
 
   @override
-  UserDeletedMessage messageId(String? messageId) => this(messageId: messageId);
+  UserDeletedMessage messageId(String? messageId) => call(messageId: messageId);
 
   @override
   UserDeletedMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserDeletedMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserDeletedMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserDeletedMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserDeletedMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -72,7 +75,8 @@ class _$UserDeletedMessageCWProxyImpl implements _$UserDeletedMessageCWProxy {
 }
 
 extension $UserDeletedMessageCopyWith on UserDeletedMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfUserDeletedMessage.copyWith(...)` or like so:`instanceOfUserDeletedMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUserDeletedMessage.copyWith(...)` or `instanceOfUserDeletedMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UserDeletedMessageCWProxy get copyWith =>
       _$UserDeletedMessageCWProxyImpl(this);

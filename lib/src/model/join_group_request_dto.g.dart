@@ -9,31 +9,34 @@ part of 'join_group_request_dto.dart';
 abstract class _$JoinGroupRequestDtoCWProxy {
   JoinGroupRequestDto groupId(String? groupId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `JoinGroupRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `JoinGroupRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// JoinGroupRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   JoinGroupRequestDto call({String? groupId});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfJoinGroupRequestDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfJoinGroupRequestDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfJoinGroupRequestDto.copyWith(...)` or call `instanceOfJoinGroupRequestDto.copyWith.fieldName(value)` for a single field.
 class _$JoinGroupRequestDtoCWProxyImpl implements _$JoinGroupRequestDtoCWProxy {
   const _$JoinGroupRequestDtoCWProxyImpl(this._value);
 
   final JoinGroupRequestDto _value;
 
   @override
-  JoinGroupRequestDto groupId(String? groupId) => this(groupId: groupId);
+  JoinGroupRequestDto groupId(String? groupId) => call(groupId: groupId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `JoinGroupRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `JoinGroupRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// JoinGroupRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   JoinGroupRequestDto call({Object? groupId = const $CopyWithPlaceholder()}) {
     return JoinGroupRequestDto(
       groupId: groupId == const $CopyWithPlaceholder()
@@ -45,7 +48,8 @@ class _$JoinGroupRequestDtoCWProxyImpl implements _$JoinGroupRequestDtoCWProxy {
 }
 
 extension $JoinGroupRequestDtoCopyWith on JoinGroupRequestDto {
-  /// Returns a callable class that can be used as follows: `instanceOfJoinGroupRequestDto.copyWith(...)` or like so:`instanceOfJoinGroupRequestDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfJoinGroupRequestDto.copyWith(...)` or `instanceOfJoinGroupRequestDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$JoinGroupRequestDtoCWProxy get copyWith =>
       _$JoinGroupRequestDtoCWProxyImpl(this);

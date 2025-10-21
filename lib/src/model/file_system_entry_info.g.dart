@@ -13,12 +13,13 @@ abstract class _$FileSystemEntryInfoCWProxy {
 
   FileSystemEntryInfo type(FileSystemEntryType? type);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `FileSystemEntryInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `FileSystemEntryInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// FileSystemEntryInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   FileSystemEntryInfo call({
     String? name,
     String? path,
@@ -26,28 +27,30 @@ abstract class _$FileSystemEntryInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfFileSystemEntryInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfFileSystemEntryInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfFileSystemEntryInfo.copyWith(...)` or call `instanceOfFileSystemEntryInfo.copyWith.fieldName(value)` for a single field.
 class _$FileSystemEntryInfoCWProxyImpl implements _$FileSystemEntryInfoCWProxy {
   const _$FileSystemEntryInfoCWProxyImpl(this._value);
 
   final FileSystemEntryInfo _value;
 
   @override
-  FileSystemEntryInfo name(String? name) => this(name: name);
+  FileSystemEntryInfo name(String? name) => call(name: name);
 
   @override
-  FileSystemEntryInfo path(String? path) => this(path: path);
+  FileSystemEntryInfo path(String? path) => call(path: path);
 
   @override
-  FileSystemEntryInfo type(FileSystemEntryType? type) => this(type: type);
+  FileSystemEntryInfo type(FileSystemEntryType? type) => call(type: type);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `FileSystemEntryInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `FileSystemEntryInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// FileSystemEntryInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   FileSystemEntryInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? path = const $CopyWithPlaceholder(),
@@ -71,7 +74,8 @@ class _$FileSystemEntryInfoCWProxyImpl implements _$FileSystemEntryInfoCWProxy {
 }
 
 extension $FileSystemEntryInfoCopyWith on FileSystemEntryInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfFileSystemEntryInfo.copyWith(...)` or like so:`instanceOfFileSystemEntryInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfFileSystemEntryInfo.copyWith(...)` or `instanceOfFileSystemEntryInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$FileSystemEntryInfoCWProxy get copyWith =>
       _$FileSystemEntryInfoCWProxyImpl(this);

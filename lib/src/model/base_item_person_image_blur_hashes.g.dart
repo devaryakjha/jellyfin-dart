@@ -33,12 +33,13 @@ abstract class _$BaseItemPersonImageBlurHashesCWProxy {
 
   BaseItemPersonImageBlurHashes profile(Map<String, String>? profile);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BaseItemPersonImageBlurHashes(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BaseItemPersonImageBlurHashes(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BaseItemPersonImageBlurHashes(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BaseItemPersonImageBlurHashes call({
     Map<String, String>? primary,
     Map<String, String>? art,
@@ -56,7 +57,8 @@ abstract class _$BaseItemPersonImageBlurHashesCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfBaseItemPersonImageBlurHashes.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfBaseItemPersonImageBlurHashes.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfBaseItemPersonImageBlurHashes.copyWith(...)` or call `instanceOfBaseItemPersonImageBlurHashes.copyWith.fieldName(value)` for a single field.
 class _$BaseItemPersonImageBlurHashesCWProxyImpl
     implements _$BaseItemPersonImageBlurHashesCWProxy {
   const _$BaseItemPersonImageBlurHashesCWProxyImpl(this._value);
@@ -65,61 +67,62 @@ class _$BaseItemPersonImageBlurHashesCWProxyImpl
 
   @override
   BaseItemPersonImageBlurHashes primary(Map<String, String>? primary) =>
-      this(primary: primary);
+      call(primary: primary);
 
   @override
-  BaseItemPersonImageBlurHashes art(Map<String, String>? art) => this(art: art);
+  BaseItemPersonImageBlurHashes art(Map<String, String>? art) => call(art: art);
 
   @override
   BaseItemPersonImageBlurHashes backdrop(Map<String, String>? backdrop) =>
-      this(backdrop: backdrop);
+      call(backdrop: backdrop);
 
   @override
   BaseItemPersonImageBlurHashes banner(Map<String, String>? banner) =>
-      this(banner: banner);
+      call(banner: banner);
 
   @override
   BaseItemPersonImageBlurHashes logo(Map<String, String>? logo) =>
-      this(logo: logo);
+      call(logo: logo);
 
   @override
   BaseItemPersonImageBlurHashes thumb(Map<String, String>? thumb) =>
-      this(thumb: thumb);
+      call(thumb: thumb);
 
   @override
   BaseItemPersonImageBlurHashes disc(Map<String, String>? disc) =>
-      this(disc: disc);
+      call(disc: disc);
 
   @override
-  BaseItemPersonImageBlurHashes box(Map<String, String>? box) => this(box: box);
+  BaseItemPersonImageBlurHashes box(Map<String, String>? box) => call(box: box);
 
   @override
   BaseItemPersonImageBlurHashes screenshot(Map<String, String>? screenshot) =>
-      this(screenshot: screenshot);
+      call(screenshot: screenshot);
 
   @override
   BaseItemPersonImageBlurHashes menu(Map<String, String>? menu) =>
-      this(menu: menu);
+      call(menu: menu);
 
   @override
   BaseItemPersonImageBlurHashes chapter(Map<String, String>? chapter) =>
-      this(chapter: chapter);
+      call(chapter: chapter);
 
   @override
   BaseItemPersonImageBlurHashes boxRear(Map<String, String>? boxRear) =>
-      this(boxRear: boxRear);
+      call(boxRear: boxRear);
 
   @override
   BaseItemPersonImageBlurHashes profile(Map<String, String>? profile) =>
-      this(profile: profile);
+      call(profile: profile);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BaseItemPersonImageBlurHashes(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BaseItemPersonImageBlurHashes(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BaseItemPersonImageBlurHashes(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BaseItemPersonImageBlurHashes call({
     Object? primary = const $CopyWithPlaceholder(),
     Object? art = const $CopyWithPlaceholder(),
@@ -194,7 +197,8 @@ class _$BaseItemPersonImageBlurHashesCWProxyImpl
 
 extension $BaseItemPersonImageBlurHashesCopyWith
     on BaseItemPersonImageBlurHashes {
-  /// Returns a callable class that can be used as follows: `instanceOfBaseItemPersonImageBlurHashes.copyWith(...)` or like so:`instanceOfBaseItemPersonImageBlurHashes.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfBaseItemPersonImageBlurHashes.copyWith(...)` or `instanceOfBaseItemPersonImageBlurHashes.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$BaseItemPersonImageBlurHashesCWProxy get copyWith =>
       _$BaseItemPersonImageBlurHashesCWProxyImpl(this);

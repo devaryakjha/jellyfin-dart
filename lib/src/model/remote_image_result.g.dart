@@ -13,12 +13,13 @@ abstract class _$RemoteImageResultCWProxy {
 
   RemoteImageResult providers(List<String>? providers);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoteImageResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoteImageResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoteImageResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoteImageResult call({
     List<RemoteImageInfo>? images,
     int? totalRecordCount,
@@ -26,7 +27,8 @@ abstract class _$RemoteImageResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfRemoteImageResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfRemoteImageResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfRemoteImageResult.copyWith(...)` or call `instanceOfRemoteImageResult.copyWith.fieldName(value)` for a single field.
 class _$RemoteImageResultCWProxyImpl implements _$RemoteImageResultCWProxy {
   const _$RemoteImageResultCWProxyImpl(this._value);
 
@@ -34,23 +36,24 @@ class _$RemoteImageResultCWProxyImpl implements _$RemoteImageResultCWProxy {
 
   @override
   RemoteImageResult images(List<RemoteImageInfo>? images) =>
-      this(images: images);
+      call(images: images);
 
   @override
   RemoteImageResult totalRecordCount(int? totalRecordCount) =>
-      this(totalRecordCount: totalRecordCount);
+      call(totalRecordCount: totalRecordCount);
 
   @override
   RemoteImageResult providers(List<String>? providers) =>
-      this(providers: providers);
+      call(providers: providers);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoteImageResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoteImageResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoteImageResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoteImageResult call({
     Object? images = const $CopyWithPlaceholder(),
     Object? totalRecordCount = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$RemoteImageResultCWProxyImpl implements _$RemoteImageResultCWProxy {
 }
 
 extension $RemoteImageResultCopyWith on RemoteImageResult {
-  /// Returns a callable class that can be used as follows: `instanceOfRemoteImageResult.copyWith(...)` or like so:`instanceOfRemoteImageResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfRemoteImageResult.copyWith(...)` or `instanceOfRemoteImageResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$RemoteImageResultCWProxy get copyWith =>
       _$RemoteImageResultCWProxyImpl(this);

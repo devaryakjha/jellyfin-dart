@@ -43,12 +43,13 @@ abstract class _$UserConfigurationCWProxy {
 
   UserConfiguration castReceiverId(String? castReceiverId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserConfiguration(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserConfiguration(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserConfiguration(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserConfiguration call({
     String? audioLanguagePreference,
     bool? playDefaultAudioTrack,
@@ -69,7 +70,8 @@ abstract class _$UserConfigurationCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUserConfiguration.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUserConfiguration.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUserConfiguration.copyWith(...)` or call `instanceOfUserConfiguration.copyWith.fieldName(value)` for a single field.
 class _$UserConfigurationCWProxyImpl implements _$UserConfigurationCWProxy {
   const _$UserConfigurationCWProxyImpl(this._value);
 
@@ -77,78 +79,79 @@ class _$UserConfigurationCWProxyImpl implements _$UserConfigurationCWProxy {
 
   @override
   UserConfiguration audioLanguagePreference(String? audioLanguagePreference) =>
-      this(audioLanguagePreference: audioLanguagePreference);
+      call(audioLanguagePreference: audioLanguagePreference);
 
   @override
   UserConfiguration playDefaultAudioTrack(bool? playDefaultAudioTrack) =>
-      this(playDefaultAudioTrack: playDefaultAudioTrack);
+      call(playDefaultAudioTrack: playDefaultAudioTrack);
 
   @override
   UserConfiguration subtitleLanguagePreference(
     String? subtitleLanguagePreference,
-  ) => this(subtitleLanguagePreference: subtitleLanguagePreference);
+  ) => call(subtitleLanguagePreference: subtitleLanguagePreference);
 
   @override
   UserConfiguration displayMissingEpisodes(bool? displayMissingEpisodes) =>
-      this(displayMissingEpisodes: displayMissingEpisodes);
+      call(displayMissingEpisodes: displayMissingEpisodes);
 
   @override
   UserConfiguration groupedFolders(List<String>? groupedFolders) =>
-      this(groupedFolders: groupedFolders);
+      call(groupedFolders: groupedFolders);
 
   @override
   UserConfiguration subtitleMode(SubtitlePlaybackMode? subtitleMode) =>
-      this(subtitleMode: subtitleMode);
+      call(subtitleMode: subtitleMode);
 
   @override
   UserConfiguration displayCollectionsView(bool? displayCollectionsView) =>
-      this(displayCollectionsView: displayCollectionsView);
+      call(displayCollectionsView: displayCollectionsView);
 
   @override
   UserConfiguration enableLocalPassword(bool? enableLocalPassword) =>
-      this(enableLocalPassword: enableLocalPassword);
+      call(enableLocalPassword: enableLocalPassword);
 
   @override
   UserConfiguration orderedViews(List<String>? orderedViews) =>
-      this(orderedViews: orderedViews);
+      call(orderedViews: orderedViews);
 
   @override
   UserConfiguration latestItemsExcludes(List<String>? latestItemsExcludes) =>
-      this(latestItemsExcludes: latestItemsExcludes);
+      call(latestItemsExcludes: latestItemsExcludes);
 
   @override
   UserConfiguration myMediaExcludes(List<String>? myMediaExcludes) =>
-      this(myMediaExcludes: myMediaExcludes);
+      call(myMediaExcludes: myMediaExcludes);
 
   @override
   UserConfiguration hidePlayedInLatest(bool? hidePlayedInLatest) =>
-      this(hidePlayedInLatest: hidePlayedInLatest);
+      call(hidePlayedInLatest: hidePlayedInLatest);
 
   @override
   UserConfiguration rememberAudioSelections(bool? rememberAudioSelections) =>
-      this(rememberAudioSelections: rememberAudioSelections);
+      call(rememberAudioSelections: rememberAudioSelections);
 
   @override
   UserConfiguration rememberSubtitleSelections(
     bool? rememberSubtitleSelections,
-  ) => this(rememberSubtitleSelections: rememberSubtitleSelections);
+  ) => call(rememberSubtitleSelections: rememberSubtitleSelections);
 
   @override
   UserConfiguration enableNextEpisodeAutoPlay(
     bool? enableNextEpisodeAutoPlay,
-  ) => this(enableNextEpisodeAutoPlay: enableNextEpisodeAutoPlay);
+  ) => call(enableNextEpisodeAutoPlay: enableNextEpisodeAutoPlay);
 
   @override
   UserConfiguration castReceiverId(String? castReceiverId) =>
-      this(castReceiverId: castReceiverId);
+      call(castReceiverId: castReceiverId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserConfiguration(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserConfiguration(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserConfiguration(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserConfiguration call({
     Object? audioLanguagePreference = const $CopyWithPlaceholder(),
     Object? playDefaultAudioTrack = const $CopyWithPlaceholder(),
@@ -245,7 +248,8 @@ class _$UserConfigurationCWProxyImpl implements _$UserConfigurationCWProxy {
 }
 
 extension $UserConfigurationCopyWith on UserConfiguration {
-  /// Returns a callable class that can be used as follows: `instanceOfUserConfiguration.copyWith(...)` or like so:`instanceOfUserConfiguration.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUserConfiguration.copyWith(...)` or `instanceOfUserConfiguration.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UserConfigurationCWProxy get copyWith =>
       _$UserConfigurationCWProxyImpl(this);

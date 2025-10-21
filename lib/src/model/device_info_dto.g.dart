@@ -29,12 +29,13 @@ abstract class _$DeviceInfoDtoCWProxy {
 
   DeviceInfoDto iconUrl(String? iconUrl);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DeviceInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DeviceInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DeviceInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DeviceInfoDto call({
     String? name,
     String? customName,
@@ -50,56 +51,58 @@ abstract class _$DeviceInfoDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfDeviceInfoDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfDeviceInfoDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfDeviceInfoDto.copyWith(...)` or call `instanceOfDeviceInfoDto.copyWith.fieldName(value)` for a single field.
 class _$DeviceInfoDtoCWProxyImpl implements _$DeviceInfoDtoCWProxy {
   const _$DeviceInfoDtoCWProxyImpl(this._value);
 
   final DeviceInfoDto _value;
 
   @override
-  DeviceInfoDto name(String? name) => this(name: name);
+  DeviceInfoDto name(String? name) => call(name: name);
 
   @override
-  DeviceInfoDto customName(String? customName) => this(customName: customName);
+  DeviceInfoDto customName(String? customName) => call(customName: customName);
 
   @override
   DeviceInfoDto accessToken(String? accessToken) =>
-      this(accessToken: accessToken);
+      call(accessToken: accessToken);
 
   @override
-  DeviceInfoDto id(String? id) => this(id: id);
+  DeviceInfoDto id(String? id) => call(id: id);
 
   @override
   DeviceInfoDto lastUserName(String? lastUserName) =>
-      this(lastUserName: lastUserName);
+      call(lastUserName: lastUserName);
 
   @override
-  DeviceInfoDto appName(String? appName) => this(appName: appName);
+  DeviceInfoDto appName(String? appName) => call(appName: appName);
 
   @override
-  DeviceInfoDto appVersion(String? appVersion) => this(appVersion: appVersion);
+  DeviceInfoDto appVersion(String? appVersion) => call(appVersion: appVersion);
 
   @override
-  DeviceInfoDto lastUserId(String? lastUserId) => this(lastUserId: lastUserId);
+  DeviceInfoDto lastUserId(String? lastUserId) => call(lastUserId: lastUserId);
 
   @override
   DeviceInfoDto dateLastActivity(DateTime? dateLastActivity) =>
-      this(dateLastActivity: dateLastActivity);
+      call(dateLastActivity: dateLastActivity);
 
   @override
   DeviceInfoDto capabilities(ClientCapabilitiesDto? capabilities) =>
-      this(capabilities: capabilities);
+      call(capabilities: capabilities);
 
   @override
-  DeviceInfoDto iconUrl(String? iconUrl) => this(iconUrl: iconUrl);
+  DeviceInfoDto iconUrl(String? iconUrl) => call(iconUrl: iconUrl);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DeviceInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DeviceInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DeviceInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DeviceInfoDto call({
     Object? name = const $CopyWithPlaceholder(),
     Object? customName = const $CopyWithPlaceholder(),
@@ -163,7 +166,8 @@ class _$DeviceInfoDtoCWProxyImpl implements _$DeviceInfoDtoCWProxy {
 }
 
 extension $DeviceInfoDtoCopyWith on DeviceInfoDto {
-  /// Returns a callable class that can be used as follows: `instanceOfDeviceInfoDto.copyWith(...)` or like so:`instanceOfDeviceInfoDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfDeviceInfoDto.copyWith(...)` or `instanceOfDeviceInfoDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$DeviceInfoDtoCWProxy get copyWith => _$DeviceInfoDtoCWProxyImpl(this);
 }

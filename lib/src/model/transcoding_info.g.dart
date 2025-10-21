@@ -37,12 +37,13 @@ abstract class _$TranscodingInfoCWProxy {
     TranscodingInfoTranscodeReasonsEnum? transcodeReasons,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TranscodingInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TranscodingInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TranscodingInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TranscodingInfo call({
     String? audioCodec,
     String? videoCodec,
@@ -60,7 +61,8 @@ abstract class _$TranscodingInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTranscodingInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTranscodingInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTranscodingInfo.copyWith(...)` or call `instanceOfTranscodingInfo.copyWith.fieldName(value)` for a single field.
 class _$TranscodingInfoCWProxyImpl implements _$TranscodingInfoCWProxy {
   const _$TranscodingInfoCWProxyImpl(this._value);
 
@@ -68,60 +70,61 @@ class _$TranscodingInfoCWProxyImpl implements _$TranscodingInfoCWProxy {
 
   @override
   TranscodingInfo audioCodec(String? audioCodec) =>
-      this(audioCodec: audioCodec);
+      call(audioCodec: audioCodec);
 
   @override
   TranscodingInfo videoCodec(String? videoCodec) =>
-      this(videoCodec: videoCodec);
+      call(videoCodec: videoCodec);
 
   @override
-  TranscodingInfo container(String? container) => this(container: container);
+  TranscodingInfo container(String? container) => call(container: container);
 
   @override
   TranscodingInfo isVideoDirect(bool? isVideoDirect) =>
-      this(isVideoDirect: isVideoDirect);
+      call(isVideoDirect: isVideoDirect);
 
   @override
   TranscodingInfo isAudioDirect(bool? isAudioDirect) =>
-      this(isAudioDirect: isAudioDirect);
+      call(isAudioDirect: isAudioDirect);
 
   @override
-  TranscodingInfo bitrate(int? bitrate) => this(bitrate: bitrate);
+  TranscodingInfo bitrate(int? bitrate) => call(bitrate: bitrate);
 
   @override
-  TranscodingInfo framerate(double? framerate) => this(framerate: framerate);
+  TranscodingInfo framerate(double? framerate) => call(framerate: framerate);
 
   @override
   TranscodingInfo completionPercentage(double? completionPercentage) =>
-      this(completionPercentage: completionPercentage);
+      call(completionPercentage: completionPercentage);
 
   @override
-  TranscodingInfo width(int? width) => this(width: width);
+  TranscodingInfo width(int? width) => call(width: width);
 
   @override
-  TranscodingInfo height(int? height) => this(height: height);
+  TranscodingInfo height(int? height) => call(height: height);
 
   @override
   TranscodingInfo audioChannels(int? audioChannels) =>
-      this(audioChannels: audioChannels);
+      call(audioChannels: audioChannels);
 
   @override
   TranscodingInfo hardwareAccelerationType(
     HardwareAccelerationType? hardwareAccelerationType,
-  ) => this(hardwareAccelerationType: hardwareAccelerationType);
+  ) => call(hardwareAccelerationType: hardwareAccelerationType);
 
   @override
   TranscodingInfo transcodeReasons(
     TranscodingInfoTranscodeReasonsEnum? transcodeReasons,
-  ) => this(transcodeReasons: transcodeReasons);
+  ) => call(transcodeReasons: transcodeReasons);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TranscodingInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TranscodingInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TranscodingInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TranscodingInfo call({
     Object? audioCodec = const $CopyWithPlaceholder(),
     Object? videoCodec = const $CopyWithPlaceholder(),
@@ -196,7 +199,8 @@ class _$TranscodingInfoCWProxyImpl implements _$TranscodingInfoCWProxy {
 }
 
 extension $TranscodingInfoCopyWith on TranscodingInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfTranscodingInfo.copyWith(...)` or like so:`instanceOfTranscodingInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTranscodingInfo.copyWith(...)` or `instanceOfTranscodingInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TranscodingInfoCWProxy get copyWith => _$TranscodingInfoCWProxyImpl(this);
 }

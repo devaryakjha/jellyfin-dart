@@ -29,12 +29,13 @@ abstract class _$PlaybackStopInfoCWProxy {
 
   PlaybackStopInfo nowPlayingQueue(List<QueueItem>? nowPlayingQueue);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaybackStopInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaybackStopInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaybackStopInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaybackStopInfo call({
     BaseItemDto? item,
     String? itemId,
@@ -50,59 +51,61 @@ abstract class _$PlaybackStopInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlaybackStopInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlaybackStopInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlaybackStopInfo.copyWith(...)` or call `instanceOfPlaybackStopInfo.copyWith.fieldName(value)` for a single field.
 class _$PlaybackStopInfoCWProxyImpl implements _$PlaybackStopInfoCWProxy {
   const _$PlaybackStopInfoCWProxyImpl(this._value);
 
   final PlaybackStopInfo _value;
 
   @override
-  PlaybackStopInfo item(BaseItemDto? item) => this(item: item);
+  PlaybackStopInfo item(BaseItemDto? item) => call(item: item);
 
   @override
-  PlaybackStopInfo itemId(String? itemId) => this(itemId: itemId);
+  PlaybackStopInfo itemId(String? itemId) => call(itemId: itemId);
 
   @override
-  PlaybackStopInfo sessionId(String? sessionId) => this(sessionId: sessionId);
+  PlaybackStopInfo sessionId(String? sessionId) => call(sessionId: sessionId);
 
   @override
   PlaybackStopInfo mediaSourceId(String? mediaSourceId) =>
-      this(mediaSourceId: mediaSourceId);
+      call(mediaSourceId: mediaSourceId);
 
   @override
   PlaybackStopInfo positionTicks(int? positionTicks) =>
-      this(positionTicks: positionTicks);
+      call(positionTicks: positionTicks);
 
   @override
   PlaybackStopInfo liveStreamId(String? liveStreamId) =>
-      this(liveStreamId: liveStreamId);
+      call(liveStreamId: liveStreamId);
 
   @override
   PlaybackStopInfo playSessionId(String? playSessionId) =>
-      this(playSessionId: playSessionId);
+      call(playSessionId: playSessionId);
 
   @override
-  PlaybackStopInfo failed(bool? failed) => this(failed: failed);
+  PlaybackStopInfo failed(bool? failed) => call(failed: failed);
 
   @override
   PlaybackStopInfo nextMediaType(String? nextMediaType) =>
-      this(nextMediaType: nextMediaType);
+      call(nextMediaType: nextMediaType);
 
   @override
   PlaybackStopInfo playlistItemId(String? playlistItemId) =>
-      this(playlistItemId: playlistItemId);
+      call(playlistItemId: playlistItemId);
 
   @override
   PlaybackStopInfo nowPlayingQueue(List<QueueItem>? nowPlayingQueue) =>
-      this(nowPlayingQueue: nowPlayingQueue);
+      call(nowPlayingQueue: nowPlayingQueue);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaybackStopInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaybackStopInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaybackStopInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaybackStopInfo call({
     Object? item = const $CopyWithPlaceholder(),
     Object? itemId = const $CopyWithPlaceholder(),
@@ -166,7 +169,8 @@ class _$PlaybackStopInfoCWProxyImpl implements _$PlaybackStopInfoCWProxy {
 }
 
 extension $PlaybackStopInfoCopyWith on PlaybackStopInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfPlaybackStopInfo.copyWith(...)` or like so:`instanceOfPlaybackStopInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlaybackStopInfo.copyWith(...)` or `instanceOfPlaybackStopInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlaybackStopInfoCWProxy get copyWith => _$PlaybackStopInfoCWProxyImpl(this);
 }

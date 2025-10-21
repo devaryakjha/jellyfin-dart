@@ -33,12 +33,13 @@ abstract class _$ChannelFeaturesCWProxy {
 
   ChannelFeatures supportsContentDownloading(bool? supportsContentDownloading);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ChannelFeatures(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ChannelFeatures(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ChannelFeatures(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ChannelFeatures call({
     String? name,
     String? id,
@@ -55,65 +56,67 @@ abstract class _$ChannelFeaturesCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfChannelFeatures.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfChannelFeatures.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfChannelFeatures.copyWith(...)` or call `instanceOfChannelFeatures.copyWith.fieldName(value)` for a single field.
 class _$ChannelFeaturesCWProxyImpl implements _$ChannelFeaturesCWProxy {
   const _$ChannelFeaturesCWProxyImpl(this._value);
 
   final ChannelFeatures _value;
 
   @override
-  ChannelFeatures name(String? name) => this(name: name);
+  ChannelFeatures name(String? name) => call(name: name);
 
   @override
-  ChannelFeatures id(String? id) => this(id: id);
+  ChannelFeatures id(String? id) => call(id: id);
 
   @override
-  ChannelFeatures canSearch(bool? canSearch) => this(canSearch: canSearch);
+  ChannelFeatures canSearch(bool? canSearch) => call(canSearch: canSearch);
 
   @override
   ChannelFeatures mediaTypes(List<ChannelMediaType>? mediaTypes) =>
-      this(mediaTypes: mediaTypes);
+      call(mediaTypes: mediaTypes);
 
   @override
   ChannelFeatures contentTypes(List<ChannelMediaContentType>? contentTypes) =>
-      this(contentTypes: contentTypes);
+      call(contentTypes: contentTypes);
 
   @override
   ChannelFeatures maxPageSize(int? maxPageSize) =>
-      this(maxPageSize: maxPageSize);
+      call(maxPageSize: maxPageSize);
 
   @override
   ChannelFeatures autoRefreshLevels(int? autoRefreshLevels) =>
-      this(autoRefreshLevels: autoRefreshLevels);
+      call(autoRefreshLevels: autoRefreshLevels);
 
   @override
   ChannelFeatures defaultSortFields(
     List<ChannelItemSortField>? defaultSortFields,
-  ) => this(defaultSortFields: defaultSortFields);
+  ) => call(defaultSortFields: defaultSortFields);
 
   @override
   ChannelFeatures supportsSortOrderToggle(bool? supportsSortOrderToggle) =>
-      this(supportsSortOrderToggle: supportsSortOrderToggle);
+      call(supportsSortOrderToggle: supportsSortOrderToggle);
 
   @override
   ChannelFeatures supportsLatestMedia(bool? supportsLatestMedia) =>
-      this(supportsLatestMedia: supportsLatestMedia);
+      call(supportsLatestMedia: supportsLatestMedia);
 
   @override
-  ChannelFeatures canFilter(bool? canFilter) => this(canFilter: canFilter);
+  ChannelFeatures canFilter(bool? canFilter) => call(canFilter: canFilter);
 
   @override
   ChannelFeatures supportsContentDownloading(
     bool? supportsContentDownloading,
-  ) => this(supportsContentDownloading: supportsContentDownloading);
+  ) => call(supportsContentDownloading: supportsContentDownloading);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ChannelFeatures(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ChannelFeatures(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ChannelFeatures(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ChannelFeatures call({
     Object? name = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
@@ -184,7 +187,8 @@ class _$ChannelFeaturesCWProxyImpl implements _$ChannelFeaturesCWProxy {
 }
 
 extension $ChannelFeaturesCopyWith on ChannelFeatures {
-  /// Returns a callable class that can be used as follows: `instanceOfChannelFeatures.copyWith(...)` or like so:`instanceOfChannelFeatures.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfChannelFeatures.copyWith(...)` or `instanceOfChannelFeatures.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ChannelFeaturesCWProxy get copyWith => _$ChannelFeaturesCWProxyImpl(this);
 }

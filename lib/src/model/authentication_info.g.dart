@@ -31,12 +31,13 @@ abstract class _$AuthenticationInfoCWProxy {
 
   AuthenticationInfo userName(String? userName);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AuthenticationInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AuthenticationInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AuthenticationInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AuthenticationInfo call({
     int? id,
     String? accessToken,
@@ -53,61 +54,63 @@ abstract class _$AuthenticationInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfAuthenticationInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfAuthenticationInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfAuthenticationInfo.copyWith(...)` or call `instanceOfAuthenticationInfo.copyWith.fieldName(value)` for a single field.
 class _$AuthenticationInfoCWProxyImpl implements _$AuthenticationInfoCWProxy {
   const _$AuthenticationInfoCWProxyImpl(this._value);
 
   final AuthenticationInfo _value;
 
   @override
-  AuthenticationInfo id(int? id) => this(id: id);
+  AuthenticationInfo id(int? id) => call(id: id);
 
   @override
   AuthenticationInfo accessToken(String? accessToken) =>
-      this(accessToken: accessToken);
+      call(accessToken: accessToken);
 
   @override
-  AuthenticationInfo deviceId(String? deviceId) => this(deviceId: deviceId);
+  AuthenticationInfo deviceId(String? deviceId) => call(deviceId: deviceId);
 
   @override
-  AuthenticationInfo appName(String? appName) => this(appName: appName);
+  AuthenticationInfo appName(String? appName) => call(appName: appName);
 
   @override
   AuthenticationInfo appVersion(String? appVersion) =>
-      this(appVersion: appVersion);
+      call(appVersion: appVersion);
 
   @override
   AuthenticationInfo deviceName(String? deviceName) =>
-      this(deviceName: deviceName);
+      call(deviceName: deviceName);
 
   @override
-  AuthenticationInfo userId(String? userId) => this(userId: userId);
+  AuthenticationInfo userId(String? userId) => call(userId: userId);
 
   @override
-  AuthenticationInfo isActive(bool? isActive) => this(isActive: isActive);
+  AuthenticationInfo isActive(bool? isActive) => call(isActive: isActive);
 
   @override
   AuthenticationInfo dateCreated(DateTime? dateCreated) =>
-      this(dateCreated: dateCreated);
+      call(dateCreated: dateCreated);
 
   @override
   AuthenticationInfo dateRevoked(DateTime? dateRevoked) =>
-      this(dateRevoked: dateRevoked);
+      call(dateRevoked: dateRevoked);
 
   @override
   AuthenticationInfo dateLastActivity(DateTime? dateLastActivity) =>
-      this(dateLastActivity: dateLastActivity);
+      call(dateLastActivity: dateLastActivity);
 
   @override
-  AuthenticationInfo userName(String? userName) => this(userName: userName);
+  AuthenticationInfo userName(String? userName) => call(userName: userName);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AuthenticationInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AuthenticationInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AuthenticationInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AuthenticationInfo call({
     Object? id = const $CopyWithPlaceholder(),
     Object? accessToken = const $CopyWithPlaceholder(),
@@ -176,7 +179,8 @@ class _$AuthenticationInfoCWProxyImpl implements _$AuthenticationInfoCWProxy {
 }
 
 extension $AuthenticationInfoCopyWith on AuthenticationInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfAuthenticationInfo.copyWith(...)` or like so:`instanceOfAuthenticationInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfAuthenticationInfo.copyWith(...)` or `instanceOfAuthenticationInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$AuthenticationInfoCWProxy get copyWith =>
       _$AuthenticationInfoCWProxyImpl(this);

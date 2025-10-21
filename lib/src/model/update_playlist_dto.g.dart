@@ -15,12 +15,13 @@ abstract class _$UpdatePlaylistDtoCWProxy {
 
   UpdatePlaylistDto isPublic(bool? isPublic);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UpdatePlaylistDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UpdatePlaylistDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UpdatePlaylistDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UpdatePlaylistDto call({
     String? name,
     List<String>? ids,
@@ -29,32 +30,34 @@ abstract class _$UpdatePlaylistDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUpdatePlaylistDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUpdatePlaylistDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUpdatePlaylistDto.copyWith(...)` or call `instanceOfUpdatePlaylistDto.copyWith.fieldName(value)` for a single field.
 class _$UpdatePlaylistDtoCWProxyImpl implements _$UpdatePlaylistDtoCWProxy {
   const _$UpdatePlaylistDtoCWProxyImpl(this._value);
 
   final UpdatePlaylistDto _value;
 
   @override
-  UpdatePlaylistDto name(String? name) => this(name: name);
+  UpdatePlaylistDto name(String? name) => call(name: name);
 
   @override
-  UpdatePlaylistDto ids(List<String>? ids) => this(ids: ids);
+  UpdatePlaylistDto ids(List<String>? ids) => call(ids: ids);
 
   @override
   UpdatePlaylistDto users(List<PlaylistUserPermissions>? users) =>
-      this(users: users);
+      call(users: users);
 
   @override
-  UpdatePlaylistDto isPublic(bool? isPublic) => this(isPublic: isPublic);
+  UpdatePlaylistDto isPublic(bool? isPublic) => call(isPublic: isPublic);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UpdatePlaylistDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UpdatePlaylistDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UpdatePlaylistDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UpdatePlaylistDto call({
     Object? name = const $CopyWithPlaceholder(),
     Object? ids = const $CopyWithPlaceholder(),
@@ -83,7 +86,8 @@ class _$UpdatePlaylistDtoCWProxyImpl implements _$UpdatePlaylistDtoCWProxy {
 }
 
 extension $UpdatePlaylistDtoCopyWith on UpdatePlaylistDto {
-  /// Returns a callable class that can be used as follows: `instanceOfUpdatePlaylistDto.copyWith(...)` or like so:`instanceOfUpdatePlaylistDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUpdatePlaylistDto.copyWith(...)` or `instanceOfUpdatePlaylistDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UpdatePlaylistDtoCWProxy get copyWith =>
       _$UpdatePlaylistDtoCWProxyImpl(this);

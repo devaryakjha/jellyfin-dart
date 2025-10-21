@@ -31,12 +31,13 @@ abstract class _$PlayerStateInfoCWProxy {
 
   PlayerStateInfo liveStreamId(String? liveStreamId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlayerStateInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlayerStateInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlayerStateInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlayerStateInfo call({
     int? positionTicks,
     bool? canSeek,
@@ -53,7 +54,8 @@ abstract class _$PlayerStateInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlayerStateInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlayerStateInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlayerStateInfo.copyWith(...)` or call `instanceOfPlayerStateInfo.copyWith.fieldName(value)` for a single field.
 class _$PlayerStateInfoCWProxyImpl implements _$PlayerStateInfoCWProxy {
   const _$PlayerStateInfoCWProxyImpl(this._value);
 
@@ -61,56 +63,57 @@ class _$PlayerStateInfoCWProxyImpl implements _$PlayerStateInfoCWProxy {
 
   @override
   PlayerStateInfo positionTicks(int? positionTicks) =>
-      this(positionTicks: positionTicks);
+      call(positionTicks: positionTicks);
 
   @override
-  PlayerStateInfo canSeek(bool? canSeek) => this(canSeek: canSeek);
+  PlayerStateInfo canSeek(bool? canSeek) => call(canSeek: canSeek);
 
   @override
-  PlayerStateInfo isPaused(bool? isPaused) => this(isPaused: isPaused);
+  PlayerStateInfo isPaused(bool? isPaused) => call(isPaused: isPaused);
 
   @override
-  PlayerStateInfo isMuted(bool? isMuted) => this(isMuted: isMuted);
+  PlayerStateInfo isMuted(bool? isMuted) => call(isMuted: isMuted);
 
   @override
   PlayerStateInfo volumeLevel(int? volumeLevel) =>
-      this(volumeLevel: volumeLevel);
+      call(volumeLevel: volumeLevel);
 
   @override
   PlayerStateInfo audioStreamIndex(int? audioStreamIndex) =>
-      this(audioStreamIndex: audioStreamIndex);
+      call(audioStreamIndex: audioStreamIndex);
 
   @override
   PlayerStateInfo subtitleStreamIndex(int? subtitleStreamIndex) =>
-      this(subtitleStreamIndex: subtitleStreamIndex);
+      call(subtitleStreamIndex: subtitleStreamIndex);
 
   @override
   PlayerStateInfo mediaSourceId(String? mediaSourceId) =>
-      this(mediaSourceId: mediaSourceId);
+      call(mediaSourceId: mediaSourceId);
 
   @override
   PlayerStateInfo playMethod(PlayMethod? playMethod) =>
-      this(playMethod: playMethod);
+      call(playMethod: playMethod);
 
   @override
   PlayerStateInfo repeatMode(RepeatMode? repeatMode) =>
-      this(repeatMode: repeatMode);
+      call(repeatMode: repeatMode);
 
   @override
   PlayerStateInfo playbackOrder(PlaybackOrder? playbackOrder) =>
-      this(playbackOrder: playbackOrder);
+      call(playbackOrder: playbackOrder);
 
   @override
   PlayerStateInfo liveStreamId(String? liveStreamId) =>
-      this(liveStreamId: liveStreamId);
+      call(liveStreamId: liveStreamId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlayerStateInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlayerStateInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlayerStateInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlayerStateInfo call({
     Object? positionTicks = const $CopyWithPlaceholder(),
     Object? canSeek = const $CopyWithPlaceholder(),
@@ -179,7 +182,8 @@ class _$PlayerStateInfoCWProxyImpl implements _$PlayerStateInfoCWProxy {
 }
 
 extension $PlayerStateInfoCopyWith on PlayerStateInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfPlayerStateInfo.copyWith(...)` or like so:`instanceOfPlayerStateInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlayerStateInfo.copyWith(...)` or `instanceOfPlayerStateInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlayerStateInfoCWProxy get copyWith => _$PlayerStateInfoCWProxyImpl(this);
 }

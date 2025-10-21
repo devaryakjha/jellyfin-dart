@@ -15,12 +15,13 @@ abstract class _$CountryInfoCWProxy {
 
   CountryInfo threeLetterISORegionName(String? threeLetterISORegionName);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CountryInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CountryInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CountryInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CountryInfo call({
     String? name,
     String? displayName,
@@ -29,34 +30,36 @@ abstract class _$CountryInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfCountryInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfCountryInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfCountryInfo.copyWith(...)` or call `instanceOfCountryInfo.copyWith.fieldName(value)` for a single field.
 class _$CountryInfoCWProxyImpl implements _$CountryInfoCWProxy {
   const _$CountryInfoCWProxyImpl(this._value);
 
   final CountryInfo _value;
 
   @override
-  CountryInfo name(String? name) => this(name: name);
+  CountryInfo name(String? name) => call(name: name);
 
   @override
   CountryInfo displayName(String? displayName) =>
-      this(displayName: displayName);
+      call(displayName: displayName);
 
   @override
   CountryInfo twoLetterISORegionName(String? twoLetterISORegionName) =>
-      this(twoLetterISORegionName: twoLetterISORegionName);
+      call(twoLetterISORegionName: twoLetterISORegionName);
 
   @override
   CountryInfo threeLetterISORegionName(String? threeLetterISORegionName) =>
-      this(threeLetterISORegionName: threeLetterISORegionName);
+      call(threeLetterISORegionName: threeLetterISORegionName);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CountryInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CountryInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CountryInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CountryInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? displayName = const $CopyWithPlaceholder(),
@@ -87,7 +90,8 @@ class _$CountryInfoCWProxyImpl implements _$CountryInfoCWProxy {
 }
 
 extension $CountryInfoCopyWith on CountryInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfCountryInfo.copyWith(...)` or like so:`instanceOfCountryInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfCountryInfo.copyWith(...)` or `instanceOfCountryInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$CountryInfoCWProxy get copyWith => _$CountryInfoCWProxyImpl(this);
 }

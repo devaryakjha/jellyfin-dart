@@ -11,34 +11,37 @@ abstract class _$QueryFiltersCWProxy {
 
   QueryFilters tags(List<String>? tags);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `QueryFilters(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `QueryFilters(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// QueryFilters(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   QueryFilters call({List<NameGuidPair>? genres, List<String>? tags});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfQueryFilters.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfQueryFilters.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfQueryFilters.copyWith(...)` or call `instanceOfQueryFilters.copyWith.fieldName(value)` for a single field.
 class _$QueryFiltersCWProxyImpl implements _$QueryFiltersCWProxy {
   const _$QueryFiltersCWProxyImpl(this._value);
 
   final QueryFilters _value;
 
   @override
-  QueryFilters genres(List<NameGuidPair>? genres) => this(genres: genres);
+  QueryFilters genres(List<NameGuidPair>? genres) => call(genres: genres);
 
   @override
-  QueryFilters tags(List<String>? tags) => this(tags: tags);
+  QueryFilters tags(List<String>? tags) => call(tags: tags);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `QueryFilters(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `QueryFilters(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// QueryFilters(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   QueryFilters call({
     Object? genres = const $CopyWithPlaceholder(),
     Object? tags = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$QueryFiltersCWProxyImpl implements _$QueryFiltersCWProxy {
 }
 
 extension $QueryFiltersCopyWith on QueryFilters {
-  /// Returns a callable class that can be used as follows: `instanceOfQueryFilters.copyWith(...)` or like so:`instanceOfQueryFilters.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfQueryFilters.copyWith(...)` or `instanceOfQueryFilters.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$QueryFiltersCWProxy get copyWith => _$QueryFiltersCWProxyImpl(this);
 }

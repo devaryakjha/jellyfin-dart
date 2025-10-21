@@ -13,12 +13,13 @@ abstract class _$SyncPlayPlayQueueUpdateCWProxy {
 
   SyncPlayPlayQueueUpdate type(GroupUpdateType? type);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SyncPlayPlayQueueUpdate(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SyncPlayPlayQueueUpdate(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SyncPlayPlayQueueUpdate(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SyncPlayPlayQueueUpdate call({
     String? groupId,
     PlayQueueUpdate? data,
@@ -26,7 +27,8 @@ abstract class _$SyncPlayPlayQueueUpdateCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSyncPlayPlayQueueUpdate.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSyncPlayPlayQueueUpdate.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSyncPlayPlayQueueUpdate.copyWith(...)` or call `instanceOfSyncPlayPlayQueueUpdate.copyWith.fieldName(value)` for a single field.
 class _$SyncPlayPlayQueueUpdateCWProxyImpl
     implements _$SyncPlayPlayQueueUpdateCWProxy {
   const _$SyncPlayPlayQueueUpdateCWProxyImpl(this._value);
@@ -34,21 +36,22 @@ class _$SyncPlayPlayQueueUpdateCWProxyImpl
   final SyncPlayPlayQueueUpdate _value;
 
   @override
-  SyncPlayPlayQueueUpdate groupId(String? groupId) => this(groupId: groupId);
+  SyncPlayPlayQueueUpdate groupId(String? groupId) => call(groupId: groupId);
 
   @override
-  SyncPlayPlayQueueUpdate data(PlayQueueUpdate? data) => this(data: data);
+  SyncPlayPlayQueueUpdate data(PlayQueueUpdate? data) => call(data: data);
 
   @override
-  SyncPlayPlayQueueUpdate type(GroupUpdateType? type) => this(type: type);
+  SyncPlayPlayQueueUpdate type(GroupUpdateType? type) => call(type: type);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SyncPlayPlayQueueUpdate(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SyncPlayPlayQueueUpdate(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SyncPlayPlayQueueUpdate(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SyncPlayPlayQueueUpdate call({
     Object? groupId = const $CopyWithPlaceholder(),
     Object? data = const $CopyWithPlaceholder(),
@@ -72,7 +75,8 @@ class _$SyncPlayPlayQueueUpdateCWProxyImpl
 }
 
 extension $SyncPlayPlayQueueUpdateCopyWith on SyncPlayPlayQueueUpdate {
-  /// Returns a callable class that can be used as follows: `instanceOfSyncPlayPlayQueueUpdate.copyWith(...)` or like so:`instanceOfSyncPlayPlayQueueUpdate.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSyncPlayPlayQueueUpdate.copyWith(...)` or `instanceOfSyncPlayPlayQueueUpdate.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SyncPlayPlayQueueUpdateCWProxy get copyWith =>
       _$SyncPlayPlayQueueUpdateCWProxyImpl(this);

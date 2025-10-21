@@ -13,12 +13,13 @@ abstract class _$SetChannelMappingDtoCWProxy {
 
   SetChannelMappingDto providerChannelId(String providerChannelId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SetChannelMappingDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SetChannelMappingDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SetChannelMappingDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SetChannelMappingDto call({
     String providerId,
     String tunerChannelId,
@@ -26,7 +27,8 @@ abstract class _$SetChannelMappingDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSetChannelMappingDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSetChannelMappingDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSetChannelMappingDto.copyWith(...)` or call `instanceOfSetChannelMappingDto.copyWith.fieldName(value)` for a single field.
 class _$SetChannelMappingDtoCWProxyImpl
     implements _$SetChannelMappingDtoCWProxy {
   const _$SetChannelMappingDtoCWProxyImpl(this._value);
@@ -35,38 +37,44 @@ class _$SetChannelMappingDtoCWProxyImpl
 
   @override
   SetChannelMappingDto providerId(String providerId) =>
-      this(providerId: providerId);
+      call(providerId: providerId);
 
   @override
   SetChannelMappingDto tunerChannelId(String tunerChannelId) =>
-      this(tunerChannelId: tunerChannelId);
+      call(tunerChannelId: tunerChannelId);
 
   @override
   SetChannelMappingDto providerChannelId(String providerChannelId) =>
-      this(providerChannelId: providerChannelId);
+      call(providerChannelId: providerChannelId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SetChannelMappingDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SetChannelMappingDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SetChannelMappingDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SetChannelMappingDto call({
     Object? providerId = const $CopyWithPlaceholder(),
     Object? tunerChannelId = const $CopyWithPlaceholder(),
     Object? providerChannelId = const $CopyWithPlaceholder(),
   }) {
     return SetChannelMappingDto(
-      providerId: providerId == const $CopyWithPlaceholder()
+      providerId:
+          providerId == const $CopyWithPlaceholder() || providerId == null
           ? _value.providerId
           // ignore: cast_nullable_to_non_nullable
           : providerId as String,
-      tunerChannelId: tunerChannelId == const $CopyWithPlaceholder()
+      tunerChannelId:
+          tunerChannelId == const $CopyWithPlaceholder() ||
+              tunerChannelId == null
           ? _value.tunerChannelId
           // ignore: cast_nullable_to_non_nullable
           : tunerChannelId as String,
-      providerChannelId: providerChannelId == const $CopyWithPlaceholder()
+      providerChannelId:
+          providerChannelId == const $CopyWithPlaceholder() ||
+              providerChannelId == null
           ? _value.providerChannelId
           // ignore: cast_nullable_to_non_nullable
           : providerChannelId as String,
@@ -75,7 +83,8 @@ class _$SetChannelMappingDtoCWProxyImpl
 }
 
 extension $SetChannelMappingDtoCopyWith on SetChannelMappingDto {
-  /// Returns a callable class that can be used as follows: `instanceOfSetChannelMappingDto.copyWith(...)` or like so:`instanceOfSetChannelMappingDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSetChannelMappingDto.copyWith(...)` or `instanceOfSetChannelMappingDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SetChannelMappingDtoCWProxy get copyWith =>
       _$SetChannelMappingDtoCWProxyImpl(this);

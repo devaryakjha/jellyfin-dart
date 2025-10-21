@@ -17,12 +17,13 @@ abstract class _$StartupConfigurationDtoCWProxy {
     String? preferredMetadataLanguage,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `StartupConfigurationDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `StartupConfigurationDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// StartupConfigurationDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   StartupConfigurationDto call({
     String? serverName,
     String? uICulture,
@@ -31,7 +32,8 @@ abstract class _$StartupConfigurationDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfStartupConfigurationDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfStartupConfigurationDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfStartupConfigurationDto.copyWith(...)` or call `instanceOfStartupConfigurationDto.copyWith.fieldName(value)` for a single field.
 class _$StartupConfigurationDtoCWProxyImpl
     implements _$StartupConfigurationDtoCWProxy {
   const _$StartupConfigurationDtoCWProxyImpl(this._value);
@@ -40,28 +42,29 @@ class _$StartupConfigurationDtoCWProxyImpl
 
   @override
   StartupConfigurationDto serverName(String? serverName) =>
-      this(serverName: serverName);
+      call(serverName: serverName);
 
   @override
   StartupConfigurationDto uICulture(String? uICulture) =>
-      this(uICulture: uICulture);
+      call(uICulture: uICulture);
 
   @override
   StartupConfigurationDto metadataCountryCode(String? metadataCountryCode) =>
-      this(metadataCountryCode: metadataCountryCode);
+      call(metadataCountryCode: metadataCountryCode);
 
   @override
   StartupConfigurationDto preferredMetadataLanguage(
     String? preferredMetadataLanguage,
-  ) => this(preferredMetadataLanguage: preferredMetadataLanguage);
+  ) => call(preferredMetadataLanguage: preferredMetadataLanguage);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `StartupConfigurationDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `StartupConfigurationDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// StartupConfigurationDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   StartupConfigurationDto call({
     Object? serverName = const $CopyWithPlaceholder(),
     Object? uICulture = const $CopyWithPlaceholder(),
@@ -91,7 +94,8 @@ class _$StartupConfigurationDtoCWProxyImpl
 }
 
 extension $StartupConfigurationDtoCopyWith on StartupConfigurationDto {
-  /// Returns a callable class that can be used as follows: `instanceOfStartupConfigurationDto.copyWith(...)` or like so:`instanceOfStartupConfigurationDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfStartupConfigurationDto.copyWith(...)` or `instanceOfStartupConfigurationDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$StartupConfigurationDtoCWProxy get copyWith =>
       _$StartupConfigurationDtoCWProxyImpl(this);

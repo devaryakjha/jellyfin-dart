@@ -21,12 +21,13 @@ abstract class _$ConfigImageTypesCWProxy {
 
   ConfigImageTypes stillSizes(List<String>? stillSizes);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ConfigImageTypes(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ConfigImageTypes(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ConfigImageTypes(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ConfigImageTypes call({
     List<String>? backdropSizes,
     String? baseUrl,
@@ -38,7 +39,8 @@ abstract class _$ConfigImageTypesCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfConfigImageTypes.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfConfigImageTypes.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfConfigImageTypes.copyWith(...)` or call `instanceOfConfigImageTypes.copyWith.fieldName(value)` for a single field.
 class _$ConfigImageTypesCWProxyImpl implements _$ConfigImageTypesCWProxy {
   const _$ConfigImageTypesCWProxyImpl(this._value);
 
@@ -46,38 +48,39 @@ class _$ConfigImageTypesCWProxyImpl implements _$ConfigImageTypesCWProxy {
 
   @override
   ConfigImageTypes backdropSizes(List<String>? backdropSizes) =>
-      this(backdropSizes: backdropSizes);
+      call(backdropSizes: backdropSizes);
 
   @override
-  ConfigImageTypes baseUrl(String? baseUrl) => this(baseUrl: baseUrl);
+  ConfigImageTypes baseUrl(String? baseUrl) => call(baseUrl: baseUrl);
 
   @override
   ConfigImageTypes logoSizes(List<String>? logoSizes) =>
-      this(logoSizes: logoSizes);
+      call(logoSizes: logoSizes);
 
   @override
   ConfigImageTypes posterSizes(List<String>? posterSizes) =>
-      this(posterSizes: posterSizes);
+      call(posterSizes: posterSizes);
 
   @override
   ConfigImageTypes profileSizes(List<String>? profileSizes) =>
-      this(profileSizes: profileSizes);
+      call(profileSizes: profileSizes);
 
   @override
   ConfigImageTypes secureBaseUrl(String? secureBaseUrl) =>
-      this(secureBaseUrl: secureBaseUrl);
+      call(secureBaseUrl: secureBaseUrl);
 
   @override
   ConfigImageTypes stillSizes(List<String>? stillSizes) =>
-      this(stillSizes: stillSizes);
+      call(stillSizes: stillSizes);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ConfigImageTypes(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ConfigImageTypes(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ConfigImageTypes(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ConfigImageTypes call({
     Object? backdropSizes = const $CopyWithPlaceholder(),
     Object? baseUrl = const $CopyWithPlaceholder(),
@@ -121,7 +124,8 @@ class _$ConfigImageTypesCWProxyImpl implements _$ConfigImageTypesCWProxy {
 }
 
 extension $ConfigImageTypesCopyWith on ConfigImageTypes {
-  /// Returns a callable class that can be used as follows: `instanceOfConfigImageTypes.copyWith(...)` or like so:`instanceOfConfigImageTypes.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfConfigImageTypes.copyWith(...)` or `instanceOfConfigImageTypes.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ConfigImageTypesCWProxy get copyWith => _$ConfigImageTypesCWProxyImpl(this);
 }

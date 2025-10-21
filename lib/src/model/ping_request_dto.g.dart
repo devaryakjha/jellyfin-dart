@@ -9,31 +9,34 @@ part of 'ping_request_dto.dart';
 abstract class _$PingRequestDtoCWProxy {
   PingRequestDto ping(int? ping);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PingRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PingRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PingRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PingRequestDto call({int? ping});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPingRequestDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPingRequestDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPingRequestDto.copyWith(...)` or call `instanceOfPingRequestDto.copyWith.fieldName(value)` for a single field.
 class _$PingRequestDtoCWProxyImpl implements _$PingRequestDtoCWProxy {
   const _$PingRequestDtoCWProxyImpl(this._value);
 
   final PingRequestDto _value;
 
   @override
-  PingRequestDto ping(int? ping) => this(ping: ping);
+  PingRequestDto ping(int? ping) => call(ping: ping);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PingRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PingRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PingRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PingRequestDto call({Object? ping = const $CopyWithPlaceholder()}) {
     return PingRequestDto(
       ping: ping == const $CopyWithPlaceholder()
@@ -45,7 +48,8 @@ class _$PingRequestDtoCWProxyImpl implements _$PingRequestDtoCWProxy {
 }
 
 extension $PingRequestDtoCopyWith on PingRequestDto {
-  /// Returns a callable class that can be used as follows: `instanceOfPingRequestDto.copyWith(...)` or like so:`instanceOfPingRequestDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPingRequestDto.copyWith(...)` or `instanceOfPingRequestDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PingRequestDtoCWProxy get copyWith => _$PingRequestDtoCWProxyImpl(this);
 }

@@ -13,12 +13,13 @@ abstract class _$SessionsMessageCWProxy {
 
   SessionsMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SessionsMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SessionsMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SessionsMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SessionsMessage call({
     List<SessionInfoDto>? data,
     String? messageId,
@@ -26,29 +27,31 @@ abstract class _$SessionsMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSessionsMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSessionsMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSessionsMessage.copyWith(...)` or call `instanceOfSessionsMessage.copyWith.fieldName(value)` for a single field.
 class _$SessionsMessageCWProxyImpl implements _$SessionsMessageCWProxy {
   const _$SessionsMessageCWProxyImpl(this._value);
 
   final SessionsMessage _value;
 
   @override
-  SessionsMessage data(List<SessionInfoDto>? data) => this(data: data);
+  SessionsMessage data(List<SessionInfoDto>? data) => call(data: data);
 
   @override
-  SessionsMessage messageId(String? messageId) => this(messageId: messageId);
+  SessionsMessage messageId(String? messageId) => call(messageId: messageId);
 
   @override
   SessionsMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SessionsMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SessionsMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SessionsMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SessionsMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -72,7 +75,8 @@ class _$SessionsMessageCWProxyImpl implements _$SessionsMessageCWProxy {
 }
 
 extension $SessionsMessageCopyWith on SessionsMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfSessionsMessage.copyWith(...)` or like so:`instanceOfSessionsMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSessionsMessage.copyWith(...)` or `instanceOfSessionsMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SessionsMessageCWProxy get copyWith => _$SessionsMessageCWProxyImpl(this);
 }

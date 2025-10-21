@@ -9,16 +9,18 @@ part of 'forgot_password_dto.dart';
 abstract class _$ForgotPasswordDtoCWProxy {
   ForgotPasswordDto enteredUsername(String enteredUsername);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ForgotPasswordDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ForgotPasswordDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ForgotPasswordDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ForgotPasswordDto call({String enteredUsername});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfForgotPasswordDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfForgotPasswordDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfForgotPasswordDto.copyWith(...)` or call `instanceOfForgotPasswordDto.copyWith.fieldName(value)` for a single field.
 class _$ForgotPasswordDtoCWProxyImpl implements _$ForgotPasswordDtoCWProxy {
   const _$ForgotPasswordDtoCWProxyImpl(this._value);
 
@@ -26,20 +28,23 @@ class _$ForgotPasswordDtoCWProxyImpl implements _$ForgotPasswordDtoCWProxy {
 
   @override
   ForgotPasswordDto enteredUsername(String enteredUsername) =>
-      this(enteredUsername: enteredUsername);
+      call(enteredUsername: enteredUsername);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ForgotPasswordDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ForgotPasswordDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ForgotPasswordDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ForgotPasswordDto call({
     Object? enteredUsername = const $CopyWithPlaceholder(),
   }) {
     return ForgotPasswordDto(
-      enteredUsername: enteredUsername == const $CopyWithPlaceholder()
+      enteredUsername:
+          enteredUsername == const $CopyWithPlaceholder() ||
+              enteredUsername == null
           ? _value.enteredUsername
           // ignore: cast_nullable_to_non_nullable
           : enteredUsername as String,
@@ -48,7 +53,8 @@ class _$ForgotPasswordDtoCWProxyImpl implements _$ForgotPasswordDtoCWProxy {
 }
 
 extension $ForgotPasswordDtoCopyWith on ForgotPasswordDto {
-  /// Returns a callable class that can be used as follows: `instanceOfForgotPasswordDto.copyWith(...)` or like so:`instanceOfForgotPasswordDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfForgotPasswordDto.copyWith(...)` or `instanceOfForgotPasswordDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ForgotPasswordDtoCWProxy get copyWith =>
       _$ForgotPasswordDtoCWProxyImpl(this);

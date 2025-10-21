@@ -15,12 +15,13 @@ abstract class _$BufferRequestDtoCWProxy {
 
   BufferRequestDto playlistItemId(String? playlistItemId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BufferRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BufferRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BufferRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BufferRequestDto call({
     DateTime? when_,
     int? positionTicks,
@@ -29,33 +30,35 @@ abstract class _$BufferRequestDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfBufferRequestDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfBufferRequestDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfBufferRequestDto.copyWith(...)` or call `instanceOfBufferRequestDto.copyWith.fieldName(value)` for a single field.
 class _$BufferRequestDtoCWProxyImpl implements _$BufferRequestDtoCWProxy {
   const _$BufferRequestDtoCWProxyImpl(this._value);
 
   final BufferRequestDto _value;
 
   @override
-  BufferRequestDto when_(DateTime? when_) => this(when_: when_);
+  BufferRequestDto when_(DateTime? when_) => call(when_: when_);
 
   @override
   BufferRequestDto positionTicks(int? positionTicks) =>
-      this(positionTicks: positionTicks);
+      call(positionTicks: positionTicks);
 
   @override
-  BufferRequestDto isPlaying(bool? isPlaying) => this(isPlaying: isPlaying);
+  BufferRequestDto isPlaying(bool? isPlaying) => call(isPlaying: isPlaying);
 
   @override
   BufferRequestDto playlistItemId(String? playlistItemId) =>
-      this(playlistItemId: playlistItemId);
+      call(playlistItemId: playlistItemId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BufferRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BufferRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BufferRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BufferRequestDto call({
     Object? when_ = const $CopyWithPlaceholder(),
     Object? positionTicks = const $CopyWithPlaceholder(),
@@ -84,7 +87,8 @@ class _$BufferRequestDtoCWProxyImpl implements _$BufferRequestDtoCWProxy {
 }
 
 extension $BufferRequestDtoCopyWith on BufferRequestDto {
-  /// Returns a callable class that can be used as follows: `instanceOfBufferRequestDto.copyWith(...)` or like so:`instanceOfBufferRequestDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfBufferRequestDto.copyWith(...)` or `instanceOfBufferRequestDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$BufferRequestDtoCWProxy get copyWith => _$BufferRequestDtoCWProxyImpl(this);
 }

@@ -21,12 +21,13 @@ abstract class _$LibraryUpdateInfoCWProxy {
 
   LibraryUpdateInfo isEmpty(bool? isEmpty);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryUpdateInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryUpdateInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryUpdateInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryUpdateInfo call({
     List<String>? foldersAddedTo,
     List<String>? foldersRemovedFrom,
@@ -38,7 +39,8 @@ abstract class _$LibraryUpdateInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLibraryUpdateInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLibraryUpdateInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLibraryUpdateInfo.copyWith(...)` or call `instanceOfLibraryUpdateInfo.copyWith.fieldName(value)` for a single field.
 class _$LibraryUpdateInfoCWProxyImpl implements _$LibraryUpdateInfoCWProxy {
   const _$LibraryUpdateInfoCWProxyImpl(this._value);
 
@@ -46,38 +48,39 @@ class _$LibraryUpdateInfoCWProxyImpl implements _$LibraryUpdateInfoCWProxy {
 
   @override
   LibraryUpdateInfo foldersAddedTo(List<String>? foldersAddedTo) =>
-      this(foldersAddedTo: foldersAddedTo);
+      call(foldersAddedTo: foldersAddedTo);
 
   @override
   LibraryUpdateInfo foldersRemovedFrom(List<String>? foldersRemovedFrom) =>
-      this(foldersRemovedFrom: foldersRemovedFrom);
+      call(foldersRemovedFrom: foldersRemovedFrom);
 
   @override
   LibraryUpdateInfo itemsAdded(List<String>? itemsAdded) =>
-      this(itemsAdded: itemsAdded);
+      call(itemsAdded: itemsAdded);
 
   @override
   LibraryUpdateInfo itemsRemoved(List<String>? itemsRemoved) =>
-      this(itemsRemoved: itemsRemoved);
+      call(itemsRemoved: itemsRemoved);
 
   @override
   LibraryUpdateInfo itemsUpdated(List<String>? itemsUpdated) =>
-      this(itemsUpdated: itemsUpdated);
+      call(itemsUpdated: itemsUpdated);
 
   @override
   LibraryUpdateInfo collectionFolders(List<String>? collectionFolders) =>
-      this(collectionFolders: collectionFolders);
+      call(collectionFolders: collectionFolders);
 
   @override
-  LibraryUpdateInfo isEmpty(bool? isEmpty) => this(isEmpty: isEmpty);
+  LibraryUpdateInfo isEmpty(bool? isEmpty) => call(isEmpty: isEmpty);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryUpdateInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryUpdateInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryUpdateInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryUpdateInfo call({
     Object? foldersAddedTo = const $CopyWithPlaceholder(),
     Object? foldersRemovedFrom = const $CopyWithPlaceholder(),
@@ -121,7 +124,8 @@ class _$LibraryUpdateInfoCWProxyImpl implements _$LibraryUpdateInfoCWProxy {
 }
 
 extension $LibraryUpdateInfoCopyWith on LibraryUpdateInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfLibraryUpdateInfo.copyWith(...)` or like so:`instanceOfLibraryUpdateInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLibraryUpdateInfo.copyWith(...)` or `instanceOfLibraryUpdateInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LibraryUpdateInfoCWProxy get copyWith =>
       _$LibraryUpdateInfoCWProxyImpl(this);

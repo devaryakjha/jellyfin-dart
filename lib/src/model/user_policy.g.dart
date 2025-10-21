@@ -103,12 +103,13 @@ abstract class _$UserPolicyCWProxy {
 
   UserPolicy syncPlayAccess(SyncPlayUserAccessType? syncPlayAccess);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserPolicy(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserPolicy(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserPolicy(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserPolicy call({
     bool? isAdministrator,
     bool? isHidden,
@@ -157,7 +158,8 @@ abstract class _$UserPolicyCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfUserPolicy.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfUserPolicy.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfUserPolicy.copyWith(...)` or call `instanceOfUserPolicy.copyWith.fieldName(value)` for a single field.
 class _$UserPolicyCWProxyImpl implements _$UserPolicyCWProxy {
   const _$UserPolicyCWProxyImpl(this._value);
 
@@ -165,189 +167,190 @@ class _$UserPolicyCWProxyImpl implements _$UserPolicyCWProxy {
 
   @override
   UserPolicy isAdministrator(bool? isAdministrator) =>
-      this(isAdministrator: isAdministrator);
+      call(isAdministrator: isAdministrator);
 
   @override
-  UserPolicy isHidden(bool? isHidden) => this(isHidden: isHidden);
+  UserPolicy isHidden(bool? isHidden) => call(isHidden: isHidden);
 
   @override
   UserPolicy enableCollectionManagement(bool? enableCollectionManagement) =>
-      this(enableCollectionManagement: enableCollectionManagement);
+      call(enableCollectionManagement: enableCollectionManagement);
 
   @override
   UserPolicy enableSubtitleManagement(bool? enableSubtitleManagement) =>
-      this(enableSubtitleManagement: enableSubtitleManagement);
+      call(enableSubtitleManagement: enableSubtitleManagement);
 
   @override
   UserPolicy enableLyricManagement(bool? enableLyricManagement) =>
-      this(enableLyricManagement: enableLyricManagement);
+      call(enableLyricManagement: enableLyricManagement);
 
   @override
-  UserPolicy isDisabled(bool? isDisabled) => this(isDisabled: isDisabled);
+  UserPolicy isDisabled(bool? isDisabled) => call(isDisabled: isDisabled);
 
   @override
   UserPolicy maxParentalRating(int? maxParentalRating) =>
-      this(maxParentalRating: maxParentalRating);
+      call(maxParentalRating: maxParentalRating);
 
   @override
   UserPolicy maxParentalSubRating(int? maxParentalSubRating) =>
-      this(maxParentalSubRating: maxParentalSubRating);
+      call(maxParentalSubRating: maxParentalSubRating);
 
   @override
   UserPolicy blockedTags(List<String>? blockedTags) =>
-      this(blockedTags: blockedTags);
+      call(blockedTags: blockedTags);
 
   @override
   UserPolicy allowedTags(List<String>? allowedTags) =>
-      this(allowedTags: allowedTags);
+      call(allowedTags: allowedTags);
 
   @override
   UserPolicy enableUserPreferenceAccess(bool? enableUserPreferenceAccess) =>
-      this(enableUserPreferenceAccess: enableUserPreferenceAccess);
+      call(enableUserPreferenceAccess: enableUserPreferenceAccess);
 
   @override
   UserPolicy accessSchedules(List<AccessSchedule>? accessSchedules) =>
-      this(accessSchedules: accessSchedules);
+      call(accessSchedules: accessSchedules);
 
   @override
   UserPolicy blockUnratedItems(List<UnratedItem>? blockUnratedItems) =>
-      this(blockUnratedItems: blockUnratedItems);
+      call(blockUnratedItems: blockUnratedItems);
 
   @override
   UserPolicy enableRemoteControlOfOtherUsers(
     bool? enableRemoteControlOfOtherUsers,
-  ) => this(enableRemoteControlOfOtherUsers: enableRemoteControlOfOtherUsers);
+  ) => call(enableRemoteControlOfOtherUsers: enableRemoteControlOfOtherUsers);
 
   @override
   UserPolicy enableSharedDeviceControl(bool? enableSharedDeviceControl) =>
-      this(enableSharedDeviceControl: enableSharedDeviceControl);
+      call(enableSharedDeviceControl: enableSharedDeviceControl);
 
   @override
   UserPolicy enableRemoteAccess(bool? enableRemoteAccess) =>
-      this(enableRemoteAccess: enableRemoteAccess);
+      call(enableRemoteAccess: enableRemoteAccess);
 
   @override
   UserPolicy enableLiveTvManagement(bool? enableLiveTvManagement) =>
-      this(enableLiveTvManagement: enableLiveTvManagement);
+      call(enableLiveTvManagement: enableLiveTvManagement);
 
   @override
   UserPolicy enableLiveTvAccess(bool? enableLiveTvAccess) =>
-      this(enableLiveTvAccess: enableLiveTvAccess);
+      call(enableLiveTvAccess: enableLiveTvAccess);
 
   @override
   UserPolicy enableMediaPlayback(bool? enableMediaPlayback) =>
-      this(enableMediaPlayback: enableMediaPlayback);
+      call(enableMediaPlayback: enableMediaPlayback);
 
   @override
   UserPolicy enableAudioPlaybackTranscoding(
     bool? enableAudioPlaybackTranscoding,
-  ) => this(enableAudioPlaybackTranscoding: enableAudioPlaybackTranscoding);
+  ) => call(enableAudioPlaybackTranscoding: enableAudioPlaybackTranscoding);
 
   @override
   UserPolicy enableVideoPlaybackTranscoding(
     bool? enableVideoPlaybackTranscoding,
-  ) => this(enableVideoPlaybackTranscoding: enableVideoPlaybackTranscoding);
+  ) => call(enableVideoPlaybackTranscoding: enableVideoPlaybackTranscoding);
 
   @override
   UserPolicy enablePlaybackRemuxing(bool? enablePlaybackRemuxing) =>
-      this(enablePlaybackRemuxing: enablePlaybackRemuxing);
+      call(enablePlaybackRemuxing: enablePlaybackRemuxing);
 
   @override
   UserPolicy forceRemoteSourceTranscoding(bool? forceRemoteSourceTranscoding) =>
-      this(forceRemoteSourceTranscoding: forceRemoteSourceTranscoding);
+      call(forceRemoteSourceTranscoding: forceRemoteSourceTranscoding);
 
   @override
   UserPolicy enableContentDeletion(bool? enableContentDeletion) =>
-      this(enableContentDeletion: enableContentDeletion);
+      call(enableContentDeletion: enableContentDeletion);
 
   @override
   UserPolicy enableContentDeletionFromFolders(
     List<String>? enableContentDeletionFromFolders,
-  ) => this(enableContentDeletionFromFolders: enableContentDeletionFromFolders);
+  ) => call(enableContentDeletionFromFolders: enableContentDeletionFromFolders);
 
   @override
   UserPolicy enableContentDownloading(bool? enableContentDownloading) =>
-      this(enableContentDownloading: enableContentDownloading);
+      call(enableContentDownloading: enableContentDownloading);
 
   @override
   UserPolicy enableSyncTranscoding(bool? enableSyncTranscoding) =>
-      this(enableSyncTranscoding: enableSyncTranscoding);
+      call(enableSyncTranscoding: enableSyncTranscoding);
 
   @override
   UserPolicy enableMediaConversion(bool? enableMediaConversion) =>
-      this(enableMediaConversion: enableMediaConversion);
+      call(enableMediaConversion: enableMediaConversion);
 
   @override
   UserPolicy enabledDevices(List<String>? enabledDevices) =>
-      this(enabledDevices: enabledDevices);
+      call(enabledDevices: enabledDevices);
 
   @override
   UserPolicy enableAllDevices(bool? enableAllDevices) =>
-      this(enableAllDevices: enableAllDevices);
+      call(enableAllDevices: enableAllDevices);
 
   @override
   UserPolicy enabledChannels(List<String>? enabledChannels) =>
-      this(enabledChannels: enabledChannels);
+      call(enabledChannels: enabledChannels);
 
   @override
   UserPolicy enableAllChannels(bool? enableAllChannels) =>
-      this(enableAllChannels: enableAllChannels);
+      call(enableAllChannels: enableAllChannels);
 
   @override
   UserPolicy enabledFolders(List<String>? enabledFolders) =>
-      this(enabledFolders: enabledFolders);
+      call(enabledFolders: enabledFolders);
 
   @override
   UserPolicy enableAllFolders(bool? enableAllFolders) =>
-      this(enableAllFolders: enableAllFolders);
+      call(enableAllFolders: enableAllFolders);
 
   @override
   UserPolicy invalidLoginAttemptCount(int? invalidLoginAttemptCount) =>
-      this(invalidLoginAttemptCount: invalidLoginAttemptCount);
+      call(invalidLoginAttemptCount: invalidLoginAttemptCount);
 
   @override
   UserPolicy loginAttemptsBeforeLockout(int? loginAttemptsBeforeLockout) =>
-      this(loginAttemptsBeforeLockout: loginAttemptsBeforeLockout);
+      call(loginAttemptsBeforeLockout: loginAttemptsBeforeLockout);
 
   @override
   UserPolicy maxActiveSessions(int? maxActiveSessions) =>
-      this(maxActiveSessions: maxActiveSessions);
+      call(maxActiveSessions: maxActiveSessions);
 
   @override
   UserPolicy enablePublicSharing(bool? enablePublicSharing) =>
-      this(enablePublicSharing: enablePublicSharing);
+      call(enablePublicSharing: enablePublicSharing);
 
   @override
   UserPolicy blockedMediaFolders(List<String>? blockedMediaFolders) =>
-      this(blockedMediaFolders: blockedMediaFolders);
+      call(blockedMediaFolders: blockedMediaFolders);
 
   @override
   UserPolicy blockedChannels(List<String>? blockedChannels) =>
-      this(blockedChannels: blockedChannels);
+      call(blockedChannels: blockedChannels);
 
   @override
   UserPolicy remoteClientBitrateLimit(int? remoteClientBitrateLimit) =>
-      this(remoteClientBitrateLimit: remoteClientBitrateLimit);
+      call(remoteClientBitrateLimit: remoteClientBitrateLimit);
 
   @override
   UserPolicy authenticationProviderId(String authenticationProviderId) =>
-      this(authenticationProviderId: authenticationProviderId);
+      call(authenticationProviderId: authenticationProviderId);
 
   @override
   UserPolicy passwordResetProviderId(String passwordResetProviderId) =>
-      this(passwordResetProviderId: passwordResetProviderId);
+      call(passwordResetProviderId: passwordResetProviderId);
 
   @override
   UserPolicy syncPlayAccess(SyncPlayUserAccessType? syncPlayAccess) =>
-      this(syncPlayAccess: syncPlayAccess);
+      call(syncPlayAccess: syncPlayAccess);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `UserPolicy(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `UserPolicy(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// UserPolicy(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   UserPolicy call({
     Object? isAdministrator = const $CopyWithPlaceholder(),
     Object? isHidden = const $CopyWithPlaceholder(),
@@ -579,12 +582,14 @@ class _$UserPolicyCWProxyImpl implements _$UserPolicyCWProxy {
           // ignore: cast_nullable_to_non_nullable
           : remoteClientBitrateLimit as int?,
       authenticationProviderId:
-          authenticationProviderId == const $CopyWithPlaceholder()
+          authenticationProviderId == const $CopyWithPlaceholder() ||
+              authenticationProviderId == null
           ? _value.authenticationProviderId
           // ignore: cast_nullable_to_non_nullable
           : authenticationProviderId as String,
       passwordResetProviderId:
-          passwordResetProviderId == const $CopyWithPlaceholder()
+          passwordResetProviderId == const $CopyWithPlaceholder() ||
+              passwordResetProviderId == null
           ? _value.passwordResetProviderId
           // ignore: cast_nullable_to_non_nullable
           : passwordResetProviderId as String,
@@ -597,7 +602,8 @@ class _$UserPolicyCWProxyImpl implements _$UserPolicyCWProxy {
 }
 
 extension $UserPolicyCopyWith on UserPolicy {
-  /// Returns a callable class that can be used as follows: `instanceOfUserPolicy.copyWith(...)` or like so:`instanceOfUserPolicy.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfUserPolicy.copyWith(...)` or `instanceOfUserPolicy.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$UserPolicyCWProxy get copyWith => _$UserPolicyCWProxyImpl(this);
 }

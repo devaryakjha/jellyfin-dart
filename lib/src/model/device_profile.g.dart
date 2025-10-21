@@ -33,12 +33,13 @@ abstract class _$DeviceProfileCWProxy {
 
   DeviceProfile subtitleProfiles(List<SubtitleProfile>? subtitleProfiles);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DeviceProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DeviceProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DeviceProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DeviceProfile call({
     String? name,
     String? id,
@@ -54,64 +55,66 @@ abstract class _$DeviceProfileCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfDeviceProfile.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfDeviceProfile.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfDeviceProfile.copyWith(...)` or call `instanceOfDeviceProfile.copyWith.fieldName(value)` for a single field.
 class _$DeviceProfileCWProxyImpl implements _$DeviceProfileCWProxy {
   const _$DeviceProfileCWProxyImpl(this._value);
 
   final DeviceProfile _value;
 
   @override
-  DeviceProfile name(String? name) => this(name: name);
+  DeviceProfile name(String? name) => call(name: name);
 
   @override
-  DeviceProfile id(String? id) => this(id: id);
+  DeviceProfile id(String? id) => call(id: id);
 
   @override
   DeviceProfile maxStreamingBitrate(int? maxStreamingBitrate) =>
-      this(maxStreamingBitrate: maxStreamingBitrate);
+      call(maxStreamingBitrate: maxStreamingBitrate);
 
   @override
   DeviceProfile maxStaticBitrate(int? maxStaticBitrate) =>
-      this(maxStaticBitrate: maxStaticBitrate);
+      call(maxStaticBitrate: maxStaticBitrate);
 
   @override
   DeviceProfile musicStreamingTranscodingBitrate(
     int? musicStreamingTranscodingBitrate,
-  ) => this(musicStreamingTranscodingBitrate: musicStreamingTranscodingBitrate);
+  ) => call(musicStreamingTranscodingBitrate: musicStreamingTranscodingBitrate);
 
   @override
   DeviceProfile maxStaticMusicBitrate(int? maxStaticMusicBitrate) =>
-      this(maxStaticMusicBitrate: maxStaticMusicBitrate);
+      call(maxStaticMusicBitrate: maxStaticMusicBitrate);
 
   @override
   DeviceProfile directPlayProfiles(
     List<DirectPlayProfile>? directPlayProfiles,
-  ) => this(directPlayProfiles: directPlayProfiles);
+  ) => call(directPlayProfiles: directPlayProfiles);
 
   @override
   DeviceProfile transcodingProfiles(
     List<TranscodingProfile>? transcodingProfiles,
-  ) => this(transcodingProfiles: transcodingProfiles);
+  ) => call(transcodingProfiles: transcodingProfiles);
 
   @override
   DeviceProfile containerProfiles(List<ContainerProfile>? containerProfiles) =>
-      this(containerProfiles: containerProfiles);
+      call(containerProfiles: containerProfiles);
 
   @override
   DeviceProfile codecProfiles(List<CodecProfile>? codecProfiles) =>
-      this(codecProfiles: codecProfiles);
+      call(codecProfiles: codecProfiles);
 
   @override
   DeviceProfile subtitleProfiles(List<SubtitleProfile>? subtitleProfiles) =>
-      this(subtitleProfiles: subtitleProfiles);
+      call(subtitleProfiles: subtitleProfiles);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DeviceProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DeviceProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DeviceProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DeviceProfile call({
     Object? name = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
@@ -177,7 +180,8 @@ class _$DeviceProfileCWProxyImpl implements _$DeviceProfileCWProxy {
 }
 
 extension $DeviceProfileCopyWith on DeviceProfile {
-  /// Returns a callable class that can be used as follows: `instanceOfDeviceProfile.copyWith(...)` or like so:`instanceOfDeviceProfile.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfDeviceProfile.copyWith(...)` or `instanceOfDeviceProfile.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$DeviceProfileCWProxy get copyWith => _$DeviceProfileCWProxyImpl(this);
 }

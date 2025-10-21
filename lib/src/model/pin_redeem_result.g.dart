@@ -11,35 +11,38 @@ abstract class _$PinRedeemResultCWProxy {
 
   PinRedeemResult usersReset(List<String>? usersReset);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PinRedeemResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PinRedeemResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PinRedeemResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PinRedeemResult call({bool? success, List<String>? usersReset});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPinRedeemResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPinRedeemResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPinRedeemResult.copyWith(...)` or call `instanceOfPinRedeemResult.copyWith.fieldName(value)` for a single field.
 class _$PinRedeemResultCWProxyImpl implements _$PinRedeemResultCWProxy {
   const _$PinRedeemResultCWProxyImpl(this._value);
 
   final PinRedeemResult _value;
 
   @override
-  PinRedeemResult success(bool? success) => this(success: success);
+  PinRedeemResult success(bool? success) => call(success: success);
 
   @override
   PinRedeemResult usersReset(List<String>? usersReset) =>
-      this(usersReset: usersReset);
+      call(usersReset: usersReset);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PinRedeemResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PinRedeemResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PinRedeemResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PinRedeemResult call({
     Object? success = const $CopyWithPlaceholder(),
     Object? usersReset = const $CopyWithPlaceholder(),
@@ -58,7 +61,8 @@ class _$PinRedeemResultCWProxyImpl implements _$PinRedeemResultCWProxy {
 }
 
 extension $PinRedeemResultCopyWith on PinRedeemResult {
-  /// Returns a callable class that can be used as follows: `instanceOfPinRedeemResult.copyWith(...)` or like so:`instanceOfPinRedeemResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPinRedeemResult.copyWith(...)` or `instanceOfPinRedeemResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PinRedeemResultCWProxy get copyWith => _$PinRedeemResultCWProxyImpl(this);
 }

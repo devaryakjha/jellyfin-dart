@@ -13,12 +13,13 @@ abstract class _$SyncPlayUserLeftUpdateCWProxy {
 
   SyncPlayUserLeftUpdate type(GroupUpdateType? type);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SyncPlayUserLeftUpdate(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SyncPlayUserLeftUpdate(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SyncPlayUserLeftUpdate(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SyncPlayUserLeftUpdate call({
     String? groupId,
     String? data,
@@ -26,7 +27,8 @@ abstract class _$SyncPlayUserLeftUpdateCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSyncPlayUserLeftUpdate.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSyncPlayUserLeftUpdate.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSyncPlayUserLeftUpdate.copyWith(...)` or call `instanceOfSyncPlayUserLeftUpdate.copyWith.fieldName(value)` for a single field.
 class _$SyncPlayUserLeftUpdateCWProxyImpl
     implements _$SyncPlayUserLeftUpdateCWProxy {
   const _$SyncPlayUserLeftUpdateCWProxyImpl(this._value);
@@ -34,21 +36,22 @@ class _$SyncPlayUserLeftUpdateCWProxyImpl
   final SyncPlayUserLeftUpdate _value;
 
   @override
-  SyncPlayUserLeftUpdate groupId(String? groupId) => this(groupId: groupId);
+  SyncPlayUserLeftUpdate groupId(String? groupId) => call(groupId: groupId);
 
   @override
-  SyncPlayUserLeftUpdate data(String? data) => this(data: data);
+  SyncPlayUserLeftUpdate data(String? data) => call(data: data);
 
   @override
-  SyncPlayUserLeftUpdate type(GroupUpdateType? type) => this(type: type);
+  SyncPlayUserLeftUpdate type(GroupUpdateType? type) => call(type: type);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SyncPlayUserLeftUpdate(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SyncPlayUserLeftUpdate(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SyncPlayUserLeftUpdate(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SyncPlayUserLeftUpdate call({
     Object? groupId = const $CopyWithPlaceholder(),
     Object? data = const $CopyWithPlaceholder(),
@@ -72,7 +75,8 @@ class _$SyncPlayUserLeftUpdateCWProxyImpl
 }
 
 extension $SyncPlayUserLeftUpdateCopyWith on SyncPlayUserLeftUpdate {
-  /// Returns a callable class that can be used as follows: `instanceOfSyncPlayUserLeftUpdate.copyWith(...)` or like so:`instanceOfSyncPlayUserLeftUpdate.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSyncPlayUserLeftUpdate.copyWith(...)` or `instanceOfSyncPlayUserLeftUpdate.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SyncPlayUserLeftUpdateCWProxy get copyWith =>
       _$SyncPlayUserLeftUpdateCWProxyImpl(this);

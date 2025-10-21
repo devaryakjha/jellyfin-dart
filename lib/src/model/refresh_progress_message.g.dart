@@ -13,12 +13,13 @@ abstract class _$RefreshProgressMessageCWProxy {
 
   RefreshProgressMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RefreshProgressMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RefreshProgressMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RefreshProgressMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RefreshProgressMessage call({
     Map<String, String>? data,
     String? messageId,
@@ -26,7 +27,8 @@ abstract class _$RefreshProgressMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfRefreshProgressMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfRefreshProgressMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfRefreshProgressMessage.copyWith(...)` or call `instanceOfRefreshProgressMessage.copyWith.fieldName(value)` for a single field.
 class _$RefreshProgressMessageCWProxyImpl
     implements _$RefreshProgressMessageCWProxy {
   const _$RefreshProgressMessageCWProxyImpl(this._value);
@@ -34,23 +36,24 @@ class _$RefreshProgressMessageCWProxyImpl
   final RefreshProgressMessage _value;
 
   @override
-  RefreshProgressMessage data(Map<String, String>? data) => this(data: data);
+  RefreshProgressMessage data(Map<String, String>? data) => call(data: data);
 
   @override
   RefreshProgressMessage messageId(String? messageId) =>
-      this(messageId: messageId);
+      call(messageId: messageId);
 
   @override
   RefreshProgressMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RefreshProgressMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RefreshProgressMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RefreshProgressMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RefreshProgressMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$RefreshProgressMessageCWProxyImpl
 }
 
 extension $RefreshProgressMessageCopyWith on RefreshProgressMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfRefreshProgressMessage.copyWith(...)` or like so:`instanceOfRefreshProgressMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfRefreshProgressMessage.copyWith(...)` or `instanceOfRefreshProgressMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$RefreshProgressMessageCWProxy get copyWith =>
       _$RefreshProgressMessageCWProxyImpl(this);

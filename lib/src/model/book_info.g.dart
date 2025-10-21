@@ -31,12 +31,13 @@ abstract class _$BookInfoCWProxy {
 
   BookInfo seriesName(String? seriesName);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BookInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BookInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BookInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BookInfo call({
     String? name,
     String? originalTitle,
@@ -53,61 +54,63 @@ abstract class _$BookInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfBookInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfBookInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfBookInfo.copyWith(...)` or call `instanceOfBookInfo.copyWith.fieldName(value)` for a single field.
 class _$BookInfoCWProxyImpl implements _$BookInfoCWProxy {
   const _$BookInfoCWProxyImpl(this._value);
 
   final BookInfo _value;
 
   @override
-  BookInfo name(String? name) => this(name: name);
+  BookInfo name(String? name) => call(name: name);
 
   @override
   BookInfo originalTitle(String? originalTitle) =>
-      this(originalTitle: originalTitle);
+      call(originalTitle: originalTitle);
 
   @override
-  BookInfo path(String? path) => this(path: path);
+  BookInfo path(String? path) => call(path: path);
 
   @override
   BookInfo metadataLanguage(String? metadataLanguage) =>
-      this(metadataLanguage: metadataLanguage);
+      call(metadataLanguage: metadataLanguage);
 
   @override
   BookInfo metadataCountryCode(String? metadataCountryCode) =>
-      this(metadataCountryCode: metadataCountryCode);
+      call(metadataCountryCode: metadataCountryCode);
 
   @override
   BookInfo providerIds(Map<String, String>? providerIds) =>
-      this(providerIds: providerIds);
+      call(providerIds: providerIds);
 
   @override
-  BookInfo year(int? year) => this(year: year);
+  BookInfo year(int? year) => call(year: year);
 
   @override
-  BookInfo indexNumber(int? indexNumber) => this(indexNumber: indexNumber);
+  BookInfo indexNumber(int? indexNumber) => call(indexNumber: indexNumber);
 
   @override
   BookInfo parentIndexNumber(int? parentIndexNumber) =>
-      this(parentIndexNumber: parentIndexNumber);
+      call(parentIndexNumber: parentIndexNumber);
 
   @override
   BookInfo premiereDate(DateTime? premiereDate) =>
-      this(premiereDate: premiereDate);
+      call(premiereDate: premiereDate);
 
   @override
-  BookInfo isAutomated(bool? isAutomated) => this(isAutomated: isAutomated);
+  BookInfo isAutomated(bool? isAutomated) => call(isAutomated: isAutomated);
 
   @override
-  BookInfo seriesName(String? seriesName) => this(seriesName: seriesName);
+  BookInfo seriesName(String? seriesName) => call(seriesName: seriesName);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `BookInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `BookInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// BookInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   BookInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? originalTitle = const $CopyWithPlaceholder(),
@@ -176,7 +179,8 @@ class _$BookInfoCWProxyImpl implements _$BookInfoCWProxy {
 }
 
 extension $BookInfoCopyWith on BookInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfBookInfo.copyWith(...)` or like so:`instanceOfBookInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfBookInfo.copyWith(...)` or `instanceOfBookInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$BookInfoCWProxy get copyWith => _$BookInfoCWProxyImpl(this);
 }

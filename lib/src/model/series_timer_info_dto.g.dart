@@ -79,12 +79,13 @@ abstract class _$SeriesTimerInfoDtoCWProxy {
 
   SeriesTimerInfoDto parentPrimaryImageTag(String? parentPrimaryImageTag);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SeriesTimerInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SeriesTimerInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SeriesTimerInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SeriesTimerInfoDto call({
     String? id,
     String? type,
@@ -124,150 +125,152 @@ abstract class _$SeriesTimerInfoDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSeriesTimerInfoDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSeriesTimerInfoDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSeriesTimerInfoDto.copyWith(...)` or call `instanceOfSeriesTimerInfoDto.copyWith.fieldName(value)` for a single field.
 class _$SeriesTimerInfoDtoCWProxyImpl implements _$SeriesTimerInfoDtoCWProxy {
   const _$SeriesTimerInfoDtoCWProxyImpl(this._value);
 
   final SeriesTimerInfoDto _value;
 
   @override
-  SeriesTimerInfoDto id(String? id) => this(id: id);
+  SeriesTimerInfoDto id(String? id) => call(id: id);
 
   @override
-  SeriesTimerInfoDto type(String? type) => this(type: type);
+  SeriesTimerInfoDto type(String? type) => call(type: type);
 
   @override
-  SeriesTimerInfoDto serverId(String? serverId) => this(serverId: serverId);
+  SeriesTimerInfoDto serverId(String? serverId) => call(serverId: serverId);
 
   @override
   SeriesTimerInfoDto externalId(String? externalId) =>
-      this(externalId: externalId);
+      call(externalId: externalId);
 
   @override
-  SeriesTimerInfoDto channelId(String? channelId) => this(channelId: channelId);
+  SeriesTimerInfoDto channelId(String? channelId) => call(channelId: channelId);
 
   @override
   SeriesTimerInfoDto externalChannelId(String? externalChannelId) =>
-      this(externalChannelId: externalChannelId);
+      call(externalChannelId: externalChannelId);
 
   @override
   SeriesTimerInfoDto channelName(String? channelName) =>
-      this(channelName: channelName);
+      call(channelName: channelName);
 
   @override
   SeriesTimerInfoDto channelPrimaryImageTag(String? channelPrimaryImageTag) =>
-      this(channelPrimaryImageTag: channelPrimaryImageTag);
+      call(channelPrimaryImageTag: channelPrimaryImageTag);
 
   @override
-  SeriesTimerInfoDto programId(String? programId) => this(programId: programId);
+  SeriesTimerInfoDto programId(String? programId) => call(programId: programId);
 
   @override
   SeriesTimerInfoDto externalProgramId(String? externalProgramId) =>
-      this(externalProgramId: externalProgramId);
+      call(externalProgramId: externalProgramId);
 
   @override
-  SeriesTimerInfoDto name(String? name) => this(name: name);
+  SeriesTimerInfoDto name(String? name) => call(name: name);
 
   @override
-  SeriesTimerInfoDto overview(String? overview) => this(overview: overview);
+  SeriesTimerInfoDto overview(String? overview) => call(overview: overview);
 
   @override
   SeriesTimerInfoDto startDate(DateTime? startDate) =>
-      this(startDate: startDate);
+      call(startDate: startDate);
 
   @override
-  SeriesTimerInfoDto endDate(DateTime? endDate) => this(endDate: endDate);
+  SeriesTimerInfoDto endDate(DateTime? endDate) => call(endDate: endDate);
 
   @override
   SeriesTimerInfoDto serviceName(String? serviceName) =>
-      this(serviceName: serviceName);
+      call(serviceName: serviceName);
 
   @override
-  SeriesTimerInfoDto priority(int? priority) => this(priority: priority);
+  SeriesTimerInfoDto priority(int? priority) => call(priority: priority);
 
   @override
   SeriesTimerInfoDto prePaddingSeconds(int? prePaddingSeconds) =>
-      this(prePaddingSeconds: prePaddingSeconds);
+      call(prePaddingSeconds: prePaddingSeconds);
 
   @override
   SeriesTimerInfoDto postPaddingSeconds(int? postPaddingSeconds) =>
-      this(postPaddingSeconds: postPaddingSeconds);
+      call(postPaddingSeconds: postPaddingSeconds);
 
   @override
   SeriesTimerInfoDto isPrePaddingRequired(bool? isPrePaddingRequired) =>
-      this(isPrePaddingRequired: isPrePaddingRequired);
+      call(isPrePaddingRequired: isPrePaddingRequired);
 
   @override
   SeriesTimerInfoDto parentBackdropItemId(String? parentBackdropItemId) =>
-      this(parentBackdropItemId: parentBackdropItemId);
+      call(parentBackdropItemId: parentBackdropItemId);
 
   @override
   SeriesTimerInfoDto parentBackdropImageTags(
     List<String>? parentBackdropImageTags,
-  ) => this(parentBackdropImageTags: parentBackdropImageTags);
+  ) => call(parentBackdropImageTags: parentBackdropImageTags);
 
   @override
   SeriesTimerInfoDto isPostPaddingRequired(bool? isPostPaddingRequired) =>
-      this(isPostPaddingRequired: isPostPaddingRequired);
+      call(isPostPaddingRequired: isPostPaddingRequired);
 
   @override
   SeriesTimerInfoDto keepUntil(KeepUntil? keepUntil) =>
-      this(keepUntil: keepUntil);
+      call(keepUntil: keepUntil);
 
   @override
   SeriesTimerInfoDto recordAnyTime(bool? recordAnyTime) =>
-      this(recordAnyTime: recordAnyTime);
+      call(recordAnyTime: recordAnyTime);
 
   @override
   SeriesTimerInfoDto skipEpisodesInLibrary(bool? skipEpisodesInLibrary) =>
-      this(skipEpisodesInLibrary: skipEpisodesInLibrary);
+      call(skipEpisodesInLibrary: skipEpisodesInLibrary);
 
   @override
   SeriesTimerInfoDto recordAnyChannel(bool? recordAnyChannel) =>
-      this(recordAnyChannel: recordAnyChannel);
+      call(recordAnyChannel: recordAnyChannel);
 
   @override
-  SeriesTimerInfoDto keepUpTo(int? keepUpTo) => this(keepUpTo: keepUpTo);
+  SeriesTimerInfoDto keepUpTo(int? keepUpTo) => call(keepUpTo: keepUpTo);
 
   @override
   SeriesTimerInfoDto recordNewOnly(bool? recordNewOnly) =>
-      this(recordNewOnly: recordNewOnly);
+      call(recordNewOnly: recordNewOnly);
 
   @override
-  SeriesTimerInfoDto days(List<DayOfWeek>? days) => this(days: days);
+  SeriesTimerInfoDto days(List<DayOfWeek>? days) => call(days: days);
 
   @override
   SeriesTimerInfoDto dayPattern(DayPattern? dayPattern) =>
-      this(dayPattern: dayPattern);
+      call(dayPattern: dayPattern);
 
   @override
   SeriesTimerInfoDto imageTags(Map<String, String>? imageTags) =>
-      this(imageTags: imageTags);
+      call(imageTags: imageTags);
 
   @override
   SeriesTimerInfoDto parentThumbItemId(String? parentThumbItemId) =>
-      this(parentThumbItemId: parentThumbItemId);
+      call(parentThumbItemId: parentThumbItemId);
 
   @override
   SeriesTimerInfoDto parentThumbImageTag(String? parentThumbImageTag) =>
-      this(parentThumbImageTag: parentThumbImageTag);
+      call(parentThumbImageTag: parentThumbImageTag);
 
   @override
   SeriesTimerInfoDto parentPrimaryImageItemId(
     String? parentPrimaryImageItemId,
-  ) => this(parentPrimaryImageItemId: parentPrimaryImageItemId);
+  ) => call(parentPrimaryImageItemId: parentPrimaryImageItemId);
 
   @override
   SeriesTimerInfoDto parentPrimaryImageTag(String? parentPrimaryImageTag) =>
-      this(parentPrimaryImageTag: parentPrimaryImageTag);
+      call(parentPrimaryImageTag: parentPrimaryImageTag);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SeriesTimerInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SeriesTimerInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SeriesTimerInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SeriesTimerInfoDto call({
     Object? id = const $CopyWithPlaceholder(),
     Object? type = const $CopyWithPlaceholder(),
@@ -457,7 +460,8 @@ class _$SeriesTimerInfoDtoCWProxyImpl implements _$SeriesTimerInfoDtoCWProxy {
 }
 
 extension $SeriesTimerInfoDtoCopyWith on SeriesTimerInfoDto {
-  /// Returns a callable class that can be used as follows: `instanceOfSeriesTimerInfoDto.copyWith(...)` or like so:`instanceOfSeriesTimerInfoDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSeriesTimerInfoDto.copyWith(...)` or `instanceOfSeriesTimerInfoDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SeriesTimerInfoDtoCWProxy get copyWith =>
       _$SeriesTimerInfoDtoCWProxyImpl(this);

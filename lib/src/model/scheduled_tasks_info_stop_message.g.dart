@@ -9,16 +9,18 @@ part of 'scheduled_tasks_info_stop_message.dart';
 abstract class _$ScheduledTasksInfoStopMessageCWProxy {
   ScheduledTasksInfoStopMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ScheduledTasksInfoStopMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ScheduledTasksInfoStopMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ScheduledTasksInfoStopMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ScheduledTasksInfoStopMessage call({SessionMessageType? messageType});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfScheduledTasksInfoStopMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfScheduledTasksInfoStopMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfScheduledTasksInfoStopMessage.copyWith(...)` or call `instanceOfScheduledTasksInfoStopMessage.copyWith.fieldName(value)` for a single field.
 class _$ScheduledTasksInfoStopMessageCWProxyImpl
     implements _$ScheduledTasksInfoStopMessageCWProxy {
   const _$ScheduledTasksInfoStopMessageCWProxyImpl(this._value);
@@ -27,15 +29,16 @@ class _$ScheduledTasksInfoStopMessageCWProxyImpl
 
   @override
   ScheduledTasksInfoStopMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ScheduledTasksInfoStopMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ScheduledTasksInfoStopMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ScheduledTasksInfoStopMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ScheduledTasksInfoStopMessage call({
     Object? messageType = const $CopyWithPlaceholder(),
   }) {
@@ -50,7 +53,8 @@ class _$ScheduledTasksInfoStopMessageCWProxyImpl
 
 extension $ScheduledTasksInfoStopMessageCopyWith
     on ScheduledTasksInfoStopMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfScheduledTasksInfoStopMessage.copyWith(...)` or like so:`instanceOfScheduledTasksInfoStopMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfScheduledTasksInfoStopMessage.copyWith(...)` or `instanceOfScheduledTasksInfoStopMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ScheduledTasksInfoStopMessageCWProxy get copyWith =>
       _$ScheduledTasksInfoStopMessageCWProxyImpl(this);

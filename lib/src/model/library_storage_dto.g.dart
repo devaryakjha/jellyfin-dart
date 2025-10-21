@@ -13,12 +13,13 @@ abstract class _$LibraryStorageDtoCWProxy {
 
   LibraryStorageDto folders(List<FolderStorageDto>? folders);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryStorageDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryStorageDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryStorageDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryStorageDto call({
     String? id,
     String? name,
@@ -26,29 +27,31 @@ abstract class _$LibraryStorageDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLibraryStorageDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLibraryStorageDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLibraryStorageDto.copyWith(...)` or call `instanceOfLibraryStorageDto.copyWith.fieldName(value)` for a single field.
 class _$LibraryStorageDtoCWProxyImpl implements _$LibraryStorageDtoCWProxy {
   const _$LibraryStorageDtoCWProxyImpl(this._value);
 
   final LibraryStorageDto _value;
 
   @override
-  LibraryStorageDto id(String? id) => this(id: id);
+  LibraryStorageDto id(String? id) => call(id: id);
 
   @override
-  LibraryStorageDto name(String? name) => this(name: name);
+  LibraryStorageDto name(String? name) => call(name: name);
 
   @override
   LibraryStorageDto folders(List<FolderStorageDto>? folders) =>
-      this(folders: folders);
+      call(folders: folders);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryStorageDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryStorageDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryStorageDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryStorageDto call({
     Object? id = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
@@ -72,7 +75,8 @@ class _$LibraryStorageDtoCWProxyImpl implements _$LibraryStorageDtoCWProxy {
 }
 
 extension $LibraryStorageDtoCopyWith on LibraryStorageDto {
-  /// Returns a callable class that can be used as follows: `instanceOfLibraryStorageDto.copyWith(...)` or like so:`instanceOfLibraryStorageDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLibraryStorageDto.copyWith(...)` or `instanceOfLibraryStorageDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LibraryStorageDtoCWProxy get copyWith =>
       _$LibraryStorageDtoCWProxyImpl(this);

@@ -31,12 +31,13 @@ abstract class _$ItemCountsCWProxy {
 
   ItemCounts itemCount(int? itemCount);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ItemCounts(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ItemCounts(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ItemCounts(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ItemCounts call({
     int? movieCount,
     int? seriesCount,
@@ -53,59 +54,61 @@ abstract class _$ItemCountsCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfItemCounts.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfItemCounts.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfItemCounts.copyWith(...)` or call `instanceOfItemCounts.copyWith.fieldName(value)` for a single field.
 class _$ItemCountsCWProxyImpl implements _$ItemCountsCWProxy {
   const _$ItemCountsCWProxyImpl(this._value);
 
   final ItemCounts _value;
 
   @override
-  ItemCounts movieCount(int? movieCount) => this(movieCount: movieCount);
+  ItemCounts movieCount(int? movieCount) => call(movieCount: movieCount);
 
   @override
-  ItemCounts seriesCount(int? seriesCount) => this(seriesCount: seriesCount);
+  ItemCounts seriesCount(int? seriesCount) => call(seriesCount: seriesCount);
 
   @override
   ItemCounts episodeCount(int? episodeCount) =>
-      this(episodeCount: episodeCount);
+      call(episodeCount: episodeCount);
 
   @override
-  ItemCounts artistCount(int? artistCount) => this(artistCount: artistCount);
+  ItemCounts artistCount(int? artistCount) => call(artistCount: artistCount);
 
   @override
   ItemCounts programCount(int? programCount) =>
-      this(programCount: programCount);
+      call(programCount: programCount);
 
   @override
   ItemCounts trailerCount(int? trailerCount) =>
-      this(trailerCount: trailerCount);
+      call(trailerCount: trailerCount);
 
   @override
-  ItemCounts songCount(int? songCount) => this(songCount: songCount);
+  ItemCounts songCount(int? songCount) => call(songCount: songCount);
 
   @override
-  ItemCounts albumCount(int? albumCount) => this(albumCount: albumCount);
+  ItemCounts albumCount(int? albumCount) => call(albumCount: albumCount);
 
   @override
   ItemCounts musicVideoCount(int? musicVideoCount) =>
-      this(musicVideoCount: musicVideoCount);
+      call(musicVideoCount: musicVideoCount);
 
   @override
-  ItemCounts boxSetCount(int? boxSetCount) => this(boxSetCount: boxSetCount);
+  ItemCounts boxSetCount(int? boxSetCount) => call(boxSetCount: boxSetCount);
 
   @override
-  ItemCounts bookCount(int? bookCount) => this(bookCount: bookCount);
+  ItemCounts bookCount(int? bookCount) => call(bookCount: bookCount);
 
   @override
-  ItemCounts itemCount(int? itemCount) => this(itemCount: itemCount);
+  ItemCounts itemCount(int? itemCount) => call(itemCount: itemCount);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ItemCounts(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ItemCounts(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ItemCounts(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ItemCounts call({
     Object? movieCount = const $CopyWithPlaceholder(),
     Object? seriesCount = const $CopyWithPlaceholder(),
@@ -174,7 +177,8 @@ class _$ItemCountsCWProxyImpl implements _$ItemCountsCWProxy {
 }
 
 extension $ItemCountsCopyWith on ItemCounts {
-  /// Returns a callable class that can be used as follows: `instanceOfItemCounts.copyWith(...)` or like so:`instanceOfItemCounts.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfItemCounts.copyWith(...)` or `instanceOfItemCounts.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ItemCountsCWProxy get copyWith => _$ItemCountsCWProxyImpl(this);
 }

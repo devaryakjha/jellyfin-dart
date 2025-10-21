@@ -13,37 +13,40 @@ abstract class _$ImageOptionCWProxy {
 
   ImageOption minWidth(int? minWidth);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ImageOption(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ImageOption(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ImageOption(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ImageOption call({ImageType? type, int? limit, int? minWidth});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfImageOption.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfImageOption.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfImageOption.copyWith(...)` or call `instanceOfImageOption.copyWith.fieldName(value)` for a single field.
 class _$ImageOptionCWProxyImpl implements _$ImageOptionCWProxy {
   const _$ImageOptionCWProxyImpl(this._value);
 
   final ImageOption _value;
 
   @override
-  ImageOption type(ImageType? type) => this(type: type);
+  ImageOption type(ImageType? type) => call(type: type);
 
   @override
-  ImageOption limit(int? limit) => this(limit: limit);
+  ImageOption limit(int? limit) => call(limit: limit);
 
   @override
-  ImageOption minWidth(int? minWidth) => this(minWidth: minWidth);
+  ImageOption minWidth(int? minWidth) => call(minWidth: minWidth);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ImageOption(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ImageOption(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ImageOption(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ImageOption call({
     Object? type = const $CopyWithPlaceholder(),
     Object? limit = const $CopyWithPlaceholder(),
@@ -67,7 +70,8 @@ class _$ImageOptionCWProxyImpl implements _$ImageOptionCWProxy {
 }
 
 extension $ImageOptionCopyWith on ImageOption {
-  /// Returns a callable class that can be used as follows: `instanceOfImageOption.copyWith(...)` or like so:`instanceOfImageOption.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfImageOption.copyWith(...)` or `instanceOfImageOption.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ImageOptionCWProxy get copyWith => _$ImageOptionCWProxyImpl(this);
 }

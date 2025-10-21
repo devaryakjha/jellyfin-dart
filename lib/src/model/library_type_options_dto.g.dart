@@ -25,12 +25,13 @@ abstract class _$LibraryTypeOptionsDtoCWProxy {
     List<ImageOption>? defaultImageOptions,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryTypeOptionsDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryTypeOptionsDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryTypeOptionsDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryTypeOptionsDto call({
     String? type,
     List<LibraryOptionInfoDto>? metadataFetchers,
@@ -40,7 +41,8 @@ abstract class _$LibraryTypeOptionsDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLibraryTypeOptionsDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLibraryTypeOptionsDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLibraryTypeOptionsDto.copyWith(...)` or call `instanceOfLibraryTypeOptionsDto.copyWith.fieldName(value)` for a single field.
 class _$LibraryTypeOptionsDtoCWProxyImpl
     implements _$LibraryTypeOptionsDtoCWProxy {
   const _$LibraryTypeOptionsDtoCWProxyImpl(this._value);
@@ -48,35 +50,36 @@ class _$LibraryTypeOptionsDtoCWProxyImpl
   final LibraryTypeOptionsDto _value;
 
   @override
-  LibraryTypeOptionsDto type(String? type) => this(type: type);
+  LibraryTypeOptionsDto type(String? type) => call(type: type);
 
   @override
   LibraryTypeOptionsDto metadataFetchers(
     List<LibraryOptionInfoDto>? metadataFetchers,
-  ) => this(metadataFetchers: metadataFetchers);
+  ) => call(metadataFetchers: metadataFetchers);
 
   @override
   LibraryTypeOptionsDto imageFetchers(
     List<LibraryOptionInfoDto>? imageFetchers,
-  ) => this(imageFetchers: imageFetchers);
+  ) => call(imageFetchers: imageFetchers);
 
   @override
   LibraryTypeOptionsDto supportedImageTypes(
     List<ImageType>? supportedImageTypes,
-  ) => this(supportedImageTypes: supportedImageTypes);
+  ) => call(supportedImageTypes: supportedImageTypes);
 
   @override
   LibraryTypeOptionsDto defaultImageOptions(
     List<ImageOption>? defaultImageOptions,
-  ) => this(defaultImageOptions: defaultImageOptions);
+  ) => call(defaultImageOptions: defaultImageOptions);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryTypeOptionsDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryTypeOptionsDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryTypeOptionsDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryTypeOptionsDto call({
     Object? type = const $CopyWithPlaceholder(),
     Object? metadataFetchers = const $CopyWithPlaceholder(),
@@ -110,7 +113,8 @@ class _$LibraryTypeOptionsDtoCWProxyImpl
 }
 
 extension $LibraryTypeOptionsDtoCopyWith on LibraryTypeOptionsDto {
-  /// Returns a callable class that can be used as follows: `instanceOfLibraryTypeOptionsDto.copyWith(...)` or like so:`instanceOfLibraryTypeOptionsDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLibraryTypeOptionsDto.copyWith(...)` or `instanceOfLibraryTypeOptionsDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LibraryTypeOptionsDtoCWProxy get copyWith =>
       _$LibraryTypeOptionsDtoCWProxyImpl(this);

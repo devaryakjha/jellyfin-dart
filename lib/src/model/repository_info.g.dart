@@ -13,37 +13,40 @@ abstract class _$RepositoryInfoCWProxy {
 
   RepositoryInfo enabled(bool? enabled);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RepositoryInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RepositoryInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RepositoryInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RepositoryInfo call({String? name, String? url, bool? enabled});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfRepositoryInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfRepositoryInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfRepositoryInfo.copyWith(...)` or call `instanceOfRepositoryInfo.copyWith.fieldName(value)` for a single field.
 class _$RepositoryInfoCWProxyImpl implements _$RepositoryInfoCWProxy {
   const _$RepositoryInfoCWProxyImpl(this._value);
 
   final RepositoryInfo _value;
 
   @override
-  RepositoryInfo name(String? name) => this(name: name);
+  RepositoryInfo name(String? name) => call(name: name);
 
   @override
-  RepositoryInfo url(String? url) => this(url: url);
+  RepositoryInfo url(String? url) => call(url: url);
 
   @override
-  RepositoryInfo enabled(bool? enabled) => this(enabled: enabled);
+  RepositoryInfo enabled(bool? enabled) => call(enabled: enabled);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RepositoryInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RepositoryInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RepositoryInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RepositoryInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? url = const $CopyWithPlaceholder(),
@@ -67,7 +70,8 @@ class _$RepositoryInfoCWProxyImpl implements _$RepositoryInfoCWProxy {
 }
 
 extension $RepositoryInfoCopyWith on RepositoryInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfRepositoryInfo.copyWith(...)` or like so:`instanceOfRepositoryInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfRepositoryInfo.copyWith(...)` or `instanceOfRepositoryInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$RepositoryInfoCWProxy get copyWith => _$RepositoryInfoCWProxyImpl(this);
 }

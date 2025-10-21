@@ -10,22 +10,26 @@ abstract class _$StartupRemoteAccessDtoCWProxy {
   StartupRemoteAccessDto enableRemoteAccess(bool enableRemoteAccess);
 
   StartupRemoteAccessDto enableAutomaticPortMapping(
+    @Deprecated('enableAutomaticPortMapping has been deprecated')
     bool enableAutomaticPortMapping,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `StartupRemoteAccessDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `StartupRemoteAccessDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// StartupRemoteAccessDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   StartupRemoteAccessDto call({
     bool enableRemoteAccess,
+    @Deprecated('enableAutomaticPortMapping has been deprecated')
     bool enableAutomaticPortMapping,
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfStartupRemoteAccessDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfStartupRemoteAccessDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfStartupRemoteAccessDto.copyWith(...)` or call `instanceOfStartupRemoteAccessDto.copyWith.fieldName(value)` for a single field.
 class _$StartupRemoteAccessDtoCWProxyImpl
     implements _$StartupRemoteAccessDtoCWProxy {
   const _$StartupRemoteAccessDtoCWProxyImpl(this._value);
@@ -34,31 +38,37 @@ class _$StartupRemoteAccessDtoCWProxyImpl
 
   @override
   StartupRemoteAccessDto enableRemoteAccess(bool enableRemoteAccess) =>
-      this(enableRemoteAccess: enableRemoteAccess);
+      call(enableRemoteAccess: enableRemoteAccess);
 
   @override
   StartupRemoteAccessDto enableAutomaticPortMapping(
+    @Deprecated('enableAutomaticPortMapping has been deprecated')
     bool enableAutomaticPortMapping,
-  ) => this(enableAutomaticPortMapping: enableAutomaticPortMapping);
+  ) => call(enableAutomaticPortMapping: enableAutomaticPortMapping);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `StartupRemoteAccessDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `StartupRemoteAccessDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// StartupRemoteAccessDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   StartupRemoteAccessDto call({
     Object? enableRemoteAccess = const $CopyWithPlaceholder(),
+    @Deprecated('enableAutomaticPortMapping has been deprecated')
     Object? enableAutomaticPortMapping = const $CopyWithPlaceholder(),
   }) {
     return StartupRemoteAccessDto(
-      enableRemoteAccess: enableRemoteAccess == const $CopyWithPlaceholder()
+      enableRemoteAccess:
+          enableRemoteAccess == const $CopyWithPlaceholder() ||
+              enableRemoteAccess == null
           ? _value.enableRemoteAccess
           // ignore: cast_nullable_to_non_nullable
           : enableRemoteAccess as bool,
       enableAutomaticPortMapping:
-          enableAutomaticPortMapping == const $CopyWithPlaceholder()
+          enableAutomaticPortMapping == const $CopyWithPlaceholder() ||
+              enableAutomaticPortMapping == null
           ? _value.enableAutomaticPortMapping
           // ignore: cast_nullable_to_non_nullable
           : enableAutomaticPortMapping as bool,
@@ -67,7 +77,8 @@ class _$StartupRemoteAccessDtoCWProxyImpl
 }
 
 extension $StartupRemoteAccessDtoCopyWith on StartupRemoteAccessDto {
-  /// Returns a callable class that can be used as follows: `instanceOfStartupRemoteAccessDto.copyWith(...)` or like so:`instanceOfStartupRemoteAccessDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfStartupRemoteAccessDto.copyWith(...)` or `instanceOfStartupRemoteAccessDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$StartupRemoteAccessDtoCWProxy get copyWith =>
       _$StartupRemoteAccessDtoCWProxyImpl(this);

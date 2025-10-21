@@ -23,12 +23,13 @@ abstract class _$VirtualFolderInfoCWProxy {
 
   VirtualFolderInfo refreshStatus(String? refreshStatus);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `VirtualFolderInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `VirtualFolderInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// VirtualFolderInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   VirtualFolderInfo call({
     String? name,
     List<String>? locations,
@@ -41,49 +42,51 @@ abstract class _$VirtualFolderInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfVirtualFolderInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfVirtualFolderInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfVirtualFolderInfo.copyWith(...)` or call `instanceOfVirtualFolderInfo.copyWith.fieldName(value)` for a single field.
 class _$VirtualFolderInfoCWProxyImpl implements _$VirtualFolderInfoCWProxy {
   const _$VirtualFolderInfoCWProxyImpl(this._value);
 
   final VirtualFolderInfo _value;
 
   @override
-  VirtualFolderInfo name(String? name) => this(name: name);
+  VirtualFolderInfo name(String? name) => call(name: name);
 
   @override
   VirtualFolderInfo locations(List<String>? locations) =>
-      this(locations: locations);
+      call(locations: locations);
 
   @override
   VirtualFolderInfo collectionType(CollectionTypeOptions? collectionType) =>
-      this(collectionType: collectionType);
+      call(collectionType: collectionType);
 
   @override
   VirtualFolderInfo libraryOptions(LibraryOptions? libraryOptions) =>
-      this(libraryOptions: libraryOptions);
+      call(libraryOptions: libraryOptions);
 
   @override
-  VirtualFolderInfo itemId(String? itemId) => this(itemId: itemId);
+  VirtualFolderInfo itemId(String? itemId) => call(itemId: itemId);
 
   @override
   VirtualFolderInfo primaryImageItemId(String? primaryImageItemId) =>
-      this(primaryImageItemId: primaryImageItemId);
+      call(primaryImageItemId: primaryImageItemId);
 
   @override
   VirtualFolderInfo refreshProgress(double? refreshProgress) =>
-      this(refreshProgress: refreshProgress);
+      call(refreshProgress: refreshProgress);
 
   @override
   VirtualFolderInfo refreshStatus(String? refreshStatus) =>
-      this(refreshStatus: refreshStatus);
+      call(refreshStatus: refreshStatus);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `VirtualFolderInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `VirtualFolderInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// VirtualFolderInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   VirtualFolderInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? locations = const $CopyWithPlaceholder(),
@@ -132,7 +135,8 @@ class _$VirtualFolderInfoCWProxyImpl implements _$VirtualFolderInfoCWProxy {
 }
 
 extension $VirtualFolderInfoCopyWith on VirtualFolderInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfVirtualFolderInfo.copyWith(...)` or like so:`instanceOfVirtualFolderInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfVirtualFolderInfo.copyWith(...)` or `instanceOfVirtualFolderInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$VirtualFolderInfoCWProxy get copyWith =>
       _$VirtualFolderInfoCWProxyImpl(this);

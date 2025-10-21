@@ -11,34 +11,37 @@ abstract class _$NameValuePairCWProxy {
 
   NameValuePair value(String? value);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `NameValuePair(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `NameValuePair(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// NameValuePair(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   NameValuePair call({String? name, String? value});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfNameValuePair.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfNameValuePair.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfNameValuePair.copyWith(...)` or call `instanceOfNameValuePair.copyWith.fieldName(value)` for a single field.
 class _$NameValuePairCWProxyImpl implements _$NameValuePairCWProxy {
   const _$NameValuePairCWProxyImpl(this._value);
 
   final NameValuePair _value;
 
   @override
-  NameValuePair name(String? name) => this(name: name);
+  NameValuePair name(String? name) => call(name: name);
 
   @override
-  NameValuePair value(String? value) => this(value: value);
+  NameValuePair value(String? value) => call(value: value);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `NameValuePair(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `NameValuePair(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// NameValuePair(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   NameValuePair call({
     Object? name = const $CopyWithPlaceholder(),
     Object? value = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$NameValuePairCWProxyImpl implements _$NameValuePairCWProxy {
 }
 
 extension $NameValuePairCopyWith on NameValuePair {
-  /// Returns a callable class that can be used as follows: `instanceOfNameValuePair.copyWith(...)` or like so:`instanceOfNameValuePair.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfNameValuePair.copyWith(...)` or `instanceOfNameValuePair.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$NameValuePairCWProxy get copyWith => _$NameValuePairCWProxyImpl(this);
 }

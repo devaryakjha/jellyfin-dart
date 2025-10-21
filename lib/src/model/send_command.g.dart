@@ -19,12 +19,13 @@ abstract class _$SendCommandCWProxy {
 
   SendCommand emittedAt(DateTime? emittedAt);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SendCommand(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SendCommand(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SendCommand(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SendCommand call({
     String? groupId,
     String? playlistItemId,
@@ -35,39 +36,41 @@ abstract class _$SendCommandCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSendCommand.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSendCommand.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSendCommand.copyWith(...)` or call `instanceOfSendCommand.copyWith.fieldName(value)` for a single field.
 class _$SendCommandCWProxyImpl implements _$SendCommandCWProxy {
   const _$SendCommandCWProxyImpl(this._value);
 
   final SendCommand _value;
 
   @override
-  SendCommand groupId(String? groupId) => this(groupId: groupId);
+  SendCommand groupId(String? groupId) => call(groupId: groupId);
 
   @override
   SendCommand playlistItemId(String? playlistItemId) =>
-      this(playlistItemId: playlistItemId);
+      call(playlistItemId: playlistItemId);
 
   @override
-  SendCommand when_(DateTime? when_) => this(when_: when_);
+  SendCommand when_(DateTime? when_) => call(when_: when_);
 
   @override
   SendCommand positionTicks(int? positionTicks) =>
-      this(positionTicks: positionTicks);
+      call(positionTicks: positionTicks);
 
   @override
-  SendCommand command(SendCommandType? command) => this(command: command);
+  SendCommand command(SendCommandType? command) => call(command: command);
 
   @override
-  SendCommand emittedAt(DateTime? emittedAt) => this(emittedAt: emittedAt);
+  SendCommand emittedAt(DateTime? emittedAt) => call(emittedAt: emittedAt);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SendCommand(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SendCommand(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SendCommand(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SendCommand call({
     Object? groupId = const $CopyWithPlaceholder(),
     Object? playlistItemId = const $CopyWithPlaceholder(),
@@ -106,7 +109,8 @@ class _$SendCommandCWProxyImpl implements _$SendCommandCWProxy {
 }
 
 extension $SendCommandCopyWith on SendCommand {
-  /// Returns a callable class that can be used as follows: `instanceOfSendCommand.copyWith(...)` or like so:`instanceOfSendCommand.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSendCommand.copyWith(...)` or `instanceOfSendCommand.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SendCommandCWProxy get copyWith => _$SendCommandCWProxyImpl(this);
 }

@@ -17,12 +17,13 @@ abstract class _$ProblemDetailsCWProxy {
 
   ProblemDetails instance(String? instance);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ProblemDetails(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ProblemDetails(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ProblemDetails(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ProblemDetails call({
     String? type,
     String? title,
@@ -32,34 +33,36 @@ abstract class _$ProblemDetailsCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfProblemDetails.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfProblemDetails.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfProblemDetails.copyWith(...)` or call `instanceOfProblemDetails.copyWith.fieldName(value)` for a single field.
 class _$ProblemDetailsCWProxyImpl implements _$ProblemDetailsCWProxy {
   const _$ProblemDetailsCWProxyImpl(this._value);
 
   final ProblemDetails _value;
 
   @override
-  ProblemDetails type(String? type) => this(type: type);
+  ProblemDetails type(String? type) => call(type: type);
 
   @override
-  ProblemDetails title(String? title) => this(title: title);
+  ProblemDetails title(String? title) => call(title: title);
 
   @override
-  ProblemDetails status(int? status) => this(status: status);
+  ProblemDetails status(int? status) => call(status: status);
 
   @override
-  ProblemDetails detail(String? detail) => this(detail: detail);
+  ProblemDetails detail(String? detail) => call(detail: detail);
 
   @override
-  ProblemDetails instance(String? instance) => this(instance: instance);
+  ProblemDetails instance(String? instance) => call(instance: instance);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ProblemDetails(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ProblemDetails(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ProblemDetails(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ProblemDetails call({
     Object? type = const $CopyWithPlaceholder(),
     Object? title = const $CopyWithPlaceholder(),
@@ -93,7 +96,8 @@ class _$ProblemDetailsCWProxyImpl implements _$ProblemDetailsCWProxy {
 }
 
 extension $ProblemDetailsCopyWith on ProblemDetails {
-  /// Returns a callable class that can be used as follows: `instanceOfProblemDetails.copyWith(...)` or like so:`instanceOfProblemDetails.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfProblemDetails.copyWith(...)` or `instanceOfProblemDetails.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ProblemDetailsCWProxy get copyWith => _$ProblemDetailsCWProxyImpl(this);
 }

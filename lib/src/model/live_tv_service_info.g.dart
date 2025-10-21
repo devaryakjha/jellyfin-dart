@@ -23,12 +23,13 @@ abstract class _$LiveTvServiceInfoCWProxy {
 
   LiveTvServiceInfo tuners(List<String>? tuners);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LiveTvServiceInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LiveTvServiceInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LiveTvServiceInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LiveTvServiceInfo call({
     String? name,
     String? homePageUrl,
@@ -41,46 +42,48 @@ abstract class _$LiveTvServiceInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLiveTvServiceInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLiveTvServiceInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLiveTvServiceInfo.copyWith(...)` or call `instanceOfLiveTvServiceInfo.copyWith.fieldName(value)` for a single field.
 class _$LiveTvServiceInfoCWProxyImpl implements _$LiveTvServiceInfoCWProxy {
   const _$LiveTvServiceInfoCWProxyImpl(this._value);
 
   final LiveTvServiceInfo _value;
 
   @override
-  LiveTvServiceInfo name(String? name) => this(name: name);
+  LiveTvServiceInfo name(String? name) => call(name: name);
 
   @override
   LiveTvServiceInfo homePageUrl(String? homePageUrl) =>
-      this(homePageUrl: homePageUrl);
+      call(homePageUrl: homePageUrl);
 
   @override
-  LiveTvServiceInfo status(LiveTvServiceStatus? status) => this(status: status);
+  LiveTvServiceInfo status(LiveTvServiceStatus? status) => call(status: status);
 
   @override
   LiveTvServiceInfo statusMessage(String? statusMessage) =>
-      this(statusMessage: statusMessage);
+      call(statusMessage: statusMessage);
 
   @override
-  LiveTvServiceInfo version(String? version) => this(version: version);
+  LiveTvServiceInfo version(String? version) => call(version: version);
 
   @override
   LiveTvServiceInfo hasUpdateAvailable(bool? hasUpdateAvailable) =>
-      this(hasUpdateAvailable: hasUpdateAvailable);
+      call(hasUpdateAvailable: hasUpdateAvailable);
 
   @override
-  LiveTvServiceInfo isVisible(bool? isVisible) => this(isVisible: isVisible);
+  LiveTvServiceInfo isVisible(bool? isVisible) => call(isVisible: isVisible);
 
   @override
-  LiveTvServiceInfo tuners(List<String>? tuners) => this(tuners: tuners);
+  LiveTvServiceInfo tuners(List<String>? tuners) => call(tuners: tuners);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LiveTvServiceInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LiveTvServiceInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LiveTvServiceInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LiveTvServiceInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? homePageUrl = const $CopyWithPlaceholder(),
@@ -129,7 +132,8 @@ class _$LiveTvServiceInfoCWProxyImpl implements _$LiveTvServiceInfoCWProxy {
 }
 
 extension $LiveTvServiceInfoCopyWith on LiveTvServiceInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfLiveTvServiceInfo.copyWith(...)` or like so:`instanceOfLiveTvServiceInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLiveTvServiceInfo.copyWith(...)` or `instanceOfLiveTvServiceInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LiveTvServiceInfoCWProxy get copyWith =>
       _$LiveTvServiceInfoCWProxyImpl(this);

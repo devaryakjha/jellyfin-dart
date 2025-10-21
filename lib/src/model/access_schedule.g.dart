@@ -17,12 +17,13 @@ abstract class _$AccessScheduleCWProxy {
 
   AccessSchedule endHour(double? endHour);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AccessSchedule(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AccessSchedule(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AccessSchedule(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AccessSchedule call({
     int? id,
     String? userId,
@@ -32,35 +33,37 @@ abstract class _$AccessScheduleCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfAccessSchedule.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfAccessSchedule.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfAccessSchedule.copyWith(...)` or call `instanceOfAccessSchedule.copyWith.fieldName(value)` for a single field.
 class _$AccessScheduleCWProxyImpl implements _$AccessScheduleCWProxy {
   const _$AccessScheduleCWProxyImpl(this._value);
 
   final AccessSchedule _value;
 
   @override
-  AccessSchedule id(int? id) => this(id: id);
+  AccessSchedule id(int? id) => call(id: id);
 
   @override
-  AccessSchedule userId(String? userId) => this(userId: userId);
+  AccessSchedule userId(String? userId) => call(userId: userId);
 
   @override
   AccessSchedule dayOfWeek(DynamicDayOfWeek? dayOfWeek) =>
-      this(dayOfWeek: dayOfWeek);
+      call(dayOfWeek: dayOfWeek);
 
   @override
-  AccessSchedule startHour(double? startHour) => this(startHour: startHour);
+  AccessSchedule startHour(double? startHour) => call(startHour: startHour);
 
   @override
-  AccessSchedule endHour(double? endHour) => this(endHour: endHour);
+  AccessSchedule endHour(double? endHour) => call(endHour: endHour);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AccessSchedule(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `AccessSchedule(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// AccessSchedule(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   AccessSchedule call({
     Object? id = const $CopyWithPlaceholder(),
     Object? userId = const $CopyWithPlaceholder(),
@@ -94,7 +97,8 @@ class _$AccessScheduleCWProxyImpl implements _$AccessScheduleCWProxy {
 }
 
 extension $AccessScheduleCopyWith on AccessSchedule {
-  /// Returns a callable class that can be used as follows: `instanceOfAccessSchedule.copyWith(...)` or like so:`instanceOfAccessSchedule.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfAccessSchedule.copyWith(...)` or `instanceOfAccessSchedule.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$AccessScheduleCWProxy get copyWith => _$AccessScheduleCWProxyImpl(this);
 }

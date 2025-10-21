@@ -15,12 +15,13 @@ abstract class _$ContainerProfileCWProxy {
 
   ContainerProfile subContainer(String? subContainer);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ContainerProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ContainerProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ContainerProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ContainerProfile call({
     DlnaProfileType? type,
     List<ProfileCondition>? conditions,
@@ -29,33 +30,35 @@ abstract class _$ContainerProfileCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfContainerProfile.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfContainerProfile.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfContainerProfile.copyWith(...)` or call `instanceOfContainerProfile.copyWith.fieldName(value)` for a single field.
 class _$ContainerProfileCWProxyImpl implements _$ContainerProfileCWProxy {
   const _$ContainerProfileCWProxyImpl(this._value);
 
   final ContainerProfile _value;
 
   @override
-  ContainerProfile type(DlnaProfileType? type) => this(type: type);
+  ContainerProfile type(DlnaProfileType? type) => call(type: type);
 
   @override
   ContainerProfile conditions(List<ProfileCondition>? conditions) =>
-      this(conditions: conditions);
+      call(conditions: conditions);
 
   @override
-  ContainerProfile container(String? container) => this(container: container);
+  ContainerProfile container(String? container) => call(container: container);
 
   @override
   ContainerProfile subContainer(String? subContainer) =>
-      this(subContainer: subContainer);
+      call(subContainer: subContainer);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ContainerProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ContainerProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ContainerProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ContainerProfile call({
     Object? type = const $CopyWithPlaceholder(),
     Object? conditions = const $CopyWithPlaceholder(),
@@ -84,7 +87,8 @@ class _$ContainerProfileCWProxyImpl implements _$ContainerProfileCWProxy {
 }
 
 extension $ContainerProfileCopyWith on ContainerProfile {
-  /// Returns a callable class that can be used as follows: `instanceOfContainerProfile.copyWith(...)` or like so:`instanceOfContainerProfile.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfContainerProfile.copyWith(...)` or `instanceOfContainerProfile.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ContainerProfileCWProxy get copyWith => _$ContainerProfileCWProxyImpl(this);
 }

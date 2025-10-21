@@ -17,12 +17,13 @@ abstract class _$ChapterInfoCWProxy {
 
   ChapterInfo imageTag(String? imageTag);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ChapterInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ChapterInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ChapterInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ChapterInfo call({
     int? startPositionTicks,
     String? name,
@@ -32,7 +33,8 @@ abstract class _$ChapterInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfChapterInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfChapterInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfChapterInfo.copyWith(...)` or call `instanceOfChapterInfo.copyWith.fieldName(value)` for a single field.
 class _$ChapterInfoCWProxyImpl implements _$ChapterInfoCWProxy {
   const _$ChapterInfoCWProxyImpl(this._value);
 
@@ -40,28 +42,29 @@ class _$ChapterInfoCWProxyImpl implements _$ChapterInfoCWProxy {
 
   @override
   ChapterInfo startPositionTicks(int? startPositionTicks) =>
-      this(startPositionTicks: startPositionTicks);
+      call(startPositionTicks: startPositionTicks);
 
   @override
-  ChapterInfo name(String? name) => this(name: name);
+  ChapterInfo name(String? name) => call(name: name);
 
   @override
-  ChapterInfo imagePath(String? imagePath) => this(imagePath: imagePath);
+  ChapterInfo imagePath(String? imagePath) => call(imagePath: imagePath);
 
   @override
   ChapterInfo imageDateModified(DateTime? imageDateModified) =>
-      this(imageDateModified: imageDateModified);
+      call(imageDateModified: imageDateModified);
 
   @override
-  ChapterInfo imageTag(String? imageTag) => this(imageTag: imageTag);
+  ChapterInfo imageTag(String? imageTag) => call(imageTag: imageTag);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ChapterInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ChapterInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ChapterInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ChapterInfo call({
     Object? startPositionTicks = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
@@ -95,7 +98,8 @@ class _$ChapterInfoCWProxyImpl implements _$ChapterInfoCWProxy {
 }
 
 extension $ChapterInfoCopyWith on ChapterInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfChapterInfo.copyWith(...)` or like so:`instanceOfChapterInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfChapterInfo.copyWith(...)` or `instanceOfChapterInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ChapterInfoCWProxy get copyWith => _$ChapterInfoCWProxyImpl(this);
 }

@@ -17,12 +17,13 @@ abstract class _$MediaSegmentDtoCWProxy {
 
   MediaSegmentDto endTicks(int? endTicks);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaSegmentDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaSegmentDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaSegmentDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaSegmentDto call({
     String? id,
     String? itemId,
@@ -32,34 +33,36 @@ abstract class _$MediaSegmentDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMediaSegmentDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMediaSegmentDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMediaSegmentDto.copyWith(...)` or call `instanceOfMediaSegmentDto.copyWith.fieldName(value)` for a single field.
 class _$MediaSegmentDtoCWProxyImpl implements _$MediaSegmentDtoCWProxy {
   const _$MediaSegmentDtoCWProxyImpl(this._value);
 
   final MediaSegmentDto _value;
 
   @override
-  MediaSegmentDto id(String? id) => this(id: id);
+  MediaSegmentDto id(String? id) => call(id: id);
 
   @override
-  MediaSegmentDto itemId(String? itemId) => this(itemId: itemId);
+  MediaSegmentDto itemId(String? itemId) => call(itemId: itemId);
 
   @override
-  MediaSegmentDto type(MediaSegmentType? type) => this(type: type);
+  MediaSegmentDto type(MediaSegmentType? type) => call(type: type);
 
   @override
-  MediaSegmentDto startTicks(int? startTicks) => this(startTicks: startTicks);
+  MediaSegmentDto startTicks(int? startTicks) => call(startTicks: startTicks);
 
   @override
-  MediaSegmentDto endTicks(int? endTicks) => this(endTicks: endTicks);
+  MediaSegmentDto endTicks(int? endTicks) => call(endTicks: endTicks);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MediaSegmentDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MediaSegmentDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MediaSegmentDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MediaSegmentDto call({
     Object? id = const $CopyWithPlaceholder(),
     Object? itemId = const $CopyWithPlaceholder(),
@@ -93,7 +96,8 @@ class _$MediaSegmentDtoCWProxyImpl implements _$MediaSegmentDtoCWProxy {
 }
 
 extension $MediaSegmentDtoCopyWith on MediaSegmentDto {
-  /// Returns a callable class that can be used as follows: `instanceOfMediaSegmentDto.copyWith(...)` or like so:`instanceOfMediaSegmentDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMediaSegmentDto.copyWith(...)` or `instanceOfMediaSegmentDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MediaSegmentDtoCWProxy get copyWith => _$MediaSegmentDtoCWProxyImpl(this);
 }

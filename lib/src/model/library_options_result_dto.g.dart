@@ -29,12 +29,13 @@ abstract class _$LibraryOptionsResultDtoCWProxy {
 
   LibraryOptionsResultDto typeOptions(List<LibraryTypeOptionsDto>? typeOptions);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryOptionsResultDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryOptionsResultDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryOptionsResultDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryOptionsResultDto call({
     List<LibraryOptionInfoDto>? metadataSavers,
     List<LibraryOptionInfoDto>? metadataReaders,
@@ -45,7 +46,8 @@ abstract class _$LibraryOptionsResultDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfLibraryOptionsResultDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfLibraryOptionsResultDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfLibraryOptionsResultDto.copyWith(...)` or call `instanceOfLibraryOptionsResultDto.copyWith.fieldName(value)` for a single field.
 class _$LibraryOptionsResultDtoCWProxyImpl
     implements _$LibraryOptionsResultDtoCWProxy {
   const _$LibraryOptionsResultDtoCWProxyImpl(this._value);
@@ -55,40 +57,41 @@ class _$LibraryOptionsResultDtoCWProxyImpl
   @override
   LibraryOptionsResultDto metadataSavers(
     List<LibraryOptionInfoDto>? metadataSavers,
-  ) => this(metadataSavers: metadataSavers);
+  ) => call(metadataSavers: metadataSavers);
 
   @override
   LibraryOptionsResultDto metadataReaders(
     List<LibraryOptionInfoDto>? metadataReaders,
-  ) => this(metadataReaders: metadataReaders);
+  ) => call(metadataReaders: metadataReaders);
 
   @override
   LibraryOptionsResultDto subtitleFetchers(
     List<LibraryOptionInfoDto>? subtitleFetchers,
-  ) => this(subtitleFetchers: subtitleFetchers);
+  ) => call(subtitleFetchers: subtitleFetchers);
 
   @override
   LibraryOptionsResultDto lyricFetchers(
     List<LibraryOptionInfoDto>? lyricFetchers,
-  ) => this(lyricFetchers: lyricFetchers);
+  ) => call(lyricFetchers: lyricFetchers);
 
   @override
   LibraryOptionsResultDto mediaSegmentProviders(
     List<LibraryOptionInfoDto>? mediaSegmentProviders,
-  ) => this(mediaSegmentProviders: mediaSegmentProviders);
+  ) => call(mediaSegmentProviders: mediaSegmentProviders);
 
   @override
   LibraryOptionsResultDto typeOptions(
     List<LibraryTypeOptionsDto>? typeOptions,
-  ) => this(typeOptions: typeOptions);
+  ) => call(typeOptions: typeOptions);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LibraryOptionsResultDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `LibraryOptionsResultDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// LibraryOptionsResultDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   LibraryOptionsResultDto call({
     Object? metadataSavers = const $CopyWithPlaceholder(),
     Object? metadataReaders = const $CopyWithPlaceholder(),
@@ -128,7 +131,8 @@ class _$LibraryOptionsResultDtoCWProxyImpl
 }
 
 extension $LibraryOptionsResultDtoCopyWith on LibraryOptionsResultDto {
-  /// Returns a callable class that can be used as follows: `instanceOfLibraryOptionsResultDto.copyWith(...)` or like so:`instanceOfLibraryOptionsResultDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfLibraryOptionsResultDto.copyWith(...)` or `instanceOfLibraryOptionsResultDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$LibraryOptionsResultDtoCWProxy get copyWith =>
       _$LibraryOptionsResultDtoCWProxyImpl(this);

@@ -11,16 +11,18 @@ abstract class _$CustomDatabaseOptionCWProxy {
 
   CustomDatabaseOption value(String? value);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CustomDatabaseOption(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CustomDatabaseOption(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CustomDatabaseOption(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CustomDatabaseOption call({String? key, String? value});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfCustomDatabaseOption.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfCustomDatabaseOption.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfCustomDatabaseOption.copyWith(...)` or call `instanceOfCustomDatabaseOption.copyWith.fieldName(value)` for a single field.
 class _$CustomDatabaseOptionCWProxyImpl
     implements _$CustomDatabaseOptionCWProxy {
   const _$CustomDatabaseOptionCWProxyImpl(this._value);
@@ -28,18 +30,19 @@ class _$CustomDatabaseOptionCWProxyImpl
   final CustomDatabaseOption _value;
 
   @override
-  CustomDatabaseOption key(String? key) => this(key: key);
+  CustomDatabaseOption key(String? key) => call(key: key);
 
   @override
-  CustomDatabaseOption value(String? value) => this(value: value);
+  CustomDatabaseOption value(String? value) => call(value: value);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CustomDatabaseOption(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CustomDatabaseOption(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CustomDatabaseOption(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CustomDatabaseOption call({
     Object? key = const $CopyWithPlaceholder(),
     Object? value = const $CopyWithPlaceholder(),
@@ -58,7 +61,8 @@ class _$CustomDatabaseOptionCWProxyImpl
 }
 
 extension $CustomDatabaseOptionCopyWith on CustomDatabaseOption {
-  /// Returns a callable class that can be used as follows: `instanceOfCustomDatabaseOption.copyWith(...)` or like so:`instanceOfCustomDatabaseOption.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfCustomDatabaseOption.copyWith(...)` or `instanceOfCustomDatabaseOption.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$CustomDatabaseOptionCWProxy get copyWith =>
       _$CustomDatabaseOptionCWProxyImpl(this);

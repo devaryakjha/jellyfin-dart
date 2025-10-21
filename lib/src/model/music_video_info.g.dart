@@ -31,12 +31,13 @@ abstract class _$MusicVideoInfoCWProxy {
 
   MusicVideoInfo artists(List<String>? artists);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MusicVideoInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MusicVideoInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MusicVideoInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MusicVideoInfo call({
     String? name,
     String? originalTitle,
@@ -53,63 +54,65 @@ abstract class _$MusicVideoInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMusicVideoInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMusicVideoInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMusicVideoInfo.copyWith(...)` or call `instanceOfMusicVideoInfo.copyWith.fieldName(value)` for a single field.
 class _$MusicVideoInfoCWProxyImpl implements _$MusicVideoInfoCWProxy {
   const _$MusicVideoInfoCWProxyImpl(this._value);
 
   final MusicVideoInfo _value;
 
   @override
-  MusicVideoInfo name(String? name) => this(name: name);
+  MusicVideoInfo name(String? name) => call(name: name);
 
   @override
   MusicVideoInfo originalTitle(String? originalTitle) =>
-      this(originalTitle: originalTitle);
+      call(originalTitle: originalTitle);
 
   @override
-  MusicVideoInfo path(String? path) => this(path: path);
+  MusicVideoInfo path(String? path) => call(path: path);
 
   @override
   MusicVideoInfo metadataLanguage(String? metadataLanguage) =>
-      this(metadataLanguage: metadataLanguage);
+      call(metadataLanguage: metadataLanguage);
 
   @override
   MusicVideoInfo metadataCountryCode(String? metadataCountryCode) =>
-      this(metadataCountryCode: metadataCountryCode);
+      call(metadataCountryCode: metadataCountryCode);
 
   @override
   MusicVideoInfo providerIds(Map<String, String>? providerIds) =>
-      this(providerIds: providerIds);
+      call(providerIds: providerIds);
 
   @override
-  MusicVideoInfo year(int? year) => this(year: year);
+  MusicVideoInfo year(int? year) => call(year: year);
 
   @override
   MusicVideoInfo indexNumber(int? indexNumber) =>
-      this(indexNumber: indexNumber);
+      call(indexNumber: indexNumber);
 
   @override
   MusicVideoInfo parentIndexNumber(int? parentIndexNumber) =>
-      this(parentIndexNumber: parentIndexNumber);
+      call(parentIndexNumber: parentIndexNumber);
 
   @override
   MusicVideoInfo premiereDate(DateTime? premiereDate) =>
-      this(premiereDate: premiereDate);
+      call(premiereDate: premiereDate);
 
   @override
   MusicVideoInfo isAutomated(bool? isAutomated) =>
-      this(isAutomated: isAutomated);
+      call(isAutomated: isAutomated);
 
   @override
-  MusicVideoInfo artists(List<String>? artists) => this(artists: artists);
+  MusicVideoInfo artists(List<String>? artists) => call(artists: artists);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MusicVideoInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MusicVideoInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MusicVideoInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MusicVideoInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? originalTitle = const $CopyWithPlaceholder(),
@@ -178,7 +181,8 @@ class _$MusicVideoInfoCWProxyImpl implements _$MusicVideoInfoCWProxy {
 }
 
 extension $MusicVideoInfoCopyWith on MusicVideoInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfMusicVideoInfo.copyWith(...)` or like so:`instanceOfMusicVideoInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMusicVideoInfo.copyWith(...)` or `instanceOfMusicVideoInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MusicVideoInfoCWProxy get copyWith => _$MusicVideoInfoCWProxyImpl(this);
 }

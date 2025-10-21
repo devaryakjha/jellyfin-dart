@@ -13,12 +13,13 @@ abstract class _$PlaystateRequestCWProxy {
 
   PlaystateRequest controllingUserId(String? controllingUserId);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaystateRequest(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaystateRequest(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaystateRequest(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaystateRequest call({
     PlaystateCommand? command,
     int? seekPositionTicks,
@@ -26,30 +27,32 @@ abstract class _$PlaystateRequestCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlaystateRequest.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlaystateRequest.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlaystateRequest.copyWith(...)` or call `instanceOfPlaystateRequest.copyWith.fieldName(value)` for a single field.
 class _$PlaystateRequestCWProxyImpl implements _$PlaystateRequestCWProxy {
   const _$PlaystateRequestCWProxyImpl(this._value);
 
   final PlaystateRequest _value;
 
   @override
-  PlaystateRequest command(PlaystateCommand? command) => this(command: command);
+  PlaystateRequest command(PlaystateCommand? command) => call(command: command);
 
   @override
   PlaystateRequest seekPositionTicks(int? seekPositionTicks) =>
-      this(seekPositionTicks: seekPositionTicks);
+      call(seekPositionTicks: seekPositionTicks);
 
   @override
   PlaystateRequest controllingUserId(String? controllingUserId) =>
-      this(controllingUserId: controllingUserId);
+      call(controllingUserId: controllingUserId);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaystateRequest(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaystateRequest(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaystateRequest(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaystateRequest call({
     Object? command = const $CopyWithPlaceholder(),
     Object? seekPositionTicks = const $CopyWithPlaceholder(),
@@ -73,7 +76,8 @@ class _$PlaystateRequestCWProxyImpl implements _$PlaystateRequestCWProxy {
 }
 
 extension $PlaystateRequestCopyWith on PlaystateRequest {
-  /// Returns a callable class that can be used as follows: `instanceOfPlaystateRequest.copyWith(...)` or like so:`instanceOfPlaystateRequest.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlaystateRequest.copyWith(...)` or `instanceOfPlaystateRequest.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlaystateRequestCWProxy get copyWith => _$PlaystateRequestCWProxyImpl(this);
 }

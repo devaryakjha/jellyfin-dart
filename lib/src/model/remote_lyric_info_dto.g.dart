@@ -13,38 +13,41 @@ abstract class _$RemoteLyricInfoDtoCWProxy {
 
   RemoteLyricInfoDto lyrics(LyricDto? lyrics);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoteLyricInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoteLyricInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoteLyricInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoteLyricInfoDto call({String? id, String? providerName, LyricDto? lyrics});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfRemoteLyricInfoDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfRemoteLyricInfoDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfRemoteLyricInfoDto.copyWith(...)` or call `instanceOfRemoteLyricInfoDto.copyWith.fieldName(value)` for a single field.
 class _$RemoteLyricInfoDtoCWProxyImpl implements _$RemoteLyricInfoDtoCWProxy {
   const _$RemoteLyricInfoDtoCWProxyImpl(this._value);
 
   final RemoteLyricInfoDto _value;
 
   @override
-  RemoteLyricInfoDto id(String? id) => this(id: id);
+  RemoteLyricInfoDto id(String? id) => call(id: id);
 
   @override
   RemoteLyricInfoDto providerName(String? providerName) =>
-      this(providerName: providerName);
+      call(providerName: providerName);
 
   @override
-  RemoteLyricInfoDto lyrics(LyricDto? lyrics) => this(lyrics: lyrics);
+  RemoteLyricInfoDto lyrics(LyricDto? lyrics) => call(lyrics: lyrics);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `RemoteLyricInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `RemoteLyricInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// RemoteLyricInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   RemoteLyricInfoDto call({
     Object? id = const $CopyWithPlaceholder(),
     Object? providerName = const $CopyWithPlaceholder(),
@@ -68,7 +71,8 @@ class _$RemoteLyricInfoDtoCWProxyImpl implements _$RemoteLyricInfoDtoCWProxy {
 }
 
 extension $RemoteLyricInfoDtoCopyWith on RemoteLyricInfoDto {
-  /// Returns a callable class that can be used as follows: `instanceOfRemoteLyricInfoDto.copyWith(...)` or like so:`instanceOfRemoteLyricInfoDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfRemoteLyricInfoDto.copyWith(...)` or `instanceOfRemoteLyricInfoDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$RemoteLyricInfoDtoCWProxy get copyWith =>
       _$RemoteLyricInfoDtoCWProxyImpl(this);

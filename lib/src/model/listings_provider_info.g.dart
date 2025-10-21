@@ -43,12 +43,13 @@ abstract class _$ListingsProviderInfoCWProxy {
 
   ListingsProviderInfo userAgent(String? userAgent);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ListingsProviderInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ListingsProviderInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ListingsProviderInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ListingsProviderInfo call({
     String? id,
     String? type,
@@ -71,7 +72,8 @@ abstract class _$ListingsProviderInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfListingsProviderInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfListingsProviderInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfListingsProviderInfo.copyWith(...)` or call `instanceOfListingsProviderInfo.copyWith.fieldName(value)` for a single field.
 class _$ListingsProviderInfoCWProxyImpl
     implements _$ListingsProviderInfoCWProxy {
   const _$ListingsProviderInfoCWProxyImpl(this._value);
@@ -79,77 +81,78 @@ class _$ListingsProviderInfoCWProxyImpl
   final ListingsProviderInfo _value;
 
   @override
-  ListingsProviderInfo id(String? id) => this(id: id);
+  ListingsProviderInfo id(String? id) => call(id: id);
 
   @override
-  ListingsProviderInfo type(String? type) => this(type: type);
+  ListingsProviderInfo type(String? type) => call(type: type);
 
   @override
-  ListingsProviderInfo username(String? username) => this(username: username);
+  ListingsProviderInfo username(String? username) => call(username: username);
 
   @override
-  ListingsProviderInfo password(String? password) => this(password: password);
+  ListingsProviderInfo password(String? password) => call(password: password);
 
   @override
   ListingsProviderInfo listingsId(String? listingsId) =>
-      this(listingsId: listingsId);
+      call(listingsId: listingsId);
 
   @override
-  ListingsProviderInfo zipCode(String? zipCode) => this(zipCode: zipCode);
+  ListingsProviderInfo zipCode(String? zipCode) => call(zipCode: zipCode);
 
   @override
-  ListingsProviderInfo country(String? country) => this(country: country);
+  ListingsProviderInfo country(String? country) => call(country: country);
 
   @override
-  ListingsProviderInfo path(String? path) => this(path: path);
+  ListingsProviderInfo path(String? path) => call(path: path);
 
   @override
   ListingsProviderInfo enabledTuners(List<String>? enabledTuners) =>
-      this(enabledTuners: enabledTuners);
+      call(enabledTuners: enabledTuners);
 
   @override
   ListingsProviderInfo enableAllTuners(bool? enableAllTuners) =>
-      this(enableAllTuners: enableAllTuners);
+      call(enableAllTuners: enableAllTuners);
 
   @override
   ListingsProviderInfo newsCategories(List<String>? newsCategories) =>
-      this(newsCategories: newsCategories);
+      call(newsCategories: newsCategories);
 
   @override
   ListingsProviderInfo sportsCategories(List<String>? sportsCategories) =>
-      this(sportsCategories: sportsCategories);
+      call(sportsCategories: sportsCategories);
 
   @override
   ListingsProviderInfo kidsCategories(List<String>? kidsCategories) =>
-      this(kidsCategories: kidsCategories);
+      call(kidsCategories: kidsCategories);
 
   @override
   ListingsProviderInfo movieCategories(List<String>? movieCategories) =>
-      this(movieCategories: movieCategories);
+      call(movieCategories: movieCategories);
 
   @override
   ListingsProviderInfo channelMappings(List<NameValuePair>? channelMappings) =>
-      this(channelMappings: channelMappings);
+      call(channelMappings: channelMappings);
 
   @override
   ListingsProviderInfo moviePrefix(String? moviePrefix) =>
-      this(moviePrefix: moviePrefix);
+      call(moviePrefix: moviePrefix);
 
   @override
   ListingsProviderInfo preferredLanguage(String? preferredLanguage) =>
-      this(preferredLanguage: preferredLanguage);
+      call(preferredLanguage: preferredLanguage);
 
   @override
   ListingsProviderInfo userAgent(String? userAgent) =>
-      this(userAgent: userAgent);
+      call(userAgent: userAgent);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ListingsProviderInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ListingsProviderInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ListingsProviderInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ListingsProviderInfo call({
     Object? id = const $CopyWithPlaceholder(),
     Object? type = const $CopyWithPlaceholder(),
@@ -248,7 +251,8 @@ class _$ListingsProviderInfoCWProxyImpl
 }
 
 extension $ListingsProviderInfoCopyWith on ListingsProviderInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfListingsProviderInfo.copyWith(...)` or like so:`instanceOfListingsProviderInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfListingsProviderInfo.copyWith(...)` or `instanceOfListingsProviderInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ListingsProviderInfoCWProxy get copyWith =>
       _$ListingsProviderInfoCWProxyImpl(this);

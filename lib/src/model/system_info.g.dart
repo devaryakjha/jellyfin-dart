@@ -15,13 +15,18 @@ abstract class _$SystemInfoCWProxy {
 
   SystemInfo productName(String? productName);
 
-  SystemInfo operatingSystem(String? operatingSystem);
+  SystemInfo operatingSystem(
+    @Deprecated('operatingSystem has been deprecated') String? operatingSystem,
+  );
 
   SystemInfo id(String? id);
 
   SystemInfo startupWizardCompleted(bool? startupWizardCompleted);
 
-  SystemInfo operatingSystemDisplayName(String? operatingSystemDisplayName);
+  SystemInfo operatingSystemDisplayName(
+    @Deprecated('operatingSystemDisplayName has been deprecated')
+    String? operatingSystemDisplayName,
+  );
 
   SystemInfo packageName(String? packageName);
 
@@ -37,48 +42,79 @@ abstract class _$SystemInfoCWProxy {
     List<InstallationInfo>? completedInstallations,
   );
 
-  SystemInfo canSelfRestart(bool? canSelfRestart);
+  SystemInfo canSelfRestart(
+    @Deprecated('canSelfRestart has been deprecated') bool? canSelfRestart,
+  );
 
-  SystemInfo canLaunchWebBrowser(bool? canLaunchWebBrowser);
+  SystemInfo canLaunchWebBrowser(
+    @Deprecated('canLaunchWebBrowser has been deprecated')
+    bool? canLaunchWebBrowser,
+  );
 
-  SystemInfo programDataPath(String? programDataPath);
+  SystemInfo programDataPath(
+    @Deprecated('programDataPath has been deprecated') String? programDataPath,
+  );
 
-  SystemInfo webPath(String? webPath);
+  SystemInfo webPath(
+    @Deprecated('webPath has been deprecated') String? webPath,
+  );
 
-  SystemInfo itemsByNamePath(String? itemsByNamePath);
+  SystemInfo itemsByNamePath(
+    @Deprecated('itemsByNamePath has been deprecated') String? itemsByNamePath,
+  );
 
-  SystemInfo cachePath(String? cachePath);
+  SystemInfo cachePath(
+    @Deprecated('cachePath has been deprecated') String? cachePath,
+  );
 
-  SystemInfo logPath(String? logPath);
+  SystemInfo logPath(
+    @Deprecated('logPath has been deprecated') String? logPath,
+  );
 
-  SystemInfo internalMetadataPath(String? internalMetadataPath);
+  SystemInfo internalMetadataPath(
+    @Deprecated('internalMetadataPath has been deprecated')
+    String? internalMetadataPath,
+  );
 
-  SystemInfo transcodingTempPath(String? transcodingTempPath);
+  SystemInfo transcodingTempPath(
+    @Deprecated('transcodingTempPath has been deprecated')
+    String? transcodingTempPath,
+  );
 
   SystemInfo castReceiverApplications(
     List<CastReceiverApplication>? castReceiverApplications,
   );
 
-  SystemInfo hasUpdateAvailable(bool? hasUpdateAvailable);
+  SystemInfo hasUpdateAvailable(
+    @Deprecated('hasUpdateAvailable has been deprecated')
+    bool? hasUpdateAvailable,
+  );
 
-  SystemInfo encoderLocation(String? encoderLocation);
+  SystemInfo encoderLocation(
+    @Deprecated('encoderLocation has been deprecated') String? encoderLocation,
+  );
 
-  SystemInfo systemArchitecture(String? systemArchitecture);
+  SystemInfo systemArchitecture(
+    @Deprecated('systemArchitecture has been deprecated')
+    String? systemArchitecture,
+  );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SystemInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SystemInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SystemInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SystemInfo call({
     String? localAddress,
     String? serverName,
     String? version,
     String? productName,
-    String? operatingSystem,
+    @Deprecated('operatingSystem has been deprecated') String? operatingSystem,
     String? id,
     bool? startupWizardCompleted,
+    @Deprecated('operatingSystemDisplayName has been deprecated')
     String? operatingSystemDisplayName,
     String? packageName,
     bool? hasPendingRestart,
@@ -86,23 +122,29 @@ abstract class _$SystemInfoCWProxy {
     bool? supportsLibraryMonitor,
     int? webSocketPortNumber,
     List<InstallationInfo>? completedInstallations,
-    bool? canSelfRestart,
+    @Deprecated('canSelfRestart has been deprecated') bool? canSelfRestart,
+    @Deprecated('canLaunchWebBrowser has been deprecated')
     bool? canLaunchWebBrowser,
-    String? programDataPath,
-    String? webPath,
-    String? itemsByNamePath,
-    String? cachePath,
-    String? logPath,
+    @Deprecated('programDataPath has been deprecated') String? programDataPath,
+    @Deprecated('webPath has been deprecated') String? webPath,
+    @Deprecated('itemsByNamePath has been deprecated') String? itemsByNamePath,
+    @Deprecated('cachePath has been deprecated') String? cachePath,
+    @Deprecated('logPath has been deprecated') String? logPath,
+    @Deprecated('internalMetadataPath has been deprecated')
     String? internalMetadataPath,
+    @Deprecated('transcodingTempPath has been deprecated')
     String? transcodingTempPath,
     List<CastReceiverApplication>? castReceiverApplications,
+    @Deprecated('hasUpdateAvailable has been deprecated')
     bool? hasUpdateAvailable,
-    String? encoderLocation,
+    @Deprecated('encoderLocation has been deprecated') String? encoderLocation,
+    @Deprecated('systemArchitecture has been deprecated')
     String? systemArchitecture,
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSystemInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSystemInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSystemInfo.copyWith(...)` or call `instanceOfSystemInfo.copyWith.fieldName(value)` for a single field.
 class _$SystemInfoCWProxyImpl implements _$SystemInfoCWProxy {
   const _$SystemInfoCWProxyImpl(this._value);
 
@@ -110,121 +152,147 @@ class _$SystemInfoCWProxyImpl implements _$SystemInfoCWProxy {
 
   @override
   SystemInfo localAddress(String? localAddress) =>
-      this(localAddress: localAddress);
+      call(localAddress: localAddress);
 
   @override
-  SystemInfo serverName(String? serverName) => this(serverName: serverName);
+  SystemInfo serverName(String? serverName) => call(serverName: serverName);
 
   @override
-  SystemInfo version(String? version) => this(version: version);
+  SystemInfo version(String? version) => call(version: version);
 
   @override
-  SystemInfo productName(String? productName) => this(productName: productName);
+  SystemInfo productName(String? productName) => call(productName: productName);
 
   @override
-  SystemInfo operatingSystem(String? operatingSystem) =>
-      this(operatingSystem: operatingSystem);
+  SystemInfo operatingSystem(
+    @Deprecated('operatingSystem has been deprecated') String? operatingSystem,
+  ) => call(operatingSystem: operatingSystem);
 
   @override
-  SystemInfo id(String? id) => this(id: id);
+  SystemInfo id(String? id) => call(id: id);
 
   @override
   SystemInfo startupWizardCompleted(bool? startupWizardCompleted) =>
-      this(startupWizardCompleted: startupWizardCompleted);
+      call(startupWizardCompleted: startupWizardCompleted);
 
   @override
-  SystemInfo operatingSystemDisplayName(String? operatingSystemDisplayName) =>
-      this(operatingSystemDisplayName: operatingSystemDisplayName);
+  SystemInfo operatingSystemDisplayName(
+    @Deprecated('operatingSystemDisplayName has been deprecated')
+    String? operatingSystemDisplayName,
+  ) => call(operatingSystemDisplayName: operatingSystemDisplayName);
 
   @override
-  SystemInfo packageName(String? packageName) => this(packageName: packageName);
+  SystemInfo packageName(String? packageName) => call(packageName: packageName);
 
   @override
   SystemInfo hasPendingRestart(bool? hasPendingRestart) =>
-      this(hasPendingRestart: hasPendingRestart);
+      call(hasPendingRestart: hasPendingRestart);
 
   @override
   SystemInfo isShuttingDown(bool? isShuttingDown) =>
-      this(isShuttingDown: isShuttingDown);
+      call(isShuttingDown: isShuttingDown);
 
   @override
   SystemInfo supportsLibraryMonitor(bool? supportsLibraryMonitor) =>
-      this(supportsLibraryMonitor: supportsLibraryMonitor);
+      call(supportsLibraryMonitor: supportsLibraryMonitor);
 
   @override
   SystemInfo webSocketPortNumber(int? webSocketPortNumber) =>
-      this(webSocketPortNumber: webSocketPortNumber);
+      call(webSocketPortNumber: webSocketPortNumber);
 
   @override
   SystemInfo completedInstallations(
     List<InstallationInfo>? completedInstallations,
-  ) => this(completedInstallations: completedInstallations);
+  ) => call(completedInstallations: completedInstallations);
 
   @override
-  SystemInfo canSelfRestart(bool? canSelfRestart) =>
-      this(canSelfRestart: canSelfRestart);
+  SystemInfo canSelfRestart(
+    @Deprecated('canSelfRestart has been deprecated') bool? canSelfRestart,
+  ) => call(canSelfRestart: canSelfRestart);
 
   @override
-  SystemInfo canLaunchWebBrowser(bool? canLaunchWebBrowser) =>
-      this(canLaunchWebBrowser: canLaunchWebBrowser);
+  SystemInfo canLaunchWebBrowser(
+    @Deprecated('canLaunchWebBrowser has been deprecated')
+    bool? canLaunchWebBrowser,
+  ) => call(canLaunchWebBrowser: canLaunchWebBrowser);
 
   @override
-  SystemInfo programDataPath(String? programDataPath) =>
-      this(programDataPath: programDataPath);
+  SystemInfo programDataPath(
+    @Deprecated('programDataPath has been deprecated') String? programDataPath,
+  ) => call(programDataPath: programDataPath);
 
   @override
-  SystemInfo webPath(String? webPath) => this(webPath: webPath);
+  SystemInfo webPath(
+    @Deprecated('webPath has been deprecated') String? webPath,
+  ) => call(webPath: webPath);
 
   @override
-  SystemInfo itemsByNamePath(String? itemsByNamePath) =>
-      this(itemsByNamePath: itemsByNamePath);
+  SystemInfo itemsByNamePath(
+    @Deprecated('itemsByNamePath has been deprecated') String? itemsByNamePath,
+  ) => call(itemsByNamePath: itemsByNamePath);
 
   @override
-  SystemInfo cachePath(String? cachePath) => this(cachePath: cachePath);
+  SystemInfo cachePath(
+    @Deprecated('cachePath has been deprecated') String? cachePath,
+  ) => call(cachePath: cachePath);
 
   @override
-  SystemInfo logPath(String? logPath) => this(logPath: logPath);
+  SystemInfo logPath(
+    @Deprecated('logPath has been deprecated') String? logPath,
+  ) => call(logPath: logPath);
 
   @override
-  SystemInfo internalMetadataPath(String? internalMetadataPath) =>
-      this(internalMetadataPath: internalMetadataPath);
+  SystemInfo internalMetadataPath(
+    @Deprecated('internalMetadataPath has been deprecated')
+    String? internalMetadataPath,
+  ) => call(internalMetadataPath: internalMetadataPath);
 
   @override
-  SystemInfo transcodingTempPath(String? transcodingTempPath) =>
-      this(transcodingTempPath: transcodingTempPath);
+  SystemInfo transcodingTempPath(
+    @Deprecated('transcodingTempPath has been deprecated')
+    String? transcodingTempPath,
+  ) => call(transcodingTempPath: transcodingTempPath);
 
   @override
   SystemInfo castReceiverApplications(
     List<CastReceiverApplication>? castReceiverApplications,
-  ) => this(castReceiverApplications: castReceiverApplications);
+  ) => call(castReceiverApplications: castReceiverApplications);
 
   @override
-  SystemInfo hasUpdateAvailable(bool? hasUpdateAvailable) =>
-      this(hasUpdateAvailable: hasUpdateAvailable);
+  SystemInfo hasUpdateAvailable(
+    @Deprecated('hasUpdateAvailable has been deprecated')
+    bool? hasUpdateAvailable,
+  ) => call(hasUpdateAvailable: hasUpdateAvailable);
 
   @override
-  SystemInfo encoderLocation(String? encoderLocation) =>
-      this(encoderLocation: encoderLocation);
+  SystemInfo encoderLocation(
+    @Deprecated('encoderLocation has been deprecated') String? encoderLocation,
+  ) => call(encoderLocation: encoderLocation);
 
   @override
-  SystemInfo systemArchitecture(String? systemArchitecture) =>
-      this(systemArchitecture: systemArchitecture);
+  SystemInfo systemArchitecture(
+    @Deprecated('systemArchitecture has been deprecated')
+    String? systemArchitecture,
+  ) => call(systemArchitecture: systemArchitecture);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SystemInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SystemInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SystemInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SystemInfo call({
     Object? localAddress = const $CopyWithPlaceholder(),
     Object? serverName = const $CopyWithPlaceholder(),
     Object? version = const $CopyWithPlaceholder(),
     Object? productName = const $CopyWithPlaceholder(),
+    @Deprecated('operatingSystem has been deprecated')
     Object? operatingSystem = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
     Object? startupWizardCompleted = const $CopyWithPlaceholder(),
+    @Deprecated('operatingSystemDisplayName has been deprecated')
     Object? operatingSystemDisplayName = const $CopyWithPlaceholder(),
     Object? packageName = const $CopyWithPlaceholder(),
     Object? hasPendingRestart = const $CopyWithPlaceholder(),
@@ -232,18 +300,30 @@ class _$SystemInfoCWProxyImpl implements _$SystemInfoCWProxy {
     Object? supportsLibraryMonitor = const $CopyWithPlaceholder(),
     Object? webSocketPortNumber = const $CopyWithPlaceholder(),
     Object? completedInstallations = const $CopyWithPlaceholder(),
+    @Deprecated('canSelfRestart has been deprecated')
     Object? canSelfRestart = const $CopyWithPlaceholder(),
+    @Deprecated('canLaunchWebBrowser has been deprecated')
     Object? canLaunchWebBrowser = const $CopyWithPlaceholder(),
+    @Deprecated('programDataPath has been deprecated')
     Object? programDataPath = const $CopyWithPlaceholder(),
+    @Deprecated('webPath has been deprecated')
     Object? webPath = const $CopyWithPlaceholder(),
+    @Deprecated('itemsByNamePath has been deprecated')
     Object? itemsByNamePath = const $CopyWithPlaceholder(),
+    @Deprecated('cachePath has been deprecated')
     Object? cachePath = const $CopyWithPlaceholder(),
+    @Deprecated('logPath has been deprecated')
     Object? logPath = const $CopyWithPlaceholder(),
+    @Deprecated('internalMetadataPath has been deprecated')
     Object? internalMetadataPath = const $CopyWithPlaceholder(),
+    @Deprecated('transcodingTempPath has been deprecated')
     Object? transcodingTempPath = const $CopyWithPlaceholder(),
     Object? castReceiverApplications = const $CopyWithPlaceholder(),
+    @Deprecated('hasUpdateAvailable has been deprecated')
     Object? hasUpdateAvailable = const $CopyWithPlaceholder(),
+    @Deprecated('encoderLocation has been deprecated')
     Object? encoderLocation = const $CopyWithPlaceholder(),
+    @Deprecated('systemArchitecture has been deprecated')
     Object? systemArchitecture = const $CopyWithPlaceholder(),
   }) {
     return SystemInfo(
@@ -365,7 +445,8 @@ class _$SystemInfoCWProxyImpl implements _$SystemInfoCWProxy {
 }
 
 extension $SystemInfoCopyWith on SystemInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfSystemInfo.copyWith(...)` or like so:`instanceOfSystemInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSystemInfo.copyWith(...)` or `instanceOfSystemInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SystemInfoCWProxy get copyWith => _$SystemInfoCWProxyImpl(this);
 }

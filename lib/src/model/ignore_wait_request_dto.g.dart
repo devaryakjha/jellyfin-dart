@@ -9,16 +9,18 @@ part of 'ignore_wait_request_dto.dart';
 abstract class _$IgnoreWaitRequestDtoCWProxy {
   IgnoreWaitRequestDto ignoreWait(bool? ignoreWait);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `IgnoreWaitRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `IgnoreWaitRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// IgnoreWaitRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   IgnoreWaitRequestDto call({bool? ignoreWait});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfIgnoreWaitRequestDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfIgnoreWaitRequestDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfIgnoreWaitRequestDto.copyWith(...)` or call `instanceOfIgnoreWaitRequestDto.copyWith.fieldName(value)` for a single field.
 class _$IgnoreWaitRequestDtoCWProxyImpl
     implements _$IgnoreWaitRequestDtoCWProxy {
   const _$IgnoreWaitRequestDtoCWProxyImpl(this._value);
@@ -27,15 +29,16 @@ class _$IgnoreWaitRequestDtoCWProxyImpl
 
   @override
   IgnoreWaitRequestDto ignoreWait(bool? ignoreWait) =>
-      this(ignoreWait: ignoreWait);
+      call(ignoreWait: ignoreWait);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `IgnoreWaitRequestDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `IgnoreWaitRequestDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// IgnoreWaitRequestDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   IgnoreWaitRequestDto call({
     Object? ignoreWait = const $CopyWithPlaceholder(),
   }) {
@@ -49,7 +52,8 @@ class _$IgnoreWaitRequestDtoCWProxyImpl
 }
 
 extension $IgnoreWaitRequestDtoCopyWith on IgnoreWaitRequestDto {
-  /// Returns a callable class that can be used as follows: `instanceOfIgnoreWaitRequestDto.copyWith(...)` or like so:`instanceOfIgnoreWaitRequestDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfIgnoreWaitRequestDto.copyWith(...)` or `instanceOfIgnoreWaitRequestDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$IgnoreWaitRequestDtoCWProxy get copyWith =>
       _$IgnoreWaitRequestDtoCWProxyImpl(this);

@@ -17,12 +17,13 @@ abstract class _$GroupInfoDtoCWProxy {
 
   GroupInfoDto lastUpdatedAt(DateTime? lastUpdatedAt);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GroupInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GroupInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GroupInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GroupInfoDto call({
     String? groupId,
     String? groupName,
@@ -32,36 +33,38 @@ abstract class _$GroupInfoDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfGroupInfoDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfGroupInfoDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfGroupInfoDto.copyWith(...)` or call `instanceOfGroupInfoDto.copyWith.fieldName(value)` for a single field.
 class _$GroupInfoDtoCWProxyImpl implements _$GroupInfoDtoCWProxy {
   const _$GroupInfoDtoCWProxyImpl(this._value);
 
   final GroupInfoDto _value;
 
   @override
-  GroupInfoDto groupId(String? groupId) => this(groupId: groupId);
+  GroupInfoDto groupId(String? groupId) => call(groupId: groupId);
 
   @override
-  GroupInfoDto groupName(String? groupName) => this(groupName: groupName);
+  GroupInfoDto groupName(String? groupName) => call(groupName: groupName);
 
   @override
-  GroupInfoDto state(GroupStateType? state) => this(state: state);
+  GroupInfoDto state(GroupStateType? state) => call(state: state);
 
   @override
   GroupInfoDto participants(List<String>? participants) =>
-      this(participants: participants);
+      call(participants: participants);
 
   @override
   GroupInfoDto lastUpdatedAt(DateTime? lastUpdatedAt) =>
-      this(lastUpdatedAt: lastUpdatedAt);
+      call(lastUpdatedAt: lastUpdatedAt);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `GroupInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `GroupInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// GroupInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   GroupInfoDto call({
     Object? groupId = const $CopyWithPlaceholder(),
     Object? groupName = const $CopyWithPlaceholder(),
@@ -95,7 +98,8 @@ class _$GroupInfoDtoCWProxyImpl implements _$GroupInfoDtoCWProxy {
 }
 
 extension $GroupInfoDtoCopyWith on GroupInfoDto {
-  /// Returns a callable class that can be used as follows: `instanceOfGroupInfoDto.copyWith(...)` or like so:`instanceOfGroupInfoDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfGroupInfoDto.copyWith(...)` or `instanceOfGroupInfoDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$GroupInfoDtoCWProxy get copyWith => _$GroupInfoDtoCWProxyImpl(this);
 }

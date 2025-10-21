@@ -11,34 +11,37 @@ abstract class _$SessionUserInfoCWProxy {
 
   SessionUserInfo userName(String? userName);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SessionUserInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SessionUserInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SessionUserInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SessionUserInfo call({String? userId, String? userName});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSessionUserInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSessionUserInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSessionUserInfo.copyWith(...)` or call `instanceOfSessionUserInfo.copyWith.fieldName(value)` for a single field.
 class _$SessionUserInfoCWProxyImpl implements _$SessionUserInfoCWProxy {
   const _$SessionUserInfoCWProxyImpl(this._value);
 
   final SessionUserInfo _value;
 
   @override
-  SessionUserInfo userId(String? userId) => this(userId: userId);
+  SessionUserInfo userId(String? userId) => call(userId: userId);
 
   @override
-  SessionUserInfo userName(String? userName) => this(userName: userName);
+  SessionUserInfo userName(String? userName) => call(userName: userName);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SessionUserInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SessionUserInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SessionUserInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SessionUserInfo call({
     Object? userId = const $CopyWithPlaceholder(),
     Object? userName = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$SessionUserInfoCWProxyImpl implements _$SessionUserInfoCWProxy {
 }
 
 extension $SessionUserInfoCopyWith on SessionUserInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfSessionUserInfo.copyWith(...)` or like so:`instanceOfSessionUserInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSessionUserInfo.copyWith(...)` or `instanceOfSessionUserInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SessionUserInfoCWProxy get copyWith => _$SessionUserInfoCWProxyImpl(this);
 }

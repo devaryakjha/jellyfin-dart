@@ -13,12 +13,13 @@ abstract class _$PlaylistDtoCWProxy {
 
   PlaylistDto itemIds(List<String>? itemIds);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaylistDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaylistDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaylistDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaylistDto call({
     bool? openAccess,
     List<PlaylistUserPermissions>? shares,
@@ -26,29 +27,31 @@ abstract class _$PlaylistDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlaylistDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlaylistDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlaylistDto.copyWith(...)` or call `instanceOfPlaylistDto.copyWith.fieldName(value)` for a single field.
 class _$PlaylistDtoCWProxyImpl implements _$PlaylistDtoCWProxy {
   const _$PlaylistDtoCWProxyImpl(this._value);
 
   final PlaylistDto _value;
 
   @override
-  PlaylistDto openAccess(bool? openAccess) => this(openAccess: openAccess);
+  PlaylistDto openAccess(bool? openAccess) => call(openAccess: openAccess);
 
   @override
   PlaylistDto shares(List<PlaylistUserPermissions>? shares) =>
-      this(shares: shares);
+      call(shares: shares);
 
   @override
-  PlaylistDto itemIds(List<String>? itemIds) => this(itemIds: itemIds);
+  PlaylistDto itemIds(List<String>? itemIds) => call(itemIds: itemIds);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlaylistDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlaylistDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlaylistDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlaylistDto call({
     Object? openAccess = const $CopyWithPlaceholder(),
     Object? shares = const $CopyWithPlaceholder(),
@@ -72,7 +75,8 @@ class _$PlaylistDtoCWProxyImpl implements _$PlaylistDtoCWProxy {
 }
 
 extension $PlaylistDtoCopyWith on PlaylistDto {
-  /// Returns a callable class that can be used as follows: `instanceOfPlaylistDto.copyWith(...)` or like so:`instanceOfPlaylistDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlaylistDto.copyWith(...)` or `instanceOfPlaylistDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlaylistDtoCWProxy get copyWith => _$PlaylistDtoCWProxyImpl(this);
 }

@@ -13,12 +13,13 @@ abstract class _$DeviceInfoDtoQueryResultCWProxy {
 
   DeviceInfoDtoQueryResult startIndex(int? startIndex);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DeviceInfoDtoQueryResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DeviceInfoDtoQueryResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DeviceInfoDtoQueryResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DeviceInfoDtoQueryResult call({
     List<DeviceInfoDto>? items,
     int? totalRecordCount,
@@ -26,7 +27,8 @@ abstract class _$DeviceInfoDtoQueryResultCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfDeviceInfoDtoQueryResult.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfDeviceInfoDtoQueryResult.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfDeviceInfoDtoQueryResult.copyWith(...)` or call `instanceOfDeviceInfoDtoQueryResult.copyWith.fieldName(value)` for a single field.
 class _$DeviceInfoDtoQueryResultCWProxyImpl
     implements _$DeviceInfoDtoQueryResultCWProxy {
   const _$DeviceInfoDtoQueryResultCWProxyImpl(this._value);
@@ -35,23 +37,24 @@ class _$DeviceInfoDtoQueryResultCWProxyImpl
 
   @override
   DeviceInfoDtoQueryResult items(List<DeviceInfoDto>? items) =>
-      this(items: items);
+      call(items: items);
 
   @override
   DeviceInfoDtoQueryResult totalRecordCount(int? totalRecordCount) =>
-      this(totalRecordCount: totalRecordCount);
+      call(totalRecordCount: totalRecordCount);
 
   @override
   DeviceInfoDtoQueryResult startIndex(int? startIndex) =>
-      this(startIndex: startIndex);
+      call(startIndex: startIndex);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `DeviceInfoDtoQueryResult(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `DeviceInfoDtoQueryResult(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// DeviceInfoDtoQueryResult(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   DeviceInfoDtoQueryResult call({
     Object? items = const $CopyWithPlaceholder(),
     Object? totalRecordCount = const $CopyWithPlaceholder(),
@@ -75,7 +78,8 @@ class _$DeviceInfoDtoQueryResultCWProxyImpl
 }
 
 extension $DeviceInfoDtoQueryResultCopyWith on DeviceInfoDtoQueryResult {
-  /// Returns a callable class that can be used as follows: `instanceOfDeviceInfoDtoQueryResult.copyWith(...)` or like so:`instanceOfDeviceInfoDtoQueryResult.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfDeviceInfoDtoQueryResult.copyWith(...)` or `instanceOfDeviceInfoDtoQueryResult.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$DeviceInfoDtoQueryResultCWProxy get copyWith =>
       _$DeviceInfoDtoQueryResultCWProxyImpl(this);

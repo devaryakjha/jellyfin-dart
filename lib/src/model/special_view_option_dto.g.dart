@@ -11,16 +11,18 @@ abstract class _$SpecialViewOptionDtoCWProxy {
 
   SpecialViewOptionDto id(String? id);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SpecialViewOptionDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SpecialViewOptionDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SpecialViewOptionDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SpecialViewOptionDto call({String? name, String? id});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSpecialViewOptionDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSpecialViewOptionDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSpecialViewOptionDto.copyWith(...)` or call `instanceOfSpecialViewOptionDto.copyWith.fieldName(value)` for a single field.
 class _$SpecialViewOptionDtoCWProxyImpl
     implements _$SpecialViewOptionDtoCWProxy {
   const _$SpecialViewOptionDtoCWProxyImpl(this._value);
@@ -28,18 +30,19 @@ class _$SpecialViewOptionDtoCWProxyImpl
   final SpecialViewOptionDto _value;
 
   @override
-  SpecialViewOptionDto name(String? name) => this(name: name);
+  SpecialViewOptionDto name(String? name) => call(name: name);
 
   @override
-  SpecialViewOptionDto id(String? id) => this(id: id);
+  SpecialViewOptionDto id(String? id) => call(id: id);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SpecialViewOptionDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SpecialViewOptionDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SpecialViewOptionDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SpecialViewOptionDto call({
     Object? name = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
@@ -58,7 +61,8 @@ class _$SpecialViewOptionDtoCWProxyImpl
 }
 
 extension $SpecialViewOptionDtoCopyWith on SpecialViewOptionDto {
-  /// Returns a callable class that can be used as follows: `instanceOfSpecialViewOptionDto.copyWith(...)` or like so:`instanceOfSpecialViewOptionDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSpecialViewOptionDto.copyWith(...)` or `instanceOfSpecialViewOptionDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SpecialViewOptionDtoCWProxy get copyWith =>
       _$SpecialViewOptionDtoCWProxyImpl(this);

@@ -21,12 +21,13 @@ abstract class _$TrickplayInfoDtoCWProxy {
 
   TrickplayInfoDto bandwidth(int? bandwidth);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TrickplayInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TrickplayInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TrickplayInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TrickplayInfoDto call({
     int? width,
     int? height,
@@ -38,41 +39,43 @@ abstract class _$TrickplayInfoDtoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfTrickplayInfoDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfTrickplayInfoDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfTrickplayInfoDto.copyWith(...)` or call `instanceOfTrickplayInfoDto.copyWith.fieldName(value)` for a single field.
 class _$TrickplayInfoDtoCWProxyImpl implements _$TrickplayInfoDtoCWProxy {
   const _$TrickplayInfoDtoCWProxyImpl(this._value);
 
   final TrickplayInfoDto _value;
 
   @override
-  TrickplayInfoDto width(int? width) => this(width: width);
+  TrickplayInfoDto width(int? width) => call(width: width);
 
   @override
-  TrickplayInfoDto height(int? height) => this(height: height);
+  TrickplayInfoDto height(int? height) => call(height: height);
 
   @override
-  TrickplayInfoDto tileWidth(int? tileWidth) => this(tileWidth: tileWidth);
+  TrickplayInfoDto tileWidth(int? tileWidth) => call(tileWidth: tileWidth);
 
   @override
-  TrickplayInfoDto tileHeight(int? tileHeight) => this(tileHeight: tileHeight);
+  TrickplayInfoDto tileHeight(int? tileHeight) => call(tileHeight: tileHeight);
 
   @override
   TrickplayInfoDto thumbnailCount(int? thumbnailCount) =>
-      this(thumbnailCount: thumbnailCount);
+      call(thumbnailCount: thumbnailCount);
 
   @override
-  TrickplayInfoDto interval(int? interval) => this(interval: interval);
+  TrickplayInfoDto interval(int? interval) => call(interval: interval);
 
   @override
-  TrickplayInfoDto bandwidth(int? bandwidth) => this(bandwidth: bandwidth);
+  TrickplayInfoDto bandwidth(int? bandwidth) => call(bandwidth: bandwidth);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `TrickplayInfoDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `TrickplayInfoDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// TrickplayInfoDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   TrickplayInfoDto call({
     Object? width = const $CopyWithPlaceholder(),
     Object? height = const $CopyWithPlaceholder(),
@@ -116,7 +119,8 @@ class _$TrickplayInfoDtoCWProxyImpl implements _$TrickplayInfoDtoCWProxy {
 }
 
 extension $TrickplayInfoDtoCopyWith on TrickplayInfoDto {
-  /// Returns a callable class that can be used as follows: `instanceOfTrickplayInfoDto.copyWith(...)` or like so:`instanceOfTrickplayInfoDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfTrickplayInfoDto.copyWith(...)` or `instanceOfTrickplayInfoDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$TrickplayInfoDtoCWProxy get copyWith => _$TrickplayInfoDtoCWProxyImpl(this);
 }

@@ -11,34 +11,37 @@ abstract class _$ExternalUrlCWProxy {
 
   ExternalUrl url(String? url);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ExternalUrl(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ExternalUrl(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ExternalUrl(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ExternalUrl call({String? name, String? url});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfExternalUrl.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfExternalUrl.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfExternalUrl.copyWith(...)` or call `instanceOfExternalUrl.copyWith.fieldName(value)` for a single field.
 class _$ExternalUrlCWProxyImpl implements _$ExternalUrlCWProxy {
   const _$ExternalUrlCWProxyImpl(this._value);
 
   final ExternalUrl _value;
 
   @override
-  ExternalUrl name(String? name) => this(name: name);
+  ExternalUrl name(String? name) => call(name: name);
 
   @override
-  ExternalUrl url(String? url) => this(url: url);
+  ExternalUrl url(String? url) => call(url: url);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ExternalUrl(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ExternalUrl(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ExternalUrl(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ExternalUrl call({
     Object? name = const $CopyWithPlaceholder(),
     Object? url = const $CopyWithPlaceholder(),
@@ -57,7 +60,8 @@ class _$ExternalUrlCWProxyImpl implements _$ExternalUrlCWProxy {
 }
 
 extension $ExternalUrlCopyWith on ExternalUrl {
-  /// Returns a callable class that can be used as follows: `instanceOfExternalUrl.copyWith(...)` or like so:`instanceOfExternalUrl.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfExternalUrl.copyWith(...)` or `instanceOfExternalUrl.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ExternalUrlCWProxy get copyWith => _$ExternalUrlCWProxyImpl(this);
 }

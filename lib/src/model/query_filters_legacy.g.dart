@@ -15,12 +15,13 @@ abstract class _$QueryFiltersLegacyCWProxy {
 
   QueryFiltersLegacy years(List<int>? years);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `QueryFiltersLegacy(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `QueryFiltersLegacy(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// QueryFiltersLegacy(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   QueryFiltersLegacy call({
     List<String>? genres,
     List<String>? tags,
@@ -29,32 +30,34 @@ abstract class _$QueryFiltersLegacyCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfQueryFiltersLegacy.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfQueryFiltersLegacy.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfQueryFiltersLegacy.copyWith(...)` or call `instanceOfQueryFiltersLegacy.copyWith.fieldName(value)` for a single field.
 class _$QueryFiltersLegacyCWProxyImpl implements _$QueryFiltersLegacyCWProxy {
   const _$QueryFiltersLegacyCWProxyImpl(this._value);
 
   final QueryFiltersLegacy _value;
 
   @override
-  QueryFiltersLegacy genres(List<String>? genres) => this(genres: genres);
+  QueryFiltersLegacy genres(List<String>? genres) => call(genres: genres);
 
   @override
-  QueryFiltersLegacy tags(List<String>? tags) => this(tags: tags);
+  QueryFiltersLegacy tags(List<String>? tags) => call(tags: tags);
 
   @override
   QueryFiltersLegacy officialRatings(List<String>? officialRatings) =>
-      this(officialRatings: officialRatings);
+      call(officialRatings: officialRatings);
 
   @override
-  QueryFiltersLegacy years(List<int>? years) => this(years: years);
+  QueryFiltersLegacy years(List<int>? years) => call(years: years);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `QueryFiltersLegacy(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `QueryFiltersLegacy(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// QueryFiltersLegacy(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   QueryFiltersLegacy call({
     Object? genres = const $CopyWithPlaceholder(),
     Object? tags = const $CopyWithPlaceholder(),
@@ -83,7 +86,8 @@ class _$QueryFiltersLegacyCWProxyImpl implements _$QueryFiltersLegacyCWProxy {
 }
 
 extension $QueryFiltersLegacyCopyWith on QueryFiltersLegacy {
-  /// Returns a callable class that can be used as follows: `instanceOfQueryFiltersLegacy.copyWith(...)` or like so:`instanceOfQueryFiltersLegacy.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfQueryFiltersLegacy.copyWith(...)` or `instanceOfQueryFiltersLegacy.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$QueryFiltersLegacyCWProxy get copyWith =>
       _$QueryFiltersLegacyCWProxyImpl(this);

@@ -29,12 +29,13 @@ abstract class _$MovieInfoCWProxy {
 
   MovieInfo isAutomated(bool? isAutomated);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MovieInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MovieInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MovieInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MovieInfo call({
     String? name,
     String? originalTitle,
@@ -50,58 +51,60 @@ abstract class _$MovieInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMovieInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMovieInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMovieInfo.copyWith(...)` or call `instanceOfMovieInfo.copyWith.fieldName(value)` for a single field.
 class _$MovieInfoCWProxyImpl implements _$MovieInfoCWProxy {
   const _$MovieInfoCWProxyImpl(this._value);
 
   final MovieInfo _value;
 
   @override
-  MovieInfo name(String? name) => this(name: name);
+  MovieInfo name(String? name) => call(name: name);
 
   @override
   MovieInfo originalTitle(String? originalTitle) =>
-      this(originalTitle: originalTitle);
+      call(originalTitle: originalTitle);
 
   @override
-  MovieInfo path(String? path) => this(path: path);
+  MovieInfo path(String? path) => call(path: path);
 
   @override
   MovieInfo metadataLanguage(String? metadataLanguage) =>
-      this(metadataLanguage: metadataLanguage);
+      call(metadataLanguage: metadataLanguage);
 
   @override
   MovieInfo metadataCountryCode(String? metadataCountryCode) =>
-      this(metadataCountryCode: metadataCountryCode);
+      call(metadataCountryCode: metadataCountryCode);
 
   @override
   MovieInfo providerIds(Map<String, String>? providerIds) =>
-      this(providerIds: providerIds);
+      call(providerIds: providerIds);
 
   @override
-  MovieInfo year(int? year) => this(year: year);
+  MovieInfo year(int? year) => call(year: year);
 
   @override
-  MovieInfo indexNumber(int? indexNumber) => this(indexNumber: indexNumber);
+  MovieInfo indexNumber(int? indexNumber) => call(indexNumber: indexNumber);
 
   @override
   MovieInfo parentIndexNumber(int? parentIndexNumber) =>
-      this(parentIndexNumber: parentIndexNumber);
+      call(parentIndexNumber: parentIndexNumber);
 
   @override
   MovieInfo premiereDate(DateTime? premiereDate) =>
-      this(premiereDate: premiereDate);
+      call(premiereDate: premiereDate);
 
   @override
-  MovieInfo isAutomated(bool? isAutomated) => this(isAutomated: isAutomated);
+  MovieInfo isAutomated(bool? isAutomated) => call(isAutomated: isAutomated);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MovieInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MovieInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MovieInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MovieInfo call({
     Object? name = const $CopyWithPlaceholder(),
     Object? originalTitle = const $CopyWithPlaceholder(),
@@ -165,7 +168,8 @@ class _$MovieInfoCWProxyImpl implements _$MovieInfoCWProxy {
 }
 
 extension $MovieInfoCopyWith on MovieInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfMovieInfo.copyWith(...)` or like so:`instanceOfMovieInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMovieInfo.copyWith(...)` or `instanceOfMovieInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MovieInfoCWProxy get copyWith => _$MovieInfoCWProxyImpl(this);
 }

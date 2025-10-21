@@ -11,19 +11,21 @@ abstract class _$ServerShuttingDownMessageCWProxy {
 
   ServerShuttingDownMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ServerShuttingDownMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ServerShuttingDownMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ServerShuttingDownMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ServerShuttingDownMessage call({
     String? messageId,
     SessionMessageType? messageType,
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfServerShuttingDownMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfServerShuttingDownMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfServerShuttingDownMessage.copyWith(...)` or call `instanceOfServerShuttingDownMessage.copyWith.fieldName(value)` for a single field.
 class _$ServerShuttingDownMessageCWProxyImpl
     implements _$ServerShuttingDownMessageCWProxy {
   const _$ServerShuttingDownMessageCWProxyImpl(this._value);
@@ -32,19 +34,20 @@ class _$ServerShuttingDownMessageCWProxyImpl
 
   @override
   ServerShuttingDownMessage messageId(String? messageId) =>
-      this(messageId: messageId);
+      call(messageId: messageId);
 
   @override
   ServerShuttingDownMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ServerShuttingDownMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ServerShuttingDownMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ServerShuttingDownMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ServerShuttingDownMessage call({
     Object? messageId = const $CopyWithPlaceholder(),
     Object? messageType = const $CopyWithPlaceholder(),
@@ -63,7 +66,8 @@ class _$ServerShuttingDownMessageCWProxyImpl
 }
 
 extension $ServerShuttingDownMessageCopyWith on ServerShuttingDownMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfServerShuttingDownMessage.copyWith(...)` or like so:`instanceOfServerShuttingDownMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfServerShuttingDownMessage.copyWith(...)` or `instanceOfServerShuttingDownMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ServerShuttingDownMessageCWProxy get copyWith =>
       _$ServerShuttingDownMessageCWProxyImpl(this);

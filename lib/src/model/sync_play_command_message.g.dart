@@ -13,12 +13,13 @@ abstract class _$SyncPlayCommandMessageCWProxy {
 
   SyncPlayCommandMessage messageType(SessionMessageType? messageType);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SyncPlayCommandMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SyncPlayCommandMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SyncPlayCommandMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SyncPlayCommandMessage call({
     SendCommand? data,
     String? messageId,
@@ -26,7 +27,8 @@ abstract class _$SyncPlayCommandMessageCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfSyncPlayCommandMessage.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfSyncPlayCommandMessage.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfSyncPlayCommandMessage.copyWith(...)` or call `instanceOfSyncPlayCommandMessage.copyWith.fieldName(value)` for a single field.
 class _$SyncPlayCommandMessageCWProxyImpl
     implements _$SyncPlayCommandMessageCWProxy {
   const _$SyncPlayCommandMessageCWProxyImpl(this._value);
@@ -34,23 +36,24 @@ class _$SyncPlayCommandMessageCWProxyImpl
   final SyncPlayCommandMessage _value;
 
   @override
-  SyncPlayCommandMessage data(SendCommand? data) => this(data: data);
+  SyncPlayCommandMessage data(SendCommand? data) => call(data: data);
 
   @override
   SyncPlayCommandMessage messageId(String? messageId) =>
-      this(messageId: messageId);
+      call(messageId: messageId);
 
   @override
   SyncPlayCommandMessage messageType(SessionMessageType? messageType) =>
-      this(messageType: messageType);
+      call(messageType: messageType);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `SyncPlayCommandMessage(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `SyncPlayCommandMessage(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// SyncPlayCommandMessage(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   SyncPlayCommandMessage call({
     Object? data = const $CopyWithPlaceholder(),
     Object? messageId = const $CopyWithPlaceholder(),
@@ -74,7 +77,8 @@ class _$SyncPlayCommandMessageCWProxyImpl
 }
 
 extension $SyncPlayCommandMessageCopyWith on SyncPlayCommandMessage {
-  /// Returns a callable class that can be used as follows: `instanceOfSyncPlayCommandMessage.copyWith(...)` or like so:`instanceOfSyncPlayCommandMessage.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfSyncPlayCommandMessage.copyWith(...)` or `instanceOfSyncPlayCommandMessage.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$SyncPlayCommandMessageCWProxy get copyWith =>
       _$SyncPlayCommandMessageCWProxyImpl(this);

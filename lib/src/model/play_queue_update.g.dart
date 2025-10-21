@@ -23,12 +23,13 @@ abstract class _$PlayQueueUpdateCWProxy {
 
   PlayQueueUpdate repeatMode(GroupRepeatMode? repeatMode);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlayQueueUpdate(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlayQueueUpdate(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlayQueueUpdate(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlayQueueUpdate call({
     PlayQueueUpdateReason? reason,
     DateTime? lastUpdate,
@@ -41,49 +42,51 @@ abstract class _$PlayQueueUpdateCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfPlayQueueUpdate.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfPlayQueueUpdate.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfPlayQueueUpdate.copyWith(...)` or call `instanceOfPlayQueueUpdate.copyWith.fieldName(value)` for a single field.
 class _$PlayQueueUpdateCWProxyImpl implements _$PlayQueueUpdateCWProxy {
   const _$PlayQueueUpdateCWProxyImpl(this._value);
 
   final PlayQueueUpdate _value;
 
   @override
-  PlayQueueUpdate reason(PlayQueueUpdateReason? reason) => this(reason: reason);
+  PlayQueueUpdate reason(PlayQueueUpdateReason? reason) => call(reason: reason);
 
   @override
   PlayQueueUpdate lastUpdate(DateTime? lastUpdate) =>
-      this(lastUpdate: lastUpdate);
+      call(lastUpdate: lastUpdate);
 
   @override
   PlayQueueUpdate playlist(List<SyncPlayQueueItem>? playlist) =>
-      this(playlist: playlist);
+      call(playlist: playlist);
 
   @override
   PlayQueueUpdate playingItemIndex(int? playingItemIndex) =>
-      this(playingItemIndex: playingItemIndex);
+      call(playingItemIndex: playingItemIndex);
 
   @override
   PlayQueueUpdate startPositionTicks(int? startPositionTicks) =>
-      this(startPositionTicks: startPositionTicks);
+      call(startPositionTicks: startPositionTicks);
 
   @override
-  PlayQueueUpdate isPlaying(bool? isPlaying) => this(isPlaying: isPlaying);
+  PlayQueueUpdate isPlaying(bool? isPlaying) => call(isPlaying: isPlaying);
 
   @override
   PlayQueueUpdate shuffleMode(GroupShuffleMode? shuffleMode) =>
-      this(shuffleMode: shuffleMode);
+      call(shuffleMode: shuffleMode);
 
   @override
   PlayQueueUpdate repeatMode(GroupRepeatMode? repeatMode) =>
-      this(repeatMode: repeatMode);
+      call(repeatMode: repeatMode);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `PlayQueueUpdate(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `PlayQueueUpdate(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// PlayQueueUpdate(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   PlayQueueUpdate call({
     Object? reason = const $CopyWithPlaceholder(),
     Object? lastUpdate = const $CopyWithPlaceholder(),
@@ -132,7 +135,8 @@ class _$PlayQueueUpdateCWProxyImpl implements _$PlayQueueUpdateCWProxy {
 }
 
 extension $PlayQueueUpdateCopyWith on PlayQueueUpdate {
-  /// Returns a callable class that can be used as follows: `instanceOfPlayQueueUpdate.copyWith(...)` or like so:`instanceOfPlayQueueUpdate.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfPlayQueueUpdate.copyWith(...)` or `instanceOfPlayQueueUpdate.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$PlayQueueUpdateCWProxy get copyWith => _$PlayQueueUpdateCWProxyImpl(this);
 }

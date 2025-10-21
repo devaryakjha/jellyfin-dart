@@ -19,12 +19,13 @@ abstract class _$CodecProfileCWProxy {
 
   CodecProfile subContainer(String? subContainer);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CodecProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CodecProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CodecProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CodecProfile call({
     CodecType? type,
     List<ProfileCondition>? conditions,
@@ -35,40 +36,42 @@ abstract class _$CodecProfileCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfCodecProfile.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfCodecProfile.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfCodecProfile.copyWith(...)` or call `instanceOfCodecProfile.copyWith.fieldName(value)` for a single field.
 class _$CodecProfileCWProxyImpl implements _$CodecProfileCWProxy {
   const _$CodecProfileCWProxyImpl(this._value);
 
   final CodecProfile _value;
 
   @override
-  CodecProfile type(CodecType? type) => this(type: type);
+  CodecProfile type(CodecType? type) => call(type: type);
 
   @override
   CodecProfile conditions(List<ProfileCondition>? conditions) =>
-      this(conditions: conditions);
+      call(conditions: conditions);
 
   @override
   CodecProfile applyConditions(List<ProfileCondition>? applyConditions) =>
-      this(applyConditions: applyConditions);
+      call(applyConditions: applyConditions);
 
   @override
-  CodecProfile codec(String? codec) => this(codec: codec);
+  CodecProfile codec(String? codec) => call(codec: codec);
 
   @override
-  CodecProfile container(String? container) => this(container: container);
+  CodecProfile container(String? container) => call(container: container);
 
   @override
   CodecProfile subContainer(String? subContainer) =>
-      this(subContainer: subContainer);
+      call(subContainer: subContainer);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `CodecProfile(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `CodecProfile(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// CodecProfile(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   CodecProfile call({
     Object? type = const $CopyWithPlaceholder(),
     Object? conditions = const $CopyWithPlaceholder(),
@@ -107,7 +110,8 @@ class _$CodecProfileCWProxyImpl implements _$CodecProfileCWProxy {
 }
 
 extension $CodecProfileCopyWith on CodecProfile {
-  /// Returns a callable class that can be used as follows: `instanceOfCodecProfile.copyWith(...)` or like so:`instanceOfCodecProfile.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfCodecProfile.copyWith(...)` or `instanceOfCodecProfile.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$CodecProfileCWProxy get copyWith => _$CodecProfileCWProxyImpl(this);
 }

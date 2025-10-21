@@ -25,12 +25,13 @@ abstract class _$MetadataOptionsCWProxy {
 
   MetadataOptions imageFetcherOrder(List<String>? imageFetcherOrder);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MetadataOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MetadataOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MetadataOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MetadataOptions call({
     String? itemType,
     List<String>? disabledMetadataSavers,
@@ -42,49 +43,51 @@ abstract class _$MetadataOptionsCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfMetadataOptions.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfMetadataOptions.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfMetadataOptions.copyWith(...)` or call `instanceOfMetadataOptions.copyWith.fieldName(value)` for a single field.
 class _$MetadataOptionsCWProxyImpl implements _$MetadataOptionsCWProxy {
   const _$MetadataOptionsCWProxyImpl(this._value);
 
   final MetadataOptions _value;
 
   @override
-  MetadataOptions itemType(String? itemType) => this(itemType: itemType);
+  MetadataOptions itemType(String? itemType) => call(itemType: itemType);
 
   @override
   MetadataOptions disabledMetadataSavers(
     List<String>? disabledMetadataSavers,
-  ) => this(disabledMetadataSavers: disabledMetadataSavers);
+  ) => call(disabledMetadataSavers: disabledMetadataSavers);
 
   @override
   MetadataOptions localMetadataReaderOrder(
     List<String>? localMetadataReaderOrder,
-  ) => this(localMetadataReaderOrder: localMetadataReaderOrder);
+  ) => call(localMetadataReaderOrder: localMetadataReaderOrder);
 
   @override
   MetadataOptions disabledMetadataFetchers(
     List<String>? disabledMetadataFetchers,
-  ) => this(disabledMetadataFetchers: disabledMetadataFetchers);
+  ) => call(disabledMetadataFetchers: disabledMetadataFetchers);
 
   @override
   MetadataOptions metadataFetcherOrder(List<String>? metadataFetcherOrder) =>
-      this(metadataFetcherOrder: metadataFetcherOrder);
+      call(metadataFetcherOrder: metadataFetcherOrder);
 
   @override
   MetadataOptions disabledImageFetchers(List<String>? disabledImageFetchers) =>
-      this(disabledImageFetchers: disabledImageFetchers);
+      call(disabledImageFetchers: disabledImageFetchers);
 
   @override
   MetadataOptions imageFetcherOrder(List<String>? imageFetcherOrder) =>
-      this(imageFetcherOrder: imageFetcherOrder);
+      call(imageFetcherOrder: imageFetcherOrder);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `MetadataOptions(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `MetadataOptions(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// MetadataOptions(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   MetadataOptions call({
     Object? itemType = const $CopyWithPlaceholder(),
     Object? disabledMetadataSavers = const $CopyWithPlaceholder(),
@@ -132,7 +135,8 @@ class _$MetadataOptionsCWProxyImpl implements _$MetadataOptionsCWProxy {
 }
 
 extension $MetadataOptionsCopyWith on MetadataOptions {
-  /// Returns a callable class that can be used as follows: `instanceOfMetadataOptions.copyWith(...)` or like so:`instanceOfMetadataOptions.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfMetadataOptions.copyWith(...)` or `instanceOfMetadataOptions.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$MetadataOptionsCWProxy get copyWith => _$MetadataOptionsCWProxyImpl(this);
 }

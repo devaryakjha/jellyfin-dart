@@ -15,12 +15,13 @@ abstract class _$ServerDiscoveryInfoCWProxy {
 
   ServerDiscoveryInfo endpointAddress(String? endpointAddress);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ServerDiscoveryInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ServerDiscoveryInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ServerDiscoveryInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ServerDiscoveryInfo call({
     String? address,
     String? id,
@@ -29,32 +30,34 @@ abstract class _$ServerDiscoveryInfoCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfServerDiscoveryInfo.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfServerDiscoveryInfo.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfServerDiscoveryInfo.copyWith(...)` or call `instanceOfServerDiscoveryInfo.copyWith.fieldName(value)` for a single field.
 class _$ServerDiscoveryInfoCWProxyImpl implements _$ServerDiscoveryInfoCWProxy {
   const _$ServerDiscoveryInfoCWProxyImpl(this._value);
 
   final ServerDiscoveryInfo _value;
 
   @override
-  ServerDiscoveryInfo address(String? address) => this(address: address);
+  ServerDiscoveryInfo address(String? address) => call(address: address);
 
   @override
-  ServerDiscoveryInfo id(String? id) => this(id: id);
+  ServerDiscoveryInfo id(String? id) => call(id: id);
 
   @override
-  ServerDiscoveryInfo name(String? name) => this(name: name);
+  ServerDiscoveryInfo name(String? name) => call(name: name);
 
   @override
   ServerDiscoveryInfo endpointAddress(String? endpointAddress) =>
-      this(endpointAddress: endpointAddress);
+      call(endpointAddress: endpointAddress);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ServerDiscoveryInfo(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ServerDiscoveryInfo(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ServerDiscoveryInfo(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ServerDiscoveryInfo call({
     Object? address = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
@@ -83,7 +86,8 @@ class _$ServerDiscoveryInfoCWProxyImpl implements _$ServerDiscoveryInfoCWProxy {
 }
 
 extension $ServerDiscoveryInfoCopyWith on ServerDiscoveryInfo {
-  /// Returns a callable class that can be used as follows: `instanceOfServerDiscoveryInfo.copyWith(...)` or like so:`instanceOfServerDiscoveryInfo.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfServerDiscoveryInfo.copyWith(...)` or `instanceOfServerDiscoveryInfo.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ServerDiscoveryInfoCWProxy get copyWith =>
       _$ServerDiscoveryInfoCWProxyImpl(this);

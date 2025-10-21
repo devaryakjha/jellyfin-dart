@@ -9,16 +9,18 @@ part of 'client_log_document_response_dto.dart';
 abstract class _$ClientLogDocumentResponseDtoCWProxy {
   ClientLogDocumentResponseDto fileName(String? fileName);
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ClientLogDocumentResponseDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ClientLogDocumentResponseDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ClientLogDocumentResponseDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ClientLogDocumentResponseDto call({String? fileName});
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfClientLogDocumentResponseDto.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfClientLogDocumentResponseDto.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfClientLogDocumentResponseDto.copyWith(...)` or call `instanceOfClientLogDocumentResponseDto.copyWith.fieldName(value)` for a single field.
 class _$ClientLogDocumentResponseDtoCWProxyImpl
     implements _$ClientLogDocumentResponseDtoCWProxy {
   const _$ClientLogDocumentResponseDtoCWProxyImpl(this._value);
@@ -27,15 +29,16 @@ class _$ClientLogDocumentResponseDtoCWProxyImpl
 
   @override
   ClientLogDocumentResponseDto fileName(String? fileName) =>
-      this(fileName: fileName);
+      call(fileName: fileName);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `ClientLogDocumentResponseDto(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `ClientLogDocumentResponseDto(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// ClientLogDocumentResponseDto(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   ClientLogDocumentResponseDto call({
     Object? fileName = const $CopyWithPlaceholder(),
   }) {
@@ -50,7 +53,8 @@ class _$ClientLogDocumentResponseDtoCWProxyImpl
 
 extension $ClientLogDocumentResponseDtoCopyWith
     on ClientLogDocumentResponseDto {
-  /// Returns a callable class that can be used as follows: `instanceOfClientLogDocumentResponseDto.copyWith(...)` or like so:`instanceOfClientLogDocumentResponseDto.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfClientLogDocumentResponseDto.copyWith(...)` or `instanceOfClientLogDocumentResponseDto.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$ClientLogDocumentResponseDtoCWProxy get copyWith =>
       _$ClientLogDocumentResponseDtoCWProxyImpl(this);

@@ -27,7 +27,9 @@ abstract class _$NetworkConfigurationCWProxy {
 
   NetworkConfiguration autoDiscovery(bool? autoDiscovery);
 
-  NetworkConfiguration enableUPnP(bool? enableUPnP);
+  NetworkConfiguration enableUPnP(
+    @Deprecated('enableUPnP has been deprecated') bool? enableUPnP,
+  );
 
   NetworkConfiguration enableIPv4(bool? enableIPv4);
 
@@ -63,12 +65,13 @@ abstract class _$NetworkConfigurationCWProxy {
     bool? isRemoteIPFilterBlacklist,
   );
 
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `NetworkConfiguration(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `NetworkConfiguration(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// NetworkConfiguration(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   NetworkConfiguration call({
     String? baseUrl,
     bool? enableHttps,
@@ -80,7 +83,7 @@ abstract class _$NetworkConfigurationCWProxy {
     int? publicHttpPort,
     int? publicHttpsPort,
     bool? autoDiscovery,
-    bool? enableUPnP,
+    @Deprecated('enableUPnP has been deprecated') bool? enableUPnP,
     bool? enableIPv4,
     bool? enableIPv6,
     bool? enableRemoteAccess,
@@ -96,7 +99,8 @@ abstract class _$NetworkConfigurationCWProxy {
   });
 }
 
-/// Proxy class for `copyWith` functionality. This is a callable class and can be used as follows: `instanceOfNetworkConfiguration.copyWith(...)`. Additionally contains functions for specific fields e.g. `instanceOfNetworkConfiguration.copyWith.fieldName(...)`
+/// Callable proxy for `copyWith` functionality.
+/// Use as `instanceOfNetworkConfiguration.copyWith(...)` or call `instanceOfNetworkConfiguration.copyWith.fieldName(value)` for a single field.
 class _$NetworkConfigurationCWProxyImpl
     implements _$NetworkConfigurationCWProxy {
   const _$NetworkConfigurationCWProxyImpl(this._value);
@@ -104,110 +108,112 @@ class _$NetworkConfigurationCWProxyImpl
   final NetworkConfiguration _value;
 
   @override
-  NetworkConfiguration baseUrl(String? baseUrl) => this(baseUrl: baseUrl);
+  NetworkConfiguration baseUrl(String? baseUrl) => call(baseUrl: baseUrl);
 
   @override
   NetworkConfiguration enableHttps(bool? enableHttps) =>
-      this(enableHttps: enableHttps);
+      call(enableHttps: enableHttps);
 
   @override
   NetworkConfiguration requireHttps(bool? requireHttps) =>
-      this(requireHttps: requireHttps);
+      call(requireHttps: requireHttps);
 
   @override
   NetworkConfiguration certificatePath(String? certificatePath) =>
-      this(certificatePath: certificatePath);
+      call(certificatePath: certificatePath);
 
   @override
   NetworkConfiguration certificatePassword(String? certificatePassword) =>
-      this(certificatePassword: certificatePassword);
+      call(certificatePassword: certificatePassword);
 
   @override
   NetworkConfiguration internalHttpPort(int? internalHttpPort) =>
-      this(internalHttpPort: internalHttpPort);
+      call(internalHttpPort: internalHttpPort);
 
   @override
   NetworkConfiguration internalHttpsPort(int? internalHttpsPort) =>
-      this(internalHttpsPort: internalHttpsPort);
+      call(internalHttpsPort: internalHttpsPort);
 
   @override
   NetworkConfiguration publicHttpPort(int? publicHttpPort) =>
-      this(publicHttpPort: publicHttpPort);
+      call(publicHttpPort: publicHttpPort);
 
   @override
   NetworkConfiguration publicHttpsPort(int? publicHttpsPort) =>
-      this(publicHttpsPort: publicHttpsPort);
+      call(publicHttpsPort: publicHttpsPort);
 
   @override
   NetworkConfiguration autoDiscovery(bool? autoDiscovery) =>
-      this(autoDiscovery: autoDiscovery);
+      call(autoDiscovery: autoDiscovery);
 
   @override
-  NetworkConfiguration enableUPnP(bool? enableUPnP) =>
-      this(enableUPnP: enableUPnP);
+  NetworkConfiguration enableUPnP(
+    @Deprecated('enableUPnP has been deprecated') bool? enableUPnP,
+  ) => call(enableUPnP: enableUPnP);
 
   @override
   NetworkConfiguration enableIPv4(bool? enableIPv4) =>
-      this(enableIPv4: enableIPv4);
+      call(enableIPv4: enableIPv4);
 
   @override
   NetworkConfiguration enableIPv6(bool? enableIPv6) =>
-      this(enableIPv6: enableIPv6);
+      call(enableIPv6: enableIPv6);
 
   @override
   NetworkConfiguration enableRemoteAccess(bool? enableRemoteAccess) =>
-      this(enableRemoteAccess: enableRemoteAccess);
+      call(enableRemoteAccess: enableRemoteAccess);
 
   @override
   NetworkConfiguration localNetworkSubnets(List<String>? localNetworkSubnets) =>
-      this(localNetworkSubnets: localNetworkSubnets);
+      call(localNetworkSubnets: localNetworkSubnets);
 
   @override
   NetworkConfiguration localNetworkAddresses(
     List<String>? localNetworkAddresses,
-  ) => this(localNetworkAddresses: localNetworkAddresses);
+  ) => call(localNetworkAddresses: localNetworkAddresses);
 
   @override
   NetworkConfiguration knownProxies(List<String>? knownProxies) =>
-      this(knownProxies: knownProxies);
+      call(knownProxies: knownProxies);
 
   @override
   NetworkConfiguration ignoreVirtualInterfaces(bool? ignoreVirtualInterfaces) =>
-      this(ignoreVirtualInterfaces: ignoreVirtualInterfaces);
+      call(ignoreVirtualInterfaces: ignoreVirtualInterfaces);
 
   @override
   NetworkConfiguration virtualInterfaceNames(
     List<String>? virtualInterfaceNames,
-  ) => this(virtualInterfaceNames: virtualInterfaceNames);
+  ) => call(virtualInterfaceNames: virtualInterfaceNames);
 
   @override
   NetworkConfiguration enablePublishedServerUriByRequest(
     bool? enablePublishedServerUriByRequest,
-  ) => this(
+  ) => call(
     enablePublishedServerUriByRequest: enablePublishedServerUriByRequest,
   );
 
   @override
   NetworkConfiguration publishedServerUriBySubnet(
     List<String>? publishedServerUriBySubnet,
-  ) => this(publishedServerUriBySubnet: publishedServerUriBySubnet);
+  ) => call(publishedServerUriBySubnet: publishedServerUriBySubnet);
 
   @override
   NetworkConfiguration remoteIPFilter(List<String>? remoteIPFilter) =>
-      this(remoteIPFilter: remoteIPFilter);
+      call(remoteIPFilter: remoteIPFilter);
 
   @override
   NetworkConfiguration isRemoteIPFilterBlacklist(
     bool? isRemoteIPFilterBlacklist,
-  ) => this(isRemoteIPFilterBlacklist: isRemoteIPFilterBlacklist);
+  ) => call(isRemoteIPFilterBlacklist: isRemoteIPFilterBlacklist);
 
   @override
-  /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `NetworkConfiguration(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
+  /// Creates a new instance with the provided field values.
+  /// Passing `null` to a nullable field nullifies it, while `null` for a non-nullable field is ignored. To update a single field use `NetworkConfiguration(...).copyWith.fieldName(value)`.
   ///
-  /// Usage
+  /// Example:
   /// ```dart
   /// NetworkConfiguration(...).copyWith(id: 12, name: "My name")
-  /// ````
+  /// ```
   NetworkConfiguration call({
     Object? baseUrl = const $CopyWithPlaceholder(),
     Object? enableHttps = const $CopyWithPlaceholder(),
@@ -219,6 +225,7 @@ class _$NetworkConfigurationCWProxyImpl
     Object? publicHttpPort = const $CopyWithPlaceholder(),
     Object? publicHttpsPort = const $CopyWithPlaceholder(),
     Object? autoDiscovery = const $CopyWithPlaceholder(),
+    @Deprecated('enableUPnP has been deprecated')
     Object? enableUPnP = const $CopyWithPlaceholder(),
     Object? enableIPv4 = const $CopyWithPlaceholder(),
     Object? enableIPv6 = const $CopyWithPlaceholder(),
@@ -337,7 +344,8 @@ class _$NetworkConfigurationCWProxyImpl
 }
 
 extension $NetworkConfigurationCopyWith on NetworkConfiguration {
-  /// Returns a callable class that can be used as follows: `instanceOfNetworkConfiguration.copyWith(...)` or like so:`instanceOfNetworkConfiguration.copyWith.fieldName(...)`.
+  /// Returns a callable class used to build a new instance with modified fields.
+  /// Example: `instanceOfNetworkConfiguration.copyWith(...)` or `instanceOfNetworkConfiguration.copyWith.fieldName(...)`.
   // ignore: library_private_types_in_public_api
   _$NetworkConfigurationCWProxy get copyWith =>
       _$NetworkConfigurationCWProxyImpl(this);
