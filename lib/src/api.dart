@@ -139,11 +139,15 @@ class JellyfinDart {
   void setMediaBrowserAuth({
     required String deviceId,
     required String version,
+    String? client,
+    String? device,
     String? token,
   }) {
     final interceptor =
         dio.interceptors.firstWhere((i) => i is MediaBrowserAuthInterceptor)
             as MediaBrowserAuthInterceptor;
+    interceptor.device = device;
+    interceptor.client = client;
     interceptor.deviceId = deviceId;
     interceptor.version = version;
     interceptor.token = token;
