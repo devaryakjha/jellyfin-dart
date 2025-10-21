@@ -4,18 +4,21 @@ import 'package:jellyfin_dart/jellyfin_dart.dart';
 /// fetching items, searching, and filtering content.
 void main() async {
   final client = JellyfinDart(
-    basePathOverride: 'https://your-jellyfin-server.com',
+    basePathOverride: String.fromEnvironment(
+      'BASE_URL',
+      defaultValue: 'http://localhost:8096',
+    ),
   );
 
   // Set up MediaBrowser authentication with access token
   client.setMediaBrowserAuth(
     deviceId: 'unique-device-id-12345',
     version: '10.10.7',
-    token: 'your-access-token-from-login',
+    token: String.fromEnvironment('ACCESS_TOKEN'),
   );
 
   // Replace with an actual user ID from your server
-  const userId = 'your-user-id';
+  const userId = String.fromEnvironment('USER_ID');
 
   // Example 1: Get all library items
   print('=== Fetching Library Items ===');
@@ -53,7 +56,7 @@ Future<void> fetchLibraryItems(JellyfinDart client, String userId) async {
     print('Found ${items?.totalRecordCount ?? 0} total items');
     print('Showing ${items?.items?.length ?? 0} items:');
 
-    for (final item in items?.items ?? []) {
+    for (final item in items?.items ?? <BaseItemDto>[]) {
       print('  - ${item.name} (${item.type})');
     }
   } catch (e) {
@@ -72,7 +75,7 @@ Future<void> searchContent(JellyfinDart client, String userId) async {
     )).data;
 
     print('Found ${results?.totalRecordCount ?? 0} search results:');
-    for (final result in results?.searchHints ?? []) {
+    for (final result in results?.searchHints ?? <SearchHint>[]) {
       print('  - ${result.name} (${result.type})');
     }
   } catch (e) {
@@ -90,7 +93,7 @@ Future<void> getRecentlyAdded(JellyfinDart client, String userId) async {
     )).data;
 
     print('Recently added items:');
-    for (final item in items ?? []) {
+    for (final item in items ?? <BaseItemDto>[]) {
       print('  - ${item.name} (Added: ${item.dateCreated})');
     }
   } catch (e) {
@@ -111,7 +114,7 @@ Future<void> getMovies(JellyfinDart client, String userId) async {
     )).data;
 
     print('Found ${movies?.totalRecordCount ?? 0} movies:');
-    for (final movie in movies?.items ?? []) {
+    for (final movie in movies?.items ?? <BaseItemDto>[]) {
       print('  - ${movie.name} (${movie.productionYear})');
     }
   } catch (e) {
@@ -132,7 +135,7 @@ Future<void> getTvShows(JellyfinDart client, String userId) async {
     )).data;
 
     print('Found ${shows?.totalRecordCount ?? 0} TV shows:');
-    for (final show in shows?.items ?? []) {
+    for (final show in shows?.items ?? <BaseItemDto>[]) {
       print('  - ${show.name} (${show.productionYear})');
     }
   } catch (e) {

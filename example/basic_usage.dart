@@ -5,7 +5,10 @@ import 'package:jellyfin_dart/jellyfin_dart.dart';
 void main() async {
   // Create a Jellyfin client instance
   final client = JellyfinDart(
-    basePathOverride: 'https://demo.jellyfin.org/stable',
+    basePathOverride: String.fromEnvironment(
+      'BASE_URL',
+      defaultValue: 'http://localhost:8096',
+    ),
   );
 
   // Set up MediaBrowser authentication

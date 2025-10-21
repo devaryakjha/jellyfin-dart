@@ -3,7 +3,10 @@ import 'package:jellyfin_dart/jellyfin_dart.dart';
 /// Example demonstrating Jellyfin MediaBrowser authentication.
 /// Jellyfin uses a custom authentication header format with DeviceId, Version, and Token.
 void main() async {
-  final serverUrl = String.fromEnvironment('SERVER_URL');
+  final serverUrl = String.fromEnvironment(
+    'SERVER_URL',
+    defaultValue: 'http://localhost:8096',
+  );
 
   final client = JellyfinDart(basePathOverride: serverUrl);
 
@@ -60,7 +63,7 @@ Future<void> userLoginExample(JellyfinDart client) async {
 
       print('Login successful!');
       print('User: ${authResult.user?.name}');
-      print('Access Token: ${accessToken.substring(0, 20)}...');
+      print('Access Token: ${accessToken}...');
 
       // Now you can make authenticated requests
       final usersResponse = await userApi.getUsers();
