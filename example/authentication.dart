@@ -1,99 +1,62 @@
 import 'package:jellyfin_dart/jellyfin_dart.dart';
 
-/// Example demonstrating different authentication methods
-/// supported by the Jellyfin client.
+/// Example demonstrating Jellyfin MediaBrowser authentication.
+/// Jellyfin uses a custom authentication header format with DeviceId, Version, and Token.
 void main() async {
-  final serverUrl = 'https://your-jellyfin-server.com';
+  final serverUrl = String.fromEnvironment('SERVER_URL');
 
-  // Example 1: API Key Authentication (Recommended)
-  print('=== API Key Authentication ===');
-  await apiKeyExample(serverUrl);
-
-  // Example 2: Bearer Token Authentication
-  print('\n=== Bearer Token Authentication ===');
-  await bearerTokenExample(serverUrl);
-
-  // Example 3: Basic Authentication
-  print('\n=== Basic Authentication ===');
-  await basicAuthExample(serverUrl);
-
-  // Example 4: User Login with Password
-  print('\n=== User Login Authentication ===');
-  await userLoginExample(serverUrl);
-}
-
-/// Authenticate using an API key
-Future<void> apiKeyExample(String serverUrl) async {
   final client = JellyfinDart(basePathOverride: serverUrl);
 
-  // Set API key for authentication
-  client.setApiKey('CustomAuthentication', 'your-api-key');
+  // Set DeviceId and Version (required for all requests)
+  // DeviceId should be a unique identifier for the client device
+  // Version should be your app/client version
+  client.setDeviceId('unique-device-id-12345');
+  client.setVersion('10.10.7');
 
+  // Example 1: Basic setup without token (for public endpoints)
+  print('=== Basic MediaBrowser Auth (No Token) ===');
+  await basicAuthExample(client);
+
+  // Example 2: User Login with Password
+  print('\n=== User Login Authentication ===');
+  await userLoginExample(client);
+}
+
+/// Setup MediaBrowser auth without a token (for public endpoints)
+Future<void> basicAuthExample(JellyfinDart client) async {
   try {
     final systemApi = client.getSystemApi();
-    final response = await systemApi.getSystemInfo();
+    final response = await systemApi.getPublicSystemInfo();
     final info = response.data;
-    print('Authenticated! Server: ${info?.serverName}');
+    print('Connected! Server: ${info?.serverName}');
+    print('Server Version: ${info?.version}');
   } catch (e) {
-    print('Authentication failed: $e');
-  }
-}
-
-/// Authenticate using a bearer token
-Future<void> bearerTokenExample(String serverUrl) async {
-  final client = JellyfinDart(basePathOverride: serverUrl);
-
-  // Set bearer token for authentication
-  client.setBearerAuth('bearerAuth', 'your-bearer-token');
-
-  try {
-    final userApi = client.getUserApi();
-    final response = await userApi.getUsers();
-    final users = response.data;
-    print('Authenticated! Found ${users?.length ?? 0} users');
-  } catch (e) {
-    print('Authentication failed: $e');
-  }
-}
-
-/// Authenticate using basic auth (username/password)
-Future<void> basicAuthExample(String serverUrl) async {
-  final client = JellyfinDart(basePathOverride: serverUrl);
-
-  // Set basic auth credentials
-  client.setBasicAuth('basicAuth', 'username', 'password');
-
-  try {
-    final userApi = client.getUserApi();
-    final response = await userApi.getUsers();
-    final users = response.data;
-    print('Authenticated! Found ${users?.length ?? 0} users');
-  } catch (e) {
-    print('Authentication failed: $e');
+    print('Connection failed: $e');
   }
 }
 
 /// Authenticate by logging in with username and password
 /// This is the most common method for user applications
-Future<void> userLoginExample(String serverUrl) async {
-  final client = JellyfinDart(basePathOverride: serverUrl);
-
+Future<void> userLoginExample(JellyfinDart client) async {
   try {
     final userApi = client.getUserApi();
 
     // Authenticate user by name and password
     final authResponse = await userApi.authenticateUserByName(
       authenticateUserByName: AuthenticateUserByName(
-        username: 'your-username',
-        pw: 'your-password',
+        username: String.fromEnvironment(
+          'USERNAME',
+          defaultValue: 'your-username',
+        ),
+        pw: String.fromEnvironment('PASSWORD', defaultValue: 'your-password'),
       ),
     );
     final authResult = authResponse.data;
 
     if (authResult?.accessToken != null) {
-      // Store the access token for future requests
+      // Store the access token for authenticated requests
       final accessToken = authResult!.accessToken!;
-      client.setBearerAuth('bearerAuth', accessToken);
+      client.setToken(accessToken);
 
       print('Login successful!');
       print('User: ${authResult.user?.name}');

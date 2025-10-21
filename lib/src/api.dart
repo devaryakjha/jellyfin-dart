@@ -3,10 +3,7 @@
 //
 
 import 'package:dio/dio.dart';
-import 'package:jellyfin_dart/src/auth/api_key_auth.dart';
-import 'package:jellyfin_dart/src/auth/basic_auth.dart';
-import 'package:jellyfin_dart/src/auth/bearer_auth.dart';
-import 'package:jellyfin_dart/src/auth/oauth.dart';
+import 'package:jellyfin_dart/src/auth/mediabrowser_auth.dart';
 import 'package:jellyfin_dart/src/api/activity_log_api.dart';
 import 'package:jellyfin_dart/src/api/api_key_api.dart';
 import 'package:jellyfin_dart/src/api/artists_api.dart';
@@ -87,55 +84,69 @@ class JellyfinDart {
              ),
            ) {
     if (interceptors == null) {
-      this.dio.interceptors.addAll([
-        OAuthInterceptor(),
-        BasicAuthInterceptor(),
-        BearerAuthInterceptor(),
-        ApiKeyAuthInterceptor(),
-      ]);
+      this.dio.interceptors.add(MediaBrowserAuthInterceptor());
     } else {
       this.dio.interceptors.addAll(interceptors);
     }
   }
 
-  void setOAuthToken(String name, String token) {
-    if (this.dio.interceptors.any((i) => i is OAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is OAuthInterceptor)
-                  as OAuthInterceptor)
-              .tokens[name] =
-          token;
-    }
+  /// Sets the client name for MediaBrowser authentication
+  /// Optional - defaults to 'Jellyfin Dart'
+  void setClient(String client) {
+    final interceptor =
+        dio.interceptors.firstWhere((i) => i is MediaBrowserAuthInterceptor)
+            as MediaBrowserAuthInterceptor;
+    interceptor.client = client;
   }
 
-  void setBearerAuth(String name, String token) {
-    if (this.dio.interceptors.any((i) => i is BearerAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is BearerAuthInterceptor)
-                  as BearerAuthInterceptor)
-              .tokens[name] =
-          token;
-    }
+  /// Sets the device name for MediaBrowser authentication
+  /// Optional - defaults to 'Dart'
+  void setDevice(String device) {
+    final interceptor =
+        dio.interceptors.firstWhere((i) => i is MediaBrowserAuthInterceptor)
+            as MediaBrowserAuthInterceptor;
+    interceptor.device = device;
   }
 
-  void setBasicAuth(String name, String username, String password) {
-    if (this.dio.interceptors.any((i) => i is BasicAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is BasicAuthInterceptor)
-              as BasicAuthInterceptor)
-          .authInfo[name] = BasicAuthInfo(
-        username,
-        password,
-      );
-    }
+  /// Sets the device ID for MediaBrowser authentication
+  /// Required for all authenticated requests
+  void setDeviceId(String deviceId) {
+    final interceptor =
+        dio.interceptors.firstWhere((i) => i is MediaBrowserAuthInterceptor)
+            as MediaBrowserAuthInterceptor;
+    interceptor.deviceId = deviceId;
   }
 
-  void setApiKey(String name, String apiKey) {
-    if (this.dio.interceptors.any((i) => i is ApiKeyAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere(
-                    (element) => element is ApiKeyAuthInterceptor,
-                  )
-                  as ApiKeyAuthInterceptor)
-              .apiKeys[name] =
-          apiKey;
-    }
+  /// Sets the version for MediaBrowser authentication
+  /// Required for all authenticated requests
+  void setVersion(String version) {
+    final interceptor =
+        dio.interceptors.firstWhere((i) => i is MediaBrowserAuthInterceptor)
+            as MediaBrowserAuthInterceptor;
+    interceptor.version = version;
+  }
+
+  /// Sets the authentication token for MediaBrowser authentication
+  /// Optional - only required for authenticated endpoints
+  void setToken(String? token) {
+    final interceptor =
+        dio.interceptors.firstWhere((i) => i is MediaBrowserAuthInterceptor)
+            as MediaBrowserAuthInterceptor;
+    interceptor.token = token;
+  }
+
+  /// Convenience method to set all MediaBrowser auth parameters at once
+  void setMediaBrowserAuth({
+    required String deviceId,
+    required String version,
+    String? token,
+  }) {
+    final interceptor =
+        dio.interceptors.firstWhere((i) => i is MediaBrowserAuthInterceptor)
+            as MediaBrowserAuthInterceptor;
+    interceptor.deviceId = deviceId;
+    interceptor.version = version;
+    interceptor.token = token;
   }
 
   /// Get ActivityLogApi instance, base route and serializer can be overridden by a given but be careful,

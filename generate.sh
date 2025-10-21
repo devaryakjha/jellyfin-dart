@@ -34,7 +34,7 @@ if [ -d "test" ]; then
     rm -rf test
 fi
 
-if -f "pubspec.lock" ]; then
+if [ -f "pubspec.lock" ]; then
     echo "Removing pubspec.lock..."
     rm pubspec.lock
 fi
@@ -59,13 +59,16 @@ dart pub get
 echo -e "${YELLOW}Step 4: Running script for fixing common issues...${NC}"
 dart run tool/fix_issues.dart
 
-echo -e "${YELLOW}Step 5: Formatting generated files...${NC}"
+echo -e "${YELLOW}Step 5: Modifying api.dart for MediaBrowser authentication...${NC}"
+dart run tool/modify_api.dart
+
+echo -e "${YELLOW}Step 6: Formatting generated files...${NC}"
 dart format .
 
-echo -e "${YELLOW}Step 6: Auto fixing issues...${NC}"
+echo -e "${YELLOW}Step 7: Auto fixing issues...${NC}"
 dart fix --apply
 
-echo -e "${YELLOW}Step 7: Generating *.g.dart files...${NC}"
+echo -e "${YELLOW}Step 8: Generating *.g.dart files...${NC}"
 dart run build_runner build
 
 echo -e "${GREEN}=== Generation Complete ===${NC}"

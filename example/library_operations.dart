@@ -7,8 +7,12 @@ void main() async {
     basePathOverride: 'https://your-jellyfin-server.com',
   );
 
-  // Set up authentication
-  client.setApiKey('CustomAuthentication', 'your-api-key');
+  // Set up MediaBrowser authentication with access token
+  client.setMediaBrowserAuth(
+    deviceId: 'unique-device-id-12345',
+    version: '10.10.7',
+    token: 'your-access-token-from-login',
+  );
 
   // Replace with an actual user ID from your server
   const userId = 'your-user-id';

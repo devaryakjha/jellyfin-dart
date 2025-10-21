@@ -8,12 +8,16 @@ void main() async {
     basePathOverride: 'https://demo.jellyfin.org/stable',
   );
 
-  // Set up authentication using API key
-  // Replace with your actual API key
-  client.setApiKey('CustomAuthentication', 'your-api-key-here');
+  // Set up MediaBrowser authentication
+  // DeviceId and Version are required for all requests
+  client.setMediaBrowserAuth(
+    deviceId: 'unique-device-id-12345',
+    version: '10.10.7',
+    // token: 'your-access-token', // Optional - add after login
+  );
 
   try {
-    // Get system information
+    // Get system information (public endpoint - no token needed)
     final systemApi = client.getSystemApi();
     final response = await systemApi.getPublicSystemInfo();
     final systemInfo = response.data;
@@ -22,15 +26,19 @@ void main() async {
     print('Version: ${systemInfo?.version}');
     print('Operating System: ${systemInfo?.operatingSystem}');
 
-    // Get list of users
-    final userApi = client.getUserApi();
-    final usersResponse = await userApi.getUsers();
-    final users = usersResponse.data;
+    // For authenticated endpoints, you need to set a token first
+    // You can get a token by logging in (see authentication.dart example)
+    // client.setToken('your-access-token-from-login');
 
-    print('\nFound ${users?.length ?? 0} users:');
-    for (final user in users ?? []) {
-      print('  - ${user.name} (${user.id})');
-    }
+    // Get list of users (requires authentication)
+    // final userApi = client.getUserApi();
+    // final usersResponse = await userApi.getUsers();
+    // final users = usersResponse.data;
+    //
+    // print('\nFound ${users?.length ?? 0} users:');
+    // for (final user in users ?? []) {
+    //   print('  - ${user.name} (${user.id})');
+    // }
   } catch (e) {
     print('Error: $e');
   }
