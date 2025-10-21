@@ -1,5 +1,3 @@
-
-
 auth-example:
 	@dart run -DSERVER_URL=your-server-url -DUSERNAME=username -DPASSWORD=password example/authentication.dart
 
