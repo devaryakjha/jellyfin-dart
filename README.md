@@ -13,7 +13,7 @@ A type-safe, auto-generated Dart client for the Jellyfin Media Server API. This 
 📱 **Flutter Compatible** - Works seamlessly in Flutter applications
 🔄 **Auto-Generated** - Generated from official Jellyfin OpenAPI specification
 🚀 **Dio-Powered** - Uses Dio for efficient HTTP networking
-🔐 **Multiple Auth Methods** - Supports API keys, bearer tokens, OAuth, and basic auth
+🔐 **MediaBrowser Auth** - Native Jellyfin authentication with DeviceId, Version, and Token
 
 ## Installation
 
@@ -49,44 +49,78 @@ void main() async {
     basePathOverride: 'https://your-jellyfin-server.com',
   );
 
-  // Set up authentication
-  client.setApiKey('CustomAuthentication', 'your-api-key-here');
+  // Set up MediaBrowser authentication
+  client.setMediaBrowserAuth(
+    deviceId: 'unique-device-id-12345',  // Unique identifier for your client
+    version: '10.10.7',                   // Your app/client version
+    token: 'your-access-token',           // Optional - required for authenticated endpoints
+  );
 
   // Use any API endpoint
-  final userApi = client.getUserApi();
-  final users = await userApi.getUsers();
+  final systemApi = client.getSystemApi();
+  final response = await systemApi.getSystemInfo();
+  final info = response.data;
 
-  print('Found ${users?.length} users');
+  print('Connected to: ${info?.serverName}');
 }
 ```
 
 ### Authentication
 
-The client supports multiple authentication methods:
+Jellyfin uses MediaBrowser authentication with a custom `X-Emby-Authorization` header format.
 
-#### API Key Authentication
+#### Setting Up Authentication
+
 ```dart
 final client = JellyfinDart(
   basePathOverride: 'https://your-jellyfin-server.com',
 );
 
-client.setApiKey('CustomAuthentication', 'your-api-key');
+// Option 1: Set all parameters at once (recommended)
+client.setMediaBrowserAuth(
+  deviceId: 'unique-device-id-12345',
+  version: '10.10.7',
+  token: 'access-token', // Optional - add after login
+);
+
+// Option 2: Set parameters individually
+client.setDeviceId('unique-device-id-12345');
+client.setVersion('10.10.7');
+client.setToken('access-token'); // Optional
 ```
 
-#### Bearer Token Authentication
+#### User Login Example
+
 ```dart
-client.setBearerAuth('bearerAuth', 'your-token');
+final client = JellyfinDart(
+  basePathOverride: 'https://your-jellyfin-server.com',
+);
+
+// Setup device info before login
+client.setDeviceId('unique-device-id-12345');
+client.setVersion('10.10.7');
+
+// Login with username and password
+final userApi = client.getUserApi();
+final authResponse = await userApi.authenticateUserByName(
+  authenticateUserByName: AuthenticateUserByName(
+    username: 'your-username',
+    pw: 'your-password',
+  ),
+);
+
+// Set the token for authenticated requests
+final token = authResponse.data?.accessToken;
+if (token != null) {
+  client.setToken(token);
+  print('Logged in successfully!');
+}
 ```
 
-#### Basic Authentication
-```dart
-client.setBasicAuth('basicAuth', 'username', 'password');
-```
-
-#### OAuth
-```dart
-client.setOAuthToken('oauth', 'your-oauth-token');
-```
+**Important Authentication Notes:**
+- **DeviceId**: Must be a unique identifier for your client/device. Generate once and store persistently.
+- **Version**: Your application version (e.g., "1.0.0" or "10.10.7").
+- **Token**: Access token from login. Required for authenticated endpoints, optional for public endpoints.
 
 ### Common Operations
 
@@ -215,8 +249,9 @@ This will:
 1. Download the latest Jellyfin OpenAPI spec
 2. Generate Dart code
 3. Apply post-generation fixes
-4. Format code
-5. Generate JSON serialization files
+4. Modify api.dart to use MediaBrowser authentication
+5. Format code
+6. Generate JSON serialization files
 
 ## Limitations
 

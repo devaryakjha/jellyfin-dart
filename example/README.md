@@ -5,14 +5,14 @@ This directory contains examples demonstrating how to use the jellyfin_dart pack
 ## Examples
 
 ### basic_usage.dart
-Shows how to initialize the Jellyfin client and perform basic operations like fetching system information and users.
+Shows how to initialize the Jellyfin client and perform basic operations like fetching system information using MediaBrowser authentication.
 
 ### authentication.dart
-Demonstrates the different authentication methods supported by the client:
-- API Key authentication
-- Bearer token authentication
-- Basic authentication
+Demonstrates Jellyfin's MediaBrowser authentication system:
+- Setting up DeviceId and Version (required for all requests)
 - User login with username/password
+- Using access tokens for authenticated endpoints
+- Convenience method for setting all auth parameters at once
 
 ### library_operations.dart
 Examples of common library operations:
@@ -53,7 +53,23 @@ Examples of common library operations:
   }
   ```
 
-- **Authentication**: Most endpoints require authentication. Set it up before making API calls:
+- **MediaBrowser Authentication**: Jellyfin uses a custom authentication header (`X-Emby-Authorization`). You must set DeviceId and Version for all requests:
   ```dart
-  client.setApiKey('CustomAuthentication', 'your-api-key');
+  // Setup auth (convenience method)
+  client.setMediaBrowserAuth(
+    deviceId: 'unique-device-id-12345',
+    version: '10.10.7',
+    token: 'your-access-token', // Optional - required for authenticated endpoints
+  );
+
+  // Or set individually
+  client.setDeviceId('unique-device-id-12345');
+  client.setVersion('10.10.7');
+  client.setToken('your-access-token'); // Optional
   ```
+
+- **DeviceId**: Should be a unique identifier for your client/device. Generate once and store it persistently.
+
+- **Version**: Your application/client version (e.g., "10.10.7").
+
+- **Token**: Access token received after successful login. Required for authenticated endpoints, optional for public endpoints.
