@@ -117,10 +117,7 @@ String _addMediaBrowserAuthImport(String content) {
     return content;
   }
 
-  content = content.replaceFirst(
-    dioImport,
-    '$dioImport\n$mediaBrowserImport',
-  );
+  content = content.replaceFirst(dioImport, '$dioImport\n$mediaBrowserImport');
 
   return content;
 }

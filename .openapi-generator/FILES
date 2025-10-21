@@ -1,6 +1,4 @@
 .gitignore
-README.md
-analysis_options.yaml
 build.yaml
 doc/AccessSchedule.md
 doc/ActivityLogApi.md

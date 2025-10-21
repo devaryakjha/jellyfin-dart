@@ -19,7 +19,11 @@ class MediaBrowserAuthInterceptor extends Interceptor {
 
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    if (deviceId != null || version != null || token != null || client != null || device != null) {
+    if (deviceId != null ||
+        version != null ||
+        token != null ||
+        client != null ||
+        device != null) {
       final authParts = <String>[
         'MediaBrowser Client="${client ?? 'Jellyfin Dart'}"',
         'Device="${device ?? 'Dart'}"',
