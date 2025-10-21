@@ -91,8 +91,14 @@ lib/
     └── model/                  # 600+ DTOs and enums (auto-generated)
         └── *.g.dart            # Generated JSON serialization code
 
-tools/
+tool/
 └── fix_issues.dart             # Post-generation fixes for OpenAPI generator bugs
+
+example/                        # Usage examples
+├── README.md                   # Example documentation
+├── basic_usage.dart            # Basic client usage
+├── authentication.dart         # Authentication methods
+└── library_operations.dart     # Library operations
 
 test/                           # Auto-generated unit tests (400+ files)
 doc/                            # Auto-generated API documentation
@@ -128,7 +134,7 @@ final response = await userApi.getUsers();
 
 ### Code Generation Issues & Fixes
 
-The `tools/fix_issues.dart` script fixes two categories of bugs from OpenAPI Generator:
+The `tool/fix_issues.dart` script fixes two categories of bugs from OpenAPI Generator:
 
 1. **Enum naming bug:** Replaces malformed `TranscodingInfoTranscodeReasonsEnumsEnum` with correct `TranscodingInfoTranscodeReasonsEnum`
 

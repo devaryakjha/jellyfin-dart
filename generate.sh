@@ -57,7 +57,7 @@ echo -e "${YELLOW}Step 3: Running dart pub get...${NC}"
 dart pub get
 
 echo -e "${YELLOW}Step 4: Running script for fixing common issues...${NC}"
-dart run tools/fix_issues.dart
+dart run tool/fix_issues.dart
 
 echo -e "${YELLOW}Step 5: Formatting generated files...${NC}"
 dart format .
