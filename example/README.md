@@ -53,7 +53,7 @@ Examples of common library operations:
   }
   ```
 
-- **MediaBrowser Authentication**: Jellyfin uses a custom authentication header (`X-Emby-Authorization`). You must set DeviceId and Version for all requests:
+- **MediaBrowser Authentication**: Jellyfin uses a custom authentication header (`Authorization`). You must set DeviceId and Version for all requests:
   ```dart
   // Setup auth (convenience method)
   client.setMediaBrowserAuth(

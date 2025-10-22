@@ -18,7 +18,7 @@ void main() async {
 import 'package:dio/dio.dart';
 
 /// Interceptor for Jellyfin MediaBrowser authentication
-/// Adds required headers: X-Emby-Authorization with DeviceId, Version, and optional Token
+/// Adds required headers: Authorization with DeviceId, Version, and optional Token
 class MediaBrowserAuthInterceptor extends Interceptor {
   String? client;
   String? device;

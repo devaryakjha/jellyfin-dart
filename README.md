@@ -67,7 +67,7 @@ void main() async {
 
 ### Authentication
 
-Jellyfin uses MediaBrowser authentication with a custom `X-Emby-Authorization` header format.
+Jellyfin uses MediaBrowser authentication with a custom `Authorization` header format.
 
 #### Setting Up Authentication
 
