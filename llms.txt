@@ -1,0 +1,503 @@
+# jellyfin_dart
+
+> Auto-generated Dart client for Jellyfin Media Server API v10.11.0
+
+A comprehensive, type-safe Dart client library providing complete API coverage for Jellyfin Media Server. This package is auto-generated from the official Jellyfin OpenAPI specification using OpenAPI Generator with the dart-dio client generator.
+
+## Project Information
+
+- **Package Name**: jellyfin_dart
+- **Version**: 0.1.1
+- **License**: MIT
+- **Repository**: https://github.com/devaryakjha/jellyfin-dart
+- **Homepage**: https://github.com/devaryakjha/jellyfin-dart
+- **Issue Tracker**: https://github.com/devaryakjha/jellyfin-dart/issues
+- **Pub Package**: https://pub.dev/packages/jellyfin_dart
+
+## Features
+
+- ✨ **Complete API Coverage**: All 61 Jellyfin API endpoints included
+- 🔒 **Type-Safe**: Full type safety with 600+ generated models and enums
+- 🎯 **Modern Dart**: Built for Dart 3.9.0+ with null safety
+- 📱 **Flutter Compatible**: Works seamlessly in Flutter applications
+- 🔄 **Auto-Generated**: Generated from official Jellyfin OpenAPI specification
+- 🚀 **Dio-Powered**: Uses Dio for efficient HTTP networking
+- 🔐 **MediaBrowser Auth**: Native Jellyfin authentication with DeviceId, Version, and Token
+
+## Requirements
+
+- **Dart SDK**: >=3.9.0 <4.0.0
+- **Dependencies**:
+  - `dio`: ^5.9.0 - HTTP client
+  - `json_annotation`: ^4.9.0 - JSON serialization annotations
+  - `equatable`: ^2.0.7 - Value equality
+  - `copy_with_extension`: ^10.0.1 - Copyable objects
+
+## Installation
+
+Add to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  jellyfin_dart: ^0.1.1
+```
+
+Then run:
+
+```bash
+dart pub get
+# or for Flutter
+flutter pub get
+```
+
+## Quick Start
+
+### Basic Client Setup
+
+```dart
+import 'package:jellyfin_dart/jellyfin_dart.dart';
+
+void main() async {
+  // Create client instance
+  final client = JellyfinDart(
+    basePathOverride: 'https://your-jellyfin-server.com',
+  );
+
+  // Set up MediaBrowser authentication
+  client.setMediaBrowserAuth(
+    deviceId: 'unique-device-id-12345',  // Unique identifier for your client
+    version: '1.0.0',                     // Your app/client version
+    token: 'your-access-token',           // Optional - required for authenticated endpoints
+  );
+
+  // Use any API endpoint
+  final systemApi = client.getSystemApi();
+  final response = await systemApi.getSystemInfo();
+  final info = response.data;
+
+  print('Connected to: ${info?.serverName}');
+}
+```
+
+### Authentication Flow
+
+Jellyfin uses MediaBrowser authentication with a custom `Authorization` header format.
+
+#### User Login Example
+
+```dart
+final client = JellyfinDart(
+  basePathOverride: 'https://your-jellyfin-server.com',
+);
+
+// Setup device info before login
+client.setDeviceId('unique-device-id-12345');
+client.setVersion('1.0.0');
+
+// Login with username and password
+final userApi = client.getUserApi();
+final authResponse = await userApi.authenticateUserByName(
+  authenticateUserByName: AuthenticateUserByName(
+    username: 'your-username',
+    pw: 'your-password',
+  ),
+);
+
+// Set the token for authenticated requests
+final token = authResponse.data?.accessToken;
+if (token != null) {
+  client.setToken(token);
+  print('Logged in successfully!');
+}
+```
+
+#### Authentication Parameters
+
+- **DeviceId**: Must be a unique identifier for your client/device. Generate once and store persistently.
+- **Version**: Your application version (e.g., "1.0.0").
+- **Token**: Access token from login. Required for authenticated endpoints, optional for public endpoints.
+
+### Common Operations
+
+#### Fetch Items from Library
+
+```dart
+final itemsApi = client.getItemsApi();
+final items = await itemsApi.getItems(
+  userId: 'user-id',
+  limit: 20,
+  sortBy: ['DateCreated'],
+);
+```
+
+#### Get Activity Logs
+
+```dart
+final activityLogApi = client.getActivityLogApi();
+final logs = await activityLogApi.getLogEntries(
+  startIndex: 0,
+  limit: 50,
+);
+```
+
+#### Search Content
+
+```dart
+final searchApi = client.getSearchApi();
+final results = await searchApi.get(
+  searchTerm: 'movie name',
+  userId: 'user-id',
+);
+```
+
+#### Stream Audio
+
+```dart
+final audioApi = client.getAudioApi();
+final stream = await audioApi.getAudioStream(
+  itemId: 'item-id',
+);
+```
+
+#### Manage Playlists
+
+```dart
+final playlistsApi = client.getPlaylistsApi();
+
+// Create playlist
+final createResponse = await playlistsApi.createPlaylist(
+  createPlaylistDto: CreatePlaylistDto(
+    name: 'My Playlist',
+    mediaType: 'Audio',
+  ),
+);
+
+// Add items to playlist
+await playlistsApi.addToPlaylist(
+  playlistId: createResponse.data?.id,
+  ids: ['item-id-1', 'item-id-2'],
+);
+```
+
+### Custom Dio Instance
+
+You can provide your own configured Dio instance:
+
+```dart
+final customDio = Dio(BaseOptions(
+  connectTimeout: Duration(seconds: 10),
+  receiveTimeout: Duration(seconds: 30),
+));
+
+final client = JellyfinDart(
+  dio: customDio,
+  basePathOverride: 'https://your-jellyfin-server.com',
+);
+```
+
+### Custom Interceptors
+
+Add your own interceptors for logging, error handling, etc:
+
+```dart
+final client = JellyfinDart(
+  basePathOverride: 'https://your-jellyfin-server.com',
+  interceptors: [
+    LogInterceptor(responseBody: true),
+    // Your custom interceptors
+  ],
+);
+```
+
+### Error Handling
+
+All API calls can throw `DioException`. Handle them appropriately:
+
+```dart
+try {
+  final users = await userApi.getUsers();
+  print('Success: ${users?.length} users');
+} on DioException catch (e) {
+  if (e.response != null) {
+    print('Server error: ${e.response?.statusCode}');
+    print('Error data: ${e.response?.data}');
+  } else {
+    print('Network error: ${e.message}');
+  }
+}
+```
+
+## API Coverage
+
+The client provides access to all 61 Jellyfin APIs through factory methods:
+
+### Core APIs
+
+| API Class | Access Method | Description |
+|-----------|--------------|-------------|
+| **ActivityLogApi** | `getActivityLogApi()` | Activity log operations |
+| **ApiKeyApi** | `getApiKeyApi()` | API key management |
+| **SessionApi** | `getSessionApi()` | Session management |
+| **SystemApi** | `getSystemApi()` | System information and configuration |
+| **UserApi** | `getUserApi()` | User authentication and management |
+
+### Media APIs
+
+| API Class | Access Method | Description |
+|-----------|--------------|-------------|
+| **AudioApi** | `getAudioApi()` | Audio streaming and transcoding |
+| **VideosApi** | `getVideosApi()` | Video streaming and transcoding |
+| **ImageApi** | `getImageApi()` | Image operations |
+| **SubtitleApi** | `getSubtitleApi()` | Subtitle operations |
+| **LyricsApi** | `getLyricsApi()` | Lyrics retrieval |
+| **MediaInfoApi** | `getMediaInfoApi()` | Media file information |
+| **MediaSegmentsApi** | `getMediaSegmentsApi()` | Media segment operations |
+
+### Library APIs
+
+| API Class | Access Method | Description |
+|-----------|--------------|-------------|
+| **ItemsApi** | `getItemsApi()` | Library item operations |
+| **LibraryApi** | `getLibraryApi()` | Library management |
+| **LibraryStructureApi** | `getLibraryStructureApi()` | Library structure operations |
+| **UserLibraryApi** | `getUserLibraryApi()` | User-specific library operations |
+| **UserViewsApi** | `getUserViewsApi()` | User view operations |
+
+### Content APIs
+
+| API Class | Access Method | Description |
+|-----------|--------------|-------------|
+| **ArtistsApi** | `getArtistsApi()` | Artist information and queries |
+| **GenresApi** | `getGenresApi()` | Genre operations |
+| **MusicGenresApi** | `getMusicGenresApi()` | Music genre operations |
+| **MoviesApi** | `getMoviesApi()` | Movie-specific operations |
+| **TvShowsApi** | `getTvShowsApi()` | TV show operations |
+| **PersonsApi** | `getPersonsApi()` | Person/actor information |
+| **StudiosApi** | `getStudiosApi()` | Studio information |
+| **TrailersApi** | `getTrailersApi()` | Trailer operations |
+| **YearsApi** | `getYearsApi()` | Year-based queries |
+
+### Playback APIs
+
+| API Class | Access Method | Description |
+|-----------|--------------|-------------|
+| **PlaystateApi** | `getPlaystateApi()` | Playback state operations |
+| **PlaylistsApi** | `getPlaylistsApi()` | Playlist management |
+| **InstantMixApi** | `getInstantMixApi()` | Instant mix generation |
+| **UniversalAudioApi** | `getUniversalAudioApi()` | Universal audio streaming |
+| **DynamicHlsApi** | `getDynamicHlsApi()` | Dynamic HLS streaming |
+| **HlsSegmentApi** | `getHlsSegmentApi()` | HLS segment operations |
+| **TrickplayApi** | `getTrickplayApi()` | Trickplay thumbnail operations |
+
+### Search & Discovery APIs
+
+| API Class | Access Method | Description |
+|-----------|--------------|-------------|
+| **SearchApi** | `getSearchApi()` | Universal search functionality |
+| **SuggestionsApi** | `getSuggestionsApi()` | Content suggestions |
+| **FilterApi** | `getFilterApi()` | Filter operations |
+| **ItemLookupApi** | `getItemLookupApi()` | External metadata lookup |
+| **RemoteImageApi** | `getRemoteImageApi()` | Remote image operations |
+
+### Live TV APIs
+
+| API Class | Access Method | Description |
+|-----------|--------------|-------------|
+| **LiveTvApi** | `getLiveTvApi()` | Live TV operations |
+| **ChannelsApi** | `getChannelsApi()` | Channel operations |
+
+### Admin & Configuration APIs
+
+| API Class | Access Method | Description |
+|-----------|--------------|-------------|
+| **ConfigurationApi** | `getConfigurationApi()` | Server configuration |
+| **DashboardApi** | `getDashboardApi()` | Dashboard operations |
+| **DevicesApi** | `getDevicesApi()` | Device management |
+| **DisplayPreferencesApi** | `getDisplayPreferencesApi()` | Display preference management |
+| **BrandingApi** | `getBrandingApi()` | Server branding configuration |
+| **LocalizationApi** | `getLocalizationApi()` | Localization operations |
+| **ScheduledTasksApi** | `getScheduledTasksApi()` | Scheduled task management |
+| **PluginsApi** | `getPluginsApi()` | Plugin management |
+| **PackageApi** | `getPackageApi()` | Package operations |
+
+### Sync & Collaboration APIs
+
+| API Class | Access Method | Description |
+|-----------|--------------|-------------|
+| **SyncPlayApi** | `getSyncPlayApi()` | Synchronized playback operations |
+| **QuickConnectApi** | `getQuickConnectApi()` | Quick Connect authentication |
+| **CollectionApi** | `getCollectionApi()` | Collection management |
+
+### Utility APIs
+
+| API Class | Access Method | Description |
+|-----------|--------------|-------------|
+| **BackupApi** | `getBackupApi()` | Backup and restore operations |
+| **ClientLogApi** | `getClientLogApi()` | Client log submission |
+| **EnvironmentApi** | `getEnvironmentApi()` | Environment information |
+| **ItemRefreshApi** | `getItemRefreshApi()` | Item metadata refresh |
+| **ItemUpdateApi** | `getItemUpdateApi()` | Item update operations |
+| **StartupApi** | `getStartupApi()` | Server startup configuration |
+| **TimeSyncApi** | `getTimeSyncApi()` | Time synchronization |
+| **TmdbApi** | `getTmdbApi()` | TMDb integration |
+| **VideoAttachmentsApi** | `getVideoAttachmentsApi()` | Video attachment operations |
+
+All API methods return a `Response<T>` object from Dio, where `T` is the expected response type. Access the data via `response.data`.
+
+## Architecture
+
+### Directory Structure
+
+```
+lib/
+├── jellyfin_dart.dart          # Main library export file
+└── src/
+    ├── api.dart                # JellyfinDart client class with factory methods
+    ├── deserialize.dart        # Deserialization utilities
+    ├── api/                    # 61 API endpoint classes
+    ├── auth/                   # Authentication interceptors
+    │   ├── api_key_auth.dart
+    │   ├── basic_auth.dart
+    │   ├── bearer_auth.dart
+    │   └── oauth.dart
+    └── model/                  # 600+ DTOs and enums (auto-generated)
+        └── *.g.dart            # Generated JSON serialization code
+
+tool/
+└── fix_issues.dart             # Post-generation fixes for OpenAPI generator bugs
+
+example/                        # Usage examples
+├── README.md
+├── basic_usage.dart
+├── authentication.dart
+└── library_operations.dart
+
+test/                           # Auto-generated unit tests (400+ files)
+doc/                            # Auto-generated API documentation
+```
+
+### Client Architecture
+
+The `JellyfinDart` class in `lib/src/api.dart` is the main entry point. It provides factory methods for accessing all 61 API classes, each instantiated with a shared Dio client.
+
+### Authentication
+
+Four interceptor types handle authentication automatically via Dio interceptors:
+- `OAuthInterceptor`
+- `BasicAuthInterceptor`
+- `BearerAuthInterceptor`
+- `ApiKeyAuthInterceptor`
+
+Jellyfin primarily uses a custom MediaBrowser authentication scheme via the `Authorization` header.
+
+## Development
+
+### Code Generation
+
+This package is auto-generated. To regenerate:
+
+```bash
+./generate.sh
+```
+
+This script:
+1. Cleans previous generated files (lib/, doc/, test/)
+2. Downloads and generates code from Jellyfin's stable OpenAPI spec
+3. Runs `dart pub get`
+4. Executes `tool/fix_issues.dart` to patch code generation bugs
+5. Formats code with `dart format .`
+6. Applies fixes with `dart fix --apply`
+7. Generates JSON serialization files with `dart run build_runner build`
+
+### Regenerate JSON Serialization Only
+
+After modifying model files:
+
+```bash
+dart run build_runner build
+```
+
+### Testing
+
+```bash
+# Run all tests
+dart test
+
+# Run specific test
+dart test test/session_info_dto_test.dart
+```
+
+### Code Quality
+
+```bash
+# Format code
+dart format .
+
+# Analyze code
+dart analyze
+
+# Apply automatic fixes
+dart fix --apply
+```
+
+## Important Files
+
+### DO NOT Manually Edit
+
+- Anything in `lib/src/api/` (except for bug fixes in fix_issues.dart)
+- Anything in `lib/src/model/` (except for bug fixes in fix_issues.dart)
+- `test/` directory
+
+### Safe to Edit
+
+- `openapi-config.yaml` - OpenAPI generator configuration
+- `build.yaml` - JSON serialization configuration
+- `analysis_options.yaml` - Dart analyzer settings
+- `.openapi-generator-ignore` - Files to preserve during regeneration
+- `tool/fix_issues.dart` - Post-generation fix script
+- `generate.sh` - Generation workflow script
+
+## Known Issues & Fixes
+
+The `tool/fix_issues.dart` script fixes two categories of bugs from OpenAPI Generator:
+
+1. **Enum naming bug**: Replaces malformed `TranscodingInfoTranscodeReasonsEnumsEnum` with correct `TranscodingInfoTranscodeReasonsEnum`
+
+2. **String-to-enum assignment bugs**: Finds constructor parameters and `@JsonKey` annotations that incorrectly assign string literals to enum fields, converting them to proper enum references with camelCase (e.g., `'SyncPlayGroupUpdate'` → `SessionMessageType.syncPlayGroupUpdate`)
+
+## Limitations
+
+- **Auto-generated code**: While comprehensive, some edge cases in the OpenAPI spec may produce less-than-ideal code
+- **Large package size**: Complete API coverage means this is a substantial package
+- **Breaking changes**: Jellyfin API changes may introduce breaking changes in future versions
+
+## Contributing
+
+Contributions are welcome! This package is auto-generated, so most improvements should target:
+
+1. The generation script (`generate.sh`)
+2. Post-generation fixes (`tool/fix_issues.dart`)
+3. OpenAPI configuration (`openapi-config.yaml`)
+4. Documentation and examples
+
+Please open issues at: https://github.com/devaryakjha/jellyfin-dart/issues
+
+## Resources
+
+- [Jellyfin Official Site](https://jellyfin.org/)
+- [Jellyfin API Documentation](https://jellyfin.org/docs/general/networking/index.html)
+- [OpenAPI Generator](https://openapi-generator.tech/)
+- [Package on pub.dev](https://pub.dev/packages/jellyfin_dart)
+- [Auto-generated API Documentation](doc/)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+The Jellyfin project itself is licensed under the GNU GPL. This client library is independently licensed under MIT.
+
+---
+
+**Generated from**: Jellyfin OpenAPI Specification v10.11.0 (stable)
+**Generator**: OpenAPI Generator (dart-dio v7.16.0)
+**Last Updated**: 2025-10-22
