@@ -1,3 +1,7 @@
+## 0.1.2
+
+Expose `MediaBrowserAuth` to public
+
 ## 0.1.1
 
 Minor dependency and configuration updates.
