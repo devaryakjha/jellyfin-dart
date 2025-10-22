@@ -7,6 +7,7 @@ export 'package:jellyfin_dart/src/auth/api_key_auth.dart';
 export 'package:jellyfin_dart/src/auth/basic_auth.dart';
 export 'package:jellyfin_dart/src/auth/bearer_auth.dart';
 export 'package:jellyfin_dart/src/auth/oauth.dart';
+export 'package:jellyfin_dart/src/auth/mediabrowser_auth.dart';
 
 export 'package:jellyfin_dart/src/api/activity_log_api.dart';
 export 'package:jellyfin_dart/src/api/api_key_api.dart';
