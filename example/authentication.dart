@@ -1,20 +1,27 @@
+import 'package:dio/dio.dart';
 import 'package:jellyfin_dart/jellyfin_dart.dart';
+import 'package:jellyfin_dart/src/auth/mediabrowser_auth.dart';
 
 /// Example demonstrating Jellyfin MediaBrowser authentication.
 /// Jellyfin uses a custom authentication header format with DeviceId, Version, and Token.
 void main() async {
   final serverUrl = String.fromEnvironment(
-    'SERVER_URL',
+    'BASE_URL',
     defaultValue: 'http://localhost:8096',
   );
 
-  final client = JellyfinDart(basePathOverride: serverUrl);
-
-  // Set DeviceId and Version (required for all requests)
-  // DeviceId should be a unique identifier for the client device
-  // Version should be your app/client version
-  client.setDeviceId('unique-device-id-12345');
-  client.setVersion('10.10.7');
+  final client = JellyfinDart(
+    basePathOverride: serverUrl,
+    interceptors: [
+      LogInterceptor(requestBody: true, responseBody: true, logPrint: print),
+      MediaBrowserAuthInterceptor(
+        client: 'Jellyfin Dart',
+        device: 'Dart Client',
+        deviceId: 'unique-device-id-12345',
+        version: '10.10.7',
+      ),
+    ],
+  );
 
   // Example 1: Basic setup without token (for public endpoints)
   print('=== Basic MediaBrowser Auth (No Token) ===');
