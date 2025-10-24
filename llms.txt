@@ -397,10 +397,10 @@ Jellyfin primarily uses a custom MediaBrowser authentication scheme via the `Aut
 This package is auto-generated. To regenerate:
 
 ```bash
-./generate.sh
+make generate
 ```
 
-This script:
+This target:
 1. Cleans previous generated files (lib/, doc/, test/)
 2. Downloads and generates code from Jellyfin's stable OpenAPI spec
 3. Runs `dart pub get`
@@ -455,7 +455,8 @@ dart fix --apply
 - `analysis_options.yaml` - Dart analyzer settings
 - `.openapi-generator-ignore` - Files to preserve during regeneration
 - `tool/fix_issues.dart` - Post-generation fix script
-- `generate.sh` - Generation workflow script
+- `Makefile` - Generation workflow (primary entry point)
+- `generate.sh` - Wrapper that proxies to `make generate`
 
 ## Known Issues & Fixes
 
@@ -475,7 +476,7 @@ The `tool/fix_issues.dart` script fixes two categories of bugs from OpenAPI Gene
 
 Contributions are welcome! This package is auto-generated, so most improvements should target:
 
-1. The generation script (`generate.sh`)
+1. The Makefile (`make generate` target)
 2. Post-generation fixes (`tool/fix_issues.dart`)
 3. OpenAPI configuration (`openapi-config.yaml`)
 4. Documentation and examples

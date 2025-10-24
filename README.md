@@ -242,10 +242,10 @@ This package is auto-generated from the [official Jellyfin OpenAPI specification
 If you need to regenerate the client (for contributors):
 
 ```bash
-./generate.sh
+make generate
 ```
 
-This will:
+This target will:
 1. Download the latest Jellyfin OpenAPI spec
 2. Generate Dart code
 3. Apply post-generation fixes
@@ -263,7 +263,7 @@ This will:
 
 Contributions are welcome! This package is auto-generated, so most improvements should target:
 
-1. The generation script (`generate.sh`)
+1. The Makefile (`make generate` target)
 2. Post-generation fixes (`tool/fix_issues.dart`)
 3. OpenAPI configuration (`openapi-config.yaml`)
 4. Documentation and examples

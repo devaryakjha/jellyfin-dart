@@ -19,10 +19,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Full regeneration from OpenAPI spec:**
 ```bash
-./generate.sh
+make generate
 ```
 
-This script:
+This target:
 1. Cleans previous generated files (lib/, doc/, test/)
 2. Downloads and generates code from Jellyfin's stable OpenAPI spec
 3. Runs `dart pub get`
@@ -153,7 +153,8 @@ The `tool/fix_issues.dart` script fixes two categories of bugs from OpenAPI Gene
 - `analysis_options.yaml` - Dart analyzer settings
 - `.openapi-generator-ignore` - Files to preserve during regeneration
 - `tools/fix_issues.dart` - Post-generation fix script
-- `generate.sh` - Generation workflow script
+- `Makefile` - Generation workflow (primary entry point)
+- `generate.sh` - Wrapper that proxies to `make generate`
 
 ### Build Configuration
 
@@ -170,8 +171,8 @@ The `tool/fix_issues.dart` script fixes two categories of bugs from OpenAPI Gene
 
 ## Workflow for Making Changes
 
-1. If modifying API endpoints: Edit OpenAPI spec or config, then run `./generate.sh`
-2. If fixing generation bugs: Update `tools/fix_issues.dart`, then run `./generate.sh`
+1. If modifying API endpoints: Edit OpenAPI spec or config, then run `make generate`
+2. If fixing generation bugs: Update `tools/fix_issues.dart`, then run `make generate`
 3. If modifying generated models manually (discouraged): Run `dart run build_runner build` to regenerate *.g.dart files
 4. Always run `dart format .` and `dart analyze` before committing
 
