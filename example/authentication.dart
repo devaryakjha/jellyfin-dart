@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:jellyfin_dart/jellyfin_dart.dart';
-import 'package:jellyfin_dart/src/auth/mediabrowser_auth.dart';
 
 /// Example demonstrating Jellyfin MediaBrowser authentication.
 /// Jellyfin uses a custom authentication header format with DeviceId, Version, and Token.

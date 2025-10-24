@@ -1,3 +1,5 @@
 pubspec.yaml
 README.md
 analysis_options.yaml
+.env
+.gitignore

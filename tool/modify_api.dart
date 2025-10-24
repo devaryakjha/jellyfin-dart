@@ -92,7 +92,8 @@ class MediaBrowserAuthInterceptor extends Interceptor {
   // add `export 'package:jellyfin_dart/src/auth/mediabrowser_auth.dart';` to lib/jellyfin_dart.dart at line 10
   final libFile = File('lib/jellyfin_dart.dart');
   var libContent = await libFile.readAsString();
-  const exportLine = "export 'package:jellyfin_dart/src/auth/mediabrowser_auth.dart';";
+  const exportLine =
+      "export 'package:jellyfin_dart/src/auth/mediabrowser_auth.dart';";
   if (!libContent.contains(exportLine)) {
     final lines = libContent.split('\n');
     lines.insert(9, exportLine);
